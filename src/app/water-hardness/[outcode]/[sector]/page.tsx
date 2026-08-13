@@ -101,7 +101,8 @@ export default async function SectorDetailPage({ params }: PageProps) {
     boschSaltSetting,
     latitude,
     longitude,
-    postcodeCount
+    postcodeCount,
+    dataPrecision 
   } = data;
 
   const isSoft = avgPpm < 100;
@@ -263,7 +264,18 @@ export default async function SectorDetailPage({ params }: PageProps) {
           <h2 className="text-cyan-400 font-bold text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-cyan-400" /> Quick Water Snapshot for {sector}
           </h2>
-
+          {/* 👉 THÊM KHỐI BẢO VỆ TÍN NHIỆM DATA PRECISION Ở ĐÂY */}
+            <div>
+              {dataPrecision === "zone_level" ? (
+                <span className="inline-flex items-center gap-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-3 py-1 rounded-full text-[11px] font-bold">
+                  ✓ Verified Zone-Level Data (DWI / Defra)
+                </span>
+              ) : (
+                <span className="inline-flex items-center gap-1.5 bg-amber-500/10 text-amber-300 border border-amber-500/30 px-3 py-1 rounded-full text-[11px] font-medium">
+                  ⓘ Regional Estimate ({companyName})
+                </span>
+              )}
+            </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
             <div>
               <span className="text-slate-400 text-xs block font-medium">Average Mineral Hardness</span>

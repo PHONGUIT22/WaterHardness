@@ -12,6 +12,7 @@ export interface WaterSectorData {
   clarkDegrees: number;
   hardnessCategory: string;
   boschSaltSetting: string;
+  dataPrecision: string; // 👈 THÊM DÒNG NÀY VÀO
 }
 
 // 1. TỐI ƯU TRANG CHỦ / XẾP HẠNG: Lấy Top vùng nước Mềm nhất và Cứng nhất UK
@@ -143,6 +144,7 @@ export async function getSectorData(sectorStr: string): Promise<WaterSectorData 
     clarkDegrees: Number(data.clark_degrees) || 0,
     hardnessCategory: data.hardness_category,
     boschSaltSetting: data.bosch_salt_setting,
+    dataPrecision: data.data_precision || "regional_estimate", // 👈 THÊM DÒNG NÀY VÀO
   };
 }
 
