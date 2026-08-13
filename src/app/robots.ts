@@ -18,6 +18,6 @@ export default function robots(): MetadataRoute.Robots {
         '/api/',             // Chặn bot cào trực tiếp các endpoint API nội bộ
       ],
     },
-    sitemap: 'https://zipcost.us/sitemap.xml',
+    sitemap: 'https://waterhardness.uk/sitemap.xml',
   }
 }
