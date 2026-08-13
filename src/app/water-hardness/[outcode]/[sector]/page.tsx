@@ -9,7 +9,7 @@ import Breadcrumb from "@/components/detail/Breadcrumb";
 import ApplianceSetupGuide from "@/components/detail/ApplianceSetupGuide";
 import FAQSection from "@/components/detail/FAQSection";
 import RelatedSectors from "@/components/detail/RelatedSectors";
-
+import { getSeoDates } from "@/lib/seoDates";
 // Icons
 import { 
   CheckCircle2, 
@@ -152,6 +152,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
         : `Yes, at ${avgPpm} PPM, heating elements in kettles, boilers, and washing machines will accumulate limescale without periodic descaling or water softening.`,
     },
   ];
+  const { datePublishedISO, dateModifiedISO, dateModifiedFormatted } = getSeoDates(sector);
 
   // Schema JSON-LD
   const schema = [
@@ -161,8 +162,8 @@ export default async function SectorDetailPage({ params }: PageProps) {
       "headline": `Water Hardness & Limescale Report for Sector ${sector}`,
       "description": `Detailed water quality metrics, PPM ratings, and dishwasher settings for sector ${sector} supplied by ${companyName}.`,
       "image": "https://waterhardness.uk/og-image.png",
-      "datePublished": "2026-01-01",
-      "dateModified": new Date().toISOString(),
+      "datePublished": datePublishedISO,
+      "dateModified": dateModifiedISO,
       "author": {
         "@type": "Person",
         "@id": "https://waterhardness.uk/#person",

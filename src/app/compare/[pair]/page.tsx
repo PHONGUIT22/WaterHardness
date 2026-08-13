@@ -5,6 +5,7 @@ import { getSectorData } from "@/lib/data";
 import CompareHero from "@/components/compare/CompareHero";
 import VersusTable from "@/components/compare/VersusTable";
 import { Sparkles } from "lucide-react";
+import { getSeoDates } from "@/lib/seoDates";
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -77,7 +78,7 @@ export default async function CompareDetailPage({ params }: PageProps) {
   const summaryParagraph2 = `Limescale risk and boiler heating efficiency vary based on these mineral levels. Households in Sector ${harderSector.sector} experience higher heating element degradation and kettle scale accumulation due to elevated calcium carbonate density (${harderSector.avgPpm} PPM vs ${softerSector.avgPpm} PPM).`;
 
   const summaryParagraph3 = `For home appliance setup, Bosch dishwasher water softener settings should be calibrated accordingly: Sector ${dataA.sector} requires setting ${dataA.boschSaltSetting || "H00"} whereas Sector ${dataB.sector} recommends setting ${dataB.boschSaltSetting || "H00"}.`;
-
+  const { datePublishedISO, dateModifiedISO, dateModifiedFormatted } = getSeoDates(resolvedParams.pair);
   // 3. SCHEMA JSON-LD CHUẨN EEAT & FAQ
   const schema = {
     "@context": "https://schema.org",
@@ -88,8 +89,8 @@ export default async function CompareDetailPage({ params }: PageProps) {
         "description": `Side-by-side water quality and hardness comparison between Sector ${dataA.sector} and Sector ${dataB.sector}.`,
         "author": { "@id": "https://waterhardness.uk/#person" },
         "publisher": { "@id": "https://waterhardness.uk/#organization" },
-        "datePublished": "2026-01-01",
-        "dateModified": new Date().toISOString(),
+        "datePublished": datePublishedISO,
+        "dateModified": dateModifiedISO,
       },
       {
         "@type": "FAQPage",

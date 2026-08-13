@@ -14,7 +14,7 @@ import {
   Info,
   MapPin
 } from "lucide-react";
-
+import { getSeoDates } from "@/lib/seoDates";
 // 1. BẬT ISR: Cache trang Outcode trên CDN trong 24 tiếng
 export const revalidate = 86400; 
 export const dynamicParams = true;
@@ -111,6 +111,7 @@ export default async function OutcodeHubPage({ params }: PageProps) {
   const applianceAdvice = isSoft
     ? `Since ${data.outcode} enjoys soft water (${data.avgPpm} PPM), residents generally do not need dishwasher salt or heavy-duty limescale descalers. Standard detergent dosages are sufficient for laundry and dishwashing.`
     : `Due to the ${hardnessCategoryText.toLowerCase()} (${data.avgPpm} PPM) in ${data.outcode}, limescale build-up can occur on heating elements, shower heads, and boilers. Setting your dishwasher water softener to the correct level (e.g. Bosch setting ${data.hardestSector?.boschSaltSetting || "H04"}) is strongly recommended to prevent cloudy glassware and internal scale accumulation.`;
+  const { datePublishedISO, dateModifiedISO, dateModifiedFormatted } = getSeoDates(data.outcode);
 
   // --- ĐOẠN 4: SCHEMA CHUẨN EEAT CHO TRANG HUB ---
   const schema = {
@@ -122,8 +123,8 @@ export default async function OutcodeHubPage({ params }: PageProps) {
         "description": `Comprehensive water quality overview across ${data.totalSectors} postcode sectors in ${data.outcode} supplied by ${data.companyName}.`,
         "author": { "@id": "https://waterhardness.uk/#person" },
         "publisher": { "@id": "https://waterhardness.uk/#organization" },
-        "datePublished": "2026-01-01",
-        "dateModified": new Date().toISOString()
+        "datePublished": datePublishedISO,
+        "dateModified": dateModifiedISO
       },
       {
         "@type": "FAQPage",

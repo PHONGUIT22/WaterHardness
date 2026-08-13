@@ -37,11 +37,11 @@ const escapeXml = (unsafe: string) => {
   });
 };
 
-function buildXmlSitemap(routes: Array<{ url: string; lastModified?: Date; changeFrequency?: string; priority?: number }>) {
+function buildXmlSitemap(routes: Array<{ url: string; lastModified: string; changeFrequency?: string; priority?: number }>) {
   const xmlEntries = routes.map(r => `
     <url>
       <loc>${escapeXml(r.url)}</loc>
-      <lastmod>${(r.lastModified || new Date()).toISOString()}</lastmod>
+      <lastmod>${r.lastModified}</lastmod>
       <changefreq>${r.changeFrequency || 'weekly'}</changefreq>
       <priority>${r.priority || 0.7}</priority>
     </url>`).join('');
@@ -59,7 +59,7 @@ export async function GET(
   const { id } = await params;
   const cleanId = id.replace('.xml', ''); 
   
-  let routes: Array<{ url: string; lastModified?: Date; changeFrequency?: string; priority?: number }> = [];
+  let routes: Array<{ url: string; lastModified: string; changeFrequency?: string; priority?: number }> = [];
 
   // 1. SITEMAP CÁC TRANG TĨNH & TRUST
   if (cleanId === 'static') {
@@ -67,18 +67,20 @@ export async function GET(
       '', '/outcodes', '/about', '/contact', '/privacy', '/terms'
     ].map((route) => ({
       url: `${baseUrl}${route}`,
-      lastModified: new Date("2026-01-01"),
+      // Lấy ISO trực tiếp từ getSeoDates để trùng với trang bài viết
+      lastModified: getSeoDates(route || 'homepage').dateModifiedISO, 
       changeFrequency: 'monthly',
       priority: route === '' ? 1.0 : 0.6,
     }));
   }
 
-  // 2. SITEMAP TẤT CẢ OUTCODE HUBS (~3,000 Outcodes)
+  // 2. SITEMAP OUTCODE HUBS (~3,000 Outcodes)
   else if (cleanId === 'outcodes') {
     const outcodes = await getAllOutcodesFromDB();
     routes = outcodes.map((st) => ({
       url: `${baseUrl}/water-hardness/${st.outcode.toLowerCase()}`,
-      lastModified: new Date(getSeoDates(st.outcode).dateModifiedISO),
+      // 👉 TRÙNG KHỚP 100% VỚI Schema JSON-LD TRONG TRANG OUTCODE
+      lastModified: getSeoDates(st.outcode).dateModifiedISO,
       changeFrequency: 'weekly',
       priority: 0.9,
     }));
@@ -97,22 +99,27 @@ export async function GET(
     ];
 
     routes = [
-      { url: `${baseUrl}/compare`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
+      { 
+        url: `${baseUrl}/compare`, 
+        lastModified: getSeoDates('compare-root').dateModifiedISO, 
+        changeFrequency: 'daily', 
+        priority: 0.9 
+      },
       ...popularPairs.map((pair) => ({
         url: `${baseUrl}/compare/${pair}`,
-        lastModified: new Date(),
+        // 👉 TRÙNG KHỚP 100% VỚI Schema JSON-LD TRONG TRANG SO SÁNH
+        lastModified: getSeoDates(pair).dateModifiedISO,
         changeFrequency: 'weekly',
         priority: 0.8,
       }))
     ];
   }
 
-  // 4. SITEMAP CHI TIẾT TỪNG TRANG SECTOR (CHIA NHỎ CHUẨN 500 URLs / FILE)
+  // 4. SITEMAP CHI TIẾT TỪNG TRANG SECTOR (500 URLs / FILE)
   else if (cleanId.startsWith('sectors-')) {
     const pageIndex = parseInt(cleanId.replace('sectors-', ''), 10);
 
     if (!isNaN(pageIndex) && pageIndex > 0) {
-      // Tính toán vị trí offset trong Database (VD: Trang 1 lấy 0-499, Trang 2 lấy 500-999...)
       const from = (pageIndex - 1) * CHUNK_SIZE;
       const to = pageIndex * CHUNK_SIZE - 1;
 
@@ -126,9 +133,11 @@ export async function GET(
         routes = sectors.map((s) => {
           const outcodeSlug = s.outcode.toLowerCase().trim();
           const sectorSlug = s.sector.toLowerCase().trim().replace(/\s+/g, '-');
+          
           return {
             url: `${baseUrl}/water-hardness/${outcodeSlug}/${sectorSlug}`,
-            lastModified: new Date(getSeoDates(s.sector).dateModifiedISO),
+            // 👉 TRÙNG KHỚP 100% VỚI dateModifiedISO TRONG Schema JSON-LD CỦA TRANG SECTOR
+            lastModified: getSeoDates(s.sector).dateModifiedISO, 
             changeFrequency: 'monthly',
             priority: 0.8,
           };
