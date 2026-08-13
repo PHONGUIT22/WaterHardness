@@ -3,22 +3,21 @@ import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import { cache } from "react";
 import { getSectorData } from "@/lib/data";
+import { getSeoDates } from "@/lib/seoDates";
 
 // Components
 import Breadcrumb from "@/components/detail/Breadcrumb";
 import ApplianceSetupGuide from "@/components/detail/ApplianceSetupGuide";
 import FAQSection from "@/components/detail/FAQSection";
 import RelatedSectors from "@/components/detail/RelatedSectors";
-import { getSeoDates } from "@/lib/seoDates";
+
 // Icons
 import { 
   CheckCircle2, 
   Droplets, 
-  WashingMachine, 
-  AlertTriangle, 
   ShieldCheck, 
   Sparkles,
-  Flame
+  MapPin
 } from "lucide-react";
 
 // BẬT ISR: Cache trang Sector trên CDN trong 24 tiếng
@@ -29,7 +28,7 @@ interface PageProps {
   params: Promise<{ outcode: string; sector: string }> | { outcode: string; sector: string };
 }
 
-// BỌC CACHE REACT ĐỂ TRÁNH TRUYS VẤN KÉP TRONG 1 REQUEST
+// BỌC CACHE REACT ĐỂ TRÁNH TRUY VẤN KÉP TRONG 1 REQUEST
 const fetchSectorDetails = cache(async (rawSector: string) => {
   // Chuyển slug "ab10-1" thành dạng chuẩn database "AB10 1"
   const cleanSectorStr = rawSector.replace(/-/g, " ").trim().toUpperCase();
@@ -45,26 +44,25 @@ function generateCompositeSeed(inputStr: string): number {
   return Math.abs(hash);
 }
 
-// 1. SINH DYNAMIC METADATA SEO
+// 1. TỐI ƯU METADATA TĂNG CTR TRÊN GOOGLE
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
   const data = await fetchSectorDetails(resolvedParams.sector);
 
   if (!data) return { title: "Postcode Sector Not Found - WaterHardness.uk" };
 
-  const currentYear = new Date().getFullYear();
   const canonicalOutcode = data.outcode.toLowerCase();
   const canonicalSectorSlug = data.sector.toLowerCase().replace(/\s+/g, "-");
 
   return {
-    title: `Water Hardness in Sector ${data.sector} (${data.avgPpm} PPM) - ${currentYear} Guide`,
-    description: `Detailed water quality report for ${data.sector} (${data.companyName}). Average hardness: ${data.avgPpm} PPM (${data.clarkDegrees}° Clark, ${data.hardnessCategory}). View Bosch dishwasher salt settings & limescale solutions.`,
+    title: `Sector ${data.sector} Water Hardness: ${data.avgPpm} PPM | Bosch & Beko Settings`,
+    description: `🚨 Check water hardness for ${data.sector} (${data.companyName}). Avg: ${data.avgPpm} PPM (${data.hardnessCategory}). Get exact dishwasher salt settings for Bosch, Beko & Miele.`,
     alternates: {
       canonical: `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}`,
     },
     openGraph: {
-      title: `Water Hardness in ${data.sector} - ${data.avgPpm} PPM (${data.hardnessCategory})`,
-      description: `Check exact water hardness metrics and appliance settings for sector ${data.sector}.`,
+      title: `Sector ${data.sector} Water Hardness: ${data.avgPpm} PPM (${data.hardnessCategory})`,
+      description: `Check exact water hardness metrics and dishwasher salt settings for sector ${data.sector}.`,
       url: `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}`,
       siteName: "WaterHardness.uk",
       locale: "en_GB",
@@ -91,9 +89,20 @@ export default async function SectorDetailPage({ params }: PageProps) {
   }
 
   // ==============================================================================
-  // 🔥 ENGINE TÍNH TOÁN & SPINTAX TỰ ĐỘNG BÀI VIẾT (~700 TỪ THẬT DATA)
+  // 🔥 MA TRẬN TÍNH TOÁN SPINTAX TỰ ĐỘNG BÀI VIẾT (UNIQUE 100% CHỐNG HCU)
   // ==============================================================================
-  const { sector, outcode, companyName, avgPpm, clarkDegrees, hardnessCategory, boschSaltSetting } = data;
+  const { 
+    sector, 
+    outcode, 
+    companyName, 
+    avgPpm, 
+    clarkDegrees, 
+    hardnessCategory, 
+    boschSaltSetting,
+    latitude,
+    longitude,
+    postcodeCount
+  } = data;
 
   const isSoft = avgPpm < 100;
   const isModerate = avgPpm >= 100 && avgPpm < 200;
@@ -103,43 +112,69 @@ export default async function SectorDetailPage({ params }: PageProps) {
   const boilerLoss = isSoft ? "0%" : isModerate ? "5%" : isHard ? "12%" : "20%+";
   const soapDose = isSoft ? "standard" : isHard ? "+30% extra" : "+50% extra";
 
+  // Định dạng chuỗi GPS Tọa độ
+  const latStr = latitude ? latitude.toFixed(4) : "54.0000";
+  const lngStr = longitude ? Math.abs(longitude).toFixed(4) : "2.0000";
+  const lngDirection = longitude && longitude < 0 ? "W" : "E";
+
   // Seed Spintax
-  const compositeKey = `${sector}-${companyName}-${avgPpm}-${clarkDegrees}`;
+  const compositeKey = `${sector}-${companyName}-${avgPpm}-${clarkDegrees}-${latitude}-${longitude}`;
   const seed = generateCompositeSeed(compositeKey);
   const spintax = (options: string[], offset: number = 0) => options[(seed + offset) % options.length];
 
-  // --- ĐOẠN 1: TỔNG QUAN XỨ BẢO HỘ NƯỚC SECTOR ---
+  // --- ĐOẠN 1: MỞ BÀI TỔNG QUAN SECTOR (NHÚNG TỌA ĐỘ & SỐ LƯỢNG POSTCODE) ---
   const intros = [
-    `According to the latest public disclosures from ${companyName}, tap water across postcode sector ${sector} (outcode ${outcode}) registers an average mineral concentration of ${avgPpm} PPM (mg/L), which translates to ${clarkDegrees}° Clark on the English hardness scale. This water supply is officially classified as ${hardnessCategory}.`,
-    `Residents and households operating appliances in ${sector} receive water supplied by ${companyName} with an average hardness rating of ${avgPpm} PPM (${clarkDegrees}° Clark). Categorized as ${hardnessCategory}, understanding these chemical parameters is crucial for preventing plumbing scale and setting dishwasher softeners correctly.`,
-    `Managing a household or setting up home appliances in ${sector}? Environmental monitoring indicates that water delivered to this sector by ${companyName} contains ${avgPpm} PPM of dissolved calcium carbonate, placing it in the ${hardnessCategory} threshold.`
+    `According to the latest public disclosures from ${companyName}, tap water across postcode sector ${sector} (covering approximately ${postcodeCount} postcodes) registers an average mineral concentration of ${avgPpm} PPM (mg/L). Located near geographic coordinates ${latStr}°N, ${lngStr}°${lngDirection}, this local water supply is officially classified as ${hardnessCategory}.`,
+    `Residents and households operating home appliances in ${sector} receive water supplied by ${companyName}. Our spatial data (centered at coordinates ${latStr}, ${lngStr}) indicates this sector serves ${postcodeCount} active postcodes with an average hardness rating of ${avgPpm} PPM (${clarkDegrees}° Clark).`,
+    `Managing a household or installing appliances in ${sector}? Spanning ${postcodeCount} postal routing units around ${latStr}°N, environmental monitoring for this specific ${companyName} supply zone indicates ${avgPpm} PPM of dissolved calcium carbonate, placing it in the ${hardnessCategory.toLowerCase()} threshold.`,
+    `Detailed water quality metrics for sector ${sector} reveal a ${hardnessCategory.toLowerCase()} classification (${clarkDegrees}° Clark). Serving ${postcodeCount} postcodes near GPS coordinates ${latStr}, ${lngStr}, the public supply managed by ${companyName} averages ${avgPpm} PPM in mineral density.`
   ];
   const paragraphIntro = spintax(intros, 0);
 
   // --- ĐOẠN 2: PHÂN TÍCH TÁC ĐỘNG LIMESCALE & NĂNG LƯỢNG BOILER ---
-  let paragraphLimescale = "";
-  if (isVeryHard || isHard) {
-    paragraphLimescale = `With a elevated mineral density of ${avgPpm} PPM, sector ${sector} experiences rapid limescale accumulation on heating elements. Unchecked calcium deposits can reduce boiler heat transfer efficiency by up to ${boilerLoss}, leading to increased household heating bills over time. Shower heads, kettles, and tap aerators in ${sector} will require periodic descaling using citric acid or specialized descaling tablets.`;
-  } else if (isModerate) {
-    paragraphLimescale = `Registering a moderate mineral concentration of ${avgPpm} PPM (${clarkDegrees}° Clark), water in ${sector} presents a manageable limescale risk. While heating element degradation is limited (approx. ${boilerLoss} efficiency loss), gradual white mineral film can still develop inside kettles and glass shower screens if left uncleaned.`;
-  } else {
-    paragraphLimescale = `Good news for residents in ${sector}: with a low mineral density of just ${avgPpm} PPM (${clarkDegrees}° Clark), water in this area is naturally soft. Limescale formation on pipework, heating coils, and shower heads is minimal, preserving boiler efficiency and extending home appliance lifespans.`;
-  }
+  const limescaleTemplates = isVeryHard || isHard ? [
+    `With an elevated mineral density of ${avgPpm} PPM, sector ${sector} experiences rapid limescale accumulation on heating elements. Unchecked calcium deposits across the ${postcodeCount} postcodes in this zone can reduce boiler heat transfer efficiency by up to ${boilerLoss}, increasing heating bills over time.`,
+    `Plumbing systems across the ${postcodeCount} postcodes surrounding ${latStr}°N face high limescale risks due to ${avgPpm} PPM water. Residents often notice white chalky build-up on shower heads, kettle elements, and tap aerators requiring periodic descaling.`,
+    `High calcium carbonate density (${avgPpm} PPM / ${clarkDegrees}° Clark) in ${sector} leads to persistent limescale deposits. Shower screens and glass doors near coordinates ${latStr}, ${lngStr} require specialized descaling sprays to maintain clarity.`
+  ] : isModerate ? [
+    `Registering a moderate mineral concentration of ${avgPpm} PPM near ${latStr}°N, water in ${sector} presents a manageable limescale risk. Heating element degradation is limited (approx. ${boilerLoss} loss), though minor white film can develop over time.`,
+    `The ${hardnessCategory.toLowerCase()} water (${clarkDegrees}° Clark) across ${sector}&apos;s ${postcodeCount} postcodes means limescale forms gradually. Kettles and glass shower screens near coordinates ${latStr}, ${lngStr} will benefit from quarterly descaling.`
+  ] : [ // isSoft
+    `Good news for the ${postcodeCount} postcodes in sector ${sector} (centered near ${latStr}°N, ${lngStr}°${lngDirection}): with a low mineral density of just ${avgPpm} PPM, water here is naturally soft. Limescale formation on boiler coils and pipework is virtually zero.`,
+    `Because ${companyName} supplies soft water (${clarkDegrees}° Clark) to ${sector}, households enjoy extended heating boiler lifespans and zero severe limescale blockage across all local plumbing networks.`,
+    `Environmental monitoring at GPS coordinates ${latStr}, ${lngStr} indicates minimal dissolved calcium carbonate (${avgPpm} PPM), keeping kettle heating elements clean and pipework free of mineral scale.`
+  ];
+  const paragraphLimescale = spintax(limescaleTemplates, 1);
 
-  // --- ĐOẠN 3: HƯỚNG DẪN CÀI ĐẶT MUỐI MÁY RỬA BÁT (BOSCH, BEKO, MIELE) ---
-  const paragraphDishwasher = `To protect your dishwasher&apos;s internal ion-exchange resin in ${sector}, manual water softener calibration is required. For Bosch and Siemens dishwashers, the manufacturer-recommended salt setting for ${avgPpm} PPM is ${boschSaltSetting || (isSoft ? "H00" : "H04")}. ${isSoft ? "Since the water is soft, regeneration salt usage can be kept to a minimum." : "Filling the salt reservoir ensures calcium ions are neutralized before heating, preventing cloudy glass film and white spot residue on washed dishes."}`;
+  // --- ĐOẠN 3: HƯỚNG DẪN CÀI ĐẶT MUỐI MÁY RỬA BÁT ---
+  const dishwasherTemplates = [
+    `To protect your dishwasher&apos;s internal ion-exchange resin in ${sector}, manual water softener calibration is required. For Bosch and Siemens dishwashers, the recommended salt setting for ${avgPpm} PPM is ${boschSaltSetting || (isSoft ? "H00" : "H04")}. ${isSoft ? "Since the water is soft, regeneration salt usage can be kept to a minimum." : "Filling the salt reservoir ensures calcium ions are neutralized before heating."}`,
+    `Serving ${postcodeCount} households near ${latStr}°N, appliance setup in ${sector} requires configuring dishwasher softeners according to ${companyName}&apos;s ${avgPpm} PPM rating. Bosch units should be set to ${boschSaltSetting || (isSoft ? "H00" : "H04")}.`,
+    `For pristine, spot-free glassware across ${sector} (GPS ${latStr}, ${lngStr}), adjust dishwasher salt dosage to ${boschSaltSetting || (isSoft ? "H00" : "H04")} based on the local ${clarkDegrees}° Clark water supply.`
+  ];
+  const paragraphDishwasher = spintax(dishwasherTemplates, 2);
 
   // --- ĐOẠN 4: ẢNH HƯỞNG ĐẾN DA, TÓC VÀ XÀ PHÒNG ---
-  const paragraphSkinHair = `Hard minerals interact with fatty acids in soaps, creating insoluble soap scum. In ${sector}, washing with ${avgPpm} PPM water requires approximately ${soapDose} detergent or shampoo to achieve a full lather compared to soft water zones. Furthermore, residents prone to sensitive skin, eczema, or dry hair may benefit from installing an inline shower filter to reduce mineral friction during washing.`;
+  const skinHairTemplates = [
+    `Hard minerals interact with fatty acids in soaps, creating insoluble soap scum. In ${sector}, washing with ${avgPpm} PPM water requires approximately ${soapDose} detergent or shampoo to achieve a full lather compared to soft water zones.`,
+    `Across the ${postcodeCount} postcodes in ${sector} (near GPS ${latStr}°N), bathing in ${avgPpm} PPM water affects soap lathering. Residents prone to dry hair, eczema, or sensitive skin may benefit from installing an inline shower filter.`,
+    `Water supplied by ${companyName} (${avgPpm} PPM / ${clarkDegrees}° Clark) impacts laundry softness in ${sector}. Installing shower filtration systems near coordinates ${latStr}, ${lngStr} helps reduce mineral friction during washing.`
+  ];
+  const paragraphSkinHair = spintax(skinHairTemplates, 3);
 
   // --- ĐOẠN 5: KẾT LUẬN & KHUYÊN DÙNG ---
-  const paragraphVerdict = `Overall, water quality in sector ${sector} reflects ${companyName}&apos;s regional catchment chemistry. Use our interactive setup tool below to view exact brand-by-brand dishwasher settings and recommended limescale protection products for your home.`;
+  const verdictTemplates = [
+    `Overall, water quality in sector ${sector} reflects ${companyName}&apos;s regional catchment chemistry near coordinates ${latStr}°N, ${lngStr}°${lngDirection}. Use our interactive setup tool below to view exact dishwasher settings for Bosch, Beko, and Miele appliances.`,
+    `In summary, ${sector}&apos;s ${avgPpm} PPM rating across ${postcodeCount} postcodes dictates household appliance maintenance. Select your dishwasher brand below for customized salt softener setup.`,
+    `Environmental metrics for ${sector} (${clarkDegrees}° Clark) provide clear guidance for plumbing protection. Use the interactive guide below to check exact appliance settings and recommended limescale solutions.`
+  ];
+  const paragraphVerdict = spintax(verdictTemplates, 4);
 
   // FAQ Items
   const faqItems = [
     {
       question: `What is the exact water hardness in sector ${sector}?`,
-      answer: `Tap water in sector ${sector} averages ${avgPpm} PPM (mg/L) or ${clarkDegrees}° Clark. It is classified as ${hardnessCategory} water supplied by ${companyName}.`,
+      answer: `Tap water in sector ${sector} averages ${avgPpm} PPM (mg/L) or ${clarkDegrees}° Clark. It is classified as ${hardnessCategory.toLowerCase()} water supplied by ${companyName}.`,
     },
     {
       question: `What dishwasher salt setting should I use for Bosch in ${sector}?`,
@@ -152,6 +187,8 @@ export default async function SectorDetailPage({ params }: PageProps) {
         : `Yes, at ${avgPpm} PPM, heating elements in kettles, boilers, and washing machines will accumulate limescale without periodic descaling or water softening.`,
     },
   ];
+
+  // Lấy ngày tháng SEO tất định theo Sector
   const { datePublishedISO, dateModifiedISO, dateModifiedFormatted } = getSeoDates(sector);
 
   // Schema JSON-LD
@@ -272,7 +309,9 @@ export default async function SectorDetailPage({ params }: PageProps) {
               NP
             </div>
             <div>
-              <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Verification & Data Audit</span>
+              <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">
+                Updated: {dateModifiedFormatted} • Data Verified
+              </span>
               <Link href="/about" className="font-bold text-slate-900 hover:text-cyan-600 transition-colors text-sm">
                 Nguyễn Hạc Phong <span className="text-slate-400 font-normal text-xs">• Founder & Data Engineer</span>
               </Link>
@@ -302,7 +341,21 @@ export default async function SectorDetailPage({ params }: PageProps) {
         <div className="mt-12">
           <RelatedSectors currentSector={sector} outcode={outcode} />
         </div>
-
+         {/* 🔥 THÊM ĐOẠN CTA CROSS-LINKING NÀY VÀO ĐÂY */}
+        <div className="mt-8 bg-cyan-50 p-6 sm:p-8 rounded-3xl border border-cyan-100 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+          <div>
+            <h3 className="font-bold text-slate-900 text-lg">Curious how Sector {sector} compares?</h3>
+            <p className="text-sm text-slate-600 mt-1">
+              See how your local water hardness and limescale risk stack up against central London (SW1A 1).
+            </p>
+          </div>
+          <Link 
+            href={`/compare/${canonicalSectorSlug}-vs-sw1a-1`} 
+            className="bg-slate-900 hover:bg-cyan-600 text-white px-6 py-3.5 rounded-2xl text-sm font-bold transition-all shrink-0 cursor-pointer shadow-xs"
+          >
+            Compare vs London (SW1A 1) →
+          </Link>
+        </div>
       </div>
     </div>
   );
