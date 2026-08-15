@@ -52,8 +52,8 @@ export async function getHardnessRankings() {
 export async function getAllOutcodesFromDB() {
   const { data, error } = await supabase
     .from("water_hardness_sectors")
-    .select("outcode, company_name");
-
+    .select("outcode, company_name")
+    .limit(15000); // Giới hạn 15000 bản ghi để tránh quá tải
   if (error || !data) {
     console.error("Lỗi fetch Directory Outcodes:", error);
     return [];
@@ -178,4 +178,22 @@ export async function compareTwoSectors(sector1: string, sector2: string) {
     sector1: item1 ? formatItem(item1) : null,
     sector2: item2 ? formatItem(item2) : null,
   };
+}
+// 6. Lấy toàn bộ danh sách Sector để Build tĩnh (SSG)
+// Trong data.ts
+// lib/data.ts
+export async function getTopSectorsForBuild() {
+  // Chỉ pre-build sẵn 300 sectors có số lượng postcode lớn nhất hoặc trọng điểm
+  const { data, error } = await supabase
+    .from("water_hardness_sectors")
+    .select("outcode, sector")
+    .order("postcode_count", { ascending: false })
+    .limit(300);
+
+  if (error || !data) {
+    console.error("Lỗi fetch top sectors for build:", error);
+    return [];
+  }
+
+  return data;
 }

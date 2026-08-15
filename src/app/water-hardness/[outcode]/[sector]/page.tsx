@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import { cache } from "react";
-import { getSectorData } from "@/lib/data";
+import {  getSectorData, getTopSectorsForBuild } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
 
 // Components
@@ -43,7 +43,15 @@ function generateCompositeSeed(inputStr: string): number {
   }
   return Math.abs(hash);
 }
+// 2. Thay thế hàm generateStaticParams
+export async function generateStaticParams() {
+  const topSectors = await getTopSectorsForBuild();
 
+  return topSectors.map((item) => ({
+    outcode: item.outcode.toLowerCase(),
+    sector: item.sector.toLowerCase().replace(/\s+/g, "-"),
+  }));
+}
 // 1. TỐI ƯU METADATA TĂNG CTR TRÊN GOOGLE
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
