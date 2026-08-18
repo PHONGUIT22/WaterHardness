@@ -57,7 +57,7 @@ export async function generateStaticParams() {
   }));
 }
 
-// TỐI ƯU METADATA TĂNG CTR TRÊN GOOGLE
+// TỐI ƯU METADATA VÀ KHÓA INDEX TRONG GIAI ĐOẠN 1
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
   const data = await fetchSectorDetails(resolvedParams.sector);
@@ -70,6 +70,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `Sector ${data.sector} Water Hardness: ${data.avgPpm} PPM | Bosch & Beko Settings`,
     description: `🚨 Check water hardness for ${data.sector} (${data.companyName}). Avg: ${data.avgPpm} PPM (${data.hardnessCategory}). Get exact dishwasher salt settings for Bosch, Beko & Miele.`,
+    
+    // 🔥 LÁ CHẮN BẢO VỆ DOMAIN: Chặn Google index 9.000 trang Sector lúc web còn mới
+    // Googlebot có bấm vào link xem thì cũng không tính điểm phạt Thin Content / Spam
+    robots: {
+      index: false,
+      follow: true,
+      googleBot: {
+        index: false,
+        follow: true,
+      },
+    },
+
     alternates: {
       canonical: `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}`,
     },
