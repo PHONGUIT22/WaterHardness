@@ -143,7 +143,7 @@ export default function ApplianceSetupGuide({
         </div>
       </div>
 
-      {/* 2. BỘ CHỌN THƯƠNG HIỆU MÁY RỦA BÁT & CÀI ĐẶT MUỐI (BRAND SELECTOR) */}
+      {/* 2. BỘ CHỌN THƯƠNG HIỆU MÁY RỬA BÁT & CÀI ĐẶT MUỐI (BRAND SELECTOR) */}
       <div className="bg-slate-900 text-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-800">
         <div className="flex items-center gap-2 text-cyan-400 font-bold text-xs uppercase tracking-wider mb-2">
           <WashingMachine className="w-4 h-4" /> Dishwasher Setup Guide
@@ -259,7 +259,7 @@ export default function ApplianceSetupGuide({
             <a
               href="https://www.amazon.co.uk/dp/B0032AM8A0?tag=YOUR_AMAZON_TAG" 
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow sponsored noopener"
               className="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2.5 rounded-xl transition-all text-xs flex items-center justify-center gap-1.5 shadow-md"
             >
               Check Price on Amazon <ExternalLink className="w-3.5 h-3.5" />
@@ -280,7 +280,7 @@ export default function ApplianceSetupGuide({
             <a
               href="https://www.amazon.co.uk/s?k=shower+head+filter+hard+water&tag=YOUR_AMAZON_TAG"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow sponsored noopener"
               className="w-full bg-slate-700 hover:bg-cyan-600 text-white font-bold py-2.5 rounded-xl transition-all text-xs flex items-center justify-center gap-1.5"
             >
               Check Shower Filters <ExternalLink className="w-3.5 h-3.5" />
@@ -301,7 +301,7 @@ export default function ApplianceSetupGuide({
             <a
               href="https://www.amazon.co.uk/s?k=appliance+descaler+tablets&tag=YOUR_AMAZON_TAG"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow sponsored noopener"
               className="w-full bg-slate-700 hover:bg-cyan-600 text-white font-bold py-2.5 rounded-xl transition-all text-xs flex items-center justify-center gap-1.5"
             >
               View Descalers <ExternalLink className="w-3.5 h-3.5" />
