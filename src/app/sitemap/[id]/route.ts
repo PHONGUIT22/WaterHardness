@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { supabase } from "@/lib/supabase";
 import { getAllOutcodesFromDB } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
+import { guidesData } from "@/lib/guidesData";
 
 export const revalidate = 86400; // ISR Cache 1 ngày trên CDN
 
@@ -14,6 +15,7 @@ export async function generateStaticParams() {
     { id: 'static.xml' },
     { id: 'outcodes.xml' },
     { id: 'compare.xml' },
+    { id: 'guides.xml' },
   ];
 
   // Pre-build sẵn 20 file sitemap sectors (sectors-1.xml đến sectors-20.xml)
@@ -144,6 +146,24 @@ export async function GET(
         });
       }
     }
+  }
+
+  // 5. SITEMAP GUIDES & BLOG HUBS (E-E-A-T Editorial Hub)
+  else if (cleanId === 'guides') {
+    routes = [
+      {
+        url: `${baseUrl}/guides`,
+        lastModified: getSeoDates('guides-hub').dateModifiedISO,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+      },
+      ...guidesData.map((guide) => ({
+        url: `${baseUrl}/guides/${guide.slug}`,
+        lastModified: guide.dateModified,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+      }))
+    ];
   }
 
   if (routes.length === 0) {

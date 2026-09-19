@@ -64,6 +64,9 @@ export default function Navbar() {
         {/* LINKS GÓC PHẢI */}
         <div className="flex items-center gap-3 shrink-0">
           <nav className="hidden lg:flex items-center gap-6 font-medium text-slate-600 text-sm mr-2">
+            <Link href="/guides" className="hover:text-slate-900 transition-colors">
+              Guides & Blog
+            </Link>
             <Link href="/outcodes" className="hover:text-slate-900 transition-colors">
               All Outcodes
             </Link>

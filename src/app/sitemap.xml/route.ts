@@ -19,6 +19,9 @@ export async function GET() {
     <sitemap>
       <loc>${baseUrl}/sitemap/compare.xml</loc>
     </sitemap>
+    <sitemap>
+      <loc>${baseUrl}/sitemap/guides.xml</loc>
+    </sitemap>
   </sitemapindex>`.trim();
 
   return new NextResponse(xml, {
