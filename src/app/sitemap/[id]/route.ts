@@ -100,21 +100,13 @@ export async function GET(
       "bs1-1-vs-m1-1",
     ];
 
-    routes = [
-      { 
-        url: `${baseUrl}/compare`, 
-        lastModified: getSeoDates('compare-root').dateModifiedISO, 
-        changeFrequency: 'daily', 
-        priority: 0.9 
-      },
-      ...popularPairs.map((pair) => ({
-        url: `${baseUrl}/compare/${pair}`,
-        // 👉 TRÙNG KHỚP 100% VỚI Schema JSON-LD TRONG TRANG SO SÁNH
-        lastModified: getSeoDates(pair).dateModifiedISO,
-        changeFrequency: 'weekly',
-        priority: 0.8,
-      }))
-    ];
+    routes = popularPairs.map((pair) => ({
+      url: `${baseUrl}/compare/${pair}`,
+      // 👉 TRÙNG KHỚP 100% VỚI Schema JSON-LD TRONG TRANG SO SÁNH
+      lastModified: getSeoDates(pair).dateModifiedISO,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    }));
   }
 
   // 4. SITEMAP CHI TIẾT TỪNG TRANG SECTOR (500 URLs / FILE)

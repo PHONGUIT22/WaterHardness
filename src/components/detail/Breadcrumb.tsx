@@ -18,7 +18,15 @@ export default function Breadcrumb({ outcode, sector }: Props) {
 
       <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
 
-      {/* 👉 SỬA DÒNG NÀY: Dùng /water-hardness/ thay vì /outcodes/ */}
+      <Link 
+        href="/outcodes" 
+        className="hover:text-cyan-600 transition-colors font-medium"
+      >
+        All Outcodes
+      </Link>
+
+      <ChevronRight className="w-3.5 h-3.5 text-slate-300" />
+
       <Link 
         href={`/water-hardness/${cleanOutcode.toLowerCase()}`} 
         className="hover:text-cyan-600 transition-colors font-medium"

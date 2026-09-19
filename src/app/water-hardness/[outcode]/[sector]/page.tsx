@@ -20,7 +20,8 @@ import {
   MapPin,
   Flame,
   Activity,
-  Building2
+  Building2,
+  ExternalLink
 } from "lucide-react";
 
 // BẬT ISR: Cache trang Sector trên CDN trong 24 tiếng
@@ -68,8 +69,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonicalSectorSlug = data.sector.toLowerCase().replace(/\s+/g, "-");
 
   return {
-    title: `Sector ${data.sector} Water Hardness: ${data.avgPpm} PPM | Bosch & Beko Settings`,
-    description: `🚨 Check water hardness for ${data.sector} (${data.companyName}). Avg: ${data.avgPpm} PPM (${data.hardnessCategory}). Get exact dishwasher salt settings for Bosch, Beko & Miele.`,
+    title: `${data.sector} Water Hardness: ${data.avgPpm} PPM & Settings`,
+    description: `Water hardness in ${data.sector} (${data.companyName}) averages ${data.avgPpm} PPM (${data.clarkDegrees}° Clark). Dishwasher salt calibrations & boiler limescale risks.`,
     
     // 🔥 LÁ CHẮN BẢO VỆ DOMAIN: Chặn Google index 9.000 trang Sector lúc web còn mới
     // Googlebot có bấm vào link xem thì cũng không tính điểm phạt Thin Content / Spam
@@ -86,12 +87,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}`,
     },
     openGraph: {
-      title: `Sector ${data.sector} Water Hardness: ${data.avgPpm} PPM (${data.hardnessCategory})`,
-      description: `Check exact water hardness metrics and dishwasher salt settings for sector ${data.sector}.`,
+      title: `${data.sector} Water Hardness: ${data.avgPpm} PPM (${data.companyName})`,
+      description: `Official water hardness report for sector ${data.sector}: ${data.avgPpm} PPM (${data.clarkDegrees}° Clark). Check limescale risks & appliance settings.`,
       url: `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}`,
       siteName: "WaterHardness.uk",
       locale: "en_GB",
       type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${data.sector} Water Hardness: ${data.avgPpm} PPM`,
+      description: `Water hardness & appliance salt settings for sector ${data.sector} (${data.companyName}).`,
     },
   };
 }
@@ -245,51 +251,82 @@ export default async function SectorDetailPage({ params }: PageProps) {
   // Lấy ngày tháng SEO tất định theo Sector
   const { datePublishedISO, dateModifiedISO, dateModifiedFormatted } = getSeoDates(sector);
 
-  // Schema JSON-LD đầy đủ
-  const schema = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": `Sector ${sector} Water Hardness & Limescale Quality Report`,
-      "description": `Comprehensive water hardness metrics, mineral PPM ratings, and dishwasher salt settings for sector ${sector} (${companyName}).`,
-      "image": "https://waterhardness.uk/og-image.png",
-      "datePublished": datePublishedISO,
-      "dateModified": dateModifiedISO,
-      "author": {
-        "@type": "Person",
-        "@id": "https://waterhardness.uk/#person",
-        "name": "Nguyễn Hạc Phong",
-        "jobTitle": "Lead Water Data Engineer",
-        "url": "https://waterhardness.uk/about"
+  // Schema JSON-LD chuẩn @graph với QuantitativeValue & PropertyValue
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}#webpage`,
+        "url": `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}`,
+        "name": `Sector ${sector} Water Hardness Report (${avgPpm} PPM)`,
+        "isPartOf": { "@id": "https://waterhardness.uk/#website" },
+        "breadcrumb": { "@id": `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}#breadcrumb` }
       },
-      "publisher": {
-        "@type": "Organization",
-        "name": "WaterHardness.uk",
-        "logo": { "@type": "ImageObject", "url": "https://waterhardness.uk/logo.png" }
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqItems.map((f) => ({
-        "@type": "Question",
-        "name": f.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": f.answer,
+      {
+        "@type": "Article",
+        "@id": `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}#article`,
+        "headline": `Water Hardness in Sector ${sector}: ${avgPpm} PPM Quality Report`,
+        "description": `Comprehensive water hardness metrics, mineral PPM ratings, and dishwasher salt settings for sector ${sector} (${companyName}).`,
+        "image": "https://waterhardness.uk/og-image.png",
+        "datePublished": datePublishedISO,
+        "dateModified": dateModifiedISO,
+        "author": {
+          "@type": "Person",
+          "@id": "https://waterhardness.uk/#person",
+          "name": "Nguyễn Hạc Phong",
+          "jobTitle": "Lead Water Data Engineer",
+          "url": "https://waterhardness.uk/about"
         },
-      })),
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://waterhardness.uk" },
-        { "@type": "ListItem", "position": 2, "name": `Outcode ${outcode}`, "item": `https://waterhardness.uk/water-hardness/${canonicalOutcode}` },
-        { "@type": "ListItem", "position": 3, "name": `Sector ${sector}`, "item": `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}` }
-      ]
-    }
-  ];
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://waterhardness.uk/#organization",
+          "name": "WaterHardness.uk",
+          "logo": { "@type": "ImageObject", "url": "https://waterhardness.uk/logo.png" }
+        },
+        "about": [
+          {
+            "@type": "Place",
+            "name": `Postcode Sector ${sector}`,
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": latitude || 54.0,
+              "longitude": longitude || -2.0
+            }
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Water Hardness",
+            "value": avgPpm,
+            "unitText": "mg/L CaCO3",
+            "description": `${hardnessCategory} water supplied by ${companyName}`
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}#breadcrumb`,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://waterhardness.uk" },
+          { "@type": "ListItem", "position": 2, "name": "All Outcodes", "item": "https://waterhardness.uk/outcodes" },
+          { "@type": "ListItem", "position": 3, "name": `Outcode ${outcode}`, "item": `https://waterhardness.uk/water-hardness/${canonicalOutcode}` },
+          { "@type": "ListItem", "position": 4, "name": `Sector ${sector}`, "item": `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}` }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}#faq`,
+        "mainEntity": faqItems.map((f) => ({
+          "@type": "Question",
+          "name": f.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.answer
+          }
+        }))
+      }
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-[#FDFDFD] pb-20">
@@ -361,8 +398,19 @@ export default async function SectorDetailPage({ params }: PageProps) {
           </div>
         </div>
 
+        {/* DIRECT ANSWER CITABILITY BLOCK (AI OVERVIEWS & FEATURED SNIPPETS) */}
+        <section className="bg-cyan-50 border-2 border-cyan-200 rounded-3xl p-6 sm:p-7 mb-8 text-slate-800">
+          <div className="flex items-center gap-2 text-cyan-800 font-bold text-xs uppercase tracking-wider mb-2">
+            <CheckCircle2 className="w-4 h-4 text-cyan-600" />
+            <span>Direct Answer & Quick Diagnostic</span>
+          </div>
+          <p className="text-base sm:text-lg font-medium leading-relaxed text-slate-900">
+            Tap water in postcode sector <strong>{sector}</strong> has an average water hardness of <strong>{avgPpm} PPM</strong> (mg/L CaCO₃), which equals <strong>{clarkDegrees}° Clark</strong> ({frenchDegrees}°fH / {germanDegrees}°dH). Classified as <strong>{hardnessCategory.toLowerCase()}</strong> water distributed by <strong>{companyName}</strong>, domestic dishwashers require setting <strong>{boschSaltSetting || (isSoft ? "H00" : "H04")}</strong> and combi boilers face an estimated thermal efficiency drag of <strong>{boilerLossPercentage}</strong> without scale protection.
+          </p>
+        </section>
+
         {/* SEO ARTICLE DÀY ĐẶN - NỘI DUNG ĐA TẦNG CHỐNG HCU */}
-        <article className="prose prose-slate max-w-none text-slate-700 mb-10 leading-relaxed text-base sm:text-lg bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200/80 space-y-4">
+        <article className="prose prose-slate max-w-none text-slate-700 mb-8 leading-relaxed text-base sm:text-lg bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200/80 space-y-4">
           <div className="flex items-center gap-2 text-cyan-600 font-bold text-xs uppercase tracking-wider mb-2">
             <Sparkles className="w-4 h-4" /> Comprehensive Hydro-Geological Analysis
           </div>
@@ -377,24 +425,90 @@ export default async function SectorDetailPage({ params }: PageProps) {
           <p>{paragraphApplianceGuidance}</p>
         </article>
 
-        {/* KHỐI TÁC GIẢ E-E-A-T */}
-        <div className="flex items-center justify-between bg-white p-4 rounded-2xl border border-slate-200/80 mb-8 text-xs shadow-xs">
+        {/* MULTI-UNIT METRIC CONVERSION TABLE FOR CITABILITY & AI OVERVIEWS */}
+        <div className="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-8 shadow-sm mb-10 overflow-x-auto">
+          <div className="flex items-center gap-2 text-cyan-600 font-bold text-xs uppercase tracking-wider mb-1">
+            <Activity className="w-4 h-4" /> Standardized Water Chemistry Metrics
+          </div>
+          <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-1">
+            Water Hardness Measurement Conversions for Sector {sector}
+          </h3>
+          <p className="text-xs text-slate-500 mb-5">
+            Standardised unit equivalents used across British plumbing standards (BS 7593), European appliance manuals, and water testing:
+          </p>
+          <table className="w-full text-left text-xs sm:text-sm">
+            <thead className="bg-slate-50 border-b border-slate-200 text-slate-700 font-bold uppercase text-[11px]">
+              <tr>
+                <th className="py-3 px-4">Measurement Scale</th>
+                <th className="py-3 px-4">Symbol / Standard</th>
+                <th className="py-3 px-4 text-right">Value in {sector}</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 text-slate-700">
+              <tr>
+                <td className="py-3 px-4 font-semibold text-slate-900">Parts Per Million (UK/US standard)</td>
+                <td className="py-3 px-4 font-mono text-slate-500">PPM / mg/L CaCO₃</td>
+                <td className="py-3 px-4 text-right font-black text-cyan-700">{avgPpm} PPM</td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4 font-semibold text-slate-900">English Clark Degrees</td>
+                <td className="py-3 px-4 font-mono text-slate-500">°Clark / °e</td>
+                <td className="py-3 px-4 text-right font-bold">{clarkDegrees} °Clark</td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4 font-semibold text-slate-900">French Degrees</td>
+                <td className="py-3 px-4 font-mono text-slate-500">°fH</td>
+                <td className="py-3 px-4 text-right font-bold">{frenchDegrees} °fH</td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4 font-semibold text-slate-900">German Degrees (General Hardness)</td>
+                <td className="py-3 px-4 font-mono text-slate-500">°dH / dGH</td>
+                <td className="py-3 px-4 text-right font-bold">{germanDegrees} °dH</td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4 font-semibold text-slate-900">Millimoles Per Litre</td>
+                <td className="py-3 px-4 font-mono text-slate-500">mmol/L</td>
+                <td className="py-3 px-4 text-right font-bold">{(avgPpm * 0.01).toFixed(2)} mmol/L</td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4 font-semibold text-slate-900">Grains Per Gallon (US)</td>
+                <td className="py-3 px-4 font-mono text-slate-500">gpg</td>
+                <td className="py-3 px-4 text-right font-bold">{(avgPpm / 17.118).toFixed(1)} gpg</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {/* KHỐI TÁC GIẢ E-E-A-T & AUTHORITY CITATIONS */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 mb-8 text-xs shadow-xs">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-slate-900 text-cyan-400 rounded-full flex items-center justify-center font-black text-sm shrink-0 border border-slate-800">
               NP
             </div>
             <div>
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">
-                Updated: {dateModifiedFormatted} • DWI Compliant Data
+                Updated: {dateModifiedFormatted} • DWI & Defra Compliant Data
               </span>
               <Link href="/about" className="font-bold text-slate-900 hover:text-cyan-600 transition-colors text-sm">
                 Nguyễn Hạc Phong <span className="text-slate-400 font-normal text-xs">• Lead Water Data Engineer</span>
               </Link>
             </div>
           </div>
-          <Link href="/about" className="text-cyan-600 font-bold hover:underline hidden sm:inline text-xs">
-            WSZ Methodology & DWI Data Sources →
-          </Link>
+          <div className="flex items-center gap-4 text-xs font-semibold">
+            <a
+              href="https://www.dwi.gov.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-500 hover:text-cyan-600 transition-colors inline-flex items-center gap-1"
+            >
+              <span>Drinking Water Inspectorate (DWI)</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+            <span className="text-slate-300 hidden sm:inline">•</span>
+            <Link href="/about" className="text-cyan-600 font-bold hover:underline hidden sm:inline">
+              Methodology & Sources →
+            </Link>
+          </div>
         </div>
 
         {/* CLIENT COMPONENT INTERACTIVE (GAUGE BAR + BRAND SELECTOR + AFFILIATE) */}

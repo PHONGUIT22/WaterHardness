@@ -48,18 +48,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const clarkDegrees = (data.avgPpm * 0.07).toFixed(1);
 
   return {
-    title: `Outcode ${data.outcode} Water Hardness: ${data.avgPpm} PPM (${clarkDegrees}° Clark) | Quality Report`,
-    description: `🚨 Analyzing ${data.totalSectors} sectors across outcode ${data.outcode} (${data.companyName}). Avg hardness: ${data.avgPpm} PPM (${hardnessCategory}). Check limescale risks, boiler impact & Bosch settings.`,
+    title: `${data.outcode} Water Hardness: ${data.avgPpm} PPM & Guide`,
+    description: `Water hardness in outcode ${data.outcode} (${data.companyName}) averages ${data.avgPpm} PPM across ${data.totalSectors} sectors. Check limescale risks & appliance settings.`,
     alternates: {
       canonical: `https://waterhardness.uk/water-hardness/${data.outcode.toLowerCase()}`,
     },
     openGraph: {
-      title: `Water Hardness in ${data.outcode}: ${data.avgPpm} PPM (${data.companyName})`,
-      description: `Official water hardness report for outcode ${data.outcode}. Compare softest vs hardest sectors and check local appliance calibrations.`,
+      title: `${data.outcode} Water Hardness: ${data.avgPpm} PPM (${data.companyName})`,
+      description: `Official water hardness report for outcode ${data.outcode}: average ${data.avgPpm} PPM. Compare softest vs hardest sectors and check local appliance calibrations.`,
       url: `https://waterhardness.uk/water-hardness/${data.outcode.toLowerCase()}`,
       siteName: "WaterHardness.uk",
       locale: "en_GB",
       type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${data.outcode} Water Hardness: ${data.avgPpm} PPM (${data.companyName})`,
+      description: `Water hardness in outcode ${data.outcode} averages ${data.avgPpm} PPM across ${data.totalSectors} sectors.`,
     },
   };
 }
@@ -234,7 +239,8 @@ export default async function OutcodeHubPage({ params }: PageProps) {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://waterhardness.uk" },
-          { "@type": "ListItem", "position": 2, "name": `Outcode ${outcode}`, "item": `https://waterhardness.uk/water-hardness/${cleanOutcodeSlug}` }
+          { "@type": "ListItem", "position": 2, "name": "All Outcodes", "item": "https://waterhardness.uk/outcodes" },
+          { "@type": "ListItem", "position": 3, "name": `Outcode ${outcode}`, "item": `https://waterhardness.uk/water-hardness/${cleanOutcodeSlug}` }
         ]
       }
     ]

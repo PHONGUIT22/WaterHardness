@@ -42,10 +42,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!dataA || !dataB) return { title: "Comparison Not Found - WaterHardness.uk" };
 
   return {
-    title: `Water Hardness Comparison: Sector ${dataA.sector} vs Sector ${dataB.sector}`,
-    description: `Compare tap water hardness between Sector ${dataA.sector} (${dataA.avgPpm} PPM) and Sector ${dataB.sector} (${dataB.avgPpm} PPM). Check limescale risks & dishwasher settings.`,
+    title: `${dataA.sector} vs ${dataB.sector} Water Hardness Comparison`,
+    description: `Compare tap water hardness: Sector ${dataA.sector} (${dataA.avgPpm} PPM) vs Sector ${dataB.sector} (${dataB.avgPpm} PPM). Check limescale risks & appliance settings.`,
     alternates: {
       canonical: `https://waterhardness.uk/compare/${resolvedParams.pair}`,
+    },
+    openGraph: {
+      title: `${dataA.sector} vs ${dataB.sector} Water Hardness Comparison`,
+      description: `Compare tap water hardness: Sector ${dataA.sector} (${dataA.avgPpm} PPM) vs Sector ${dataB.sector} (${dataB.avgPpm} PPM).`,
+      url: `https://waterhardness.uk/compare/${resolvedParams.pair}`,
+      siteName: "WaterHardness.uk",
+      locale: "en_GB",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${dataA.sector} vs ${dataB.sector} Water Hardness Comparison`,
+      description: `Compare water hardness between Sector ${dataA.sector} and Sector ${dataB.sector}.`,
     },
   };
 }

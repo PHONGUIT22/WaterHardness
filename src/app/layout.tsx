@@ -70,6 +70,20 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@graph": [
                 {
+                  "@type": "WebSite",
+                  "@id": "https://waterhardness.uk/#website",
+                  "url": "https://waterhardness.uk",
+                  "name": "WaterHardness.uk",
+                  "publisher": {
+                    "@id": "https://waterhardness.uk/#organization"
+                  },
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://waterhardness.uk/water-hardness/{search_term_string}",
+                    "query-input": "required name=search_term_string"
+                  }
+                },
+                {
                   "@type": "Organization",
                   "@id": "https://waterhardness.uk/#organization",
                   "name": "WaterHardness",
