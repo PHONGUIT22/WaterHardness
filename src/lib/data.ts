@@ -197,3 +197,16 @@ export async function getTopSectorsForBuild() {
 
   return data;
 }
+
+// 7. Lấy danh sách Outcode thuộc về một Thành phố dựa theo tiền tố Outcode (VD: ["SW", "SE", "E", ...])
+export async function getOutcodesForCity(outcodePrefixes: string[]) {
+  const allOutcodes = await getAllOutcodesFromDB();
+  return allOutcodes
+    .filter((item) => {
+      return outcodePrefixes.some((prefix) => {
+        const regex = new RegExp(`^${prefix}\\d`, 'i');
+        return regex.test(item.outcode);
+      });
+    })
+    .sort((a, b) => a.outcode.localeCompare(b.outcode, undefined, { numeric: true, sensitivity: 'base' }));
+}
