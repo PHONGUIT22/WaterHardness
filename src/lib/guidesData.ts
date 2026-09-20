@@ -1988,6 +1988,295 @@ export const guidesData: GuideArticle[] = [
         <li><strong>Kettle Care on a Budget:</strong> Instead of expensive brand-name descalers, buy a 1kg tub of food-grade citric acid powder online (£5). One tablespoon boiled in your kettle dissolves all scale in 5 minutes with zero lingering smell.</li>
       </ol>
     `
+  },
+  {
+    slug: "severn-trent-water-hardness-guide",
+    title: "Severn Trent Water Hardness: Postcode Checker & PPM Table",
+    metaTitle: "Severn Trent Water Hardness Guide",
+    metaDescription: "Check Severn Trent water hardness across the Midlands. Compare soft water in Birmingham with hard water in Nottingham, Leicester, Derby & Coventry.",
+    targetKeyword: "severn trent water hardness",
+    category: "Regional Hardness",
+    datePublished: "2025-02-25T08:00:00Z",
+    dateModified: "2026-09-17T14:15:00Z",
+    readingTime: "6 min read",
+    quickVerdict: {
+      ppmRange: "40 – 320 PPM (Varies dramatically by catchment)",
+      classification: "Soft to Very Hard",
+      supplier: "Severn Trent Water",
+      keyTakeaway: "Severn Trent water hardness varies dramatically: Birmingham receives naturally soft water (40–60 PPM) via gravity from Wales (Elan Valley), whereas Nottingham, Leicester, and Derby receive hard water (220–300 PPM) abstracted from lowland rivers and sandstone boreholes."
+    },
+    relatedOutcodes: ["B1", "CV1", "NG1", "LE1", "DE1", "ST1", "WR1"],
+    faqItems: [
+      {
+        question: "Is Severn Trent tap water hard or soft?",
+        answer: "It depends entirely on where you live. Severn Trent covers both the softest city in England (Birmingham at 45 PPM) and some of the hardest water regions in the East Midlands (Nottingham, Derby, and Leicester at 240–300 PPM)."
+      },
+      {
+        question: "Why is water in Birmingham soft while Nottingham is hard?",
+        answer: "Birmingham receives water piped 73 miles from upland Welsh reservoirs in the Elan Valley (impermeable slate and gritstone), whereas Nottingham and Leicester draw water from lowland rivers (Trent and Derwent) and mineral-rich Sherwood sandstone aquifers."
+      },
+      {
+        question: "Do I need dishwasher salt in Severn Trent areas?",
+        answer: "If you live in Birmingham, Wolverhampton, or the Black Country, dishwasher salt is optional (set dial to H00 or H01). If you live in Nottingham, Derby, Leicester, or Coventry, dishwasher salt is mandatory (set dial to H04 or H05)."
+      },
+      {
+        question: "Does Severn Trent water damage heating boilers?",
+        answer: "In East Midlands towns (NG, LE, DE postcodes), uninhibited hard water causes rapid boiler heat exchanger calcification. Fitting an inline scale inhibitor is recommended under British Standard BS 7593."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        When people ask <em>"is Severn Trent water hard?"</em>, the honest answer is: <strong>it depends entirely on which side of the Midlands you live</strong>. Severn Trent Water manages an extraordinary hydrogeological territory that spans both the naturally softest tap water in England (Birmingham at 45 PPM) and heavy limescale hotspots in the East Midlands (Nottingham and Leicester exceeding 280 PPM).
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">The Great Midlands Divide: The Elan Valley Miracle vs River Trent Abstraction</h2>
+      <p class="text-slate-600 mb-4">
+        To understand why two cities just 45 miles apart have completely opposite water chemistry, look at where Severn Trent gets its supply:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+        <div class="bg-emerald-50 p-5 rounded-2xl border border-emerald-200">
+          <h3 class="font-bold text-emerald-950 text-base mb-2">🏔️ West Midlands: Welsh Mountain Water</h3>
+          <p class="text-xs text-slate-700 leading-relaxed">
+            Since 1904, Birmingham (<a href="/water-hardness/b1" class="text-cyan-700 hover:underline font-semibold">B1</a>) has been supplied via the 73-mile Elan Valley Aqueduct from Mid Wales. Rain falling on Welsh slate and granite collects zero chalk, delivering pristine, naturally soft water (40–60 PPM) by pure gravity into Frankley reservoir.
+          </p>
+        </div>
+        <div class="bg-amber-50 p-5 rounded-2xl border border-amber-200">
+          <h3 class="font-bold text-amber-950 text-base mb-2">🏛️ East Midlands: Lowland River & Sandstone</h3>
+          <p class="text-xs text-slate-700 leading-relaxed">
+            Nottingham (<a href="/water-hardness/ng1" class="text-cyan-700 hover:underline font-semibold">NG1</a>), Leicester (<a href="/water-hardness/le1" class="text-cyan-700 hover:underline font-semibold">LE1</a>), and Derby (<a href="/water-hardness/de1" class="text-cyan-700 hover:underline font-semibold">DE1</a>) rely on the River Trent, River Derwent, and deep boreholes in Sherwood sandstone and limestone aquifers. Tap water carries 240–300 PPM of dissolved minerals.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Severn Trent Water Hardness Table: West vs East Midlands</h2>
+      <p class="text-slate-600 mb-4">
+        Verify your local postcode area below to see whether your address falls into the soft Welsh corridor or the hard East Midlands basin:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left border-collapse border border-slate-200 text-sm">
+          <thead>
+            <tr class="bg-slate-100 text-slate-800 font-semibold">
+              <th class="border border-slate-200 p-3">Midlands City / Town</th>
+              <th class="border border-slate-200 p-3">Postcode Hub</th>
+              <th class="border border-slate-200 p-3">Average PPM</th>
+              <th class="border border-slate-200 p-3">Clark (°e)</th>
+              <th class="border border-slate-200 p-3">Hardness Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Birmingham</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/b1" class="text-cyan-600 hover:underline font-semibold">B1</a> / B15</td>
+              <td class="border border-slate-200 p-3 font-bold text-emerald-600">45 PPM</td>
+              <td class="border border-slate-200 p-3">3.2° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-emerald-600">Naturally Soft</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Coventry</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/cv1" class="text-cyan-600 hover:underline font-semibold">CV1</a> / CV6</td>
+              <td class="border border-slate-200 p-3 font-medium text-amber-700">220 PPM</td>
+              <td class="border border-slate-200 p-3">15.4° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-amber-700">Moderately Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Nottingham</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/ng1" class="text-cyan-600 hover:underline font-semibold">NG1</a> / NG7</td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">265 PPM</td>
+              <td class="border border-slate-200 p-3">18.6° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Leicester</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/le1" class="text-cyan-600 hover:underline font-semibold">LE1</a> / LE2</td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">275 PPM</td>
+              <td class="border border-slate-200 p-3">19.3° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Derby</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/de1" class="text-cyan-600 hover:underline font-semibold">DE1</a> / DE22</td>
+              <td class="border border-slate-200 p-3 font-medium text-amber-700">240 PPM</td>
+              <td class="border border-slate-200 p-3">16.8° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-amber-700">Moderately Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Stoke-on-Trent</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/st1" class="text-cyan-600 hover:underline font-semibold">ST1</a> / ST4</td>
+              <td class="border border-slate-200 p-3 font-medium text-emerald-700">95 PPM</td>
+              <td class="border border-slate-200 p-3">6.7° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-emerald-700">Slightly Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Worcester</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/wr1" class="text-cyan-600 hover:underline font-semibold">WR1</a> / WR3</td>
+              <td class="border border-slate-200 p-3 font-medium text-amber-700">185 PPM</td>
+              <td class="border border-slate-200 p-3">13.0° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-amber-700">Moderate</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Appliance Care Rules for Midlands Households</h2>
+      <p class="text-slate-600 mb-4">
+        Because of this dramatic regional variance, manufacturer default settings ruin appliances if you apply one rule to the whole Midlands:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>Birmingham (B postcodes):</strong> Turn off your dishwasher salt regeneration (set to H00). Using salt with naturally soft water causes irreversible glass etching and wastes money. Your combi boiler runs at 100% heat transfer efficiency without scale reducers.</li>
+        <li><strong>East Midlands (NG, LE, DE postcodes):</strong> Set dishwashers to H04 or H05. Fit an electrolytic inline scale inhibitor on your combi boiler inlet to satisfy British Standard BS 7593 warranty clauses. Descale kettles monthly with citric acid crystals.</li>
+      </ul>
+    `
+  },
+  {
+    slug: "beko-dishwasher-salt-settings-uk",
+    title: "Beko Dishwasher Salt Settings: UK Water Hardness Guide",
+    metaTitle: "Beko Dishwasher Salt Settings UK",
+    metaDescription: "Calibrate your Beko dishwasher water hardness level (r1 to r5) against UK water hardness PPM and Clark degrees to prevent cloudy glasses & scale.",
+    targetKeyword: "beko dishwasher salt settings uk",
+    category: "Appliance Care",
+    datePublished: "2025-03-05T08:00:00Z",
+    dateModified: "2026-09-18T16:45:00Z",
+    readingTime: "5 min read",
+    quickVerdict: {
+      classification: "Appliance Calibration Matrix",
+      supplier: "Compatible with all UK Water Suppliers",
+      keyTakeaway: "Setting your Beko dishwasher water hardness level (Level 1 to 5 / r1 to r5) to match your local PPM ensures sparkling glassware, prevents heater burnout, and stops unnecessary salt consumption."
+    },
+    relatedOutcodes: [],
+    faqItems: [
+      {
+        question: "How do I know what hardness level to set my Beko dishwasher?",
+        answer: "Look up your postcode's average water hardness on WaterHardness.uk. If your water is between 220 and 310 PPM (typical for London, Bristol, and the South East), set your Beko machine to Level 3 (r3). For over 310 PPM, set to Level 4 (r4)."
+      },
+      {
+        question: "Why is the red 'S' light flashing on my Beko dishwasher?",
+        answer: "The red 'S' (two curved arrows resembling an S) is the Salt Refill Indicator. It illuminates when the salt reservoir inside the bottom of the tub is empty. After refilling with granular dishwasher salt, the light turns off after 1–2 wash cycles."
+      },
+      {
+        question: "Do I need salt if I use All-in-One dishwasher tablets in the UK?",
+        answer: "If your water hardness exceeds 200 PPM (14° Clark), yes. Built-in tablet softeners cannot cope with hard UK mains water, resulting in chalky deposits on glasses and scale encrustation around the heating element."
+      },
+      {
+        question: "How do I adjust the mechanical dial inside a Beko dishwasher?",
+        answer: "Most Beko dishwashers have a mechanical rotary dial on the left wall of the inner tub in addition to electronic programming. Turn this dial with a flat screwdriver or coin to match the electronic setting level (1 to 5)."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        Beko is the UK’s most popular dishwasher brand, but thousands of British households leave their machines set to factory Level 3. In soft water areas (Manchester, Scotland), this wastes bags of expensive salt and corrodes fine glassware. In hard water areas (London, Surrey, Kent), it leads to cloudy pint glasses and furred heating elements. Here is how to <strong>calibrate your Beko dishwasher water hardness setting correctly</strong> in under three minutes.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Master Beko Water Hardness Calibration Matrix</h2>
+      <p class="text-slate-600 mb-4">
+        Match your local water hardness (PPM or English Degrees Clark) from our postcode search against Beko’s official electronic levels:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left border-collapse border border-slate-200 text-sm">
+          <thead>
+            <tr class="bg-slate-100 text-slate-800 font-semibold">
+              <th class="border border-slate-200 p-3">Beko Level</th>
+              <th class="border border-slate-200 p-3">Display Code</th>
+              <th class="border border-slate-200 p-3">PPM (mg/L)</th>
+              <th class="border border-slate-200 p-3">Clark (°e)</th>
+              <th class="border border-slate-200 p-3">German (°dH)</th>
+              <th class="border border-slate-200 p-3">UK Regions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-emerald-700">Level 0 / 1</td>
+              <td class="border border-slate-200 p-3 font-mono">r1</td>
+              <td class="border border-slate-200 p-3">0 – 130 PPM</td>
+              <td class="border border-slate-200 p-3">0 – 9.1°</td>
+              <td class="border border-slate-200 p-3">0 – 7°</td>
+              <td class="border border-slate-200 p-3">Scotland, Manchester, Birmingham</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Level 2</td>
+              <td class="border border-slate-200 p-3 font-mono">r2</td>
+              <td class="border border-slate-200 p-3">130 – 220 PPM</td>
+              <td class="border border-slate-200 p-3">9.2° – 15.4°</td>
+              <td class="border border-slate-200 p-3">8 – 12°</td>
+              <td class="border border-slate-200 p-3">Wales, Leeds, Cornwall, Sheffield</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-amber-700">Level 3 (Default)</td>
+              <td class="border border-slate-200 p-3 font-mono">r3</td>
+              <td class="border border-slate-200 p-3">220 – 310 PPM</td>
+              <td class="border border-slate-200 p-3">15.5° – 21.7°</td>
+              <td class="border border-slate-200 p-3">13 – 17°</td>
+              <td class="border border-slate-200 p-3">Central London, Bristol, Nottingham</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">Level 4</td>
+              <td class="border border-slate-200 p-3 font-mono">r4</td>
+              <td class="border border-slate-200 p-3">310 – 420 PPM</td>
+              <td class="border border-slate-200 p-3">21.8° – 29.4°</td>
+              <td class="border border-slate-200 p-3">18 – 24°</td>
+              <td class="border border-slate-200 p-3">Surrey, Herts, Kent, Norfolk, Essex</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-rose-900">Level 5</td>
+              <td class="border border-slate-200 p-3 font-mono">r5</td>
+              <td class="border border-slate-200 p-3">> 420 PPM</td>
+              <td class="border border-slate-200 p-3">> 29.5°</td>
+              <td class="border border-slate-200 p-3">> 25°</td>
+              <td class="border border-slate-200 p-3">Chalk extraction hotspots (Suffolk coast)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">How to Program Your Beko Dishwasher (Step-by-Step)</h2>
+      <p class="text-slate-600 mb-4">
+        Follow these steps depending on whether your Beko machine has a digital screen or a rotary programme knob:
+      </p>
+
+      <div class="space-y-4 my-6">
+        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 text-base mb-2">A. Digital Display Models (Buttons & Screen)</h3>
+          <ol class="list-decimal pl-6 space-y-1.5 text-xs text-slate-600">
+            <li>Ensure the machine is switched <strong>OFF</strong>.</li>
+            <li>Press and hold down the <strong>Start / Pause / Cancel</strong> button.</li>
+            <li>While holding it, press the <strong>On/Off</strong> button to power the machine up.</li>
+            <li>Keep holding Start/Pause until the display flashes <strong>"r..."</strong> (e.g. "r3"). Release the button.</li>
+            <li>Press the <strong>Programme Selection</strong> button repeatedly to cycle to your required level (r1 to r5).</li>
+            <li>Press the <strong>On/Off</strong> button once to save the setting and exit.</li>
+          </ol>
+        </div>
+
+        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 text-base mb-2">B. Dial / Rotary Knob Models (No Digital Display)</h3>
+          <ol class="list-decimal pl-6 space-y-1.5 text-xs text-slate-600">
+            <li>Turn the knob to position <strong>1</strong> with the door open and machine off.</li>
+            <li>Hold the <strong>Start/Pause</strong> button down and press the <strong>On/Off</strong> power button.</li>
+            <li>The wash indicator lights will begin blinking. Release Start/Pause.</li>
+            <li>Rotate the programme knob: Position 1 = Level 1, Position 2 = Level 2, Position 3 = Level 3, Position 4 = Level 4, Position 5 = Level 5.</li>
+            <li>Press the <strong>On/Off</strong> button to lock in the setting.</li>
+          </ol>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">The Internal Mechanical Water Hardness Switch</h2>
+      <p class="text-slate-600 mb-4">
+        Many Beko models feature a dual water-softener adjustment mechanism. In addition to programming the digital display, open the dishwasher door, remove the lower basket, and inspect the <strong>left inner wall of the tub</strong>:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li>You will find a circular rotary switch numbered 1 to 5.</li>
+        <li>Use a coin or flathead screwdriver to turn the arrow to match your electronic setting (e.g. if you set the control board to <strong>r4</strong>, turn this internal mechanical dial to position <strong>4</strong>).</li>
+        <li>This mechanical dial adjusts the physical bypass valve inside the ion-exchange resin tank, ensuring water flow matches the electronic regeneration frequency.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Cloudy Glasses: The Vinegar Test</h2>
+      <p class="text-slate-600 mb-4">
+        If your glasses come out of your Beko dishwasher looking white and milky, perform this 10-second test to identify the cause:
+      </p>
+      <p class="text-slate-600 mb-4">
+        Dab a drop of white vinegar onto the cloudy glass and wipe it with a paper towel. If the glass becomes crystal clear, the film is <strong>limescale</strong> (your water hardness is set too low or you have run out of salt). If the cloudy film remains unchanged, the glass has suffered permanent <strong>glass etching/corrosion</strong> (your hardness was set too high in soft water, overdosing the resin bed).
+      </p>
+    `
   }
 ];
 
