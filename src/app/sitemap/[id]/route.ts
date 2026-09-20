@@ -10,20 +10,14 @@ const baseUrl = 'https://waterhardness.uk';
 const CHUNK_SIZE = 500; // Quy định cố định 500 URLs cho mỗi sitemap con
 
 // Khai báo sẵn các file Sitemap con để Next.js pre-build
+// Tạm thời loại bỏ 20 file sectors-*.xml vì các trang sector đang có robots: { index: false }
 export async function generateStaticParams() {
-  const params = [
+  return [
     { id: 'static.xml' },
     { id: 'outcodes.xml' },
     { id: 'compare.xml' },
     { id: 'guides.xml' },
   ];
-
-  // Pre-build sẵn 20 file sitemap sectors (sectors-1.xml đến sectors-20.xml)
-  for (let i = 1; i <= 20; i++) {
-    params.push({ id: `sectors-${i}.xml` });
-  }
-
-  return params;
 }
 
 const escapeXml = (unsafe: string) => {
@@ -109,35 +103,10 @@ export async function GET(
     }));
   }
 
-  // 4. SITEMAP CHI TIẾT TỪNG TRANG SECTOR (500 URLs / FILE)
+  // 4. SITEMAP CHI TIẾT TỪNG TRANG SECTOR (Tạm thời vô hiệu hoá do các trang Sector đang có robots: { index: false })
   else if (cleanId.startsWith('sectors-')) {
-    const pageIndex = parseInt(cleanId.replace('sectors-', ''), 10);
-
-    if (!isNaN(pageIndex) && pageIndex > 0) {
-      const from = (pageIndex - 1) * CHUNK_SIZE;
-      const to = pageIndex * CHUNK_SIZE - 1;
-
-      const { data: sectors } = await supabase
-        .from("water_hardness_sectors")
-        .select("sector, outcode")
-        .order("sector", { ascending: true })
-        .range(from, to);
-
-      if (sectors && sectors.length > 0) {
-        routes = sectors.map((s) => {
-          const outcodeSlug = s.outcode.toLowerCase().trim();
-          const sectorSlug = s.sector.toLowerCase().trim().replace(/\s+/g, '-');
-          
-          return {
-            url: `${baseUrl}/water-hardness/${outcodeSlug}/${sectorSlug}`,
-            // 👉 TRÙNG KHỚP 100% VỚI dateModifiedISO TRONG Schema JSON-LD CỦA TRANG SECTOR
-            lastModified: getSeoDates(s.sector).dateModifiedISO, 
-            changeFrequency: 'monthly',
-            priority: 0.8,
-          };
-        });
-      }
-    }
+    // Trả về rỗng để kích hoạt 404, tránh lãng phí crawl budget và xung đột noindex
+    routes = [];
   }
 
   // 5. SITEMAP GUIDES & BLOG HUBS (E-E-A-T Editorial Hub)
