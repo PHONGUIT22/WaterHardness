@@ -51,13 +51,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${data.outcode} Water Hardness: ${data.avgPpm} PPM & Guide`,
-    description: `Water hardness in outcode ${data.outcode} (${data.companyName}) averages ${data.avgPpm} PPM across ${data.totalSectors} sectors. Check limescale risks & appliance settings.`,
+    description: `Check water hardness in ${data.outcode} (${data.avgPpm} PPM, ${data.companyName}). Find kettle descaling advice, limescale risks & appliance salt settings.`,
     alternates: {
       canonical: `https://waterhardness.uk/water-hardness/${data.outcode.toLowerCase()}`,
     },
     openGraph: {
       title: `${data.outcode} Water Hardness: ${data.avgPpm} PPM (${data.companyName})`,
-      description: `Official water hardness report for outcode ${data.outcode}: average ${data.avgPpm} PPM. Compare softest vs hardest sectors and check local appliance calibrations.`,
+      description: `Water hardness in ${data.outcode} averages ${data.avgPpm} PPM across ${data.totalSectors} sectors. Check limescale risks & appliance settings.`,
       url: `https://waterhardness.uk/water-hardness/${data.outcode.toLowerCase()}`,
       siteName: "WaterHardness.uk",
       locale: "en_GB",
@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     twitter: {
       card: "summary_large_image",
       title: `${data.outcode} Water Hardness: ${data.avgPpm} PPM (${data.companyName})`,
-      description: `Water hardness in outcode ${data.outcode} averages ${data.avgPpm} PPM across ${data.totalSectors} sectors.`,
+      description: `Water hardness in ${data.outcode} averages ${data.avgPpm} PPM across ${data.totalSectors} sectors.`,
     },
   };
 }
@@ -172,41 +172,44 @@ export default async function OutcodeHubPage({ params }: PageProps) {
   const seed = outcode.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) * 17 + avgPpm;
   const spintax = (options: string[], offset: number = 0) => options[(seed + offset) % options.length];
 
-  // --- ĐOẠN 1: MỞ BÀI TỔNG QUAN XỨ CẤP NƯỚC (NHÚNG ĐỘ LỆCH SO VỚI TOÀN ANH QUỐC) ---
+  // --- ĐOẠN 1: MỞ BÀI TỔNG QUAN HỘ GIA ĐÌNH ANH QUỐC (GIỌNG ANH BẢN ĐỊA, THỰC TẾ) ---
   const intros = [
-    `Public water quality testing records compiled across all ${totalSectors} postcode sectors (serving ${totalPostcodes.toLocaleString()} active postcodes) in outcode ${outcode} confirm an average water hardness of ${avgPpm} PPM (${clarkDegrees}° Clark). Maintained and distributed under the authority of ${companyName}, tap water in ${outcode} is classified as ${hardnessCategoryText.toLowerCase()}, rating ${Math.abs(diffVsUK)}% ${isHarderThanUK ? "harder than" : isSofterThanUK ? "softer than" : "comparable to"} the UK national average (200 PPM).`,
-    `Managing appliances or installing plumbing systems in outcode ${outcode}? Environmental monitoring reports from ${companyName} indicate a baseline mineral concentration of ${avgPpm} PPM (${clarkDegrees} English degrees). Across its ${totalSectors} constituent sectors and ${totalPostcodes.toLocaleString()} postcodes, the area presents a ${hardnessCategoryText.toLowerCase()} profile.`,
-    `Covering ${totalPostcodes.toLocaleString()} delivery points across outcode ${outcode}, domestic tap water supplied by ${companyName} registers an average mineral density of ${avgPpm} PPM (${frenchDegrees}°fH / ${germanDegrees}°dH). This places the entire ${outcode} postal district within the ${hardnessCategoryText.toLowerCase()} band.`
+    `Tired of stubborn limescale buildup in your kettle or dealing with an unappetising film of scum on your morning cuppa? Tap water across all ${totalSectors} postcode sectors in outcode ${outcode} (covering ${totalPostcodes.toLocaleString()} homes) averages ${avgPpm} PPM (${clarkDegrees}° Clark). Maintained and distributed by ${companyName}, this places the district firmly into the ${hardnessCategoryText.toLowerCase()} bracket—approximately ${Math.abs(diffVsUK)}% ${isHarderThanUK ? "harder than" : isSofterThanUK ? "softer than" : "comparable to"} the UK national baseline (200 PPM).`,
+    `If you have recently moved to ${outcode} or are setting up new kitchen appliances, getting your local water hardness right makes all the difference. Official water testing records from ${companyName} show a baseline mineral level of ${avgPpm} PPM (${clarkDegrees}° Clark) across ${outcode}&apos;s ${totalPostcodes.toLocaleString()} postcodes. That classifies this postal area as ${hardnessCategoryText.toLowerCase()}, directly impacting how often you need to top up dishwasher salt and how fast heating elements fur up with scale.`,
+    `Serving ${totalPostcodes.toLocaleString()} homes and businesses across outcode ${outcode}, mains tap water supplied by ${companyName} registers an average mineral density of ${avgPpm} PPM (${frenchDegrees}°fH / ${germanDegrees}°dH). Rated as ${hardnessCategoryText.toLowerCase()}, local water hardness determines how well laundry detergents lather, the rate of scale accumulation in combi boilers, and whether sensitive skin or eczema flares up after showers.`
   ];
   const paragraphIntro = spintax(intros, 0);
 
-  // --- ĐOẠN 2: PHÂN TÍCH ĐỘ PHÂN TÁN VÙNG (VARIANCE DELTA) ---
+  // --- ĐOẠN 2: PHÂN TÍCH ĐỘ PHÂN TÁN VÙNG GIỮA CÁC SECTOR ---
   let paragraphDisparity = "";
   if (isFlatData) {
-    paragraphDisparity = `Mineral concentration is remarkably uniform throughout outcode ${outcode}. All ${totalSectors} sectors, from ${softestSectorName} to ${hardestSectorName}, register an identical reading of ${avgPpm} PPM. This consistency confirms that ${companyName} distributes water from a unified primary treatment works and supply reservoir across this entire zone.`;
+    paragraphDisparity = `Water hardness is remarkably consistent across all ${totalSectors} sectors of ${outcode}, with readings holding steady at ${avgPpm} PPM from ${softestSectorName} through to ${hardestSectorName}. This uniform profile means every household on the ${companyName} network in this zone shares the same appliance settings and kettle descaling routine.`;
   } else {
-    paragraphDisparity = `Water hardness fluctuates across individual supply zones in outcode ${outcode}, exhibiting a ${varianceDelta} PPM variance between neighborhoods. Tap water is softest in sector ${softestSectorName} (${softestPpm} PPM), while the highest mineral load occurs in sector ${hardestSectorName} (${hardestPpm} PPM), reflecting localized blending from distinct borehole and river extraction facilities.`;
+    paragraphDisparity = `Water hardness isn't identical across every street in ${outcode}—there is a ${varianceDelta} PPM variance between neighborhoods. Residents in sector ${softestSectorName} enjoy the softest water at ${softestPpm} PPM, whereas taps in sector ${hardestSectorName} register the highest mineral load at ${hardestPpm} PPM. This localized disparity occurs because ${companyName} blends supplies from different boreholes, rivers, and storage reservoirs depending on elevation and seasonal demand.`;
   }
 
-  // --- ĐOẠN 3: NGUỒN NƯỚC ĐỊA CHẤT ĐẶC THÙ CỦA CÔNG TY CẤP NƯỚC ---
+  // --- ĐOẠN 3: NGUỒN NƯỚC ĐỊA CHẤT ĐẶC THÙ (DWI REGULATED) ---
   let paragraphGeology = "";
   if (isChalkAquiferSupplier) {
-    paragraphGeology = `Water distributed by ${companyName} in outcode ${outcode} originates largely from underground chalk and limestone aquifers. Natural percolation through deep subterranean calcium deposits enriches the water with dissolved calcium carbonate, contributing directly to the ${avgPpm} PPM rating and resulting in rapid limescale accumulation on heating elements.`;
+    paragraphGeology = `The reason tap water in ${outcode} carries significant dissolved minerals lies in local geology. ${companyName} abstracts substantial water supplies from subterranean chalk and limestone aquifers. As rainwater percolates through deep calcium-rich rock strata over decades, it dissolves natural calcium carbonate. While entirely safe and wholesome under Drinking Water Inspectorate (DWI) standards, these minerals precipitate out when heated above 60°C, leaving stubborn limescale deposits on heating coils.`;
   } else if (isUplandReservoirSupplier) {
-    paragraphGeology = `The municipal water supply managed by ${companyName} across ${outcode} is predominantly abstracted from upland surface reservoirs and natural catchments characterized by impermeable granite geology. This natural process limits mineral dissolution, preserving an exceptionally clean, naturally soft supply (${avgPpm} PPM).`;
+    paragraphGeology = `Tap water supplied to ${outcode} by ${companyName} originates predominantly from upland surface reservoirs and catchments surrounded by hard, impermeable granite or sandstone geology. Because rainwater runs off dense bedrock without dissolving heavy calcium deposits, it arrives at local taps naturally soft at ${avgPpm} PPM, keeping plumbing networks clear without requiring water softeners.`;
   } else if (isMixedCatchmentSupplier) {
-    paragraphGeology = `Supplies in ${outcode} are sourced through a balanced combination of lowland river abstraction and regional storage reservoirs managed by ${companyName}. Water hardness fluctuates seasonally between wet and dry periods, maintaining a stable annual average of ${avgPpm} PPM across all ${totalPostcodes.toLocaleString()} local postcodes.`;
+    paragraphGeology = `Supplies across ${outcode} are managed by ${companyName} through a balanced mix of lowland river abstraction and regional storage reservoirs. Water hardness fluctuates moderately between wet winter periods and dry summer months, averaging ${avgPpm} PPM across all ${totalPostcodes.toLocaleString()} local postcodes under strict Drinking Water Inspectorate (DWI) compliance.`;
   } else {
-    paragraphGeology = `Treated in strict compliance with the Drinking Water Inspectorate (DWI) standards, tap water in ${outcode} maintains an average mineral density of ${avgPpm} PPM, ensuring balanced purity and consistent municipal distribution by ${companyName}.`;
+    paragraphGeology = `Treated in strict compliance with Drinking Water Inspectorate (DWI) standards, tap water in ${outcode} maintains an average mineral density of ${avgPpm} PPM, ensuring consistent municipal distribution and wholesome tap drinking water from ${companyName}.`;
   }
 
-  // --- ĐOẠN 4: LỜI KHUYÊN LÒ HƠI & THIẾT BỊ GIA ĐÌNH ---
+  // --- ĐOẠN 4: LỜI KHUYÊN THỰC TẾ CHO GIA ĐÌNH ANH (KETTLES, BOILERS, SALT & SKIN) ---
   const applianceTemplates = isVerySoft || isSoft ? [
-    `With naturally soft water (${avgPpm} PPM) in outcode ${outcode}, heating cylinders and combi boilers operate near peak thermodynamic efficiency with negligible limescale drag (${boilerEfficiencyLoss}). Dishwashers require minimal or no softener regeneration salt (recommended setting: ${defaultBoschSetting}), and standard detergent dosages are fully effective.`,
-    `Households across ${outcode}&apos;s ${totalSectors} sectors benefit from extended appliance lifespans. Because water contains just ${avgPpm} PPM of dissolved minerals, kettles remain clean without periodic acid descaling, and plumbing networks are protected from scale constriction.`
+    `Living with naturally soft water (${avgPpm} PPM) in outcode ${outcode} offers welcome household benefits. Your kettle stays clean with virtually zero limescale buildup, tea brews clear without unsightly floating scum, and shower gels lather effortlessly. Combi boilers and immersion heaters maintain peak fuel efficiency (${boilerEfficiencyLoss} scale drag), and dishwasher salt top-up is optional or minimal (recommended setting: ${defaultBoschSetting}).`,
+    `Households across ${outcode}&apos;s ${totalSectors} sectors enjoy extended appliance lifespans. Because water contains just ${avgPpm} PPM of dissolved minerals, kettles remain clean without periodic acid descaling, and sensitive skin or eczema is far less prone to irritation caused by calcium mineral deposits.`
+  ] : isModerate ? [
+    `With moderate water hardness (${avgPpm} PPM) in ${outcode}, kettles and showerheads build a light white chalk ring every 2–3 months. A quick rinse with warm water and white vinegar or food-grade citric acid crystals clears the element in minutes. To prevent cloudy glassware, maintain your dishwasher salt top-up set to ${defaultBoschSetting}. Combi boilers also benefit from regular inhibitor checks during annual boiler servicing in line with British Standard BS 7593.`,
+    `Households across ${outcode}&apos;s ${totalPostcodes.toLocaleString()} postcodes experience manageable mineral levels. While heating efficiency losses remain mild (${boilerEfficiencyLoss}), routine descaling of steam irons and thermostatic shower cartridges prevents gradual mineral clogging.`
   ] : [
-    `Because water delivered to ${outcode} averages ${avgPpm} PPM, limescale represents an active maintenance factor. Heating elements in combi boilers and hot water cylinders face estimated efficiency losses of ${boilerEfficiencyLoss} without scale treatment. Kettle heating elements require descaling roughly ${kettleDescalingFreq.toLowerCase()}, and dishwasher water softeners should be calibrated to ${defaultBoschSetting}.`,
-    `Operating domestic appliances in ${outcode}&apos;s ${hardnessCategoryText.toLowerCase()} (${avgPpm} PPM) requires proactive protection. Using inline electrolytic scale inhibitors or water softeners prevents heat exchanger calcification and eliminates cloudy mineral residue on glassware across all ${totalPostcodes.toLocaleString()} postcodes.`
+    `With tap water averaging ${avgPpm} PPM in outcode ${outcode}, proactive limescale prevention is essential. Expect rapid limescale buildup in kettles—monthly descaling with white vinegar or food-grade citric acid crystals keeps the heating base efficient and stops chalky flakes falling into your tea. Combi boiler heat exchangers are also susceptible to scale encrustation, which can increase annual gas heating bills by ${boilerEfficiencyLoss} without inline scale protection under British Standard BS 7593.`,
+    `Hard water in ${outcode} (${avgPpm} PPM) often causes a cloudy scum on hot drinks and makes soap harder to lather, aggravating dry skin and eczema sensitivity after hot baths. For appliances, ensure regular water softener salt top-ups and calibrate your dishwasher to ${defaultBoschSetting} to avoid cloudy glassware, white streaks, and heating element burnout across all ${totalPostcodes.toLocaleString()} postcodes.`
   ];
   const paragraphAppliance = spintax(applianceTemplates, 1);
 
@@ -240,15 +243,13 @@ export default async function OutcodeHubPage({ params }: PageProps) {
       {
         "@type": "Article",
         "headline": `Outcode ${outcode} Water Hardness & Limescale Quality Report`,
-        "description": `Comprehensive water hardness metrics, mineral PPM ratings, and appliance settings across ${totalSectors} sectors in ${outcode} (${companyName}).`,
+        "description": `Detailed water hardness report for outcode ${outcode}: ${avgPpm} PPM (${clarkDegrees}° Clark) supplied by ${companyName}. Includes appliance salt calibrations, kettle descaling advice, and boiler protection under British Standard BS 7593.`,
         "image": "https://waterhardness.uk/og-image.png",
         "datePublished": datePublishedISO,
         "dateModified": dateModifiedISO,
         "author": {
-          "@type": "Person",
-          "@id": "https://waterhardness.uk/#person",
-          "name": "Nguyễn Hạc Phong",
-          "jobTitle": "Lead Water Quality Data Engineer",
+          "@type": "Organization",
+          "name": "WaterHardness.uk Technical & Water Quality Research Team",
           "url": "https://waterhardness.uk/about"
         },
         "publisher": {
@@ -256,6 +257,10 @@ export default async function OutcodeHubPage({ params }: PageProps) {
           "name": "WaterHardness.uk",
           "logo": { "@type": "ImageObject", "url": "https://waterhardness.uk/logo.png" }
         },
+        "citation": [
+          "https://www.dwi.gov.uk/",
+          "https://www.ciphe.org.uk/"
+        ],
         "about": [
           {
             "@type": "Place",
@@ -297,12 +302,13 @@ export default async function OutcodeHubPage({ params }: PageProps) {
     <div className="min-h-screen bg-[#FDFDFD] text-slate-900 pb-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      {/* HERO SECTION CỦA OUTCODE */}
+      {/* HERO SECTION CỦA OUTCODE - ABOVE-THE-FOLD INSTANT VERDICT */}
       <section className="bg-slate-900 text-white pt-16 pb-20 px-4">
         <div className="max-w-7xl mx-auto text-center sm:text-left">
           
-          <div className="inline-flex items-center gap-2 bg-slate-800 text-cyan-400 border border-slate-700 px-3 py-1 rounded-full text-xs font-semibold mb-6">
-            <ShieldCheck className="w-4 h-4 text-cyan-400" /> Regional Water Intelligence • 2026 Updated
+          <div className="inline-flex items-center gap-2 bg-slate-800 text-cyan-400 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-6">
+            <ShieldCheck className="w-4 h-4 text-cyan-400" />
+            <span>Official Supplier Data: {companyName} • DWI & BS 7593 Standards</span>
           </div>
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-800 pb-10">
@@ -310,21 +316,40 @@ export default async function OutcodeHubPage({ params }: PageProps) {
               <h1 className="text-4xl sm:text-6xl font-black tracking-tight uppercase">
                 Water Hardness in <span className="text-cyan-400">{outcode}</span>
               </h1>
-              <p className="text-slate-400 mt-3 text-base sm:text-lg max-w-2xl">
-                Water quality metrics across {totalSectors} postcode sectors ({totalPostcodes.toLocaleString()} postcodes) in {outcode} ({companyName}).
+              <p className="text-slate-300 mt-3 text-base sm:text-lg max-w-2xl font-medium">
+                Official water quality verdict for outcode <span className="text-white font-bold">{outcode}</span>: classified as <span className="text-cyan-400 font-bold">{hardnessCategoryText}</span> ({avgPpm} PPM), supplied and treated by <span className="text-white font-bold">{companyName}</span> across {totalSectors} sectors.
               </p>
+
+              {/* INSTANT VERDICT PILLS */}
+              <div className="mt-5 flex flex-wrap items-center gap-2 sm:gap-3 text-xs">
+                <span className={`px-3 py-1 rounded-full font-bold border ${isVeryHard || isHard ? "bg-amber-500/20 text-amber-300 border-amber-500/30" : isModerate ? "bg-cyan-500/20 text-cyan-300 border-cyan-500/30" : "bg-emerald-500/20 text-emerald-300 border-emerald-500/30"}`}>
+                  Rating: {hardnessCategoryText}
+                </span>
+                <span className="bg-slate-800 text-slate-300 px-3 py-1 rounded-full font-semibold border border-slate-700">
+                  {avgPpm} PPM • {clarkDegrees}° Clark
+                </span>
+                <span className="bg-slate-800 text-slate-300 px-3 py-1 rounded-full font-semibold border border-slate-700">
+                  Supplier: {companyName}
+                </span>
+                <span className="bg-slate-800 text-slate-300 px-3 py-1 rounded-full font-semibold border border-slate-700">
+                  {isHarderThanUK ? `+${diffVsUK}% above UK average` : isSofterThanUK ? `${diffVsUK}% below UK average` : "At UK national average (200 PPM)"}
+                </span>
+              </div>
             </div>
 
-            <div className="bg-slate-800/80 p-6 rounded-3xl border border-slate-700/80 shrink-0 text-center sm:text-right">
-              <span className="text-slate-400 text-xs font-medium block uppercase tracking-wider">
+            <div className="bg-slate-800/90 p-6 rounded-3xl border border-slate-700/80 shrink-0 text-center sm:text-right shadow-xl">
+              <span className="text-slate-400 text-xs font-semibold block uppercase tracking-wider">
                 Outcode Mean Hardness
               </span>
               <span className="text-4xl sm:text-5xl font-black text-cyan-400 block mt-1">
                 {avgPpm}
                 <span className="text-xs font-normal text-slate-400"> PPM</span>
               </span>
-              <span className="text-xs font-bold text-slate-300 block mt-1">
-                {clarkDegrees} °Clark • {hardnessCategoryText}
+              <span className="text-sm font-bold text-slate-200 block mt-1">
+                {clarkDegrees}° Clark • {hardnessCategoryText}
+              </span>
+              <span className="text-[11px] text-slate-400 block mt-1">
+                {frenchDegrees}°fH • {germanDegrees}°dH
               </span>
             </div>
           </div>
@@ -334,15 +359,51 @@ export default async function OutcodeHubPage({ params }: PageProps) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
         
-        {/* LEVER 3: DIRECT ANSWER DIAGNOSTIC BLOCK (AI OVERVIEWS & CITABILITY) */}
-        <section className="bg-cyan-50 border-2 border-cyan-200 rounded-3xl p-6 sm:p-7 mb-8 text-slate-800 shadow-sm">
-          <div className="flex items-center gap-2 text-cyan-800 font-bold text-xs uppercase tracking-wider mb-2">
+        {/* LEVER 3: DIRECT ANSWER DIAGNOSTIC BLOCK (AI OVERVIEWS & UK HOUSEHOLD ADVISOR) */}
+        <section className="bg-gradient-to-br from-cyan-50 to-blue-50/60 border-2 border-cyan-200 rounded-3xl p-6 sm:p-7 mb-8 text-slate-800 shadow-sm">
+          <div className="flex items-center gap-2 text-cyan-800 font-bold text-xs uppercase tracking-wider mb-3">
             <CheckCircle2 className="w-4 h-4 text-cyan-600" />
-            <span>Outcode {outcode} Regional Executive Summary</span>
+            <span>Outcode {outcode} Household Water Quality Verdict & Practical Advice</span>
           </div>
-          <p className="text-base sm:text-lg font-medium leading-relaxed text-slate-900">
-            Domestic tap water in outcode <strong>{outcode}</strong> averages <strong>{avgPpm} PPM</strong> (mg/L CaCO₃), equal to <strong>{clarkDegrees}° Clark</strong> ({frenchDegrees}°fH / {germanDegrees}°dH), classified as <strong>{hardnessCategoryText.toLowerCase()}</strong> distributed by <strong>{companyName}</strong>. Across all {totalSectors} constituent sectors ({totalPostcodes.toLocaleString()} postcodes), mineral readings range from <strong>{softestPpm} PPM</strong> ({softestSectorName}) to <strong>{hardestPpm} PPM</strong> ({hardestSectorName}){varianceDelta > 0 ? `, an internal variance of ${varianceDelta} PPM` : " with completely uniform mineral density"}. Water in {outcode} is <strong>{Math.abs(diffVsUK)}% {isHarderThanUK ? "harder than" : isSofterThanUK ? "softer than" : "comparable to"}</strong> the UK national average (200 PPM).
+
+          <p className="text-base sm:text-lg font-medium leading-relaxed text-slate-900 mb-4">
+            Domestic tap water in outcode <strong>{outcode}</strong> is officially classified as <strong>{hardnessCategoryText.toLowerCase()}</strong>, averaging <strong>{avgPpm} PPM</strong> (mg/L CaCO₃) or <strong>{clarkDegrees}° Clark</strong>, supplied and treated by <strong>{companyName}</strong> across all {totalSectors} postcode sectors ({totalPostcodes.toLocaleString()} postcodes). Readings range from <strong>{softestPpm} PPM</strong> ({softestSectorName}) to <strong>{hardestPpm} PPM</strong> ({hardestSectorName}){varianceDelta > 0 ? `, showing a local disparity of ${varianceDelta} PPM` : " with consistent mineral levels throughout"}.
           </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-3 border-t border-cyan-200/70 text-xs sm:text-sm text-slate-700">
+            <div className="bg-white/80 p-3.5 rounded-2xl border border-cyan-100">
+              <span className="font-bold text-slate-900 block mb-1">☕ Kettle & Tea Quality:</span>
+              <p className="leading-normal text-slate-600">
+                {isVeryHard || isHard
+                  ? "Rapid limescale buildup in kettles with floating scum on your cuppa. Descale monthly using white vinegar or food-grade citric acid."
+                  : isModerate
+                  ? "Gradual chalky ring forms in kettles over 2–3 months. Descale quarterly with citric acid crystals to keep heating elements clean."
+                  : "Naturally soft water leaves kettles clear of mineral furring. Your tea brews bright and clean with zero tea scum."}
+              </p>
+            </div>
+
+            <div className="bg-white/80 p-3.5 rounded-2xl border border-cyan-100">
+              <span className="font-bold text-slate-900 block mb-1">🚿 Skin & Bathing:</span>
+              <p className="leading-normal text-slate-600">
+                {isVeryHard || isHard
+                  ? "High calcium levels can aggravate dry skin & eczema sensitivity. Soap lathers less easily, often leaving a tight feeling after hot showers."
+                  : isModerate
+                  ? "Moderate mineral content is generally gentle on skin, producing normal lather with everyday soaps and shampoos."
+                  : "Gentle on sensitive skin and eczema-prone households. Soaps lather richly with small amounts of product."}
+              </p>
+            </div>
+
+            <div className="bg-white/80 p-3.5 rounded-2xl border border-cyan-100">
+              <span className="font-bold text-slate-900 block mb-1">🍽️ Appliances & Salt:</span>
+              <p className="leading-normal text-slate-600">
+                {isVeryHard || isHard
+                  ? `Keep water softener salt topped up and calibrate dishwashers to ${defaultBoschSetting}. Protect combi boiler heat exchangers under BS 7593.`
+                  : isModerate
+                  ? `Set dishwashers to ${defaultBoschSetting} to avoid cloudy glassware, and check boiler inhibitor levels at your annual service.`
+                  : `Dishwasher salt top-up is optional or minimal (setting ${defaultBoschSetting}). Boilers operate at peak thermal efficiency without scale.`}
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* KPI METRIC CARDS ĐỘC BẢN TOÀN OUTCODE */}
@@ -520,34 +581,44 @@ export default async function OutcodeHubPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* DÒNG XÁC NHẬN TÁC GIẢ EEAT & OUTBOUND CITATION */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 mb-12 text-xs shadow-xs">
+        {/* DÒNG XÁC NHẬN TÁC GIẢ EEAT & OUTBOUND CITATIONS */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-200/80 mb-12 text-xs shadow-xs">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-slate-900 text-cyan-400 rounded-full flex items-center justify-center font-black text-sm shrink-0 border border-slate-800">
-              NP
+            <div className="w-10 h-10 bg-slate-900 text-cyan-400 rounded-full flex items-center justify-center font-black text-xs shrink-0 border border-slate-800">
+              WQ
             </div>
             <div>
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">
-                Updated: {dateModifiedFormatted} • DWI & Defra Compliant Data
+                Updated: {dateModifiedFormatted} • Verified Against DWI & BS 7593 Standards
               </span>
               <Link href="/about" className="font-bold text-slate-900 hover:text-cyan-600 transition-colors text-sm">
-                Nguyễn Hạc Phong <span className="text-slate-400 font-normal text-xs">• Lead Water Quality Data Engineer</span>
+                WaterHardness.uk Technical & Water Quality Research Team
               </Link>
             </div>
           </div>
-          <div className="flex items-center gap-4 text-xs font-semibold">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-semibold">
             <a
               href="https://www.dwi.gov.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 hover:text-cyan-600 transition-colors inline-flex items-center gap-1"
+              className="text-slate-600 hover:text-cyan-600 transition-colors inline-flex items-center gap-1"
             >
               <span>Drinking Water Inspectorate (DWI)</span>
               <ArrowRight className="w-3 h-3" />
             </a>
             <span className="text-slate-300 hidden sm:inline">•</span>
-            <Link href="/about" className="text-cyan-600 font-bold hover:underline hidden sm:inline">
-              Methodology & Catchment Sources →
+            <a
+              href="https://www.ciphe.org.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-600 hover:text-cyan-600 transition-colors inline-flex items-center gap-1"
+            >
+              <span>British Standard BS 7593</span>
+              <ArrowRight className="w-3 h-3" />
+            </a>
+            <span className="text-slate-300 hidden sm:inline">•</span>
+            <Link href="/about" className="text-cyan-600 font-bold hover:underline">
+              Methodology →
             </Link>
           </div>
         </div>
