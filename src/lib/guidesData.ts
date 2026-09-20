@@ -154,8 +154,8 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "thames-water-hardness",
     title: "Thames Water Hardness: London Chalk Basin & PPM Breakdown",
-    metaTitle: "Thames Water Water Hardness: London PPM, Chalk Aquifers & Costs",
-    metaDescription: "Thames Water tap water averages 260 to 320+ PPM, making London one of the UK's hardest water regions. Learn about chalk aquifers, boiler risks, and appliance settings.",
+    metaTitle: "Thames Water Hardness Guide",
+    metaDescription: "Check Thames Water hardness by postcode (PPM & Clark). Discover chalk aquifers, combi boiler limescale risks & dishwasher salt settings.",
     targetKeyword: "thames water water hardness",
     category: "Regional Hardness",
     datePublished: "2025-01-20T08:00:00Z",
@@ -257,6 +257,90 @@ export const guidesData: GuideArticle[] = [
         <li><strong>Annual Fuel Penalty:</strong> 1mm of scale creates an insulating barrier that reduces heat transfer efficiency by 7% to 10%, costing £120 to £180 in avoidable annual gas costs.</li>
         <li><strong>Mandatory Part L Rule:</strong> Under UK Building Regulations Part L, any boiler fitted in an area with water hardness exceeding 200 PPM must have scale reduction provision installed on the feed pipe.</li>
       </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Thames Water Hardness by Postcode: Quick Lookup Table</h2>
+      <p class="text-slate-600 mb-4">
+        To help you verify your exact local water hardness, this lookup table details key postcode areas across the Thames Water network, comparing average PPM, Clark degrees, and local limescale risk levels:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left border-collapse border border-slate-200 text-sm">
+          <thead>
+            <tr class="bg-slate-100 text-slate-800 font-semibold">
+              <th class="border border-slate-200 p-3">Postcode Prefix</th>
+              <th class="border border-slate-200 p-3">Covered Region</th>
+              <th class="border border-slate-200 p-3">Average PPM</th>
+              <th class="border border-slate-200 p-3">Clark Degrees</th>
+              <th class="border border-slate-200 p-3">Classification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/sw1a" class="text-cyan-600 hover:underline font-semibold">SW</a></td>
+              <td class="border border-slate-200 p-3">South West London (Battersea, Wimbledon, Chelsea)</td>
+              <td class="border border-slate-200 p-3">280 – 300 PPM</td>
+              <td class="border border-slate-200 p-3">19.6° – 21.0° Clark</td>
+              <td class="border border-slate-200 p-3 font-medium text-amber-700">Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/se1" class="text-cyan-600 hover:underline font-semibold">SE</a></td>
+              <td class="border border-slate-200 p-3">South East London (Southwark, Greenwich, Lewisham)</td>
+              <td class="border border-slate-200 p-3">295 – 325 PPM</td>
+              <td class="border border-slate-200 p-3">20.7° – 22.8° Clark</td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">Very Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/w1a" class="text-cyan-600 hover:underline font-semibold">W</a></td>
+              <td class="border border-slate-200 p-3">West London (Paddington, Ealing, Kensington)</td>
+              <td class="border border-slate-200 p-3">275 – 295 PPM</td>
+              <td class="border border-slate-200 p-3">19.3° – 20.7° Clark</td>
+              <td class="border border-slate-200 p-3 font-medium text-amber-700">Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/wc1a" class="text-cyan-600 hover:underline font-semibold">WC</a></td>
+              <td class="border border-slate-200 p-3">Western Central London (Holborn, Covent Garden)</td>
+              <td class="border border-slate-200 p-3">280 – 290 PPM</td>
+              <td class="border border-slate-200 p-3">19.6° – 20.3° Clark</td>
+              <td class="border border-slate-200 p-3 font-medium text-amber-700">Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/ec1a" class="text-cyan-600 hover:underline font-semibold">EC</a></td>
+              <td class="border border-slate-200 p-3">Eastern Central London (City, Clerkenwell, Shoreditch)</td>
+              <td class="border border-slate-200 p-3">285 – 305 PPM</td>
+              <td class="border border-slate-200 p-3">20.0° – 21.4° Clark</td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">Very Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/e20" class="text-cyan-600 hover:underline font-semibold">E20</a></td>
+              <td class="border border-slate-200 p-3">Stratford, Olympic Park & East Village</td>
+              <td class="border border-slate-200 p-3">280 – 310 PPM</td>
+              <td class="border border-slate-200 p-3">19.6° – 21.7° Clark</td>
+              <td class="border border-slate-200 p-3 font-medium text-amber-700">Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/rg1" class="text-cyan-600 hover:underline font-semibold">RG</a></td>
+              <td class="border border-slate-200 p-3">Reading & Thames Valley (Bracknell, Newbury, Wokingham)</td>
+              <td class="border border-slate-200 p-3">290 – 320 PPM</td>
+              <td class="border border-slate-200 p-3">20.3° – 22.4° Clark</td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">Very Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/ox1" class="text-cyan-600 hover:underline font-semibold">OX</a></td>
+              <td class="border border-slate-200 p-3">Oxfordshire (Oxford, Banbury, Abingdon, Witney)</td>
+              <td class="border border-slate-200 p-3">285 – 315 PPM</td>
+              <td class="border border-slate-200 p-3">20.0° – 22.1° Clark</td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">Very Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/sl1" class="text-cyan-600 hover:underline font-semibold">SL</a></td>
+              <td class="border border-slate-200 p-3">Slough, Windsor & Maidenhead</td>
+              <td class="border border-slate-200 p-3">290 – 310 PPM</td>
+              <td class="border border-slate-200 p-3">20.3° – 21.7° Clark</td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">Very Hard</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     `
   },
   {
@@ -1624,6 +1708,285 @@ export const guidesData: GuideArticle[] = [
         <li>As boiling water extracts tannins, calcium carbonate micro-crystals bind to these polyphenols, oxidising into an insoluble, floating scum.</li>
         <li>In soft water areas (Scotland, Manchester), tea brews darker, clearer, and richer without a trace of surface film.</li>
       </ul>
+    `
+  },
+  // =========================================================================
+  // HIGH-PERFORMING UK EDITORIAL GUIDES (WHICH? STYLE & GSC SEARCH INTENT)
+  // =========================================================================
+  {
+    slug: "affinity-water-hardness-guide",
+    title: "Affinity Water Hardness: PPM Readings & Postcode Map (2026)",
+    metaTitle: "Affinity Water Hardness: PPM Guide",
+    metaDescription: "Check Affinity Water hardness by postcode (PPM & Clark) across Surrey, Herts & Essex. Find Woking ratings, limescale tips & dishwasher settings.",
+    targetKeyword: "affinity water hardness",
+    category: "Regional Hardness",
+    datePublished: "2025-03-01T08:00:00Z",
+    dateModified: "2026-09-18T10:00:00Z",
+    readingTime: "6 min read",
+    quickVerdict: {
+      ppmRange: "280 – 340 PPM (mg/L CaCO3)",
+      classification: "Hard to Very Hard",
+      supplier: "Affinity Water (Central, Eastern & Southeast Regions)",
+      keyTakeaway: "Affinity Water supplies some of the hardest tap water in the UK, frequently exceeding 300 PPM. Sourced primarily from deep chalk aquifers in the Chilterns and North Downs, it causes heavy limescale in kettles and requires dedicated water softener salt."
+    },
+    relatedOutcodes: ["GU21", "GU22", "AL1", "AL3", "WD17", "LU1", "HP1", "SG1", "CM20"],
+    faqItems: [
+      {
+        question: "Is Affinity Water tap water hard or soft?",
+        answer: "Affinity Water supplies tap water classified as hard to very hard, averaging between 280 and 340 PPM (19.6° to 23.8° Clark). Over 65% of its supply is drawn from natural chalk aquifers beneath Hertfordshire, Buckinghamshire, and Surrey."
+      },
+      {
+        question: "What is the water hardness in Woking (GU21 and GU22)?",
+        answer: "Woking tap water averages 290 to 320 PPM (20.3° to 22.4° Clark), putting it in the very hard category. It is treated at the Chertsey and Walton water treatment works from a blend of Thames abstraction and local groundwater boreholes."
+      },
+      {
+        question: "What dishwasher salt setting should I use for Affinity Water?",
+        answer: "Set your dishwasher water softener dial to H05 or H06 on Bosch, Siemens, and Neff dishwashers, or Level 4 on Beko machines. Running appliances without salt in Affinity Water zones leads to severe glass etching and heating element burnout."
+      },
+      {
+        question: "Does Affinity Water cause limescale in combi boilers?",
+        answer: "Yes. In untreated Affinity Water properties, a 1.2mm limescale layer can coat combi boiler plate heat exchangers within two years, increasing annual gas heating bills by roughly £130 to £190 under British Standard BS 7593 guidelines."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        If you have recently moved to an Affinity Water area across Hertfordshire, Surrey, Buckinghamshire, or Essex, you will have noticed white chalk rings in your kettle within a week. That is because <strong>Affinity Water delivers some of the hardest tap water in Great Britain</strong>, with mineral concentrations regularly peaking above <strong>300 to 340 PPM</strong> (mg/L CaCO₃).
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">The 3 Affinity Water Operating Regions: A Geography of Hard Water</h2>
+      <p class="text-slate-600 mb-4">
+        Unlike municipal suppliers that rely predominantly on surface reservoirs, Affinity Water draws roughly <strong>65% of its public tap water directly from deep underground chalk boreholes</strong>. The company operates across three separate geographic regions, each presenting severe limescale challenges:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>Central Region:</strong> Covers large parts of Hertfordshire, Buckinghamshire, and northern Greater London (including St Albans, Watford, Luton, and Barnet). Water is pumped from the Chiltern Hills chalk aquifer, averaging 290–335 PPM.</li>
+        <li><strong>Southeast Region (Surrey):</strong> Encompasses Woking, Egham, Staines, and Chertsey. Supplies combine Thames river abstraction with North Downs groundwater, testing at 280–320 PPM.</li>
+        <li><strong>Eastern Region (Essex):</strong> Covers Harlow, Saffron Walden, and Tendring. Lowland river blending and chalk boreholes yield 290–340 PPM.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Case Study: Why Woking (GU21 & GU22) Has Shockingly Hard Water</h2>
+      <p class="text-slate-600 mb-4">
+        Residents in Woking frequently search for <em>"Affinity Water hardness Woking mg/l CaCO3"</em> because heating appliances fur up at astonishing speed. Tap water across <a href="/water-hardness/gu21" class="text-cyan-600 hover:underline font-semibold">GU21</a> and <a href="/water-hardness/gu22" class="text-cyan-600 hover:underline font-semibold">GU22</a> registers an average hardness of <strong>305 PPM (21.4° Clark)</strong>.
+      </p>
+      <p class="text-slate-600 mb-4">
+        Woking's supply is treated at Chertsey and Walton water treatment works. Because local Surrey groundwater percolates through deep calcium-dense greensand and chalk formations before municipal chlorination, it enters homes laden with dissolved calcium bicarbonate. Without an inline scale inhibitor or ion-exchange water softener, showerhead nozzles clog within a month and scum coats morning tea.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Affinity Water Postcode Hardness Lookup Table</h2>
+      <p class="text-slate-600 mb-4">
+        Check your postal district below to see exact average PPM ratings and degrees Clark across major towns served by Affinity Water:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left border-collapse border border-slate-200 text-sm">
+          <thead>
+            <tr class="bg-slate-100 text-slate-800 font-semibold">
+              <th class="border border-slate-200 p-3">Town / Area</th>
+              <th class="border border-slate-200 p-3">Postcode Hub</th>
+              <th class="border border-slate-200 p-3">Average PPM</th>
+              <th class="border border-slate-200 p-3">Clark (°e)</th>
+              <th class="border border-slate-200 p-3">Official Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Woking (Surrey)</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/gu21" class="text-cyan-600 hover:underline font-semibold">GU21</a> / <a href="/water-hardness/gu22" class="text-cyan-600 hover:underline font-semibold">GU22</a></td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">305 PPM</td>
+              <td class="border border-slate-200 p-3">21.4° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">Very Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">St Albans (Herts)</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/al1" class="text-cyan-600 hover:underline font-semibold">AL1</a> / <a href="/water-hardness/al3" class="text-cyan-600 hover:underline font-semibold">AL3</a></td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">325 PPM</td>
+              <td class="border border-slate-200 p-3">22.8° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">Very Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Watford (Herts)</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/wd17" class="text-cyan-600 hover:underline font-semibold">WD17</a> / <a href="/water-hardness/wd18" class="text-cyan-600 hover:underline font-semibold">WD18</a></td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">315 PPM</td>
+              <td class="border border-slate-200 p-3">22.1° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">Very Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Luton (Bedfordshire)</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/lu1" class="text-cyan-600 hover:underline font-semibold">LU1</a> / <a href="/water-hardness/lu2" class="text-cyan-600 hover:underline font-semibold">LU2</a></td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">310 PPM</td>
+              <td class="border border-slate-200 p-3">21.7° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">Very Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Hemel Hempstead</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/hp1" class="text-cyan-600 hover:underline font-semibold">HP1</a> / <a href="/water-hardness/hp2" class="text-cyan-600 hover:underline font-semibold">HP2</a></td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">320 PPM</td>
+              <td class="border border-slate-200 p-3">22.4° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">Very Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Stevenage (Herts)</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/sg1" class="text-cyan-600 hover:underline font-semibold">SG1</a> / <a href="/water-hardness/sg2" class="text-cyan-600 hover:underline font-semibold">SG2</a></td>
+              <td class="border border-slate-200 p-3 font-medium text-amber-700">295 PPM</td>
+              <td class="border border-slate-200 p-3">20.7° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-amber-700">Hard</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Harlow (Essex)</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/cm20" class="text-cyan-600 hover:underline font-semibold">CM20</a> / <a href="/water-hardness/cm19" class="text-cyan-600 hover:underline font-semibold">CM19</a></td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">330 PPM</td>
+              <td class="border border-slate-200 p-3">23.1° Clark</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">Very Hard</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Practical Household Survival Plan for Affinity Water Customers</h2>
+      <p class="text-slate-600 mb-4">
+        Living in an Affinity Water postcode means adjusting everyday habits to protect your plumbing and appliances:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 text-base mb-2">☕ Kettle Descaling Routine</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Descale your kettle every 2–3 weeks. Boil 500ml of water with 2 tablespoons of food-grade citric acid crystals (or half white vinegar, half water), let stand for 20 minutes, and rinse. Avoid caustic chemical descalers that taint tea.
+          </p>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 text-base mb-2">🍽️ Dishwasher Salt Dosing</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Never rely on all-in-one tablets alone in Affinity Water areas. Set Bosch/Neff machines to <strong>H05 or H06</strong> and Beko to <strong>Level 4</strong>. Keep the granular salt chamber topped up to prevent cloudy glasses and element burnout.
+          </p>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 text-base mb-2">🔥 Combi Boiler & Heating (BS 7593)</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            British Standard BS 7593 mandates permanent inline scale treatment for boilers operating over 200 PPM. Ensure an electrolytic or magnetic scale reducer is installed on your cold water inlet to protect the primary heat exchanger.
+          </p>
+        </div>
+        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 text-base mb-2">🚿 Skin & Eczema Protection</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            High calcium binds with soap surfactants, leaving an insoluble film that aggravates eczema and dry scalp. Use syndet (soap-free) body washes and apply an emollient cream immediately after showering to restore your skin barrier.
+          </p>
+        </div>
+      </div>
+    `
+  },
+  {
+    slug: "london-water-hardness-by-postcode",
+    title: "London Water Hardness by Postcode: Is London Water Hard?",
+    metaTitle: "London Water Hardness by Postcode",
+    metaDescription: "Is London tap water hard? Check London water hardness by postcode (PPM & Clark). Compare North, South, East, West & Central London limescale risks.",
+    targetKeyword: "london water hardness by postcode",
+    category: "Regional Hardness",
+    datePublished: "2025-02-18T08:00:00Z",
+    dateModified: "2026-09-19T11:30:00Z",
+    readingTime: "7 min read",
+    quickVerdict: {
+      ppmRange: "260 – 320 PPM (mg/L CaCO3)",
+      classification: "Hard to Very Hard",
+      supplier: "Thames Water & Affinity Water",
+      keyTakeaway: "Yes, London tap water is exceptionally hard, averaging 280 PPM. Sourced predominantly from the River Thames, River Lee, and subterranean chalk boreholes, it produces stubborn limescale across all 32 London boroughs."
+    },
+    relatedOutcodes: ["SW1A", "EC1A", "E20", "E1", "N1", "W1A", "SE1", "NW1"],
+    faqItems: [
+      {
+        question: "Is tap water hard in London?",
+        answer: "Yes, London has some of the hardest tap water in the UK, averaging 280 PPM (19.6° Clark). Sourced from chalk-fed rivers and groundwater boreholes, it contains high levels of dissolved calcium and magnesium carbonate."
+      },
+      {
+        question: "Which parts of London have the hardest water?",
+        answer: "South East London (postcodes SE, BR, DA) and parts of East London (E, E20) register the highest hardness, often reaching 310 to 325 PPM, due to heavy abstraction from the North Downs chalk aquifer."
+      },
+      {
+        question: "Can London hard water cause hair loss or dry skin?",
+        answer: "Hard water does not cause permanent hair loss, but high calcium concentrations bind to shampoo surfactants, creating residue that makes hair feel brittle and straw-like while triggering dry skin and eczema flare-ups."
+      },
+      {
+        question: "Do London renters need to descale appliances before moving out?",
+        answer: "Yes. Tenancy deposit disputes in London frequently cite heavy limescale encrustation on shower screens, chrome taps, and kettle bases as tenant negligence. Descaling with white vinegar or citric acid before checkout prevents deposit deductions."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        Anyone moving to London from Scotland, Manchester, or overseas quickly notices a curious phenomenon: black tea develops an oily, floating scum within seconds, shower screens turn frosted with chalk streaks, and kettles sound like rumbling jet engines. The short answer to <em>"is London water hard?"</em> is an emphatic <strong>yes</strong>—London tap water averages <strong>280 PPM (19.6° Clark)</strong>, putting the entire capital into the <strong>hard to very hard</strong> classification.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Why London Tap Water is Saturated with Calcium</h2>
+      <p class="text-slate-600 mb-4">
+        London sits in the geological center of the London Basin, a massive natural bowl underlain by Cretaceous chalk layers formed millions of years ago. The capital's drinking water comes from two primary sources managed by Thames Water and Affinity Water:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>River Abstraction (70%):</strong> Abstracted from the non-tidal River Thames (west of Teddington Weir at Hampton, Kempton Park, and Walton) and the River Lee in East London. Both rivers are spring-fed by groundwater that has filtered through chalk hills.</li>
+        <li><strong>Underground Chalk Boreholes (30%):</strong> Deep wells sunk directly into the subterranean chalk aquifer beneath London and the North Downs, providing naturally sterile water with over 300mg of dissolved mineral solids per litre.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">London Postcode Hardness Guide: Borough-by-Borough PPM Breakdown</h2>
+      <p class="text-slate-600 mb-4">
+        While all London postcodes are hard, subtle variations exist between the Thames Valley river-fed west and the chalk-borehole-fed south and east:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left border-collapse border border-slate-200 text-sm">
+          <thead>
+            <tr class="bg-slate-100 text-slate-800 font-semibold">
+              <th class="border border-slate-200 p-3">Area / Direction</th>
+              <th class="border border-slate-200 p-3">Postcode Hubs</th>
+              <th class="border border-slate-200 p-3">Key Boroughs</th>
+              <th class="border border-slate-200 p-3">Average PPM</th>
+              <th class="border border-slate-200 p-3">°Clark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">Central London</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/sw1a" class="text-cyan-600 hover:underline font-semibold">SW1A</a>, <a href="/water-hardness/ec1a" class="text-cyan-600 hover:underline font-semibold">EC1A</a>, WC1</td>
+              <td class="border border-slate-200 p-3">Westminster, City of London, Camden</td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">280 – 290 PPM</td>
+              <td class="border border-slate-200 p-3">19.6° – 20.3°</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">West London</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/w1a" class="text-cyan-600 hover:underline font-semibold">W1A</a>, W2, W6, SW6</td>
+              <td class="border border-slate-200 p-3">Kensington & Chelsea, Hammersmith, Ealing</td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">275 – 295 PPM</td>
+              <td class="border border-slate-200 p-3">19.3° – 20.7°</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">East London</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/e1" class="text-cyan-600 hover:underline font-semibold">E1</a>, <a href="/water-hardness/e20" class="text-cyan-600 hover:underline font-semibold">E20</a>, E14</td>
+              <td class="border border-slate-200 p-3">Tower Hamlets, Newham (Stratford), Hackney</td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">285 – 310 PPM</td>
+              <td class="border border-slate-200 p-3">20.0° – 21.7°</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">South London</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/se1" class="text-cyan-600 hover:underline font-semibold">SE1</a>, SE10, CR0</td>
+              <td class="border border-slate-200 p-3">Southwark, Greenwich, Lewisham, Croydon</td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">300 – 325 PPM</td>
+              <td class="border border-slate-200 p-3">21.0° – 22.8°</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">North London</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/n1" class="text-cyan-600 hover:underline font-semibold">N1</a>, <a href="/water-hardness/nw1" class="text-cyan-600 hover:underline font-semibold">NW1</a>, N4</td>
+              <td class="border border-slate-200 p-3">Islington, Camden, Haringey, Barnet</td>
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">275 – 300 PPM</td>
+              <td class="border border-slate-200 p-3">19.3° – 21.0°</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">The London Renter’s Limescale Survival Playbook</h2>
+      <p class="text-slate-600 mb-4">
+        Because roughly 60% of inner London residents rent private flats, limescale is a frequent cause of tenancy deposit disputes. Protect your deposit and your wallet with these 3 essential steps:
+      </p>
+      <ol class="list-decimal pl-6 space-y-3 text-slate-600 mb-6">
+        <li><strong>Check-out Deposit Protection:</strong> London estate agents inspect shower screens with UV lights. Clean glass weekly with a spray bottle filled with white vinegar and warm water to dissolve calcium crust before it etches permanently into the glass.</li>
+        <li><strong>Shower Filters for Hair & Skin:</strong> Standard cartridge shower filters remove chlorine and sediment, which helps soothe itchy winter skin, but they do <em>not</em> remove dissolved calcium ions. For genuine softening, an ion-exchange system is needed, but a clarifying shampoo once a week clears mineral buildup from hair effectively.</li>
+        <li><strong>Kettle Care on a Budget:</strong> Instead of expensive brand-name descalers, buy a 1kg tub of food-grade citric acid powder online (£5). One tablespoon boiled in your kettle dissolves all scale in 5 minutes with zero lingering smell.</li>
+      </ol>
     `
   }
 ];
