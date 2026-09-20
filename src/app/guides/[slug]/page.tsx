@@ -46,9 +46,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const canonicalUrl = `https://waterhardness.uk/guides/${guide.slug}`;
 
+  // Giữ Title tuyệt đối dưới 58 ký tự và description dưới 155 ký tự
+  const titleWithSuffix = `${guide.metaTitle} | WaterHardness.uk`;
+  const absoluteTitle = titleWithSuffix.length <= 58 
+    ? titleWithSuffix 
+    : `${guide.metaTitle.slice(0, 36)}... | WaterHardness.uk`;
+
+  const metaDesc = guide.metaDescription.length <= 155 
+    ? guide.metaDescription 
+    : `${guide.metaDescription.slice(0, 151)}...`;
+
   return {
-    title: guide.metaTitle,
-    description: guide.metaDescription,
+    title: { absolute: absoluteTitle },
+    description: metaDesc,
     alternates: {
       canonical: canonicalUrl,
     },
