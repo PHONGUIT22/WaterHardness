@@ -22,6 +22,9 @@ export async function GET() {
     <sitemap>
       <loc>${baseUrl}/sitemap/guides.xml</loc>
     </sitemap>
+    <sitemap>
+      <loc>${baseUrl}/sitemap/cities.xml</loc>
+    </sitemap>
   </sitemapindex>`.trim();
 
   return new NextResponse(xml, {

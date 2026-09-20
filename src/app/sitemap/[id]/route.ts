@@ -3,6 +3,7 @@ import { supabase } from "@/lib/supabase";
 import { getAllOutcodesFromDB } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
 import { guidesData } from "@/lib/guidesData";
+import { citiesData } from "@/lib/citiesData";
 
 export const revalidate = 86400; // ISR Cache 1 ngày trên CDN
 
@@ -17,6 +18,7 @@ export async function generateStaticParams() {
     { id: 'outcodes.xml' },
     { id: 'compare.xml' },
     { id: 'guides.xml' },
+    { id: 'cities.xml' },
   ];
 }
 
@@ -121,6 +123,24 @@ export async function GET(
       ...guidesData.map((guide) => ({
         url: `${baseUrl}/guides/${guide.slug}`,
         lastModified: guide.dateModified,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+      }))
+    ];
+  }
+
+  // 6. SITEMAP CITIES HUBS (Top 30 UK Cities & Directory)
+  else if (cleanId === 'cities') {
+    routes = [
+      {
+        url: `${baseUrl}/cities`,
+        lastModified: getSeoDates('cities-directory').dateModifiedISO,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+      },
+      ...citiesData.map((city) => ({
+        url: `${baseUrl}/cities/${city.slug}`,
+        lastModified: getSeoDates(city.slug).dateModifiedISO,
         changeFrequency: 'weekly',
         priority: 0.9,
       }))
