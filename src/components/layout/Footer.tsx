@@ -37,10 +37,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4 text-xs uppercase tracking-wider">Top Regions</h4>
             <ul className="space-y-2.5 text-xs">
-              <li><Link href="/compare" className="hover:text-white transition-colors">Compare Postcodes Tool</Link></li>
-              <li><Link href="/water-hardness/sw1a" className="hover:text-white transition-colors">London Water Hardness</Link></li>
-              <li><Link href="/water-hardness/b1" className="hover:text-white transition-colors">Birmingham Water Quality</Link></li>
-              <li><Link href="/water-hardness/m1" className="hover:text-white transition-colors">Manchester Water Hardness</Link></li>
+              <li><Link href="/cities" className="hover:text-white transition-colors">UK Cities Directory</Link></li>
+              <li><Link href="/cities/london" className="hover:text-white transition-colors">London Water Hardness</Link></li>
+              <li><Link href="/cities/birmingham" className="hover:text-white transition-colors">Birmingham Water Quality</Link></li>
+              <li><Link href="/cities/manchester" className="hover:text-white transition-colors">Manchester Water Hardness</Link></li>
               <li><Link href="/outcodes" className="hover:text-white transition-colors">All UK Outcodes Directory</Link></li>
             </ul>
           </div>
