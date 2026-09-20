@@ -16,14 +16,14 @@ import {
 export const revalidate = 86400; // Cache 24h on CDN
 
 export const metadata: Metadata = {
-  title: "UK Water Hardness & Appliance Guides | Technical Plumbing Hub",
-  description: "Authoritative, engineer-written British consumer guides on UK water hardness (PPM), limescale prevention, dishwasher salt calibration, combi boiler efficiency, and regional geology.",
+  title: "UK Water Hardness & Appliance Guides",
+  description: "Expert UK guides on water hardness (PPM), limescale removal, dishwasher salt settings, combi boiler efficiency & local water supplier catchment reports.",
   alternates: {
     canonical: "https://waterhardness.uk/guides",
   },
   openGraph: {
-    title: "UK Water Hardness & Appliance Guides | WaterHardness.uk",
-    description: "Authoritative British guides on UK water hardness, boiler scale protection, dishwasher calibration, and regional water supply science.",
+    title: "UK Water Hardness & Appliance Guides",
+    description: "Expert British guides on UK water hardness, boiler scale protection, dishwasher calibration, and regional water supply science.",
     url: "https://waterhardness.uk/guides",
     siteName: "WaterHardness.uk",
     locale: "en_GB",
