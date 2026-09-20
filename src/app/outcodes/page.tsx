@@ -6,7 +6,7 @@ import { Building2, ArrowRight, ShieldCheck } from "lucide-react";
 export const revalidate = 86400; // Cache CDN 24h
 
 export const metadata: Metadata = {
-  title: "All UK Outcodes: Water Hardness Directory",
+  title: "UK Outcodes: Water Hardness Directory",
   description: "Browse water hardness levels, PPM readings, and appliance settings for all UK outcode areas.",
   alternates: {
     canonical: "https://waterhardness.uk/outcodes",
