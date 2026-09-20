@@ -10,10 +10,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://waterhardness.uk"),
   title: {
-    default: "UK Water Hardness Checker & Appliance Salt Settings | WaterHardness.uk",
+    default: "UK Water Hardness & Salt Checker | WaterHardness.uk",
     template: "%s | WaterHardness.uk"
   },
-  description: "Instant water hardness insights (PPM, Clark Degrees) for 1.7M+ UK postcodes. Find dishwasher salt settings & limescale risks for Bosch, Beko, Miele & more.",
+  description: "Instant UK water hardness lookup (PPM & Clark). Check local limescale risks, boiler efficiency penalties & appliance dishwasher salt settings.",
   icons: {
     icon: "/icon.webp",
     shortcut: "/icon.webp",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://waterhardness.uk",
-    title: "UK Water Hardness Checker & Appliance Salt Settings",
-    description: "Check water hardness (PPM & Clark degrees), limescale risk & dishwasher salt settings across 1.7M+ UK postcodes.",
+    title: "UK Water Hardness & Salt Checker",
+    description: "Lookup water hardness (PPM & Clark) across UK postcodes. Check limescale risks and appliance dishwasher salt settings.",
     siteName: "WaterHardness.uk",
     images: [
       {
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "UK Water Hardness Checker & Postcode Analytics",
-    description: "Find water hardness (PPM), limescale risk and dishwasher settings across all UK postcodes.",
+    title: "UK Water Hardness & Salt Checker",
+    description: "Lookup water hardness (PPM & Clark) across UK postcodes. Check limescale risks and appliance dishwasher salt settings.",
     images: ["https://waterhardness.uk/og-image.png"],
   },
 };
