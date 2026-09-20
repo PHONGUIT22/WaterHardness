@@ -69,8 +69,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const canonicalSectorSlug = data.sector.toLowerCase().replace(/\s+/g, "-");
 
   return {
-    title: `${data.sector} Water Hardness: ${data.avgPpm} PPM & Settings`,
-    description: `Water hardness in ${data.sector} (${data.companyName}) averages ${data.avgPpm} PPM (${data.clarkDegrees}° Clark). Dishwasher salt calibrations & boiler limescale risks.`,
+    title: `${data.sector} Water Hardness (${data.avgPpm} PPM)`,
+    description: `Check water hardness in ${data.sector} (${data.avgPpm} PPM, ${data.companyName}). Get dishwasher salt settings, boiler protection tips & limescale advice.`,
     
     // 🔥 LÁ CHẮN BẢO VỆ DOMAIN: Chặn Google index 9.000 trang Sector lúc web còn mới
     // Googlebot có bấm vào link xem thì cũng không tính điểm phạt Thin Content / Spam
@@ -87,7 +87,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}`,
     },
     openGraph: {
-      title: `${data.sector} Water Hardness: ${data.avgPpm} PPM (${data.companyName})`,
+      title: `${data.sector} Water Hardness (${data.avgPpm} PPM)`,
       description: `Official water hardness report for sector ${data.sector}: ${data.avgPpm} PPM (${data.clarkDegrees}° Clark). Check limescale risks & appliance settings.`,
       url: `https://waterhardness.uk/water-hardness/${canonicalOutcode}/${canonicalSectorSlug}`,
       siteName: "WaterHardness.uk",
@@ -96,7 +96,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      title: `${data.sector} Water Hardness: ${data.avgPpm} PPM`,
+      title: `${data.sector} Water Hardness (${data.avgPpm} PPM)`,
       description: `Water hardness & appliance salt settings for sector ${data.sector} (${data.companyName}).`,
     },
   };
@@ -173,11 +173,11 @@ export default async function SectorDetailPage({ params }: PageProps) {
 
   // --- ĐOẠN 1: TỔNG QUAN VÙNG & ĐỊA LÝ CẤP NƯỚC (6 Biến thể cấu trúc) ---
   const intros = [
-    `Public water quality records published by ${companyName} indicate that tap water across postcode sector ${sector} registers an average mineral hardness of ${avgPpm} PPM (mg/L of calcium carbonate). Geographically centered around coordinates ${latStr}°N, ${lngStr}°${lngDirection} and encompassing approximately ${postcodeCount} postal units, this sector falls within the official ${hardnessCategory.toLowerCase()} water classification.`,
-    `Covering ${postcodeCount} active delivery postcodes in the ${outcode} district, households and businesses in sector ${sector} are supplied with tap water averaging ${avgPpm} PPM (${clarkDegrees}° Clark). Distributed under the regulatory oversight of ${companyName}, local tap water supplies in this ${latStr}°N zone are rated as ${hardnessCategory.toLowerCase()}.`,
-    `For residents configuring home appliances or monitoring water quality in ${sector}, environmental supply metrics from ${companyName} show a dissolved mineral density of ${avgPpm} PPM. Spanning ${postcodeCount} local postcodes near coordinates ${latStr}, ${lngStr}, the mains water supply reflects a ${hardnessCategory.toLowerCase()} chemical profile.`,
+    `Public water quality records published by ${companyName} indicate that tap water across postcode sector ${sector} registers an average mineral hardness of ${avgPpm} PPM (mg/L of calcium carbonate). Serving approximately ${postcodeCount} postal units in the ${outcode} area, this sector falls within the official ${hardnessCategory.toLowerCase()} water classification.`,
+    `Covering ${postcodeCount} active delivery postcodes in the ${outcode} district, households and businesses in sector ${sector} are supplied with tap water averaging ${avgPpm} PPM (${clarkDegrees}° Clark). Distributed under the regulatory oversight of ${companyName}, local tap water supplies in this catchment are rated as ${hardnessCategory.toLowerCase()}.`,
+    `For residents configuring home appliances or monitoring water quality in ${sector}, environmental supply metrics from ${companyName} show a dissolved mineral density of ${avgPpm} PPM. Spanning ${postcodeCount} local postcodes, the mains tap water supply presents a consistent ${hardnessCategory.toLowerCase()} profile.`,
     `Water testing audits for postcode sector ${sector} confirm a mean calcium carbonate concentration of ${avgPpm} PPM, equivalent to ${clarkDegrees}° Clark or ${frenchDegrees}°fH. Sourced and treated by ${companyName} across ${postcodeCount} postcode delivery routes, water in this catchment is categorized as ${hardnessCategory.toLowerCase()}.`,
-    `Positioned around GPS reference points ${latStr}°N and ${lngStr}°${lngDirection}, sector ${sector} receives mains tap water supplied by ${companyName}. Across the ${postcodeCount} postcodes within this distribution boundary, the baseline water hardness currently averages ${avgPpm} PPM, falling into the ${hardnessCategory.toLowerCase()} threshold.`,
+    `Serving the community across sector ${sector}, mains tap water is supplied by ${companyName}. Across the ${postcodeCount} postcodes within this distribution boundary, the baseline water hardness currently averages ${avgPpm} PPM, falling into the ${hardnessCategory.toLowerCase()} threshold.`,
     `According to regional catchment disclosures for ${sector}, municipal tap water managed by ${companyName} presents a mineral density of ${avgPpm} PPM (${clarkDegrees} English degrees). This data covers approximately ${postcodeCount} residential and commercial addresses in the ${outcode} area.`
   ];
   const paragraphIntro = spintax(intros, 0);
@@ -185,16 +185,16 @@ export default async function SectorDetailPage({ params }: PageProps) {
   // --- ĐOẠN 2: PHÂN TÍCH TÁC ĐỘNG TỔN THẤT NHIỆT & LÒ HƠI BOILER ---
   const limescaleTemplates = isVeryHard ? [
     `At ${avgPpm} PPM, sector ${sector} is situated in a high-density mineral corridor. Heating water above 60°C precipitates heavy calcium carbonate scale directly onto combi boiler heat exchangers, immersion coils, and kettle bases. Without preventative scale treatment, internal pipe encrustation can degrade thermal heating efficiency by ${boilerLossPercentage}, leading to elevated quarterly energy expenses across ${sector}&apos;s ${postcodeCount} postcodes.`,
-    `With an intense mineral load of ${avgPpm} PPM (${clarkDegrees}° Clark), households in ${sector} face rapid limescale deposition. Calcium and magnesium ions bond to plumbing fixtures near coordinates ${latStr}°N, leaving thick chalky residue on shower screens, aerators, and heating elements while reducing central heating boiler efficiency by up to ${boilerLossPercentage}.`
+    `With an intense mineral load of ${avgPpm} PPM (${clarkDegrees}° Clark), households in ${sector} face rapid limescale deposition. Dissolved calcium and magnesium leave thick chalky residue on shower screens, aerators, and heating elements while reducing central heating boiler efficiency by up to ${boilerLossPercentage}.`
   ] : isHard ? [
     `Registering ${avgPpm} PPM, tap water across ${sector}&apos;s ${postcodeCount} postcodes carries significant calcium concentrations. Uninhibited hot water use accelerates limescale deposits on heating elements, potentially causing a ${boilerLossPercentage} loss in boiler heat transfer efficiency over prolonged operating cycles.`,
-    `Because water supplied by ${companyName} in ${sector} contains ${avgPpm} PPM of dissolved minerals, limescale accumulation is an active maintenance factor. Taps, thermostatic shower cartridges, and boiler coils located around ${latStr}°N require periodic descaling to prevent flow constriction.`
+    `Because water supplied by ${companyName} in ${sector} contains ${avgPpm} PPM of dissolved minerals, limescale accumulation is an active maintenance factor. Taps, thermostatic shower cartridges, and boiler coils require periodic descaling to prevent flow constriction.`
   ] : isModerate ? [
     `With a balanced reading of ${avgPpm} PPM (${clarkDegrees}° Clark), water in ${sector} exhibits a moderate mineral structure. While limescale accumulation is gradual, minor scale rings can form inside kettles and on boiler heat exchangers over 6–12 month periods (estimated thermal efficiency drag of ${boilerLossPercentage}).`,
     `Tap water in sector ${sector} averages ${avgPpm} PPM, presenting a manageable mineral level for the ${postcodeCount} local postcodes. Heating equipment operates with negligible efficiency loss (${boilerLossPercentage}), though routine quarterly inspection of kettle elements remains beneficial.`
   ] : [ // isSoft or isVerySoft
     `Benefiting from a low mineral concentration of just ${avgPpm} PPM, tap water in ${sector} is naturally soft. Heating systems and hot water cylinders across these ${postcodeCount} postcodes operate at peak thermal efficiency (${boilerLossPercentage} scale-related losses), virtually eliminating limescale buildup on pipework.`,
-    `Supplied by ${companyName} at ${avgPpm} PPM (${clarkDegrees}° Clark), water in sector ${sector} does not produce stubborn chalky encrustations. Homeowners near coordinates ${latStr}°N enjoy extended appliance lifespans and clean boiler pipework without requiring chemical water softeners.`
+    `Supplied by ${companyName} at ${avgPpm} PPM (${clarkDegrees}° Clark), water in sector ${sector} does not produce stubborn chalky encrustations. Homeowners enjoy extended appliance lifespans and clean boiler pipework without requiring chemical water softeners.`
   ];
   const paragraphLimescale = spintax(limescaleTemplates, 1);
 
@@ -207,12 +207,12 @@ export default async function SectorDetailPage({ params }: PageProps) {
   } else if (isMidlandsOrWelsh) {
     paragraphGeology = `Supplies in this zone are managed through a composite blend of river abstraction points and upland reservoirs operated by ${companyName}. The mineral balance fluctuates moderately between seasons, averaging ${avgPpm} PPM (${clarkDegrees}° Clark) across the ${postcodeCount} postal sectors in this supply matrix.`;
   } else {
-    paragraphGeology = `Water quality in ${sector} is monitored continuously under the Water Supply (Water Quality) Regulations. Environmental testing near GPS coordinates ${latStr}, ${lngStr} ensures that the ${avgPpm} PPM mineral density supplied by ${companyName} remains compliant with all Drinking Water Inspectorate (DWI) parameters.`;
+    paragraphGeology = `Water quality in ${sector} is monitored continuously under the Water Supply (Water Quality) Regulations. Environmental testing ensures that the ${avgPpm} PPM mineral density supplied by ${companyName} remains compliant with all Drinking Water Inspectorate (DWI) parameters.`;
   }
 
   // --- ĐOẠN 4: HÓA HỌC CHẤT TẨY RỬA, TÓC & DA (DETERGENT & BATHING IMPACT) ---
   const skinSoapTemplates = [
-    `On a chemical level, calcium ions in ${avgPpm} PPM water bind with soap fatty acids to create insoluble stearate compounds (soap scum). In sector ${sector}, washing laundry or dishware requires ${soapDosageAdvice}. For personal grooming, individuals prone to dry scalp or eczema may notice reduced soap lathering in this ${hardnessCategory.toLowerCase()} water environment.`,
+    `In everyday household use, calcium and magnesium ions in ${avgPpm} PPM water bind with soaps, producing chalky bathroom residue and scum on your morning cuppa. In sector ${sector}, washing laundry or dishware requires ${soapDosageAdvice}. For personal grooming, individuals with dry skin or eczema sensitivity may experience skin tightness after showers in this ${hardnessCategory.toLowerCase()} water environment.`,
     `Bathing and laundering across the ${postcodeCount} postcodes of ${sector} is influenced by the ${avgPpm} PPM mineral density. Surfactants in shampoos and detergents interact with calcium salts, requiring ${soapDosageAdvice} to achieve thorough cleansing and preserve fabric softness.`,
     `Household water chemistry in ${sector} (${clarkDegrees}° Clark) dictates everyday cleaning efficiency. Water supplied by ${companyName} at this level necessitates ${soapDosageAdvice}, while inline shower head filters can help sensitive skin by mitigating mineral residue during washing.`
   ];
@@ -272,10 +272,8 @@ export default async function SectorDetailPage({ params }: PageProps) {
         "datePublished": datePublishedISO,
         "dateModified": dateModifiedISO,
         "author": {
-          "@type": "Person",
-          "@id": "https://waterhardness.uk/#person",
-          "name": "Nguyễn Hạc Phong",
-          "jobTitle": "Lead Water Data Engineer",
+          "@type": "Organization",
+          "name": "WaterHardness.uk Technical & Water Quality Research Team",
           "url": "https://waterhardness.uk/about"
         },
         "publisher": {
@@ -284,6 +282,10 @@ export default async function SectorDetailPage({ params }: PageProps) {
           "name": "WaterHardness.uk",
           "logo": { "@type": "ImageObject", "url": "https://waterhardness.uk/logo.png" }
         },
+        "citation": [
+          "https://www.dwi.gov.uk/",
+          "https://www.ciphe.org.uk/"
+        ],
         "about": [
           {
             "@type": "Place",
