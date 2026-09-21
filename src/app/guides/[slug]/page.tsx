@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { guidesData, getGuideBySlug } from "@/lib/guidesData";
+import QuoteRequestCard from "@/components/lead/QuoteRequestCard";
 import { 
   Home, 
   ChevronRight, 
@@ -96,6 +97,18 @@ export default async function GuideArticlePage({ params }: PageProps) {
       return isoString;
     }
   };
+
+  // Calculate representative water hardness PPM for quote engine
+  let guidePpm = 240;
+  if (guide.quickVerdict.ppmRange) {
+    const match = guide.quickVerdict.ppmRange.match(/\d+/g);
+    if (match && match.length > 0) {
+      const nums = match.map(Number);
+      guidePpm = Math.round(nums.reduce((a, b) => a + b, 0) / nums.length);
+    }
+  } else if (guide.quickVerdict.classification?.toLowerCase().includes("soft")) {
+    guidePpm = 60;
+  }
 
   // Schema.org JSON-LD (Article, BreadcrumbList, FAQPage)
   const schema = {
@@ -375,6 +388,15 @@ export default async function GuideArticlePage({ params }: PageProps) {
             </div>
           </div>
         </div>
+
+        {/* LOCAL LEAD CAPTURE ENGINE: WATER SOFTENER & HEATING PROTECTION */}
+        {guide.relatedOutcodes && guide.relatedOutcodes.length > 0 && (
+          <QuoteRequestCard
+            outcode={guide.relatedOutcodes[0]}
+            avgPpm={guidePpm}
+            locationName={guide.relatedOutcodes[0]}
+          />
+        )}
 
         {/* FAQ ACCORDION SECTION */}
         <div className="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-8 shadow-sm space-y-6">

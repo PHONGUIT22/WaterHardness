@@ -5,6 +5,7 @@ import { citiesData, getCityBySlug } from "@/lib/citiesData";
 import { getOutcodesForCity } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
 import CityOutcodeGrid from "./CityOutcodeGrid";
+import QuoteRequestCard from "@/components/lead/QuoteRequestCard";
 import {
   Droplets,
   ShieldCheck,
@@ -388,6 +389,15 @@ export default async function CityHubPage({ params }: PageProps) {
                 Supplied by <strong>{city.supplier}</strong> under Drinking Water Inspectorate (DWI) regulatory standards.
               </div>
             </div>
+          </div>
+
+          {/* LOCAL LEAD CAPTURE ENGINE: WATER SOFTENER & HEATING PROTECTION */}
+          <div className="mb-8">
+            <QuoteRequestCard
+              outcode={city.outcodePrefixes[0]}
+              avgPpm={city.avgPpm}
+              locationName={city.name}
+            />
           </div>
 
           {/* Outcode Postcode Directory Grid (Step 2.3) */}

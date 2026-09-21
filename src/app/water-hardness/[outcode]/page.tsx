@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getOutcodeOverviewData, getAllOutcodesFromDB } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
+import QuoteRequestCard from "@/components/lead/QuoteRequestCard";
 import { 
   Droplets, 
   ShieldCheck, 
@@ -405,6 +406,15 @@ export default async function OutcodeHubPage({ params }: PageProps) {
             </div>
           </div>
         </section>
+
+        {/* LOCAL LEAD CAPTURE ENGINE: WATER SOFTENER & HEATING PROTECTION */}
+        <div className="mb-8">
+          <QuoteRequestCard
+            outcode={outcode.toUpperCase()}
+            avgPpm={avgPpm}
+            locationName={companyName}
+          />
+        </div>
 
         {/* KPI METRIC CARDS ĐỘC BẢN TOÀN OUTCODE */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
