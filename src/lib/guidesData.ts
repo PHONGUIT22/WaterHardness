@@ -2277,6 +2277,421 @@ export const guidesData: GuideArticle[] = [
         Dab a drop of white vinegar onto the cloudy glass and wipe it with a paper towel. If the glass becomes crystal clear, the film is <strong>limescale</strong> (your water hardness is set too low or you have run out of salt). If the cloudy film remains unchanged, the glass has suffered permanent <strong>glass etching/corrosion</strong> (your hardness was set too high in soft water, overdosing the resin bed).
       </p>
     `
+  },
+  {
+    slug: "does-surrey-have-hard-water",
+    title: "Does Surrey Have Hard Water? Woking, Guildford & KT Guide",
+    metaTitle: "Does Surrey Have Hard Water? Guide",
+    metaDescription: "Is tap water hard in Surrey? Check PPM levels across Guildford, Woking, Epsom & KT postcodes. Find kettle descaling advice & water softener tips.",
+    targetKeyword: "does surrey have hard water",
+    category: "Regional Hardness",
+    datePublished: "2025-03-01T08:00:00Z",
+    dateModified: "2026-09-21T11:00:00Z",
+    readingTime: "6 min read",
+    quickVerdict: {
+      ppmRange: "270 – 330 PPM (mg/L CaCO3)",
+      classification: "Very Hard Water",
+      supplier: "Affinity Water, SES Water & Thames Water",
+      keyTakeaway: "Yes, Surrey has some of the hardest water in England, regularly exceeding 290 PPM. Underground chalk springs across the North Downs saturate tap water with dissolved calcium, coating kettles in limescale within days and making whole-house water softeners a standard feature in Surrey homes."
+    },
+    relatedOutcodes: ["GU21","GU22","GU1","KT22","KT18","RH1","SM7"],
+    contentHtml: `
+      <p class="text-lg text-slate-700 leading-relaxed mb-6">
+        If you have just unpacked your removal boxes in Woking, Guildford, or Leatherhead after leaving a London flat, you are in for a sharp shock the very first time you boil the kettle. Many newcomers assume moving out into the leafy Surrey commuter belt means greener pastures and softer water. In reality, Surrey tap water is significantly harder than most parts of central London, frequently measuring between <strong>280 and 330 PPM</strong>.
+      </p>
+
+      <p class="text-slate-600 mb-6">
+        Within seven days of moving into a detached Surrey home, you will notice chalky white tide marks around your kitchen mixer taps, cloudy spots on drinking glasses straight out of the dishwasher, and a grey mineral crust forming across the heating base of your kettle.
+      </p>
+
+      <div class="rounded-2xl border border-rose-200 bg-rose-50/60 p-6 my-8">
+        <h3 class="text-lg font-bold text-rose-900 mb-2">The Surrey Hard Water Reality Check</h3>
+        <p class="text-sm text-rose-800 leading-relaxed">
+          Surrey sits squarely on the massive Cretaceous chalk formation of the North Downs. Rainwater percolates hundreds of feet down through porous calcium carbonate rock before being pumped out by local water companies. By the time it arrives at your kitchen tap, it is saturated with dissolved mineral salts that react violently to heat, furring pipework and choking high-end bathroom fittings.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Surrey Water Suppliers: Who Provides Your Tap Water?</h2>
+      <p class="text-slate-600 mb-4">
+        Unlike counties served by a single regional water authority, Surrey is carved up between three separate water suppliers, each drawing from distinct groundwater boreholes and river intakes:
+      </p>
+      <ul class="list-disc pl-6 space-y-3 text-slate-600 mb-6">
+        <li><strong>Affinity Water (Central & North-West Surrey):</strong> Supplies Woking (<a href="/water-hardness/gu21" class="text-blue-600 font-semibold hover:underline">GU21</a>, <a href="/water-hardness/gu22" class="text-blue-600 font-semibold hover:underline">GU22</a>), Chertsey (<a href="/water-hardness/kt16" class="text-blue-600 font-semibold hover:underline">KT16</a>), and Weybridge (<a href="/water-hardness/kt13" class="text-blue-600 font-semibold hover:underline">KT13</a>). Water here averages <strong>290–310 PPM</strong>, derived from deep chalk aquifers and the River Thames.</li>
+        <li><strong>SES Water (East & Mid Surrey):</strong> Serves Leatherhead (<a href="/water-hardness/kt22" class="text-blue-600 font-semibold hover:underline">KT22</a>), Epsom (<a href="/water-hardness/kt18" class="text-blue-600 font-semibold hover:underline">KT18</a>), Reigate (<a href="/water-hardness/rh1" class="text-blue-600 font-semibold hover:underline">RH1</a>), and Banstead (<a href="/water-hardness/sm7" class="text-blue-600 font-semibold hover:underline">SM7</a>). SES Water relies almost 85% on underground chalk boreholes, producing exceptionally hard water up to <strong>330 PPM</strong>.</li>
+        <li><strong>Thames Water (South & West Surrey):</strong> Supplies Guildford (<a href="/water-hardness/gu1" class="text-blue-600 font-semibold hover:underline">GU1</a>, <a href="/water-hardness/gu2" class="text-blue-600 font-semibold hover:underline">GU2</a>), Godalming (<a href="/water-hardness/gu7" class="text-blue-600 font-semibold hover:underline">GU7</a>), and Cranleigh. Sourced from the River Wey and Greensand aquifer wells, hardness ranges from <strong>270 to 295 PPM</strong>.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Surrey Water Hardness by Postcode Outcode</h2>
+      <p class="text-slate-600 mb-4">
+        Check your local postal district below to see exact mineral ratings and which water company manages your local mains supply:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <thead class="bg-slate-100 text-slate-800 font-semibold">
+            <tr>
+              <th class="p-3 border border-slate-200">Outcode</th>
+              <th class="p-3 border border-slate-200">Town / Area</th>
+              <th class="p-3 border border-slate-200">Water Supplier</th>
+              <th class="p-3 border border-slate-200">Avg PPM</th>
+              <th class="p-3 border border-slate-200">Classification</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/gu21" class="hover:underline">GU21</a></td>
+              <td class="p-3">Woking Central & Horsell</td>
+              <td class="p-3">Affinity Water</td>
+              <td class="p-3 font-semibold">290 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/gu1" class="hover:underline">GU1</a></td>
+              <td class="p-3">Guildford Town Centre</td>
+              <td class="p-3">Thames Water</td>
+              <td class="p-3 font-semibold">275 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-orange-100 text-orange-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/kt22" class="hover:underline">KT22</a></td>
+              <td class="p-3">Leatherhead, Oxshott & Fetcham</td>
+              <td class="p-3">SES Water</td>
+              <td class="p-3 font-semibold">315 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/kt18" class="hover:underline">KT18</a></td>
+              <td class="p-3">Epsom & Headley</td>
+              <td class="p-3">SES Water</td>
+              <td class="p-3 font-semibold">320 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/rh1" class="hover:underline">RH1</a></td>
+              <td class="p-3">Reigate & Redhill</td>
+              <td class="p-3">SES Water</td>
+              <td class="p-3 font-semibold">295 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/sm7" class="hover:underline">SM7</a></td>
+              <td class="p-3">Banstead & Woodmansterne</td>
+              <td class="p-3">SES Water</td>
+              <td class="p-3 font-semibold">310 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Why Surrey Households Rely on Water Softeners</h2>
+      <p class="text-slate-600 mb-4">
+        Walk into the utility room of almost any 4-bedroom detached home in Cobham, Weybridge, or Virginia Water, and you will spot a twin-cylinder block salt water softener humming quietly alongside a Megaflo unvented hot water cylinder.
+      </p>
+      <p class="text-slate-600 mb-4">
+        In Surrey, a water softener is not considered a luxury accessory—it is an appliance preservation necessity. Without softened water:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>Megaflo Cylinder Scale Drag:</strong> Calcium encrustation coats the immersion elements and primary heat exchanger coils, forcing the boiler to burn gas for substantially longer to heat a tank of water.</li>
+        <li><strong>Thermostatic Shower Failure:</strong> High-end brass shower cartridges in ensuite bathrooms seize up within 18 to 24 months as micro-scale binds the delicate ceramic discs.</li>
+        <li><strong>Salt Operating Costs:</strong> Surrey families typically get through one 8kg pack of block salt (two 4kg blocks, costing £12–£15 per pack) every four to six weeks, or a 25kg bag of tablet salt for larger brine tanks.</li>
+        <li><strong>Eczema and Winter Itch:</strong> Dissolved chalk binds to bath soaps and body washes, creating an insoluble curd that strips the skin barrier. Parents in Surrey frequently report dramatic reductions in childhood eczema flare-ups once softened water is installed.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Practical Limescale Survival Tips for Surrey Renters</h2>
+      <p class="text-slate-600 mb-4">
+        If you are renting a flat or house in Woking or Guildford and cannot install a plumbed-in water softener, protect your tenancy deposit with these three habits:
+      </p>
+      <ol class="list-decimal pl-6 space-y-3 text-slate-600 mb-6">
+        <li><strong>Fortnightly Citric Acid Boil:</strong> Buy a 1kg tub of food-grade citric acid powder online (£5). Put two heaped tablespoons into your kettle with 500ml of water, boil once, and watch the thick grey scale fizz away completely without any harsh chemical smells.</li>
+        <li><strong>Shower Squeegee Routine:</strong> Never let Surrey tap water evaporate naturally on clear shower glass. Keep a rubber squeegee hanging in the cubicle and wipe the glass after every shower to stop calcium etching permanently into the glass.</li>
+        <li><strong>Max Dishwasher Salt Settings:</strong> Set your dishwasher salt dial to position 5 or H5. Never rely solely on 3-in-1 pods in Surrey—the internal resin bed must regenerate with coarse granular salt to stop glasses clouding.</li>
+      </ol>
+    `,
+    faqItems: [
+      {
+            "question": "Is Surrey tap water harder than London water?",
+            "answer": "In many areas, yes. While central London averages 260 to 280 PPM, parts of East and Mid Surrey served by SES Water (such as Epsom, Leatherhead, and Banstead) regularly reach 315 to 330 PPM because they draw from deep chalk boreholes in the North Downs."
+      },
+      {
+            "question": "Which water company supplies my Surrey address?",
+            "answer": "Surrey is split between three suppliers: Affinity Water serves northwest Surrey (Woking, Chertsey, Weybridge), SES Water supplies eastern and central districts (Epsom, Leatherhead, Reigate), and Thames Water supplies southwestern areas (Guildford, Godalming)."
+      },
+      {
+            "question": "What dishwasher setting should I use in Surrey?",
+            "answer": "Set your dishwasher water softener to Level 5 (very hard). Multi-benefit detergent pods alone cannot soften Surrey's mineral-dense water; you must keep the base salt reservoir topped up with granular salt."
+      },
+      {
+            "question": "Do I really need a water softener in Surrey?",
+            "answer": "While tap water is completely safe to drink, installing an ion-exchange water softener is strongly recommended for homeowners. It eliminates limescale crust from taps, prevents boiler heat exchanger failure, and protects expensive thermostatic showers from seizing."
+      }
+]
+  },
+  {
+    slug: "does-bournemouth-have-hard-water",
+    title: "Does Bournemouth Have Hard Water? Poole & Dorset Guide",
+    metaTitle: "Does Bournemouth Have Hard Water?",
+    metaDescription: "Is tap water hard in Bournemouth & Poole? Check Dorset PPM ratings across BH postcodes. Learn how coastal chalk hills cause rapid kettle limescale.",
+    targetKeyword: "does bournemouth have hard water",
+    category: "Regional Hardness",
+    datePublished: "2025-03-01T08:00:00Z",
+    dateModified: "2026-09-21T11:00:00Z",
+    readingTime: "6 min read",
+    quickVerdict: {
+      ppmRange: "240 – 300 PPM (mg/L CaCO3)",
+      classification: "Hard Water",
+      supplier: "Bournemouth Water (Pennon Group) & Wessex Water",
+      keyTakeaway: "Yes, Bournemouth and Poole tap water is hard, averaging 260 to 285 PPM. Sourced from the River Stour, River Avon, and Dorset chalk boreholes, local tap water furrs kettle elements quickly and requires regular salt top-ups for dishwashers."
+    },
+    relatedOutcodes: ["BH4","BH16","BH1","BH8","BH15","BH12","BH23"],
+    contentHtml: `
+      <p class="text-lg text-slate-700 leading-relaxed mb-6">
+        Walk into almost any seaside guest house, Airbnb, or retirement flat along the Dorset coast and take a peek inside the kettle. More often than not, you will find a thick layer of chalky grey sediment coating the base. Holidaymakers and retirees moving to Bournemouth, Poole, and Christchurch often carry a common misconception: because the town sits by the sea with fresh maritime air, the water must be soft.
+      </p>
+
+      <p class="text-slate-600 mb-6">
+        The reality is quite the opposite. Bournemouth and Poole tap water is undeniably hard, averaging <strong>260 to 285 PPM</strong> across most BH postcodes. Tap water here leaves cloudy water spots on glassware, clogs shower roses with crumbly white stones, and causes electric showers to burn out heating elements with alarming regularity.
+      </p>
+
+      <div class="rounded-2xl border border-amber-200 bg-amber-50/60 p-6 my-8">
+        <h3 class="text-lg font-bold text-amber-900 mb-2">Where Does Bournemouth's Hard Water Come From?</h3>
+        <p class="text-sm text-amber-800 leading-relaxed">
+          Bournemouth Water (part of the Pennon Group) draws the majority of the town's water from two famous lowland rivers: the River Stour and the Hampshire Avon. Before reaching the water treatment works at Alderney and Longham Lakes, both rivers wind through the immense chalk and limestone uplands of Cranborne Chase, Salisbury Plain, and the Dorset Downs. Every raindrop dissolves heavy concentrations of calcium carbonate on its journey south to the coast.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Bournemouth & Poole Water Hardness by Postcode</h2>
+      <p class="text-slate-600 mb-4">
+        Hardness levels vary across the conurbation depending on whether your home receives treated river water or groundwater blend from local boreholes:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <thead class="bg-slate-100 text-slate-800 font-semibold">
+            <tr>
+              <th class="p-3 border border-slate-200">Outcode</th>
+              <th class="p-3 border border-slate-200">District / Neighbourhood</th>
+              <th class="p-3 border border-slate-200">Water Company</th>
+              <th class="p-3 border border-slate-200">Avg PPM</th>
+              <th class="p-3 border border-slate-200">Rating</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/bh1" class="hover:underline">BH1</a> / <a href="/water-hardness/bh8" class="hover:underline">BH8</a></td>
+              <td class="p-3">Bournemouth Town Centre & Charminster</td>
+              <td class="p-3">Bournemouth Water</td>
+              <td class="p-3 font-semibold">285 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-orange-100 text-orange-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/bh4" class="hover:underline">BH4</a></td>
+              <td class="p-3">Westbourne & Branksome</td>
+              <td class="p-3">Bournemouth Water</td>
+              <td class="p-3 font-semibold">280 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-orange-100 text-orange-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/bh15" class="hover:underline">BH15</a></td>
+              <td class="p-3">Poole Town Centre & Quay</td>
+              <td class="p-3">Bournemouth / Wessex Water</td>
+              <td class="p-3 font-semibold">265 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-orange-100 text-orange-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/bh16" class="hover:underline">BH16</a></td>
+              <td class="p-3">Upton, Lytchett Minster & Wareham Rd</td>
+              <td class="p-3">Wessex Water</td>
+              <td class="p-3 font-semibold">255 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-orange-100 text-orange-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/bh23" class="hover:underline">BH23</a></td>
+              <td class="p-3">Christchurch & Highcliffe</td>
+              <td class="p-3">Bournemouth Water</td>
+              <td class="p-3 font-semibold">275 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-orange-100 text-orange-800">Hard</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">The Coastal B&B and Holiday Let Dilemma</h2>
+      <p class="text-slate-600 mb-4">
+        Nowhere is Bournemouth's water hardness felt more acutely than by holiday let operators, guest house owners, and seaside landlords. The combination of sea salt in the air and heavy calcium carbonate in the water creates unique household maintenance headaches:
+      </p>
+      <ul class="list-disc pl-6 space-y-3 text-slate-600 mb-6">
+        <li><strong>Electric Shower Burnout:</strong> Compact electric showers fitted in guest ensuites (such as Mira or Triton 8.5kW units) suffer rapid mineral encrustation. A solid chalk crust insulates the heating element, causing it to overheat and trip out. In Bournemouth, heating elements routinely fail within 18 to 24 months, costing £80 to £120 for replacement parts plus local plumber callout charges.</li>
+        <li><strong>The 'Permanently Frosted' Glass Screen:</strong> Hot shower steam causes dissolved chalk to bake onto glass screens. If guests do not wipe the glass down after showering, the minerals bond chemically to the silica, creating an etched haze that even scrubbing with commercial descalers like Viakal cannot shift.</li>
+        <li><strong>Cardboard Beach Towels:</strong> Washing seaside towels in hard Dorset water causes calcium salts to deposit deep within the cotton fibres. Instead of soft, fluffy bath sheets, towels come out of the tumble dryer feeling stiff and scratchy unless a splash of white vinegar is added to the fabric rinse dispenser.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Dorset Household Maintenance Playbook</h2>
+      <p class="text-slate-600 mb-4">
+        To keep appliances running efficiently and stop bathroom limescale getting out of hand, follow these practical steps:
+      </p>
+      <ol class="list-decimal pl-6 space-y-3 text-slate-600 mb-6">
+        <li><strong>The 50/50 Daily Vinegar Spray:</strong> Keep a spray bottle filled with half white vinegar and half warm tap water in your bathroom. Mist the shower glass and chrome mixer taps after each shower, leave for two minutes, and wipe clean with a microfibre cloth.</li>
+        <li><strong>Calibrate the Dishwasher to Hard:</strong> Set your dishwasher regulator to Level 4 or Level 5. Never run short of dishwasher salt; keeping the salt reservoir topped up prevents milky hazing on wine glasses.</li>
+        <li><strong>Boiler Magnetic & Scale Protection:</strong> Ensure your heating engineer inspects your in-line electrolytic scale reducer and tests central heating inhibitor levels during your annual boiler service under British Standard BS 7593.</li>
+      </ol>
+    `,
+    faqItems: [
+      {
+            "question": "Why is water so hard in Bournemouth if it is right on the coast?",
+            "answer": "Coastal location does not mean soft tap water. Bournemouth's tap water is abstracted inland from the River Stour and River Avon, which flow directly through the mineral-rich chalk and limestone ridges of Cranborne Chase and the Dorset Downs."
+      },
+      {
+            "question": "Who provides drinking water in Bournemouth and Poole?",
+            "answer": "Drinking water across Bournemouth, Christchurch, and eastern Poole is supplied by Bournemouth Water (part of Pennon Group). Western fringes like Upton and Wareham are supplied by Wessex Water."
+      },
+      {
+            "question": "How do holiday let hosts in Bournemouth stop shower glass frosting?",
+            "answer": "Provide guests with a rubber squeegee and keep a spray bottle of 50/50 white vinegar and water on hand. Wiping the glass before mineral-laden water droplets evaporate prevents calcium from permanently etching the glass."
+      },
+      {
+            "question": "What dishwasher setting should I use in Poole and Bournemouth?",
+            "answer": "Set your machine to Level 4 (hard). Using 3-in-1 pods alone will eventually cause chalky clouding on glassware—always replenish granular dishwasher salt in the bottom reservoir."
+      }
+]
+  },
+  {
+    slug: "does-leeds-have-hard-water",
+    title: "Does Leeds Have Hard Water? West Yorkshire PPM Breakdown",
+    metaTitle: "Does Leeds Have Hard Water? Guide",
+    metaDescription: "Is tap water hard in Leeds? Check West Yorkshire PPM ratings across all LS postcodes. Discover why Leeds water varies from soft Pennine hills to Ouse.",
+    targetKeyword: "does leeds have hard water",
+    category: "Regional Hardness",
+    datePublished: "2025-03-01T08:00:00Z",
+    dateModified: "2026-09-21T11:00:00Z",
+    readingTime: "6 min read",
+    quickVerdict: {
+      ppmRange: "80 – 190 PPM (mg/L CaCO3)",
+      classification: "Moderately Soft to Moderate",
+      supplier: "Yorkshire Water",
+      keyTakeaway: "No, Leeds does not have hard water compared to southern England. Averaging roughly 120–140 PPM, Leeds tap water is classified as moderate. Sourced largely from upland moorland reservoirs in the Pennines, it brews a fantastic cuppa with minimal limescale."
+    },
+    relatedOutcodes: ["LS11","LS1","LS6","LS8","LS12","LS16","LS28"],
+    contentHtml: `
+      <p class="text-lg text-slate-700 leading-relaxed mb-6">
+        Anyone who takes pride in a proper brew in Leeds will tell you: the tea liquor runs bright, golden, and crystal clear. There is no murky grey foam clinging to the sides of your ceramic mug, and no oily iridescent scum drifting on the surface like you get in London or Bristol. In fact, the quality of Leeds tap water is so legendary that when Harrogate tea merchants Taylors of Harrogate began distributing Yorkshire Tea across the south, they were forced to create a special &ldquo;Yorkshire Tea for Hard Water&rdquo; blend because southern chalk water was ruining their delicate tea leaves.
+      </p>
+
+      <p class="text-slate-600 mb-6">
+        Here in Leeds, traditional Yorkshire Tea brews exactly as the blender intended. Averaging between <strong>80 and 150 PPM</strong> across most of the metropolitan district, Leeds tap water is classified as moderately soft to moderate—a far cry from the aggressive 300+ PPM chalk water found down south.
+      </p>
+
+      <div class="rounded-2xl border border-emerald-200 bg-emerald-50/60 p-6 my-8">
+        <h3 class="text-lg font-bold text-emerald-900 mb-2">The Pennine Upland Advantage</h3>
+        <p class="text-sm text-emerald-800 leading-relaxed">
+          The secret behind West Yorkshire&apos;s clean water profile lies in the geology of the Pennines. Yorkshire Water gathers the majority of Leeds&apos; municipal supply from high upland reservoirs in the Washburn and Wharfe valleys (including Fewston, Swinsty, Thruscross, and Eccup reservoir). Because rain falls over insoluble millstone grit and peat moorlands rather than chalk or limestone, the water collects minimal calcium or magnesium on its journey into your kitchen tap.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">The East-West Divide: Leeds Water Hardness by Postcode</h2>
+      <p class="text-slate-600 mb-4">
+        While northern and western suburbs enjoy pure soft moorland water, southeastern parts of Leeds receive a blended supply that incorporates water treated from the River Ouse and River Derwent. Check your local outcode below:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <thead class="bg-slate-100 text-slate-800 font-semibold">
+            <tr>
+              <th class="p-3 border border-slate-200">Outcode</th>
+              <th class="p-3 border border-slate-200">District / Suburb</th>
+              <th class="p-3 border border-slate-200">Water Supplier</th>
+              <th class="p-3 border border-slate-200">Avg PPM</th>
+              <th class="p-3 border border-slate-200">Water Category</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/ls1" class="hover:underline">LS1</a> / <a href="/water-hardness/ls2" class="hover:underline">LS2</a></td>
+              <td class="p-3">Leeds City Centre & University</td>
+              <td class="p-3">Yorkshire Water</td>
+              <td class="p-3 font-semibold">120 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800">Moderate</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/ls6" class="hover:underline">LS6</a></td>
+              <td class="p-3">Headingley, Meanwood & Hyde Park</td>
+              <td class="p-3">Yorkshire Water</td>
+              <td class="p-3 font-semibold">85 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">Moderately Soft</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/ls8" class="hover:underline">LS8</a></td>
+              <td class="p-3">Roundhay & Oakwood</td>
+              <td class="p-3">Yorkshire Water</td>
+              <td class="p-3 font-semibold">110 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800">Moderate</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/ls11" class="hover:underline">LS11</a></td>
+              <td class="p-3">Hunslet, Beeston & Holbeck</td>
+              <td class="p-3">Yorkshire Water</td>
+              <td class="p-3 font-semibold">165 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800">Moderate</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/ls16" class="hover:underline">LS16</a></td>
+              <td class="p-3">Adel, Bramhope & Cookridge</td>
+              <td class="p-3">Yorkshire Water</td>
+              <td class="p-3 font-semibold">75 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">Soft Water</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="p-3 font-bold text-blue-600"><a href="/water-hardness/ls28" class="hover:underline">LS28</a></td>
+              <td class="p-3">Pudsey, Farsley & Stanningley</td>
+              <td class="p-3">Yorkshire Water</td>
+              <td class="p-3 font-semibold">95 PPM</td>
+              <td class="p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">Moderately Soft</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-sm text-slate-500 mb-6">
+        <em>For a comprehensive breakdown of all Leeds postal districts, visit our dedicated <a href="/cities/leeds" class="text-blue-600 font-semibold hover:underline">Leeds Water Hardness City Hub</a>.</em>
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Household Impact: How Much Money Do Leeds Homes Save?</h2>
+      <p class="text-slate-600 mb-4">
+        Living in a moderate to soft water zone delivers tangible financial savings that southern homeowners can only dream of:
+      </p>
+      <ul class="list-disc pl-6 space-y-3 text-slate-600 mb-6">
+        <li><strong>No Need for a £1,500 Water Softener:</strong> Sales reps often try to sell whole-house water softeners across West Yorkshire. In Leeds, this is virtually always an unnecessary expense. The natural water does not generate enough scale to warrant the initial £1,200–£1,800 purchase and ongoing salt costs.</li>
+        <li><strong>Kettles Last for Years:</strong> In Headingley and Adel, kettle elements remain clean for months on end. A quick rinse with white vinegar once every six months is plenty to keep the base pristine. Even in Hunslet (<a href="/water-hardness/ls11" class="text-blue-600 font-semibold hover:underline">LS11</a>), descaling once every quarter is all that is required.</li>
+        <li><strong>Low Dishwasher Salt Use:</strong> Set your dishwasher hardness regulator to Level 2. If you use all-in-one dishwasher tablets, you will rarely need to refill the salt compartment.</li>
+        <li><strong>Laundry Detergent Efficiency:</strong> Because Leeds water contains minimal calcium to inhibit soap lathering, you can safely use the manufacturer&apos;s lowest recommended dosage of laundry detergent and washing-up liquid, cutting household cleaning bills by up to a third.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Boiler Care in Leeds: Don&apos;t Forget BS 7593</h2>
+      <p class="text-slate-600 mb-4">
+        While limescale build-up on combi boiler heat exchangers is minimal in Leeds, central heating protection is still vital. Soft upland water can be slightly acidic, making radiators and steel pipework vulnerable to internal corrosion and black magnetite sludge.
+      </p>
+      <p class="text-slate-600 mb-4">
+        Always ensure your Gas Safe heating engineer checks corrosion inhibitor levels (such as Sentinel X100 or Fernox F1) during your annual boiler service to remain fully compliant with British Standard BS 7593.
+      </p>
+    `,
+    faqItems: [
+      {
+            "question": "Is water in Leeds hard or soft?",
+            "answer": "Leeds water is classified as moderately soft to moderate, averaging around 120 PPM across the metropolitan area. Suburbs in the north and west (like Headingley and Adel) enjoy soft upland water under 85 PPM, while southern areas reach around 165 PPM."
+      },
+      {
+            "question": "Why does Yorkshire Tea taste better in Leeds than in London?",
+            "answer": "Yorkshire Tea was originally blended by Taylors of Harrogate for soft, moorland waters. In Leeds, the lack of heavy calcium minerals allows subtle tea aromatics and brisk tannins to infuse cleanly without forming bitter scum on the surface."
+      },
+      {
+            "question": "Do I need a water softener in Leeds?",
+            "answer": "No. Installing an ion-exchange water softener in Leeds is unnecessary and a waste of money, as the water naturally contains very low limescale-forming minerals."
+      },
+      {
+            "question": "What dishwasher setting is best for Leeds postcodes?",
+            "answer": "Set your dishwasher water softener regulator to Level 2. This prevents mineral spots on glassware without burning through unnecessary dishwasher salt."
+      }
+]
   }
 ];
 
