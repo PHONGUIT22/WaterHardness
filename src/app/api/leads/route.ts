@@ -70,10 +70,12 @@ export async function POST(request: Request) {
     const sanitizedUrgency = validUrgencies.includes(urgency) ? urgency : "within_month";
 
     // 5. Insert record into Supabase
-    const { data, error } = await supabase
+    const leadId = crypto.randomUUID();
+    const { error } = await supabase
       .from("leads")
       .insert([
         {
+          id: leadId,
           outcode: outcode.trim().toUpperCase(),
           city_or_town: city_or_town ? String(city_or_town).trim() : null,
           ppm_reading: ppm_reading ? Number(ppm_reading) : null,
@@ -85,17 +87,14 @@ export async function POST(request: Request) {
           urgency: sanitizedUrgency,
           status: "new",
         },
-      ])
-      .select("id")
-      .single();
+      ]);
 
     if (error) {
       console.error("Supabase insert lead error:", error);
-      // In case table is pending migration, return helpful message but handle gracefully
       return NextResponse.json(
         {
           success: false,
-          error: "Database table initialization in progress. Please check Supabase migration.",
+          error: "Failed to save lead request. Please try again.",
           detail: error.message,
         },
         { status: 500 }
@@ -104,7 +103,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      leadId: data.id,
+      leadId,
       message: "Lead registered successfully.",
     });
   } catch (err: any) {
