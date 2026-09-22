@@ -31,18 +31,24 @@
    - **CẤM** chạy các lệnh hệ thống tác động lên OS, sửa registry, can thiệp tiến trình khác ngoài tác vụ dev của dự án.
    - **CẤM** cài đặt các gói npm/pip toàn cục (`-g`) vào máy tính cá nhân nếu không có yêu cầu rõ ràng từ người dùng.
 
+3. **ĐIỀU LUẬT ĐẶC BIỆT: CẤM TIỆT `npm run build` / `next build`**:
+   - **Lý do**: Dự án PSEO này có hơn 3.300 trang tĩnh (SSG), chạy `npm run build` sẽ chiếm dụng toàn bộ tài nguyên và mất nhiều phút gây treo máy/nghẽn luồng làm việc.
+   - **QUY ĐỊNH**: **TUYỆT ĐỐI CẤM TIỆT** chạy `npm run build` hoặc `next build`.
+   - **Thay thế**: Để kiểm tra lỗi syntax, type safety và tính toàn vẹn code, **CHỈ ĐƯỢC PHÉP CHẠY**: `npx tsc --noEmit`.
+
 ---
 
-## 3. BẢO MẬT & BẢO VỆ DỮ LIỆU (DATA SECURITY & SECRETS)
+## 3. BẢO MẬT, MÃ NGUỒN & QUY ĐỊNH GIT (DATA & GIT RULES)
 
 1. **Bảo vệ Secrets:**
    - **CẤM** đọc trộm, in ra màn hình hoặc commit các file chứa secret như `.env`, `.env.local`, API keys, tokens của Supabase hoặc các dịch vụ bên ngoài.
    - Không được sửa đổi file cấu hình môi trường nếu không được chỉ đạo trực tiếp.
 
-2. **Toàn vẹn mã nguồn:**
+2. **Toàn vẹn mã nguồn & Quy định Git:**
    - **CẤM** tự ý xóa file, refactor quy mô lớn các thư mục không liên quan đến task được giao.
    - Luôn tôn trọng cấu trúc có sẵn: Next.js 16 (App Router), Tailwind CSS, TypeScript strict mode.
-   - Mọi commit git phải đảm bảo tuân thủ chuẩn commit của dự án và ký số GPG (`git commit -S`) theo cấu hình hệ thống.
+   - **CẤM TỰ Ý COMMIT / PUSH**: Agent chỉ viết code và kiểm tra type (`npx tsc --noEmit`). Tuyệt đối KHÔNG tự ý chạy `git commit` hay `git push`.
+   - **TUYỆT ĐỐI CẤM `git commit -S`**: Cấm hoàn toàn việc ký số GPG vì gây treo tiến trình `gpg-agent` trên Windows. Việc commit và push sẽ do người dùng tự thực hiện.
 
 ---
 
@@ -70,6 +76,11 @@ rules:
       cwd: "STRICTLY within allowed_root"
       system_modifications: FORBIDDEN
       global_installs: FORBIDDEN
+      npm_run_build: FORBIDDEN # STRICTLY FORBIDDEN! Use 'npx tsc --noEmit' instead
+    git:
+      auto_commit: FORBIDDEN
+      auto_push: FORBIDDEN
+      signed_commit_gpg: FORBIDDEN # Never run git commit -S
     security:
       leak_env_secrets: FORBIDDEN
       commit_sensitive_data: FORBIDDEN
