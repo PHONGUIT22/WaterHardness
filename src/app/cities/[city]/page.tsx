@@ -48,18 +48,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  // Ensure title stays under 58 characters total when appended with " | WaterHardness.uk" (18 chars)
-  const rawTitle = `${city.name} Water Hardness: ${city.avgPpm} PPM`;
-  const title = rawTitle.length <= 39 ? rawTitle : `${city.name} Water: ${city.avgPpm} PPM`;
+  // Determine hardness classification label based on PPM
+  const hardnessLabel = city.avgPpm < 100 ? "(Soft)" : city.avgPpm < 200 ? "(Moderate)" : "(Hard)";
+
+  // Ensure title with brand suffix " | WaterHardness.uk" (18 chars) stays strictly <= 58 chars total
+  const fullBaseTitle = `${city.name} Water Hardness: ${city.avgPpm} PPM ${hardnessLabel}`;
+  const shortBaseTitle = `${city.name} Water: ${city.avgPpm} PPM ${hardnessLabel}`;
+  const baseTitle = fullBaseTitle.length <= 40 ? fullBaseTitle : shortBaseTitle;
+  const absoluteTitle = `${baseTitle} | WaterHardness.uk`;
 
   return {
-    title,
+    title: { absolute: absoluteTitle },
     description: city.metaDescription,
     alternates: {
       canonical: `https://waterhardness.uk/cities/${city.slug}`,
     },
     openGraph: {
-      title,
+      title: absoluteTitle,
       description: city.metaDescription,
       url: `https://waterhardness.uk/cities/${city.slug}`,
       siteName: "WaterHardness.uk",
@@ -68,7 +73,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: absoluteTitle,
       description: city.metaDescription,
     },
   };
