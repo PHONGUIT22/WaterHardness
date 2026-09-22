@@ -47,15 +47,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const canonicalUrl = `https://waterhardness.uk/guides/${guide.slug}`;
 
-  // Giữ Title tuyệt đối dưới 58 ký tự và description dưới 155 ký tự
-  const titleWithSuffix = `${guide.metaTitle} | WaterHardness.uk`;
-  const absoluteTitle = titleWithSuffix.length <= 58 
-    ? titleWithSuffix 
-    : `${guide.metaTitle.slice(0, 36)}... | WaterHardness.uk`;
+  // Xử lý tiêu đề SEO không cắt cụt chữ giữa chừng
+  let absoluteTitle = guide.metaTitle;
+  if (!guide.metaTitle.includes("WaterHardness.uk")) {
+    if (guide.metaTitle.length + 18 <= 60) {
+      absoluteTitle = `${guide.metaTitle} | WaterHardness.uk`;
+    }
+  }
 
-  const metaDesc = guide.metaDescription.length <= 155 
+  // Meta description giới hạn <= 160 ký tự
+  const metaDesc = guide.metaDescription.length <= 160 
     ? guide.metaDescription 
-    : `${guide.metaDescription.slice(0, 151)}...`;
+    : `${guide.metaDescription.slice(0, 157)}...`;
 
   return {
     title: { absolute: absoluteTitle },
@@ -64,8 +67,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: guide.metaTitle,
-      description: guide.metaDescription,
+      title: absoluteTitle,
+      description: metaDesc,
       url: canonicalUrl,
       siteName: "WaterHardness.uk",
       locale: "en_GB",
@@ -73,6 +76,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       publishedTime: guide.datePublished,
       modifiedTime: guide.dateModified,
       authors: ["Nguyen Hac Phong"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: absoluteTitle,
+      description: metaDesc,
     },
   };
 }
