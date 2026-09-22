@@ -2692,6 +2692,320 @@ export const guidesData: GuideArticle[] = [
             "answer": "Set your dishwasher water softener regulator to Level 2. This prevents mineral spots on glassware without burning through unnecessary dishwasher salt."
       }
 ]
+  },
+  {
+    slug: "water-conditioner-vs-water-softener",
+    title: "Water Conditioner vs Water Softener UK: Differences, Costs & Which Actually Works?",
+    metaTitle: "Water Conditioner vs Water Softener: UK Expert Review (2026)",
+    metaDescription: "Confused between a water conditioner and an ion-exchange water softener? UK plumbers compare real limescale removal, running costs, and shower filter myths.",
+    targetKeyword: "water conditioner vs water softener",
+    category: "Plumbing & Heating",
+    datePublished: "2026-09-22T08:00:00Z",
+    dateModified: "2026-09-22T08:00:00Z",
+    readingTime: "8 min read",
+    quickVerdict: {
+      ppmRange: "180 – 320 PPM (mg/L CaCO3)",
+      classification: "Treatment System Comparison",
+      supplier: "All UK Water Suppliers (Thames, Affinity, Anglian, Southern)",
+      keyTakeaway: "Only ion-exchange water softeners (salt-based) physically extract calcium and magnesium minerals to deliver 100% soft water. Physical water conditioners and electronic descalers do not alter water hardness or PPM—they alter crystal nucleation to reduce pipe adhesion. Shower head filters do not soften water at all."
+    },
+    relatedOutcodes: ["KT22", "GU21", "SW1A", "RG1", "BS1"],
+    faqItems: [
+      {
+        question: "Does a water conditioner make tap water feel soft?",
+        answer: "No. A physical or catalytic water conditioner leaves every milligram of dissolved calcium and magnesium in your water. The water will not lather more readily with soap, nor will it feel silky smooth on skin or hair like salt-softened water does."
+      },
+      {
+        question: "Do electronic or magnetic water descalers really work?",
+        answer: "They provide partial limescale mitigation, but with strict limitations. Independent testing confirms electronic descalers induce temporary crystal nucleation (converting calcite into needle-like aragonite), which reduces scale baking onto boiler heat exchangers. However, when water droplets dry on shower glass or chrome taps, the minerals remain, leaving visible white chalk residue that still requires wiping."
+      },
+      {
+        question: "Do Amazon shower head filters soften hard water?",
+        answer: "No. Multi-stage shower filters sold on Amazon (£15–£30) use KDF-55, calcium sulfite, and activated carbon. They filter chlorine, chloramines, and sediment—which can soothe itchy skin—but they do not remove calcium ions. It is scientifically impossible to soften water inside a small showerhead without an ion-exchange brine tank."
+      },
+      {
+        question: "Can you drink water from a salt-based water softener?",
+        answer: "Under UK Drinking Water Inspectorate guidelines and British Standard BS EN 806, softened water contains elevated sodium levels (approx. 150–250 mg/L). It should not be used for reconstituting infant milk formula. UK Building Regulations stipulate that installers must maintain at least one unsoftened, hard water drinking tap at the kitchen cold supply."
+      }
+    ],
+    contentHtml: `
+      <p class="text-lg text-slate-700 leading-relaxed mb-6 font-medium">
+        If you live in a hard water county like Surrey, London, Hertfordshire, or Kent, limescale is an everyday irritation. Shower screens turn cloudy within days, kettle elements crust over, and central heating combi boilers work harder than they should. In search of relief, homeowners inevitably discover two competing solutions: <strong>salt-based ion-exchange water softeners</strong> and <strong>physical water conditioners</strong> (including magnetic or catalytic descalers).
+      </p>
+
+      <p class="text-slate-600 mb-6">
+        Marketing claims from manufacturers on both sides can be intensely confusing. Some promise &ldquo;chemical-free soft water without salt,&rdquo; while others claim anything other than a twin-cylinder salt system is snake oil. In this guide, our engineering team breaks down the physical chemistry, real-world performance, true costs, and the persistent myth of the £20 Amazon shower filter.
+      </p>
+
+      <div class="bg-blue-50/70 border border-blue-200 rounded-2xl p-6 mb-8">
+        <h3 class="text-lg font-bold text-blue-950 mb-2">The Golden Rule of Water Treatment</h3>
+        <p class="text-sm text-blue-900/90 leading-relaxed">
+          <strong>Softened water</strong> and <strong>conditioned water</strong> are not the same thing. Softened water has had calcium and magnesium physically extracted (measured PPM drops to near zero). Conditioned water still contains 100% of its mineral content, but the crystal structure has been temporarily altered to reduce how stubbornly it binds to hot metal surfaces.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Head-to-Head Comparison: Softener vs Conditioner vs Shower Filter</h2>
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">Feature / Outcome</th>
+              <th class="border border-slate-200 p-3">Salt-Based Water Softener</th>
+              <th class="border border-slate-200 p-3">Physical Water Conditioner</th>
+              <th class="border border-slate-200 p-3">Amazon Shower Filter</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-600">
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Technology</td>
+              <td class="border border-slate-200 p-3">Ion-exchange resin (regenerated with NaCl salt)</td>
+              <td class="border border-slate-200 p-3">Electrolytic (zinc/copper alloy) or electromagnetic coil</td>
+              <td class="border border-slate-200 p-3">KDF-55, activated carbon, calcium sulfite</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Mineral Removal (PPM)</td>
+              <td class="border border-slate-200 p-3 text-emerald-700 font-bold">100% extracted (drops to 0–20 PPM)</td>
+              <td class="border border-slate-200 p-3 text-amber-700 font-bold">0% removed (PPM remains identical)</td>
+              <td class="border border-slate-200 p-3 text-rose-700 font-bold">0% removed (PPM unchanged)</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Kettle Limescale</td>
+              <td class="border border-slate-200 p-3 text-emerald-700">Completely eliminated forever</td>
+              <td class="border border-slate-200 p-3 text-amber-700">Forms loose white powder, easily wiped</td>
+              <td class="border border-slate-200 p-3 text-rose-700">No effect (shower only)</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Shower Glass &amp; Chrome</td>
+              <td class="border border-slate-200 p-3 text-emerald-700">Spotless, water wipes clean without crust</td>
+              <td class="border border-slate-200 p-3 text-amber-700">Watermarks still dry white; easier to wipe</td>
+              <td class="border border-slate-200 p-3 text-rose-700">Scale continues to build up normally</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Soap &amp; Shampoo Lather</td>
+              <td class="border border-slate-200 p-3 text-emerald-700">Rich lather with 50% less soap; silky skin</td>
+              <td class="border border-slate-200 p-3 text-slate-500">Unchanged (standard hard water lather)</td>
+              <td class="border border-slate-200 p-3 text-slate-500">Unchanged (slight benefit from chlorine removal)</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Boiler Protection (BS 7593)</td>
+              <td class="border border-slate-200 p-3 text-emerald-700">Full scale protection on domestic hot water</td>
+              <td class="border border-slate-200 p-3 text-blue-700">Complies with Part L building regs inhibitor rule</td>
+              <td class="border border-slate-200 p-3 text-slate-400">None</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Typical Installed Cost</td>
+              <td class="border border-slate-200 p-3">£1,200 – £2,200 (Harvey, Kinetico, EcoWater)</td>
+              <td class="border border-slate-200 p-3">£150 – £600 (Halcyan, Scalewatcher, Salamander)</td>
+              <td class="border border-slate-200 p-3">£18 – £35 (Screw-on cartridge)</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Ongoing Running Costs</td>
+              <td class="border border-slate-200 p-3">£8 – £15 / month (block or tablet salt)</td>
+              <td class="border border-slate-200 p-3">£0 – £10 / year (zero consumables or minor electric)</td>
+              <td class="border border-slate-200 p-3">£30 – £50 / year (cartridge replacements)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">1. How Salt-Based Water Softeners Work (The True Cure)</h2>
+      <p class="text-slate-600 mb-4">
+        Ion-exchange water softeners are the only domestic devices certified to convert hard water into truly soft water. When hard water enters your home, it flows through a cylinder packed with microscopic polystyrene resin beads. These beads carry a negative electrical charge and are pre-loaded with sodium ions.
+      </p>
+      <p class="text-slate-600 mb-4">
+        Because calcium and magnesium ions have a stronger positive charge (+2) than sodium (+1), the resin beads attract and trap the mineral ions, releasing a harmless, equivalent amount of sodium into the water. Periodically, the unit automatically flushes concentrated salt brine through the resin bed to purge the collected calcium down the drain.
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>Pros:</strong> 100% elimination of limescale. Kettles remain shiny chrome forever. Shower screens need only a squeegee. Shampoo lathers with a pea-sized amount. Combi boiler heat exchangers operate at peak thermal efficiency without calcification.</li>
+        <li><strong>Cons:</strong> Higher upfront installation cost (£1,200–£2,200). Requires regular replenishment of salt blocks or tablets. Takes up under-sink cupboard space. Requires a separate, unsoftened hard water drinking tap to comply with UK Water Regulations.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">2. How Physical Water Conditioners Work (The Mitigation Method)</h2>
+      <p class="text-slate-600 mb-4">
+        Physical water conditioners do not remove any dissolved minerals from the supply. A water hardness test kit used on conditioned water will show exactly the same PPM reading before and after the device. Instead, conditioners alter how calcium behaves in solution:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>Electrolytic Conditioners:</strong> Contain a sacrificial zinc-copper alloy core. Tiny quantities of zinc ions dissolve into the flow, disrupting calcium carbonate crystallization and causing it to form soft, needle-shaped aragonite instead of rock-hard calcite.</li>
+        <li><strong>Electronic / Magnetic Descalers:</strong> Wrap induction coils around the incoming cold mains pipe, transmitting oscillating magnetic or electromagnetic frequencies that prompt microscopic crystals to precipitate in suspension rather than adhering to hot pipe walls.</li>
+      </ul>
+      <p class="text-slate-600 mb-4">
+        <strong>The practical reality:</strong> Water conditioners do satisfy UK Building Regulations Part L (which requires a scale reducer on boiler feed pipes in areas over 200 PPM). They help protect the primary plate heat exchanger of your boiler. However, they will <em>not</em> stop mineral spots on your shower glass, nor will they give you that silky, luxurious soft-water feel in the bath.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">3. Busting the Myth: Do Shower Head Filters Soften Hard Water?</h2>
+      <p class="text-slate-600 mb-4">
+        Search for &ldquo;hard water shower filter&rdquo; on Amazon UK and you will find hundreds of 15-stage and 20-stage shower cartridges promising to &ldquo;soften hard water, eliminate limescale, and cure dry skin.&rdquo;
+      </p>
+      <p class="text-slate-600 mb-4 font-semibold text-rose-800 bg-rose-50 border border-rose-200 p-4 rounded-xl">
+        This is one of the most widespread marketing deceptions in the home improvement industry. These cartridges DO NOT and CANNOT soften water.
+      </p>
+      <p class="text-slate-600 mb-4">
+        Here is the scientific reality:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>What they actually contain:</strong> Granular activated carbon, KDF-55 (copper-zinc granules), and calcium sulfite balls.</li>
+        <li><strong>What they actually do:</strong> They are outstanding at neutralising chlorine, chloramines, and heavy metal sediments from municipal mains water. If your skin is irritated by chlorine fumes during hot showers, a shower filter will genuinely make your skin and hair feel softer and less itchy.</li>
+        <li><strong>What they cannot do:</strong> To remove dissolved calcium carbonate from flowing pressurized water, you require ion-exchange resin regenerated by sodium chloride (which requires a drain connection and a separate brine vessel). A 3-inch shower filter cartridge containing zero brine capacity has zero impact on calcium PPM.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">The Final Verdict: Which One Should You Choose?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+        <div class="border border-emerald-300 bg-emerald-50/60 p-5 rounded-2xl">
+          <h3 class="font-bold text-emerald-950 text-base mb-2">Choose a Salt-Based Softener If:</h3>
+          <ul class="text-xs text-emerald-900 space-y-2 leading-relaxed">
+            <li>• You own your home and live in a zone with &gt;180 PPM (e.g. Surrey, London, Essex, Bristol).</li>
+            <li>• You are sick of spending weekends scrubbing limescale off shower enclosures and taps.</li>
+            <li>• Someone in your household suffers from severe dry skin or eczema triggered by mineral scum.</li>
+            <li>• You want complete, verified protection for an expensive combi boiler or unvented hot water cylinder.</li>
+          </ul>
+        </div>
+
+        <div class="border border-blue-300 bg-blue-50/60 p-5 rounded-2xl">
+          <h3 class="font-bold text-blue-950 text-base mb-2">Choose an Inline Conditioner If:</h3>
+          <ul class="text-xs text-blue-900 space-y-2 leading-relaxed">
+            <li>• You have a limited budget (£150–£300 installed) and want basic compliance with Building Regs Part L.</li>
+            <li>• You rent your property or have zero space under the kitchen sink for a salt cabinet.</li>
+            <li>• You don&apos;t mind wiping dried powdery residue off shower screens, as long as boiler pipes don&apos;t clog.</li>
+            <li>• You don&apos;t want to carry 10kg or 25kg bags of salt blocks into the house every month.</li>
+          </ul>
+        </div>
+      </div>
+    `,
+  },
+  {
+    slug: "south-west-water-hardness-exeter-plymouth",
+    title: "South West Water Hardness: Exeter, Plymouth & Devon PPM Guide",
+    metaTitle: "South West Water Hardness: Exeter, Plymouth & Devon Guide",
+    metaDescription: "Check South West Water hardness levels across Devon and Cornwall. Compare Plymouth's soft Dartmoor reservoir water with East Devon limestone boreholes.",
+    targetKeyword: "south west water hardness",
+    category: "Regional Hardness",
+    datePublished: "2026-09-22T08:00:00Z",
+    dateModified: "2026-09-22T08:00:00Z",
+    readingTime: "7 min read",
+    quickVerdict: {
+      ppmRange: "30 – 210 PPM (mg/L CaCO3)",
+      classification: "Soft to Moderately Hard (Split Region)",
+      supplier: "South West Water (Pennon Group)",
+      keyTakeaway: "South West Water supplies two completely distinct geological water profiles: Plymouth and West Devon enjoy ultra-soft moorland reservoir water (30–50 PPM) from Dartmoor, while East Devon boreholes around Honiton and the Otter Valley yield moderately hard water reaching up to 210 PPM."
+    },
+    relatedOutcodes: ["PL1", "EX1", "EX4", "TQ1", "EX14"],
+    faqItems: [
+      {
+        question: "Is tap water hard or soft in South West Water areas?",
+        answer: "Overall, approximately 85% of South West Water customers receive soft water (averaging 35 to 65 PPM) sourced from upland reservoirs across Dartmoor, Exmoor, and Bodmin Moor. However, localized groundwater zones in East Devon (Honiton, Sidmouth, Axminster) supply moderately hard water reaching 180 to 210 PPM."
+      },
+      {
+        question: "Does Exeter have hard or soft water?",
+        answer: "Exeter tap water is soft, typically measuring between 45 and 65 PPM (3.2 to 4.6° Clark). The municipal supply is treated at Pynes and Countess Wear water treatment works, abstracting clean river surface water from the River Exe catchment."
+      },
+      {
+        question: "Why is Plymouth water so soft?",
+        answer: "Plymouth receives its drinking water from Burrator Reservoir on Dartmoor and the River Tamar. Flowing across impermeable, ancient granite tors and peat moorlands, the runoff dissolves almost zero calcium carbonate, producing pristine tap water averaging just 34 PPM."
+      },
+      {
+        question: "Do I need a water softener in Devon or Cornwall?",
+        answer: "In Plymouth, Exeter, Torbay, and Cornwall, installing an ion-exchange water softener is a complete waste of money because the water is naturally low in limescale minerals. You only need to consider a softener if you live in East Devon (EX10, EX12, EX14) where borehole groundwater contains elevated hardness."
+      }
+    ],
+    contentHtml: `
+      <p class="text-lg text-slate-700 leading-relaxed mb-6 font-medium">
+        Across England, the South West is widely celebrated for its pristine moorland scenery, clean Atlantic coastline, and refreshing tap water. Governed by <strong>South West Water (part of Pennon Group plc)</strong>, the region serves over 1.8 million residents throughout Devon, Cornwall, and small pockets of Dorset and Somerset.
+      </p>
+
+      <p class="text-slate-600 mb-6">
+        However, when homeowners ask <em>&ldquo;Is South West Water hard or soft?&rdquo;</em>, the answer depends entirely on which side of the county boundary you reside. While residents in <a href="/cities/plymouth" class="text-blue-600 font-semibold hover:underline">Plymouth</a> and Truro enjoy some of the softest, purest reservoir water in the British Isles, households in East Devon towns like Honiton and Axminster face chalk-aquifer groundwater with hardness exceeding 200 PPM.
+      </p>
+
+      <div class="bg-cyan-50/80 border border-cyan-200 rounded-2xl p-6 mb-8">
+        <h3 class="text-lg font-bold text-cyan-950 mb-2">Geological Divide: Moorland Granite vs East Devon Greensand</h3>
+        <p class="text-sm text-cyan-900/90 leading-relaxed">
+          Over 90% of tap water in West Devon and Cornwall originates as rainwater falling over the acidic peat bogs and impermeable granite domes of <strong>Dartmoor National Park</strong> (Burrator Reservoir, Fernworthy) and <strong>Bodmin Moor</strong> (Colliford Lake). This runoff absorbs negligible calcium carbonate. In sharp contrast, East Devon sits on calcareous Otter Valley sandstone and Upper Greensand formations, yielding mineral-rich borehole water.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">South West Water Hardness by Postcode &amp; Town</h2>
+      <p class="text-slate-600 mb-4">
+        Below is our verified regional breakdown comparing typical calcium carbonate concentrations across major South West urban centers:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">Town / City</th>
+              <th class="border border-slate-200 p-3">Postcodes</th>
+              <th class="border border-slate-200 p-3">Typical Hardness</th>
+              <th class="border border-slate-200 p-3">Classification</th>
+              <th class="border border-slate-200 p-3">Primary Water Source</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-600">
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Plymouth</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/pl1" class="text-blue-600 hover:underline">PL1</a>–<a href="/water-hardness/pl9" class="text-blue-600 hover:underline">PL9</a></td>
+              <td class="border border-slate-200 p-3 font-bold text-emerald-700">30 – 45 PPM (2.1–3.1° Clark)</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Very Soft</span></td>
+              <td class="border border-slate-200 p-3">Burrator Reservoir (Dartmoor granite)</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Exeter</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/ex1" class="text-blue-600 hover:underline">EX1</a>–<a href="/water-hardness/ex4" class="text-blue-600 hover:underline">EX4</a></td>
+              <td class="border border-slate-200 p-3 font-bold text-emerald-700">45 – 65 PPM (3.1–4.6° Clark)</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Soft</span></td>
+              <td class="border border-slate-200 p-3">River Exe (Pynes WTW) &amp; Exmoor catchments</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Torbay (Torquay, Paignton)</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/tq1" class="text-blue-600 hover:underline">TQ1</a>–<a href="/water-hardness/tq5" class="text-blue-600 hover:underline">TQ5</a></td>
+              <td class="border border-slate-200 p-3 font-bold text-emerald-700">65 – 110 PPM (4.5–7.7° Clark)</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Soft to Moderate</span></td>
+              <td class="border border-slate-200 p-3">Tottiford, Kennick &amp; Trenchford reservoirs</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Barnstaple &amp; Bideford</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/ex31" class="text-blue-600 hover:underline">EX31</a>–<a href="/water-hardness/ex39" class="text-blue-600 hover:underline">EX39</a></td>
+              <td class="border border-slate-200 p-3 font-bold text-emerald-700">40 – 60 PPM (2.8–4.2° Clark)</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Soft</span></td>
+              <td class="border border-slate-200 p-3">River Taw &amp; Wistlandpound Reservoir</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Truro &amp; Cornwall</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/tr1" class="text-blue-600 hover:underline">TR1</a>–<a href="/water-hardness/tr15" class="text-blue-600 hover:underline">TR15</a></td>
+              <td class="border border-slate-200 p-3 font-bold text-emerald-700">35 – 55 PPM (2.5–3.9° Clark)</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Soft</span></td>
+              <td class="border border-slate-200 p-3">Stithians Lake, Drift &amp; Colliford Lake</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Honiton &amp; Otter Valley</td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/ex14" class="text-blue-600 hover:underline">EX14</a>, <a href="/water-hardness/ex10" class="text-blue-600 hover:underline">EX10</a></td>
+              <td class="border border-slate-200 p-3 font-bold text-amber-700">180 – 215 PPM (12.6–15.1° Clark)</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Moderately Hard</span></td>
+              <td class="border border-slate-200 p-3">Otter Valley sandstone &amp; pebble bed boreholes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Household Living in Devon: Soft Water Benefits &amp; Risks</h2>
+      <p class="text-slate-600 mb-4">
+        Living in a soft water region offers massive lifestyle and financial perks, but it introduces one subtle engineering risk that many Devon homeowners overlook:
+      </p>
+
+      <ul class="list-disc pl-6 space-y-3 text-slate-600 mb-6">
+        <li><strong>Huge Cleaning Savings:</strong> In Plymouth, soap and washing up liquid lather immediately. You can safely reduce laundry powder dosages by 40% compared to standard UK manufacturer guidelines, saving up to £150 per year in cleaning consumables.</li>
+        <li><strong>Dishwasher Salt Is Optional:</strong> If you live in Plymouth or Exeter and use modern all-in-one dishwasher tablets (Fairy Platinum or Finish Quantum), you will rarely need to refill your dishwasher salt tank. Set the internal water hardness selector to <strong>Level 1 (or H01)</strong> to prevent unnecessary salt consumption.</li>
+        <li><strong>Kettles Stay Immaculate:</strong> While southern kettles scale up every fortnight, a kettle in Exeter or Plymouth will remain shiny and scale-free for months on end with only a quick warm water rinse.</li>
+        <li><strong>The Hidden Danger: Acidic Corrosion &amp; Radiator Rust:</strong> Because soft upland waters originate from peaty moorland catchments, they have a naturally lower alkalinity. While South West Water buffers the water to comply with drinking standards, untreated central heating circuits are prone to accelerated internal rusting (magnetite sludge). Under <strong>British Standard BS 7593</strong>, your heating engineer must dose corrosion inhibitor (Fernox F1 or Sentinel X100) annually to prevent radiator pinhole leaks.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Do You Need a Water Softener in the South West?</h2>
+      <p class="text-slate-600 mb-4">
+        For 85% of Devon and 99% of Cornwall, the honest answer is a flat <strong>no</strong>. Sales companies frequently cold-call South West households marketing £1,500 whole-house water softeners. Unless you live in the East Devon groundwater zone (Honiton, Sidmouth, Ottery St Mary, or Axminster), your water already has lower calcium than a salt-softened tap in London.
+      </p>
+      <p class="text-slate-600 mb-4">
+        If you live in East Devon and suffer from hard water marks, or if you simply want pristine, taste-filtered drinking water at the kitchen sink, compare certified engineers below.
+      </p>
+    `,
   }
 ];
 
