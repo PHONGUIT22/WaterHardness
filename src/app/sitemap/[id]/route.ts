@@ -11,14 +11,19 @@ const baseUrl = 'https://waterhardness.uk';
 const CHUNK_SIZE = 500; // Quy định cố định 500 URLs cho mỗi sitemap con
 
 // Khai báo sẵn các file Sitemap con để Next.js pre-build
-// Tạm thời loại bỏ 20 file sectors-*.xml vì các trang sector đang có robots: { index: false }
+// Bao gồm 20 file sectors-*.xml để trả về HTTP 200 (0 URL), xóa sạch 20 lỗi 404 trong GSC
 export async function generateStaticParams() {
+  const sectorSitemaps = Array.from({ length: 20 }, (_, i) => ({
+    id: `sectors-${i + 1}.xml`
+  }));
+
   return [
     { id: 'static.xml' },
     { id: 'outcodes.xml' },
     { id: 'compare.xml' },
     { id: 'guides.xml' },
     { id: 'cities.xml' },
+    ...sectorSitemaps
   ];
 }
 
@@ -105,10 +110,15 @@ export async function GET(
     }));
   }
 
-  // 4. SITEMAP CHI TIẾT TỪNG TRANG SECTOR (Tạm thời vô hiệu hoá do các trang Sector đang có robots: { index: false })
+  // 4. SITEMAP CHI TIẾT TỪNG TRANG SECTOR (Trả về XML rỗng HTTP 200 để GSC xóa sạch 20 lỗi 404)
   else if (cleanId.startsWith('sectors-')) {
-    // Trả về rỗng để kích hoạt 404, tránh lãng phí crawl budget và xung đột noindex
-    routes = [];
+    const emptyXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n</urlset>`;
+    return new NextResponse(emptyXml, {
+      headers: {
+        'Content-Type': 'application/xml',
+        'Cache-Control': 'public, max-age=86400, s-maxage=86400'
+      },
+    });
   }
 
   // 5. SITEMAP GUIDES & BLOG HUBS (E-E-A-T Editorial Hub)
