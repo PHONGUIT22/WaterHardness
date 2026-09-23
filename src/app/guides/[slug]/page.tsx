@@ -118,6 +118,21 @@ export default async function GuideArticlePage({ params }: PageProps) {
     guidePpm = 60;
   }
 
+  // Ensure Plumbing & Heating (water-conditioner, water-softener) articles always render QuoteRequestCard
+  const isPlumbingAndHeating =
+    guide.category === "Plumbing & Heating" ||
+    guide.slug.includes("water-conditioner") ||
+    guide.slug.includes("water-softener") ||
+    guide.slug.includes("combi-boiler");
+
+  const leadOutcode = (guide.relatedOutcodes && guide.relatedOutcodes.length > 0)
+    ? guide.relatedOutcodes[0]
+    : "UK";
+  const leadLocationName = (guide.relatedOutcodes && guide.relatedOutcodes.length > 0)
+    ? guide.relatedOutcodes[0]
+    : "your local area";
+  const leadPpm = guidePpm > 0 ? guidePpm : 280;
+
   // Schema.org JSON-LD (Article, BreadcrumbList, FAQPage)
   const schema = {
     "@context": "https://schema.org",
@@ -351,6 +366,15 @@ export default async function GuideArticlePage({ params }: PageProps) {
           />
         </div>
 
+        {/* LOCAL LEAD CAPTURE ENGINE: WATER SOFTENER & HEATING PROTECTION */}
+        {(isPlumbingAndHeating || (guide.relatedOutcodes && guide.relatedOutcodes.length > 0)) && (
+          <QuoteRequestCard
+            outcode={leadOutcode}
+            avgPpm={leadPpm}
+            locationName={leadLocationName}
+          />
+        )}
+
         {/* APPLIANCE SPECS / SETTINGS CALLOUT BOX */}
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-800 space-y-5">
           <div className="flex items-center gap-3">
@@ -396,15 +420,6 @@ export default async function GuideArticlePage({ params }: PageProps) {
             </div>
           </div>
         </div>
-
-        {/* LOCAL LEAD CAPTURE ENGINE: WATER SOFTENER & HEATING PROTECTION */}
-        {guide.relatedOutcodes && guide.relatedOutcodes.length > 0 && (
-          <QuoteRequestCard
-            outcode={guide.relatedOutcodes[0]}
-            avgPpm={guidePpm}
-            locationName={guide.relatedOutcodes[0]}
-          />
-        )}
 
         {/* FAQ ACCORDION SECTION */}
         <div className="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-8 shadow-sm space-y-6">

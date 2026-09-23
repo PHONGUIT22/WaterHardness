@@ -7,13 +7,13 @@ import { ChevronRight, Droplets, MapPin, ShieldCheck, Scale, Compass } from "luc
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "UK Cities Water Hardness Directory",
+  title: "UK Water Hardness by City: Complete PPM Directory",
   description: "Compare tap water hardness ratings across 30 major UK cities. Check PPM levels, water suppliers, and local limescale risks for your hometown.",
   alternates: {
     canonical: "https://waterhardness.uk/cities",
   },
   openGraph: {
-    title: "UK Cities Water Hardness Directory",
+    title: "UK Water Hardness by City: Complete PPM Directory",
     description: "Compare tap water hardness ratings across 30 major UK cities. Check PPM levels, water suppliers, and local limescale risks for your hometown.",
     url: "https://waterhardness.uk/cities",
     siteName: "WaterHardness.uk",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "UK Cities Water Hardness Directory",
+    title: "UK Water Hardness by City: Complete PPM Directory",
     description: "Compare tap water hardness ratings across 30 major UK cities. Check PPM levels, water suppliers, and local limescale risks for your hometown.",
   },
 };
@@ -35,7 +35,7 @@ export default function CitiesDirectoryPage() {
         "@type": "CollectionPage",
         "@id": "https://waterhardness.uk/cities",
         "url": "https://waterhardness.uk/cities",
-        "name": "UK Cities Water Hardness Directory",
+        "name": "UK Water Hardness by City: Complete PPM Directory",
         "description": "Comprehensive comparative directory of municipal tap water hardness across 30 primary UK cities.",
         "breadcrumb": {
           "@type": "BreadcrumbList",
@@ -102,7 +102,7 @@ export default function CitiesDirectoryPage() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              UK Cities Water Hardness Directory
+              UK Water Hardness by City: Complete PPM Directory
             </h1>
             <p className="mt-2 text-base text-slate-600 max-w-3xl">
               Compare average mineral PPM levels, water suppliers, and neighbourhood hydro-variance across the UK&apos;s 30 largest cities. Select any city to view local outcode postcodes and Which?-style household advice.
