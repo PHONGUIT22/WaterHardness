@@ -35,12 +35,12 @@ export default function Footer() {
 
           {/* Cột 3: SEO Internal Links - Các vùng trọng điểm UK */}
           <div>
-            <h4 className="text-white font-semibold mb-4 text-xs uppercase tracking-wider">Top Regions</h4>
+            <h4 className="text-white font-semibold mb-4 text-xs uppercase tracking-wider">Top Directories</h4>
             <ul className="space-y-2.5 text-xs">
+              <li><Link href="/suppliers" className="hover:text-white transition-colors font-medium text-cyan-400">Water Suppliers Hub</Link></li>
               <li><Link href="/cities" className="hover:text-white transition-colors">UK Cities Directory</Link></li>
-              <li><Link href="/cities/london" className="hover:text-white transition-colors">London Water Hardness</Link></li>
-              <li><Link href="/cities/birmingham" className="hover:text-white transition-colors">Birmingham Water Quality</Link></li>
-              <li><Link href="/cities/manchester" className="hover:text-white transition-colors">Manchester Water Hardness</Link></li>
+              <li><Link href="/suppliers/thames-water" className="hover:text-white transition-colors">Thames Water Hardness</Link></li>
+              <li><Link href="/suppliers/severn-trent-water" className="hover:text-white transition-colors">Severn Trent Water Hardness</Link></li>
               <li><Link href="/outcodes" className="hover:text-white transition-colors">All UK Outcodes Directory</Link></li>
             </ul>
           </div>

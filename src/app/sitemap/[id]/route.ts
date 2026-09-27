@@ -4,6 +4,7 @@ import { getAllOutcodesFromDB } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
 import { guidesData } from "@/lib/guidesData";
 import { citiesData } from "@/lib/citiesData";
+import { suppliersData } from "@/lib/suppliersData";
 import { POPULAR_COMPARE_PAIRS } from "@/lib/comparePairs";
 
 export const revalidate = 86400; // ISR Cache 1 ngày trên CDN
@@ -24,6 +25,7 @@ export async function generateStaticParams() {
     { id: 'compare.xml' },
     { id: 'guides.xml' },
     { id: 'cities.xml' },
+    { id: 'suppliers.xml' },
     ...sectorSitemaps
   ];
 }
@@ -142,6 +144,24 @@ export async function GET(
       ...citiesData.map((city) => ({
         url: `${baseUrl}/cities/${city.slug}`,
         lastModified: getSeoDates(city.slug).dateModifiedISO,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+      }))
+    ];
+  }
+
+  // 7. SITEMAP SUPPLIERS HUBS (12 Major UK Water Authorities & Directory)
+  else if (cleanId === 'suppliers') {
+    routes = [
+      {
+        url: `${baseUrl}/suppliers`,
+        lastModified: getSeoDates('suppliers-directory').dateModifiedISO,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+      },
+      ...suppliersData.map((supplier) => ({
+        url: `${baseUrl}/suppliers/${supplier.slug}`,
+        lastModified: getSeoDates(supplier.slug).dateModifiedISO,
         changeFrequency: 'weekly',
         priority: 0.9,
       }))

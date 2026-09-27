@@ -67,6 +67,9 @@ export default function Navbar() {
             <Link href="/cities" className="hover:text-slate-900 transition-colors">
               UK Cities
             </Link>
+            <Link href="/suppliers" className="hover:text-slate-900 transition-colors">
+              Water Suppliers
+            </Link>
             <Link href="/guides" className="hover:text-slate-900 transition-colors">
               Guides & Blog
             </Link>

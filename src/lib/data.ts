@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import { getSupplierBySlug, SupplierMetadata } from "@/lib/suppliersData";
 
 // Khai báo Type để Code TypeScript chuẩn chỉ, gợi ý code (IntelliSense) mượt mà
 export interface WaterSectorData {
@@ -209,4 +210,109 @@ export async function getOutcodesForCity(outcodePrefixes: string[]) {
       });
     })
     .sort((a, b) => a.outcode.localeCompare(b.outcode, undefined, { numeric: true, sensitivity: 'base' }));
-}
+}
+
+// 8. TỐI ƯU TRANG WATER SUPPLIER HUB (VD: /suppliers/thames-water)
+export interface SupplierOutcodeItem {
+  outcode: string;
+  avgPpm: number;
+  clarkDegrees: number;
+  hardnessCategory: string;
+  sectorCount: number;
+}
+
+export interface SupplierOverviewResult {
+  supplier: SupplierMetadata;
+  totalSectors: number;
+  totalOutcodes: number;
+  networkAvgPpm: number;
+  networkClarkDegrees: number;
+  hardnessCategory: string;
+  softestOutcode: SupplierOutcodeItem;
+  hardestOutcode: SupplierOutcodeItem;
+  topHardestOutcodes: SupplierOutcodeItem[];
+  topSoftestOutcodes: SupplierOutcodeItem[];
+  outcodes: SupplierOutcodeItem[];
+}
+
+export async function getSupplierOverview(supplierSlug: string): Promise<SupplierOverviewResult | null> {
+  const supplier = getSupplierBySlug(supplierSlug);
+  if (!supplier) return null;
+
+  const { data, error } = await supabase
+    .from("water_hardness_sectors")
+    .select("outcode, sector, avg_ppm, clark_degrees, hardness_category")
+    .ilike("company_name", supplier.dbPattern)
+    .limit(3500);
+
+  if (error || !data || data.length === 0) return null;
+
+  const totalPpm = data.reduce((sum, item) => sum + (Number(item.avg_ppm) || 0), 0);
+  const networkAvgPpm = Math.round((totalPpm / data.length) * 10) / 10;
+  const networkClarkDegrees = Math.round((networkAvgPpm * 0.07) * 10) / 10;
+
+  // Group by outcode
+  const outcodeMap = new Map<string, { outcode: string; totalPpm: number; count: number; category: string }>();
+  data.forEach((row) => {
+    const code = row.outcode.toUpperCase();
+    const existing = outcodeMap.get(code);
+    const ppm = Number(row.avg_ppm) || 0;
+    if (existing) {
+      existing.totalPpm += ppm;
+      existing.count += 1;
+    } else {
+      outcodeMap.set(code, {
+        outcode: code,
+        totalPpm: ppm,
+        count: 1,
+        category: row.hardness_category || "Hard",
+      });
+    }
+  });
+
+  const outcodeList: SupplierOutcodeItem[] = Array.from(outcodeMap.values()).map((o) => {
+    const avg = Math.round((o.totalPpm / o.count) * 10) / 10;
+    return {
+      outcode: o.outcode,
+      avgPpm: avg,
+      clarkDegrees: Math.round((avg * 0.07) * 10) / 10,
+      hardnessCategory:
+        avg < 100 ? "Soft" : avg < 150 ? "Moderately Soft" : avg < 200 ? "Slightly Hard" : avg < 300 ? "Hard" : "Very Hard",
+      sectorCount: o.count,
+    };
+  });
+
+  const sortedByPpm = [...outcodeList].sort((a, b) => a.avgPpm - b.avgPpm);
+  const sortedByCode = [...outcodeList].sort((a, b) =>
+    a.outcode.localeCompare(b.outcode, undefined, { numeric: true, sensitivity: "base" })
+  );
+
+  const softest = sortedByPpm[0];
+  const hardest = sortedByPpm[sortedByPpm.length - 1];
+
+  const hardnessCategory =
+    networkAvgPpm < 100
+      ? "Soft Water"
+      : networkAvgPpm < 150
+      ? "Moderately Soft"
+      : networkAvgPpm < 200
+      ? "Moderately Hard"
+      : networkAvgPpm < 300
+      ? "Hard Water"
+      : "Very Hard Water";
+
+  return {
+    supplier,
+    totalSectors: data.length,
+    totalOutcodes: outcodeList.length,
+    networkAvgPpm,
+    networkClarkDegrees,
+    hardnessCategory,
+    softestOutcode: softest,
+    hardestOutcode: hardest,
+    topSoftestOutcodes: sortedByPpm.slice(0, 6),
+    topHardestOutcodes: [...sortedByPpm].reverse().slice(0, 6),
+    outcodes: sortedByCode,
+  };
+}
+
