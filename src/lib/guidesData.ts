@@ -26,7 +26,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-bristol-have-hard-water",
     title: "Does Bristol Have Hard Water? Mendip Limestone & Hardness Breakdown",
-    metaTitle: "Is Bristol Water Hard? (220–290 PPM Guide)",
+    metaTitle: "Is Bristol Water Hard? (Yes - 260 PPM Guide)",
     metaDescription: "Bristol tap water averages 220 to 290 PPM, categorised as hard to very hard. Discover why Mendip limestone causes rapid limescale and how to set appliances.",
     targetKeyword: "does bristol have hard water",
     category: "Regional Hardness",
@@ -154,7 +154,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "thames-water-hardness",
     title: "Thames Water Hardness: London Chalk Basin & PPM Breakdown",
-    metaTitle: "Thames Water Hardness: 260-300 PPM Report",
+    metaTitle: "Is Thames Water Hard? (Yes - 260-320 PPM)",
     metaDescription: "Check Thames Water hardness by postcode (PPM & Clark). Discover chalk aquifers, combi boiler limescale risks & dishwasher salt settings.",
     targetKeyword: "thames water water hardness",
     category: "Regional Hardness",
@@ -346,7 +346,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-scotland-have-hard-water",
     title: "Does Scotland Have Hard Water? Scottish Water PPM & Reservoir Science",
-    metaTitle: "Is Scottish Water Hard or Soft? (Soft)",
+    metaTitle: "Is Scottish Water Hard or Soft? (Naturally Soft)",
     metaDescription: "Scotland boasts naturally soft tap water averaging 20 to 60 PPM. Discover why Scottish granite keeps water scale-free and why you don't need dishwasher salt.",
     targetKeyword: "does scotland have hard water",
     category: "Regional Hardness",
@@ -451,7 +451,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-birmingham-have-hard-water",
     title: "Does Birmingham Have Hard Water? The Elan Valley Welsh Supply Explained",
-    metaTitle: "Is Birmingham Water Hard or Soft? (40 PPM)",
+    metaTitle: "Is Birmingham Water Hard? (No - 40 PPM Soft Water)",
     metaDescription: "Birmingham has naturally soft tap water averaging 40 to 80 PPM. Discover how the Elan Valley aqueduct brings soft Welsh mountain water to the West Midlands.",
     targetKeyword: "does birmingham have hard water",
     category: "Regional Hardness",
@@ -556,7 +556,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "manchester-water-hardness",
     title: "Manchester Water Hardness: Lake District Aqueducts & Soft Water Facts",
-    metaTitle: "Is Manchester Water Hard or Soft? (Soft)",
+    metaTitle: "Is Manchester Water Hard or Soft? (Soft - 35 PPM)",
     metaDescription: "Manchester tap water is soft, averaging 30 to 60 PPM. Learn how the Thirlmere and Haweswater aqueducts deliver soft Lake District water to Greater Manchester.",
     targetKeyword: "manchester water hardness",
     category: "Regional Hardness",
@@ -660,7 +660,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "yorkshire-water-hardness",
     title: "Yorkshire Water Hardness: Pennine Moorlands vs East Yorkshire Chalk",
-    metaTitle: "Yorkshire Water Hardness: Leeds vs Hull",
+    metaTitle: "Yorkshire Water Hardness: Leeds (Soft) vs Hull (Hard)",
     metaDescription: "Yorkshire tap water features a sharp split: soft water in Leeds & Sheffield (60–120 PPM) vs hard chalk water in East Yorkshire (300+ PPM). Complete breakdown.",
     targetKeyword: "yorkshire water hardness",
     category: "Regional Hardness",
@@ -764,7 +764,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "water-hardness-in-norfolk-and-suffolk",
     title: "Water Hardness in Norfolk & Suffolk: Anglian Water Chalk Aquifer Guide",
-    metaTitle: "Norfolk & Suffolk Water: 300-360 PPM",
+    metaTitle: "Is Norfolk Water Hard? (Very Hard - 300-360 PPM)",
     metaDescription: "Norfolk and Suffolk experience extreme chalk hardness, averaging 300 to 360+ PPM. Learn how Anglian Water borehole blending affects boilers and kettles.",
     targetKeyword: "norfolk water hardness",
     category: "Regional Hardness",
@@ -865,7 +865,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "wessex-water-hardness-guide",
     title: "Wessex Water Hardness Guide: Bath, Somerset & Dorset Limestone Science",
-    metaTitle: "Wessex Water Hardness: 250-310 PPM Guide",
+    metaTitle: "Is Wessex Water Hard? (Hard - 250-310 PPM Guide)",
     metaDescription: "Explore water hardness across the Wessex Water region (Bath, Somerset, Dorset, 250 to 310 PPM). Limestone aquifer geology and boiler care.",
     targetKeyword: "wessex water hardness",
     category: "Regional Hardness",
@@ -966,7 +966,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "welsh-water-hardness-cardiff-swansea",
     title: "Welsh Water Hardness: Cardiff, Swansea & South Wales Valley Catchments",
-    metaTitle: "Is Cardiff Water Hard or Soft? (30–90 PPM)",
+    metaTitle: "Welsh Water Hardness: Cardiff & Swansea PPM Ratings",
     metaDescription: "Cardiff and Swansea tap water is naturally soft to moderate, averaging 30 to 90 PPM. Discover why Welsh mountain reservoirs produce scale-free water.",
     targetKeyword: "water hardness wales",
     category: "Regional Hardness",
@@ -1064,7 +1064,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "bosch-dishwasher-salt-settings-uk",
     title: "Bosch Dishwasher Water Hardness Settings UK: Complete Calibration Guide",
-    metaTitle: "Bosch Dishwasher Salt Settings (UK Guide)",
+    metaTitle: "Bosch Dishwasher Salt Settings: UK PPM Hardness Guide",
     metaDescription: "Calibrate your Bosch, Neff, or Siemens dishwasher water hardness setting (H00 to H07) by PPM and Clark degrees. Learn why all-in-one tablets fail above 200 PPM.",
     targetKeyword: "bosch dishwasher water hardness setting uk",
     category: "Appliance Care",
@@ -1184,7 +1184,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "how-to-prevent-combi-boiler-limescale",
     title: "How to Prevent Combi Boiler Limescale: Part L Compliance & Inhibitors",
-    metaTitle: "Protect Boilers From Scale (BS 7593 UK)",
+    metaTitle: "How to Prevent Boiler Limescale: UK BS 7593 Guide",
     metaDescription: "Protect your combi boiler from limescale failure. Understand Part L building regulations (>200 PPM), inline electrolytic inhibitors, and thermal penalties.",
     targetKeyword: "boiler limescale protection uk",
     category: "Plumbing & Heating",
@@ -1281,7 +1281,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "best-kettle-descaling-methods-citric-acid-vs-vinegar",
     title: "Best Kettle Descaling Methods: Citric Acid vs White Vinegar Tested",
-    metaTitle: "Kettle Descaling: Citric Acid vs Vinegar",
+    metaTitle: "Best Way to Descale a Kettle: Citric Acid vs Vinegar",
     metaDescription: "Discover why 50g of food-grade citric acid dissolves kettle limescale faster than vinegar, with zero chemical odour and no tainted tea. Step-by-step ratio.",
     targetKeyword: "best way to descale kettle uk",
     category: "Appliance Care",
@@ -1342,7 +1342,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "washing-machine-hard-water-detergent-dosage",
     title: "Washing Machine Detergent Dosage for Hard Water: Scum & Spider Care",
-    metaTitle: "Washing Machine Detergent for Hard Water",
+    metaTitle: "Washing Machine Detergent Dosage for Hard Water (UK)",
     metaDescription: "Learn correct detergent dosing for hard water (+30% to +50%), how calcium stearate forms smelly drum syndrome, and how to protect the aluminium drum spider.",
     targetKeyword: "washing machine detergent hard water uk",
     category: "Appliance Care",
@@ -1411,7 +1411,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "water-softener-vs-water-conditioner-uk",
     title: "Water Softener vs Water Conditioner UK: Plumbing Science & Regulations",
-    metaTitle: "Water Softener vs Conditioner (UK Guide)",
+    metaTitle: "Water Softener vs Conditioner: UK Differences & Cost",
     metaDescription: "Compare salt-based ion exchange water softeners vs physical scale conditioners in the UK. WRAS drinking tap regulations, boiler compliance, and costs.",
     targetKeyword: "water softener vs conditioner uk",
     category: "Plumbing & Heating",
@@ -1520,7 +1520,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "best-shower-filters-for-hard-water-uk",
     title: "Do Shower Filters Remove Hard Water in the UK? The Honest Truth",
-    metaTitle: "Do Shower Filters Remove Hard Water? UK",
+    metaTitle: "Do Shower Filters Remove Hard Water? (Truth Revealed)",
     metaDescription: "The brutal truth about UK shower filters: they remove chlorine and heavy metals with KDF-55, but DO NOT reduce calcium hardness PPM. Expert dermatological advice.",
     targetKeyword: "do shower filters remove hard water uk",
     category: "Health & Water Science",
@@ -1619,7 +1619,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-boiling-water-remove-limescale",
     title: "Does Boiling Water Remove Limescale? Temporary vs Permanent Hardness",
-    metaTitle: "Does Boiling Water Remove Limescale?",
+    metaTitle: "Does Boiling Water Remove Limescale? (Science Facts)",
     metaDescription: "Does boiling water soften it? Learn the difference between temporary (calcium bicarbonate) and permanent hardness, and why boiling causes tea scum.",
     targetKeyword: "does boiling water make it soft uk",
     category: "Health & Water Science",
@@ -1716,7 +1716,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "affinity-water-hardness-guide",
     title: "Affinity Water Hardness: PPM Readings & Postcode Map (2026)",
-    metaTitle: "Affinity Water Hardness: 280-340 PPM",
+    metaTitle: "Is Affinity Water Hard? (Yes - 280-340 PPM Guide)",
     metaDescription: "Check Affinity Water hardness by postcode (PPM & Clark) across Surrey, Herts & Essex. Find Woking ratings, limescale tips & dishwasher settings.",
     targetKeyword: "affinity water hardness",
     category: "Regional Hardness",
@@ -1876,7 +1876,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "london-water-hardness-by-postcode",
     title: "London Water Hardness by Postcode: Is London Water Hard?",
-    metaTitle: "London Water Hardness by Postcode (PPM)",
+    metaTitle: "London Water Hardness by Postcode: Full PPM Directory",
     metaDescription: "Is London tap water hard? Check London water hardness by postcode (PPM & Clark). Compare North, South, East, West & Central London limescale risks.",
     targetKeyword: "london water hardness by postcode",
     category: "Regional Hardness",
@@ -1992,7 +1992,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "severn-trent-water-hardness-guide",
     title: "Severn Trent Water Hardness: Postcode Checker & PPM Table",
-    metaTitle: "Severn Trent Water Hardness: 40-320 PPM",
+    metaTitle: "Is Severn Trent Water Hard? (Midlands PPM Guide)",
     metaDescription: "Check Severn Trent water hardness across the Midlands. Compare soft water in Birmingham with hard water in Nottingham, Leicester, Derby & Coventry.",
     targetKeyword: "severn trent water hardness",
     category: "Regional Hardness",
@@ -2131,7 +2131,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "beko-dishwasher-salt-settings-uk",
     title: "Beko Dishwasher Salt Settings: UK Water Hardness Guide",
-    metaTitle: "Beko Dishwasher Salt Settings UK Guide",
+    metaTitle: "Beko Dishwasher Salt Settings: UK Water Hardness Guide",
     metaDescription: "Calibrate your Beko dishwasher water hardness level (r1 to r5) against UK water hardness PPM and Clark degrees to prevent cloudy glasses & scale.",
     targetKeyword: "beko dishwasher salt settings uk",
     category: "Appliance Care",
@@ -2281,7 +2281,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-surrey-have-hard-water",
     title: "Does Surrey Have Hard Water? Woking, Guildford & KT Guide",
-    metaTitle: "Does Surrey Have Hard Water? (280-330 PPM)",
+    metaTitle: "Does Surrey Have Hard Water? (Yes - 280-330 PPM)",
     metaDescription: "Is tap water hard in Surrey? Check PPM levels across Guildford, Woking, Epsom & KT postcodes. Find kettle descaling advice & water softener tips.",
     targetKeyword: "does surrey have hard water",
     category: "Regional Hardness",
@@ -2430,7 +2430,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-bournemouth-have-hard-water",
     title: "Does Bournemouth Have Hard Water? Poole & Dorset Guide",
-    metaTitle: "Bournemouth Water Hardness: 270 PPM Guide",
+    metaTitle: "Is Bournemouth Water Hard? (Yes - 270 PPM Guide)",
     metaDescription: "Is tap water hard in Bournemouth & Poole? Check Dorset PPM ratings across BH postcodes. Learn how coastal chalk hills cause rapid kettle limescale.",
     targetKeyword: "does bournemouth have hard water",
     category: "Regional Hardness",
@@ -2558,7 +2558,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-leeds-have-hard-water",
     title: "Does Leeds Have Hard Water? West Yorkshire PPM Breakdown",
-    metaTitle: "Does Leeds Have Hard Water? (120 PPM)",
+    metaTitle: "Is Leeds Water Hard? (Moderately Soft - 120 PPM)",
     metaDescription: "Is tap water hard in Leeds? Check West Yorkshire PPM ratings across all LS postcodes. Discover why Leeds water varies from soft Pennine hills to Ouse.",
     targetKeyword: "does leeds have hard water",
     category: "Regional Hardness",
@@ -2696,7 +2696,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "water-conditioner-vs-water-softener",
     title: "Water Conditioner vs Water Softener UK: Differences, Costs & Which Actually Works?",
-    metaTitle: "Water Conditioner vs Softener (UK Guide)",
+    metaTitle: "Water Conditioner vs Water Softener: Real UK Differences",
     metaDescription: "Confused between a water conditioner and an ion-exchange water softener? UK plumbers compare real limescale removal, running costs, and shower filter myths.",
     targetKeyword: "water conditioner vs water softener",
     category: "Plumbing & Heating",
@@ -2875,7 +2875,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "south-west-water-hardness-exeter-plymouth",
     title: "South West Water Hardness: Exeter, Plymouth & Devon PPM Guide",
-    metaTitle: "Exeter & Plymouth Water Hardness (SWW)",
+    metaTitle: "South West Water Hardness: Plymouth (Soft) vs Exeter (Hard)",
     metaDescription: "Check South West Water hardness levels across Devon and Cornwall. Compare Plymouth's soft Dartmoor reservoir water with East Devon limestone boreholes.",
     targetKeyword: "south west water hardness",
     category: "Regional Hardness",

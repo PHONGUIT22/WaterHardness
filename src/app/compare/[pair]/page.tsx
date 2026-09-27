@@ -7,8 +7,16 @@ import VersusTable from "@/components/compare/VersusTable";
 import { Sparkles } from "lucide-react";
 import { getSeoDates } from "@/lib/seoDates";
 
+import { POPULAR_COMPARE_PAIRS, isPopularComparePair } from "@/lib/comparePairs";
+
 export const revalidate = 86400;
 export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  return POPULAR_COMPARE_PAIRS.map((pair) => ({
+    pair,
+  }));
+}
 
 interface PageProps {
   params: Promise<{ pair: string }> | { pair: string };
@@ -27,30 +35,54 @@ function parsePairSlug(pairSlug: string) {
   return { sectorA, sectorB, slugA: parts[0], slugB: parts[1] };
 }
 
-// 1. GENERATE DYNAMIC METADATA
+// 1. GENERATE DYNAMIC METADATA (CRAWL BUDGET & THIN CONTENT PROTECTION)
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
-  const parsed = parsePairSlug(resolvedParams.pair);
+  const rawPairSlug = resolvedParams.pair || "";
+  const normalizedPairSlug = rawPairSlug.toLowerCase().trim();
+  const parsed = parsePairSlug(normalizedPairSlug);
 
-  if (!parsed) return { title: "Comparison Not Found - WaterHardness.uk" };
+  if (!parsed) {
+    return {
+      title: "Comparison Not Found - WaterHardness.uk",
+      robots: { index: false, follow: true },
+    };
+  }
 
   const [dataA, dataB] = await Promise.all([
     getSectorData(parsed.sectorA),
     getSectorData(parsed.sectorB),
   ]);
 
-  if (!dataA || !dataB) return { title: "Comparison Not Found - WaterHardness.uk" };
+  if (!dataA || !dataB) {
+    return {
+      title: "Comparison Not Found - WaterHardness.uk",
+      robots: { index: false, follow: true },
+    };
+  }
+
+  // Only whitelist key comparison pairs for indexing; arbitrary combinations are noindexed
+  const isIndexable = isPopularComparePair(normalizedPairSlug);
+  const canonicalUrl = `https://waterhardness.uk/compare/${normalizedPairSlug}`;
 
   return {
     title: `${dataA.sector} vs ${dataB.sector} Water Hardness`,
     description: `Compare tap water hardness: Sector ${dataA.sector} (${dataA.avgPpm} PPM) vs Sector ${dataB.sector} (${dataB.avgPpm} PPM). Check limescale risks & appliance settings.`,
     alternates: {
-      canonical: `https://waterhardness.uk/compare/${resolvedParams.pair}`,
+      canonical: canonicalUrl,
+    },
+    robots: {
+      index: isIndexable,
+      follow: true,
+      googleBot: {
+        index: isIndexable,
+        follow: true,
+      },
     },
     openGraph: {
       title: `${dataA.sector} vs ${dataB.sector} Water Hardness`,
       description: `Compare tap water hardness: Sector ${dataA.sector} (${dataA.avgPpm} PPM) vs Sector ${dataB.sector} (${dataB.avgPpm} PPM).`,
-      url: `https://waterhardness.uk/compare/${resolvedParams.pair}`,
+      url: canonicalUrl,
       siteName: "WaterHardness.uk",
       locale: "en_GB",
       type: "article",

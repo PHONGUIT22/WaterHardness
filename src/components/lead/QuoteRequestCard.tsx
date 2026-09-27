@@ -120,12 +120,14 @@ export default function QuoteRequestCard({
             ? `Living in a Hard Water Zone (${outcode} averages ${avgPpm} PPM)? Compare Approved Local Installers`
             : isModerateWater
             ? `Protect Your Heating & Appliances in ${outcode} (${avgPpm} PPM): Compare Local Specialists`
-            : `Looking for Drinking Water Purification in ${outcode}? Compare Local Specialists`}
+            : `Looking for Water Treatment & Heating Protection in ${outcode} (${avgPpm} PPM)?`}
         </h2>
         <p className="mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
           {isHardWater
             ? `Get up to 3 free, no-obligation quotes from WRAS-approved water softener installers and heating engineers serving ${locationName}.`
-            : `Connect with certified local plumbers for drinking water filtration, limescale management, and British Standard BS 7593 heating system protection.`}
+            : isModerateWater
+            ? `Connect with certified local plumbers for limescale management and British Standard BS 7593 heating system protection in ${locationName}.`
+            : `Connect with certified local specialists for drinking water filtration and British Standard BS 7593 anti-corrosion boiler protection in ${locationName}.`}
         </p>
       </div>
 
@@ -137,7 +139,7 @@ export default function QuoteRequestCard({
         </div>
         <div className="flex items-center gap-2">
           <Droplets className="w-4 h-4 text-blue-600 shrink-0" />
-          <span>WRAS-Approved Water Softeners</span>
+          <span>{isSoftWater ? "WRAS-Approved Filtration Systems" : "WRAS-Approved Water Softeners"}</span>
         </div>
         <div className="flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-amber-500 shrink-0" />
@@ -157,15 +159,24 @@ export default function QuoteRequestCard({
                 <button
                   type="button"
                   onClick={() => setServiceNeeded("water_softener")}
-                  className={`p-3.5 rounded-xl border text-left flex items-start gap-3 transition-all ${
+                  className={`p-3.5 rounded-xl border text-left flex items-start gap-3 transition-all relative ${
                     serviceNeeded === "water_softener"
                       ? "border-blue-600 bg-blue-50 text-blue-900 ring-2 ring-blue-500/20 shadow-xs"
+                      : isHardWater
+                      ? "border-blue-300 bg-white hover:bg-blue-50/50 text-slate-800 ring-1 ring-blue-200"
                       : "border-slate-200 bg-white hover:bg-slate-50 text-slate-800"
                   }`}
                 >
                   <Droplets className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                  <div>
-                    <div className="text-sm font-bold">Whole-House Water Softener</div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between gap-1">
+                      <div className="text-sm font-bold">Whole-House Water Softener</div>
+                      {isHardWater && (
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wide bg-blue-600 text-white shadow-2xs">
+                          ★ Recommended
+                        </span>
+                      )}
+                    </div>
                     <div className="text-xs text-slate-500 mt-0.5">
                       Harvey, Kinetico, EcoWater compatible (£1,200–£2,500)
                     </div>
@@ -183,10 +194,14 @@ export default function QuoteRequestCard({
                 }`}
               >
                 <Flame className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
-                <div>
-                  <div className="text-sm font-bold">Boiler Descaling &amp; Protection</div>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between gap-1">
+                    <div className="text-sm font-bold">Boiler Descaling &amp; Protection</div>
+                  </div>
                   <div className="text-xs text-slate-500 mt-0.5">
-                    BS 7593 Power flush &amp; magnetic filter (£350–£600)
+                    {isSoftWater
+                      ? "BS 7593 Anti-corrosion flush & inhibitor (£350–£600)"
+                      : "BS 7593 Power flush & scale protection (£350–£600)"}
                   </div>
                 </div>
               </button>
@@ -197,12 +212,21 @@ export default function QuoteRequestCard({
                 className={`p-3.5 rounded-xl border text-left flex items-start gap-3 transition-all ${
                   serviceNeeded === "drinking_filter"
                     ? "border-blue-600 bg-blue-50 text-blue-900 ring-2 ring-blue-500/20 shadow-xs"
+                    : isSoftWater
+                    ? "border-cyan-300 bg-white hover:bg-cyan-50/50 text-slate-800 ring-1 ring-cyan-200"
                     : "border-slate-200 bg-white hover:bg-slate-50 text-slate-800"
                 }`}
               >
                 <Filter className="w-5 h-5 text-cyan-600 shrink-0 mt-0.5" />
-                <div>
-                  <div className="text-sm font-bold">Drinking Water Filtration</div>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between gap-1">
+                    <div className="text-sm font-bold">Drinking Water Filtration</div>
+                    {isSoftWater && (
+                      <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wide bg-cyan-600 text-white shadow-2xs">
+                        ★ Recommended
+                      </span>
+                    )}
+                  </div>
                   <div className="text-xs text-slate-500 mt-0.5">
                     Under-sink Reverse Osmosis / Carbon block filter
                   </div>

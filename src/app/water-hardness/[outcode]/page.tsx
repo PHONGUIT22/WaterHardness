@@ -701,6 +701,7 @@ export default async function OutcodeHubPage({ params }: PageProps) {
               {softestSector && (
                 <Link
                   href={`/water-hardness/${cleanOutcodeSlug}/${softestSector.sector.toLowerCase().trim().replace(/\s+/g, "-")}`}
+                  rel="nofollow"
                   className="flex items-center justify-between p-4 bg-slate-50 hover:bg-emerald-50/60 rounded-2xl transition-colors border border-slate-200/60 group"
                 >
                   <div>
@@ -739,6 +740,7 @@ export default async function OutcodeHubPage({ params }: PageProps) {
               {hardestSector && (
                 <Link
                   href={`/water-hardness/${cleanOutcodeSlug}/${hardestSector.sector.toLowerCase().trim().replace(/\s+/g, "-")}`}
+                  rel="nofollow"
                   className="flex items-center justify-between p-4 bg-slate-50 hover:bg-amber-50/60 rounded-2xl transition-colors border border-slate-200/60 group"
                 >
                   <div>
@@ -792,6 +794,7 @@ export default async function OutcodeHubPage({ params }: PageProps) {
                 <Link
                   key={item.sector}
                   href={`/water-hardness/${cleanOutcodeSlug}/${sectorSlug}`}
+                  rel="nofollow"
                   className="p-3.5 rounded-2xl bg-slate-50 hover:bg-cyan-50 border border-slate-200/60 hover:border-cyan-300 transition-all flex items-center justify-between group"
                 >
                   <div className="truncate pr-2">

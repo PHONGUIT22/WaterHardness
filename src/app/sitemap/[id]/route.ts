@@ -4,6 +4,7 @@ import { getAllOutcodesFromDB } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
 import { guidesData } from "@/lib/guidesData";
 import { citiesData } from "@/lib/citiesData";
+import { POPULAR_COMPARE_PAIRS } from "@/lib/comparePairs";
 
 export const revalidate = 86400; // ISR Cache 1 ngày trên CDN
 
@@ -91,17 +92,7 @@ export async function GET(
 
   // 3. SITEMAP CÁC CẶP SO SÁNH HOT
   else if (cleanId === 'compare') {
-    const popularPairs = [
-      "sw1a-1-vs-m1-1",
-      "sw1a-1-vs-b1-1",
-      "sw1a-1-vs-eh1-1",
-      "b1-1-vs-m1-1",
-      "ab10-1-vs-sw1a-1",
-      "ls1-1-vs-sw1a-1",
-      "bs1-1-vs-m1-1",
-    ];
-
-    routes = popularPairs.map((pair) => ({
+    routes = POPULAR_COMPARE_PAIRS.map((pair) => ({
       url: `${baseUrl}/compare/${pair}`,
       // 👉 TRÙNG KHỚP 100% VỚI Schema JSON-LD TRONG TRANG SO SÁNH
       lastModified: getSeoDates(pair).dateModifiedISO,
