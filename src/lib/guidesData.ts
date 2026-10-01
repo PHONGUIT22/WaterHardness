@@ -971,7 +971,7 @@ export const guidesData: GuideArticle[] = [
     targetKeyword: "water hardness wales",
     category: "Regional Hardness",
     datePublished: "2025-02-15T08:00:00Z",
-    dateModified: "2026-09-30T08:00:00Z",
+    dateModified: "2026-10-01T08:00:00Z",
     readingTime: "5 min read",
     quickVerdict: {
       ppmRange: "30 – 90 PPM (mg/L CaCO3)",
@@ -996,6 +996,10 @@ export const guidesData: GuideArticle[] = [
       {
         question: "Do I need a water softener in Cardiff or Swansea?",
         answer: "No, installing an ion-exchange water softener in Cardiff or Swansea is completely unnecessary. The water is already naturally soft."
+      },
+      {
+        question: "What is Dŵr Cymru water hardness?",
+        answer: "Dŵr Cymru (Welsh Water) supplies naturally soft drinking water to more than 90% of Wales, averaging between 30 and 90 PPM. Sourced from high-rainfall upland mountain reservoirs in the Brecon Beacons and Snowdonia, Welsh tap water contains minimal calcium carbonate and leaves virtually no limescale in domestic appliances."
       }
     ],
     contentHtml: `
@@ -2881,12 +2885,12 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "south-west-water-hardness-exeter-plymouth",
     title: "South West Water Hardness: Exeter, Plymouth & Devon PPM Guide",
-    metaTitle: "South West Water Hardness: Plymouth (Soft) vs Exeter (Hard)",
-    metaDescription: "Check South West Water hardness levels across Devon and Cornwall. Compare Plymouth's soft Dartmoor reservoir water with East Devon limestone boreholes.",
-    targetKeyword: "south west water hardness",
+    metaTitle: "South West Water Hardness by Postcode: Exeter, Plymouth & Devon (PPM)",
+    metaDescription: "Check South West Water hardness by postcode (EX, PL, TQ, TR). Full PPM table comparing soft Plymouth Dartmoor water with hard East Devon aquifers.",
+    targetKeyword: "south west water hardness by postcode",
     category: "Regional Hardness",
     datePublished: "2026-09-22T08:00:00Z",
-    dateModified: "2026-09-30T08:00:00Z",
+    dateModified: "2026-10-01T08:00:00Z",
     readingTime: "7 min read",
     quickVerdict: {
       ppmRange: "30 – 210 PPM (mg/L CaCO3)",
@@ -2919,6 +2923,10 @@ export const guidesData: GuideArticle[] = [
       {
         question: "Does Plymouth have hard or soft water?",
         answer: "Plymouth has very soft water, averaging just 30 to 45 PPM. Sourced directly from Burrator Reservoir on granite Dartmoor terrain, it leaves zero limescale on taps and kettles."
+      },
+      {
+        question: "Where can I check South West Water hardness by postcode?",
+        answer: "Our verified postcode breakdown covers all South West supply zones: PL1–PL9 (Plymouth, soft 30–45 PPM), EX1–EX4 (Exeter, soft 45–65 PPM), EX10–EX14 (Honiton and Sidmouth, hard 180–210 PPM), TR1–TR27 (Truro and Cornwall, soft 35–55 PPM), and TQ1–TQ12 (Torquay and Torbay, moderate 70–110 PPM)."
       }
     ],
     contentHtml: `
@@ -3342,7 +3350,7 @@ export const guidesData: GuideArticle[] = [
     targetKeyword: "anglian water hardness",
     category: "Regional Hardness",
     datePublished: "2026-09-30T08:00:00Z",
-    dateModified: "2026-09-30T08:00:00Z",
+    dateModified: "2026-10-01T08:00:00Z",
     readingTime: "7 min read",
     quickVerdict: {
       ppmRange: "280 – 390+ PPM (mg/L CaCO3)",
@@ -3363,6 +3371,10 @@ export const guidesData: GuideArticle[] = [
       {
         question: "Do I need a water softener in an Anglian Water area?",
         answer: "While drinking hard water is harmless, installing an ion-exchange water softener is highly recommended for homeowners across the Anglian Water region. Unsoftened water will cause rapid limescale encrustation in combi boiler heat exchangers, shower valves, and kettles, shortening appliance lifespans and increasing heating bills by up to 12%."
+      },
+      {
+        question: "How do I choose a soft water company in Ipswich?",
+        answer: "When choosing a water softener installer in Ipswich (where tap water reaches a severe 325 PPM), ensure the company is WaterSafe recognised and uses WRAS-approved components. Given the heavy limescale in Suffolk, twin-cylinder non-electric systems (such as Harvey or Kinetico) are recommended to provide continuous 24/7 softened water without regeneration downtime."
       }
     ],
     contentHtml: `
@@ -3471,6 +3483,257 @@ export const guidesData: GuideArticle[] = [
         <li><strong>Dishwasher Salt Calibration:</strong> Always set your dishwasher water softener to <strong>Level 4 or Level 5</strong> (setting H05 or H06 on Bosch/Neff/Siemens, Level 4/5 on Beko and Indesit). Never operate a dishwasher on 3-in-1 detergent pods alone without refilling the base salt hopper.</li>
         <li><strong>Kettle Descaling Protocol:</strong> A standard electric kettle in Cambridge or Peterborough develops thick chalk crust within two weeks. Boil 500ml water with two tablespoons of food-grade citric acid monthly to maintain rapid boiling efficiency without toxic chemical odours.</li>
         <li><strong>Ion-Exchange Softeners:</strong> Homeowners in Anglian Water territory benefit dramatically from installing an ion-exchange water softener. By exchanging hard calcium and magnesium ions for sodium, softened water eliminates bathroom limescale spotting and preserves thermostatic shower valves indefinitely.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Choosing a Soft Water Company in Ipswich &amp; Suffolk</h2>
+      <p class="text-slate-600 mb-4">
+        With tap water across Ipswich (<a href="/water-hardness/ip1" class="text-blue-600 font-semibold hover:underline">IP1</a> to IP4) averaging a severe <strong>325 PPM</strong>, hundreds of households invest in domestic water softening every year. When vetting local Ipswich water treatment companies, always demand: (1) <strong>WRAS Certification</strong> to prevent mains backflow contamination, (2) <strong>WaterSafe or CIPHE accreditation</strong> for qualified plumbing standards, and (3) <strong>Twin-Tank Technology</strong> so your home receives softened water even while the secondary resin cylinder is regenerating with salt brine.
+      </p>
+    `,
+  },
+  {
+    slug: "does-leicester-have-hard-water",
+    title: "Does Leicester Have Hard Water? Severn Trent PPM & Postcode Guide",
+    metaTitle: "Does Leicester Have Hard Water? (Yes - 245 PPM Guide)",
+    metaDescription: "Is tap water hard or soft in Leicester? Check Severn Trent PPM ratings across LE1 to LE19, Cropston reservoir sources, kettle descaling & salt settings.",
+    targetKeyword: "does leicester have hard water",
+    category: "Regional Hardness",
+    datePublished: "2026-10-01T08:00:00Z",
+    dateModified: "2026-10-01T08:00:00Z",
+    readingTime: "6 min read",
+    quickVerdict: {
+      ppmRange: "215 – 280 PPM (mg/L CaCO3)",
+      classification: "Hard Water",
+      supplier: "Severn Trent Water",
+      keyTakeaway: "Yes, Leicester tap water is hard, averaging 245 PPM (17.1° Clark). Sourced by Severn Trent from regional surface reservoirs (Cropston and Thornton) and blended with River Dove and Derwent transfers, it leaves noticeable limescale on kettle elements, bathroom tiles, and combi boiler heat exchangers."
+    },
+    relatedOutcodes: ["LE1", "LE2", "LE3", "LE4", "LE5", "LE18", "LE19"],
+    faqItems: [
+      {
+        question: "Is tap water hard or soft in Leicester?",
+        answer: "Leicester tap water is hard, averaging approximately 245 PPM (17.1° Clark), ranging from 215 PPM in southern suburbs up to 280 PPM in northern districts like Belgrave and Beaumont Leys. It leaves chalky white limescale around kitchen taps and in electric kettles."
+      },
+      {
+        question: "Is tap water in Leicester safe to drink?",
+        answer: "Yes, tap water in Leicester is 100% safe to drink. Supplied by Severn Trent Water and regulated by the Drinking Water Inspectorate (DWI), it meets rigorous biological and chemical quality standards. The dissolved calcium and magnesium minerals also provide natural dietary health benefits."
+      },
+      {
+        question: "What dishwasher setting should I use in Leicester?",
+        answer: "In Leicester, set your dishwasher water softener to Level 4 (or setting H04/H05 on Bosch, Neff, and Siemens appliances). Always keep coarse dishwasher salt filled in the base hopper to prevent white cloudy mineral film from baking onto glassware."
+      },
+      {
+        question: "Do I need a water softener in Leicester?",
+        answer: "While not mandatory, installing an ion-exchange water softener is highly advantageous for Leicester homeowners. It eliminates stubborn shower limescale, prevents combi boiler heat exchangers from clogging, and cuts domestic detergent expenditure by up to 30%."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        Yes, tap water across Leicester and the surrounding East Midlands county is <strong>officially hard</strong>, averaging approximately <strong>245 PPM (parts per million)</strong> of calcium carbonate. Whether you live in the historic city centre (<a href="/water-hardness/le1" class="text-blue-600 font-semibold hover:underline">LE1</a>), Oadby (<a href="/water-hardness/le2" class="text-blue-600 font-semibold hover:underline">LE2</a>), or northern suburbs like Belgrave (<a href="/water-hardness/le4" class="text-blue-600 font-semibold hover:underline">LE4</a>), your mains water carries heavy mineral dissolved solids that manifest as persistent chalky limescale on household fixtures.
+      </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Does Leicester Have Hard Water?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>Yes, Leicester has hard tap water</strong>, averaging 245 PPM (17.1° Clark) across all LE postcodes. Supplied by Severn Trent Water from local reservoirs (Cropston, Thornton) and Derwent Valley transfers, dissolved calcium carbonate deposits noticeable limescale in kettles and boilers. Learn more in our <a href="/cities/leicester" class="text-blue-600 font-semibold hover:underline">Leicester Water Hardness City Profile</a>.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Leicester Water Hardness by Postcode District</h2>
+      <p class="text-slate-600 mb-4">
+        Managed by <strong>Severn Trent Water</strong>, tap water across the Leicester urban footprint shifts between moderate and very hard brackets depending on your local service reservoir and aquifer blending:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">Postcode District</th>
+              <th class="border border-slate-200 p-3">Key Suburbs &amp; Towns</th>
+              <th class="border border-slate-200 p-3">Average PPM</th>
+              <th class="border border-slate-200 p-3">Degrees Clark (°e)</th>
+              <th class="border border-slate-200 p-3">Classification</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">LE1 &amp; LE2</td>
+              <td class="border border-slate-200 p-3">Leicester City Centre, Highfields, Stoneygate, Oadby</td>
+              <td class="border border-slate-200 p-3 font-semibold">248 PPM</td>
+              <td class="border border-slate-200 p-3">17.4° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">LE3</td>
+              <td class="border border-slate-200 p-3">West End, Braunstone, Glenfield, Kirby Muxloe</td>
+              <td class="border border-slate-200 p-3 font-semibold">240 PPM</td>
+              <td class="border border-slate-200 p-3">16.8° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">LE4</td>
+              <td class="border border-slate-200 p-3">Belgrave, Beaumont Leys, Birstall, Thurmaston</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">275 PPM</td>
+              <td class="border border-slate-200 p-3 font-semibold">19.3° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Hard (Peak)</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">LE5</td>
+              <td class="border border-slate-200 p-3">Evington, Hamilton, Netherhall, Crown Hills</td>
+              <td class="border border-slate-200 p-3 font-semibold">250 PPM</td>
+              <td class="border border-slate-200 p-3">17.5° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">LE18 &amp; LE19</td>
+              <td class="border border-slate-200 p-3">Wigston, South Wigston, Narborough, Enderby</td>
+              <td class="border border-slate-200 p-3 font-semibold">235 PPM</td>
+              <td class="border border-slate-200 p-3">16.5° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Hard</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Geological Catchment: Triassic Mudstone &amp; Surface Blending</h2>
+      <p class="text-slate-600 mb-4">
+        Leicester sits geographically between the ancient igneous rocks of Charnwood Forest and the sweeping red sedimentary lowlands of the <strong>Mercia Mudstone Group</strong>. Rain falling across Leicestershire filters through gypsum-bearing marls and calcareous sandstones, dissolving significant levels of calcium sulphate and magnesium carbonates.
+      </p>
+      <p class="text-slate-600 mb-4">
+        Severn Trent abstracts water from historical local storage reservoirs—including <strong>Cropston Reservoir</strong> and <strong>Thornton Reservoir</strong>—supplemented by bulk surface transfers from the River Dove and the Derwent Valley in Derbyshire. While surface treatment works remove suspended sediments, dissolved ionic minerals remain in solution until heated by consumers.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Appliance Care &amp; Heating Compliance (BS 7593) for Leicester</h2>
+      <p class="text-slate-600 mb-4">
+        At 245 PPM, Leicester water requires proactive maintenance to prevent costly home plumbing issues:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>Combi Boiler Protection:</strong> In hard water zones, calcium carbonate precipitates inside the secondary plate heat exchanger. Building Regulations Part L requires an inline scale inhibitor on the cold mains inlet to new boilers. Under <strong>British Standard BS 7593</strong>, ensure an annual dose of chemical inhibitor (Sentinel X100 or Fernox F1) is maintained in your heating circuit.</li>
+        <li><strong>Dishwasher Salt Setting:</strong> Adjust your dishwasher water softener to <strong>Level 4</strong> (or setting H04/H05 on Bosch, Neff, and Siemens). Do not rely solely on detergent multi-tablets; the ion-exchange resin tank requires coarse salt regeneration to prevent etched, cloudy glassware.</li>
+        <li><strong>Monthly Citric Acid Descaling:</strong> To descale kettles quickly without chemical smells, boil 500ml of water with two tablespoons of food-grade citric acid. Let it stand for 15 minutes to dissolve stubborn mineral scale completely.</li>
+        <li><strong>Ion-Exchange Softener Recommendation:</strong> If you wish to eradicate limescale rings in bathrooms and prolong the operational lifespan of your boiler, consider installing a twin-tank salt-based water softener directly after your internal stopcock.</li>
+      </ul>
+    `,
+  },
+  {
+    slug: "does-brighton-have-hard-water",
+    title: "Does Brighton Have Hard Water? Sussex Chalk PPM & Postcode Guide",
+    metaTitle: "Does Brighton Have Hard Water? (Yes - 285 PPM Guide)",
+    metaDescription: "Is tap water hard in Brighton & Hove? Check Southern Water PPM ratings across BN1, BN2, BN3, South Downs chalk boreholes & water softener advice.",
+    targetKeyword: "does brighton have hard water",
+    category: "Regional Hardness",
+    datePublished: "2026-10-01T08:00:00Z",
+    dateModified: "2026-10-01T08:00:00Z",
+    readingTime: "6 min read",
+    quickVerdict: {
+      ppmRange: "260 – 310 PPM (mg/L CaCO3)",
+      classification: "Very Hard Water",
+      supplier: "Southern Water",
+      keyTakeaway: "Yes, Brighton and Hove tap water is very hard, averaging 285 PPM (20.0° Clark). Abstracted entirely from underground chalk aquifers across the South Downs National Park, it deposits chalky limescale on kettle coils, cloudy film on shower screens, and reduces combi boiler efficiency."
+    },
+    relatedOutcodes: ["BN1", "BN2", "BN3", "BN41", "BN42", "BN7"],
+    faqItems: [
+      {
+        question: "Is water hard in Brighton and Hove?",
+        answer: "Yes, Brighton and Hove has very hard tap water, averaging 285 PPM (20.0° Clark), with levels reaching up to 310 PPM during dry summer months. It causes rapid limescale encrustation in kettles and leaves stubborn chalk marks on sanitaryware."
+      },
+      {
+        question: "Why is Brighton water so hard?",
+        answer: "Southern Water abstracts 100% of Brighton and Hove's drinking water from deep underground boreholes drilled into the Cretaceous Chalk strata of the South Downs National Park. Rainfall slowly filters through thick calcium-carbonate rock, absorbing massive quantities of dissolved calcium bicarbonate."
+      },
+      {
+        question: "Is tap water in Brighton safe to drink?",
+        answer: "Yes, tap water in Brighton is completely safe and healthy to drink. Because the water filters naturally through hundreds of feet of pure chalk bedrock, it is microbiologically pristine and rich in healthy dietary minerals (calcium and magnesium)."
+      },
+      {
+        question: "Do I need a water softener in Brighton?",
+        answer: "Installing an ion-exchange water softener is strongly recommended for Brighton homeowners. Untreated very hard water (285 PPM) causes combi boilers to lose up to 10% thermal efficiency due to heat exchanger scaling, binds thermostatic shower cartridges, and damages glass shower screens."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        Yes, tap water across Brighton and Hove is <strong>categorised as very hard</strong>, registering an average mineral concentration of <strong>285 PPM (mg/L CaCO3)</strong>. Whether you reside in central Brighton (<a href="/water-hardness/bn1" class="text-blue-600 font-semibold hover:underline">BN1</a>), Kemptown (<a href="/water-hardness/bn2" class="text-blue-600 font-semibold hover:underline">BN2</a>), or Hove (<a href="/water-hardness/bn3" class="text-blue-600 font-semibold hover:underline">BN3</a>), your domestic water supply carries heavy concentrations of dissolved chalk that coat kettle elements and leave cloudy streaks on shower glass.
+      </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Does Brighton Have Hard Water?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>Yes, Brighton and Hove tap water is very hard</strong>, averaging 285 PPM (20.0° Clark). Abstracted entirely from deep underground chalk boreholes in the South Downs by Southern Water, it creates rapid kettle scale and reduces boiler efficiency. Explore our <a href="/cities/brighton" class="text-blue-600 font-semibold hover:underline">Brighton Water Hardness City Guide</a> for full data.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Brighton &amp; Sussex Water Hardness by Postcode District</h2>
+      <p class="text-slate-600 mb-4">
+        Managed by <strong>Southern Water</strong>, tap water across the Sussex coast exhibits slight localized variances based on borehole well depth across the South Downs aquifer:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">Postcode District</th>
+              <th class="border border-slate-200 p-3">Key Suburbs &amp; Towns</th>
+              <th class="border border-slate-200 p-3">Average PPM</th>
+              <th class="border border-slate-200 p-3">Degrees Clark (°e)</th>
+              <th class="border border-slate-200 p-3">Classification</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">BN1</td>
+              <td class="border border-slate-200 p-3">Brighton City Centre, Preston Park, Withdean, Stanmer</td>
+              <td class="border border-slate-200 p-3 font-semibold">285 PPM</td>
+              <td class="border border-slate-200 p-3">20.0° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">BN2</td>
+              <td class="border border-slate-200 p-3">Kemptown, Whitehawk, Woodingdean, Rottingdean, Saltdean</td>
+              <td class="border border-slate-200 p-3 font-semibold">290 PPM</td>
+              <td class="border border-slate-200 p-3">20.3° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">BN3</td>
+              <td class="border border-slate-200 p-3">Hove, Aldrington, West Blatchington, Hangleton</td>
+              <td class="border border-slate-200 p-3 font-semibold">280 PPM</td>
+              <td class="border border-slate-200 p-3">19.6° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">BN41 &amp; BN42</td>
+              <td class="border border-slate-200 p-3">Portslade, Fishersgate, Southwick, Shoreham-by-Sea</td>
+              <td class="border border-slate-200 p-3 font-semibold">275 PPM</td>
+              <td class="border border-slate-200 p-3">19.3° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">BN7</td>
+              <td class="border border-slate-200 p-3">Lewes, Kingston near Lewes, Southover, Plumpton</td>
+              <td class="border border-slate-200 p-3 font-semibold">295 PPM</td>
+              <td class="border border-slate-200 p-3">20.7° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">The Geology: South Downs Cretaceous Chalk Aquifer</h2>
+      <p class="text-slate-600 mb-4">
+        Unlike northern cities that drink from open moorland reservoirs, Brighton relies <strong>100% on underground groundwater sources</strong>. The city is nestled directly against the magnificent white cliffs and rolling hills of the <strong>South Downs National Park</strong>.
+      </p>
+      <p class="text-slate-600 mb-4">
+        The South Downs are composed of pure Cretaceous white chalk (calcium carbonate formed from microscopic coccolith fossils 80 million years ago). Rain falling across the downs percolates hundreds of feet down through porous chalk fissures. In doing so, it naturally purifies the water of all surface bacteria, but simultaneously dissolves immense quantities of calcium and magnesium bicarbonate, delivering mineral-saturated water into Southern Water's extraction boreholes at Goldstone, Patcham, Falmer, and Lewes Road.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Household Impact &amp; Water Softening in Brighton</h2>
+      <p class="text-slate-600 mb-4">
+        Living with 285 PPM tap water in Brighton creates substantial domestic challenges:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>Combi Boiler Heat Exchanger Furring:</strong> Limescale builds up rapidly on combi boiler secondary plate heat exchangers. A 1mm scale layer reduces heating efficiency by roughly 7% to 10%, adding over £120 to £160 per year in wasted domestic gas. Inline scale inhibitors or water softeners are essential under Building Regs Part L.</li>
+        <li><strong>Thermostatic Shower Cartridge Seizure:</strong> In Brighton bathrooms, calcium crystallization coats delicate ceramic thermostatic mixer cartridges, causing temperature fluctuations and premature valve failure within 24 months.</li>
+        <li><strong>Glassware Cloudiness:</strong> Set your dishwasher to <strong>Level 4 or Level 5</strong> (H05 on Bosch/Siemens) and keep the salt reservoir topped up with granular salt to stop calcium deposits from clouding wine glasses.</li>
+        <li><strong>Why Brighton Homes Install Water Softeners:</strong> Fitting an ion-exchange water softener directly after your internal mains stopcock eliminates limescale permanently, protects luxury sanitaryware, and reduces soap and shampoo consumption by up to 40%.</li>
       </ul>
     `,
   }
