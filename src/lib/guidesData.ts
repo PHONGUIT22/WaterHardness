@@ -26,12 +26,12 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-bristol-have-hard-water",
     title: "Does Bristol Have Hard Water? Mendip Limestone & Hardness Breakdown",
-    metaTitle: "Is Bristol Water Hard? (Yes - 260 PPM Guide)",
-    metaDescription: "Bristol tap water averages 220 to 290 PPM, categorised as hard to very hard. Discover why Mendip limestone causes rapid limescale and how to set appliances.",
-    targetKeyword: "does bristol have hard water",
+    metaTitle: "Is Water in Bristol Hard or Soft? (Yes - 260 PPM Guide)",
+    metaDescription: "Is Bristol a hard water area? Yes, Bristol tap water is hard to very hard, averaging 260 PPM (220–290 PPM). Discover Mendip limestone geology & appliance tips.",
+    targetKeyword: "is water in bristol hard or soft",
     category: "Regional Hardness",
     datePublished: "2025-02-14T08:00:00Z",
-    dateModified: "2026-08-18T10:30:00Z",
+    dateModified: "2026-10-04T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "220 – 290 PPM (mg/L CaCO3)",
@@ -56,12 +56,27 @@ export const guidesData: GuideArticle[] = [
       {
         question: "Does Bristol tap water cause limescale in boilers?",
         answer: "Yes. An untreated combi boiler in Bristol accumulates roughly 1mm of limescale on its secondary plate heat exchanger within 18 to 24 months, reducing heat transfer efficiency by 7% to 10% and adding £120 to £180 onto annual gas bills."
+      },
+      {
+        question: "Is Bristol a hard water area?",
+        answer: "Yes, Bristol is officially classified as a hard to very hard water area. Tap water across all BS postcode districts measures between 220 and 290 PPM (15.4 to 20.3° Clark), leading to heavy calcium carbonate deposits on kettle heating coils and bathroom surfaces."
+      },
+      {
+        question: "Is tap water in Bristol safe to drink?",
+        answer: "Yes, tap water in Bristol is 100% safe to drink. Managed by Bristol Water and tested continuously against stringent Drinking Water Inspectorate (DWI) standards, it carries healthy levels of essential dietary calcium and magnesium minerals."
       }
     ],
     contentHtml: `
       <p class="lead text-lg font-medium text-slate-700 mb-6">
         Yes, Bristol tap water is hard to very hard, registering between <strong>220 and 290 PPM</strong> (parts per million of calcium carbonate) across all postal districts. If you live anywhere between BS1 in the city centre, Clifton in BS8, or Downend in BS16, your mains tap water contains heavy concentrations of dissolved minerals that deposit chalky white limescale inside your kettle within days of descaling.
       </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Is Bristol a Hard Water Area?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>Yes, Bristol is officially a hard to very hard water area</strong>, with tap water averaging 260 PPM (18.2° Clark) and ranging between 220 and 290 PPM across all BS postcodes. Abstracted from Carboniferous limestone in the Mendip Hills by Bristol Water, it causes rapid limescale buildup in kettles, showers, and boilers.
+        </p>
+      </div>
 
       <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Bristol Water Hardness Readings by Postcode Sector</h2>
       <p class="text-slate-600 mb-4">
@@ -452,11 +467,11 @@ export const guidesData: GuideArticle[] = [
     slug: "does-birmingham-have-hard-water",
     title: "Does Birmingham Have Hard Water? The Elan Valley Welsh Supply Explained",
     metaTitle: "Is Birmingham Water Hard? (No - 40 PPM Soft Water)",
-    metaDescription: "Birmingham has naturally soft tap water averaging 40 to 80 PPM. Discover how the Elan Valley aqueduct brings soft Welsh mountain water to the West Midlands.",
-    targetKeyword: "does birmingham have hard water",
+    metaDescription: "Does Birmingham have hard or soft water? Tap water in Birmingham is naturally soft (40–80 PPM), piped 73 miles from the Welsh Elan Valley. Full PPM guide.",
+    targetKeyword: "does birmingham have hard or soft water",
     category: "Regional Hardness",
     datePublished: "2025-01-28T08:00:00Z",
-    dateModified: "2026-08-16T12:00:00Z",
+    dateModified: "2026-10-04T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "40 – 80 PPM (mg/L CaCO3)",
@@ -481,12 +496,23 @@ export const guidesData: GuideArticle[] = [
       {
         question: "Do I need a water softener in Birmingham?",
         answer: "No, a water softener is completely unnecessary for Birmingham homes receiving Elan Valley water. The natural calcium level is already so low that installing a softener provides zero noticeable benefit."
+      },
+      {
+        question: "Does Birmingham have hard or soft water?",
+        answer: "Birmingham tap water is naturally soft, averaging between 40 and 65 PPM. Unlike neighbouring East Midlands towns that rely on hard groundwater boreholes, Birmingham's supply flows entirely by gravity from Welsh mountain reservoirs in the Elan Valley."
       }
     ],
     contentHtml: `
       <p class="lead text-lg font-medium text-slate-700 mb-6">
         No, Birmingham tap water is <strong>naturally soft</strong>, with typical readings between <strong>40 and 80 PPM</strong> across central and southern postal districts (B1 to B45). While surrounding towns across the West Midlands and Staffordshire pump hard groundwater from limestone and sandstone aquifers, Birmingham enjoys crystal-clear soft water imported directly from mid-Wales.
       </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Does Birmingham Have Hard or Soft Water?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>No, Birmingham does not have hard water; it is naturally soft</strong>, averaging 40 to 80 PPM (2.8 to 5.6° Clark). Sourced from upland Welsh mountain reservoirs in the Elan Valley over impermeable slate geology, Birmingham tap water produces instant rich lather and leaves zero limescale in kettles.
+        </p>
+      </div>
 
       <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Hardness Metrics Across Birmingham Postcodes</h2>
       <p class="text-slate-600 mb-4">
@@ -660,12 +686,12 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "yorkshire-water-hardness",
     title: "Yorkshire Water Hardness: Pennine Moorlands vs East Yorkshire Chalk",
-    metaTitle: "Yorkshire Water Hardness: Leeds (Soft) vs Hull (Hard)",
-    metaDescription: "Yorkshire tap water features a sharp split: soft water in Leeds & Sheffield (60–120 PPM) vs hard chalk water in East Yorkshire (300+ PPM). Complete breakdown.",
-    targetKeyword: "yorkshire water hardness",
+    metaTitle: "Yorkshire Water: Is Water Hard or Soft? (Leeds vs Hull PPM)",
+    metaDescription: "Is Yorkshire water hard or soft? Tap water splits sharply: soft in West Yorkshire (Leeds/Sheffield, 60–120 PPM) vs very hard chalk water in East Yorkshire (Hull).",
+    targetKeyword: "yorkshire water hard or soft",
     category: "Regional Hardness",
     datePublished: "2025-02-12T08:00:00Z",
-    dateModified: "2026-08-16T16:45:00Z",
+    dateModified: "2026-10-04T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "60 – 350+ PPM (Countywide Variance)",
@@ -690,12 +716,23 @@ export const guidesData: GuideArticle[] = [
       {
         question: "Does Yorkshire Water soften drinking water before supply?",
         answer: "No UK water company artificially softens water at treatment works because doing so is cost-prohibitive and removes beneficial dietary calcium. Water hardness in Yorkshire reflects purely local geology."
+      },
+      {
+        question: "Is Yorkshire water hard or soft?",
+        answer: "Yorkshire tap water depends entirely on your postal region: West and South Yorkshire (LS, S, BD postcodes) receive naturally soft water averaging 70 to 110 PPM from Pennine peat moorlands. In contrast, East Yorkshire (HU, YO postcodes) receives very hard water (over 300 PPM) abstracted from deep chalk aquifers in the Yorkshire Wolds."
       }
     ],
     contentHtml: `
       <p class="lead text-lg font-medium text-slate-700 mb-6">
         Water hardness across Yorkshire is defined by a <strong>stark geological divide</strong>: West and South Yorkshire (including Leeds, Sheffield, and Bradford) enjoy <strong>soft to moderately hard water (60 to 120 PPM)</strong>, while East Yorkshire (including Hull and the Yorkshire Wolds) receives <strong>very hard tap water exceeding 300 to 350 PPM</strong>.
       </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Is Yorkshire Water Hard or Soft?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>Yorkshire water splits sharply by geography</strong>: West and South Yorkshire (Leeds, Sheffield, Bradford) enjoy <strong>soft to moderate water (60–120 PPM)</strong> from Pennine moorland reservoirs, whereas East Yorkshire (Hull, Beverley) receives <strong>very hard chalk water (300+ PPM)</strong> from the Yorkshire Wolds aquifer.
+        </p>
+      </div>
 
       <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Yorkshire Hardness Ratings by Postcode Area</h2>
       <p class="text-slate-600 mb-4">
@@ -3622,7 +3659,7 @@ export const guidesData: GuideArticle[] = [
     targetKeyword: "does brighton have hard water",
     category: "Regional Hardness",
     datePublished: "2026-10-01T08:00:00Z",
-    dateModified: "2026-10-01T08:00:00Z",
+    dateModified: "2026-10-04T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "260 – 310 PPM (mg/L CaCO3)",
@@ -3647,6 +3684,10 @@ export const guidesData: GuideArticle[] = [
       {
         question: "Do I need a water softener in Brighton?",
         answer: "Installing an ion-exchange water softener is strongly recommended for Brighton homeowners. Untreated very hard water (285 PPM) causes combi boilers to lose up to 10% thermal efficiency due to heat exchanger scaling, binds thermostatic shower cartridges, and damages glass shower screens."
+      },
+      {
+        question: "What is the tap water quality in Brighton?",
+        answer: "Tap water quality in Brighton is exceptionally high, achieving a 99.9% overall compliance score with Drinking Water Inspectorate (DWI) safety standards. Because it is naturally filtered through hundreds of feet of South Downs Cretaceous chalk, it is microbiologically pristine and delicious to drink, though its high calcium carbonate content (285 PPM) requires regular kettle and boiler descaling."
       }
     ],
     contentHtml: `
