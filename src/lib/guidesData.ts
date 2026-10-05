@@ -1003,12 +1003,12 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "welsh-water-hardness-cardiff-swansea",
     title: "Welsh Water Hardness: Cardiff, Swansea & South Wales Valley Catchments",
-    metaTitle: "Welsh Water Hardness: Is Water Hard in Cardiff & Swansea? (2026)",
-    metaDescription: "Is Welsh water hard or soft? Tap water in Cardiff & Swansea is naturally soft (30–90 PPM). Check postcode PPM, limescale risk & tap advice.",
-    targetKeyword: "water hardness wales",
+    metaTitle: "Is Cardiff Water Hard or Soft? (Naturally Soft - 60 PPM Guide)",
+    metaDescription: "Is tap water hard or soft in Cardiff? Cardiff tap water is naturally soft (30–90 PPM, averaging 60 PPM). Check postcode PPM, limescale risk & tap settings.",
+    targetKeyword: "is cardiff water hard or soft",
     category: "Regional Hardness",
     datePublished: "2025-02-15T08:00:00Z",
-    dateModified: "2026-10-01T08:00:00Z",
+    dateModified: "2026-10-05T08:00:00Z",
     readingTime: "5 min read",
     quickVerdict: {
       ppmRange: "30 – 90 PPM (mg/L CaCO3)",
@@ -1019,8 +1019,8 @@ export const guidesData: GuideArticle[] = [
     relatedOutcodes: ["CF10", "CF14", "SA1", "SA4", "NP20"],
     faqItems: [
       {
-        question: "Is water hard in Cardiff?",
-        answer: "No. Cardiff tap water is naturally soft to moderately soft, averaging between 45 and 85 PPM (3.1 to 5.9° Clark). It produces rich lather and leaves very little limescale in kettles."
+        question: "Is Cardiff water hard or soft?",
+        answer: "Cardiff tap water is naturally soft, averaging between 45 and 85 PPM (approximately 60 PPM, or 4.2° Clark). Abstracted from upland Brecon Beacons reservoirs, it creates instant rich lather with soap and produces virtually no limescale in domestic kettles."
       },
       {
         question: "Where does Cardiff get its drinking water?",
@@ -2477,12 +2477,12 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-bournemouth-have-hard-water",
     title: "Does Bournemouth Have Hard Water? Poole & Dorset Guide",
-    metaTitle: "Is Bournemouth Water Hard? (Yes - 270 PPM Guide)",
-    metaDescription: "Is tap water hard in Bournemouth & Poole? Check Dorset PPM ratings across BH postcodes. Learn how coastal chalk hills cause rapid kettle limescale.",
+    metaTitle: "Is Bournemouth Water Hard? (Yes - 270 PPM Dorset Guide)",
+    metaDescription: "Is tap water hard in Bournemouth & Poole? Yes, tap water averages 260–285 PPM across BH postcodes. Check chalk river sources & water softener advice.",
     targetKeyword: "does bournemouth have hard water",
     category: "Regional Hardness",
     datePublished: "2025-03-01T08:00:00Z",
-    dateModified: "2026-09-21T11:00:00Z",
+    dateModified: "2026-10-05T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "240 – 300 PPM (mg/L CaCO3)",
@@ -2495,6 +2495,13 @@ export const guidesData: GuideArticle[] = [
       <p class="text-lg text-slate-700 leading-relaxed mb-6">
         Walk into almost any seaside guest house, Airbnb, or retirement flat along the Dorset coast and take a peek inside the kettle. More often than not, you will find a thick layer of chalky grey sediment coating the base. Holidaymakers and retirees moving to Bournemouth, Poole, and Christchurch often carry a common misconception: because the town sits by the sea with fresh maritime air, the water must be soft.
       </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Is Bournemouth Water Hard?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>Yes, Bournemouth and Poole have hard tap water</strong>, averaging 260 to 285 PPM (18.2 to 20.0° Clark) across all BH postcodes. Sourced from chalk-fed rivers (the River Stour and Hampshire Avon) and local boreholes, it causes rapid kettle furring and appliance limescale buildup.
+        </p>
+      </div>
 
       <p class="text-slate-600 mb-6">
         The reality is quite the opposite. Bournemouth and Poole tap water is undeniably hard, averaging <strong>260 to 285 PPM</strong> across most BH postcodes. Tap water here leaves cloudy water spots on glassware, clogs shower roses with crumbly white stones, and causes electric showers to burn out heating elements with alarming regularity.
@@ -2597,10 +2604,14 @@ export const guidesData: GuideArticle[] = [
             "answer": "Provide guests with a rubber squeegee and keep a spray bottle of 50/50 white vinegar and water on hand. Wiping the glass before mineral-laden water droplets evaporate prevents calcium from permanently etching the glass."
       },
       {
+        question: "Is tap water in Bournemouth safe to drink?",
+        answer: "Yes, tap water in Bournemouth and Poole is 100% safe to drink. Supplied by Bournemouth Water (Pennon Group) and tested against rigorous Drinking Water Inspectorate (DWI) standards, it contains healthy dissolved calcium and magnesium minerals."
+      },
+      {
             "question": "What dishwasher setting should I use in Poole and Bournemouth?",
             "answer": "Set your machine to Level 4 (hard). Using 3-in-1 pods alone will eventually cause chalky clouding on glassware—always replenish granular dishwasher salt in the bottom reservoir."
       }
-]
+    ]
   },
   {
     slug: "does-leeds-have-hard-water",
@@ -3776,6 +3787,373 @@ export const guidesData: GuideArticle[] = [
         <li><strong>Glassware Cloudiness:</strong> Set your dishwasher to <strong>Level 4 or Level 5</strong> (H05 on Bosch/Siemens) and keep the salt reservoir topped up with granular salt to stop calcium deposits from clouding wine glasses.</li>
         <li><strong>Why Brighton Homes Install Water Softeners:</strong> Fitting an ion-exchange water softener directly after your internal mains stopcock eliminates limescale permanently, protects luxury sanitaryware, and reduces soap and shampoo consumption by up to 40%.</li>
       </ul>
+    `,
+  },
+  {
+    slug: "uk-water-hardness-ppm-scale-chart",
+    title: "UK Water Hardness PPM Scale: Full Hardness Chart, PPM vs Clark & Calculator",
+    metaTitle: "UK Water Hardness PPM Scale: Hardness Chart & 280 PPM Guide",
+    metaDescription: "What does 280 PPM water mean? Full UK water hardness scale chart comparing PPM (mg/L), English Clark degrees & French degrees with regional UK examples.",
+    targetKeyword: "280 ppm water",
+    category: "Health & Water Science",
+    datePublished: "2026-10-05T08:00:00Z",
+    dateModified: "2026-10-05T08:00:00Z",
+    readingTime: "7 min read",
+    quickVerdict: {
+      ppmRange: "0 – 400+ PPM (Official UK Scale)",
+      classification: "Educational Scientific Scale",
+      supplier: "DWI & British Water Standard",
+      keyTakeaway: "The UK water hardness scale classifies tap water into 4 main bands: Soft (0–100 PPM), Moderately Hard (101–200 PPM), Hard (201–300 PPM, e.g. 280 PPM water in London and Brighton), and Very Hard (301+ PPM). A reading of 280 PPM indicates mineral-dense water requiring proactive limescale management."
+    },
+    relatedOutcodes: ["SW1A", "BS1", "BN1", "CF10", "BT1", "LE1"],
+    faqItems: [
+      {
+        question: "Is 280 PPM water hard?",
+        answer: "Yes, 280 PPM (mg/L CaCO3) is officially classified as hard water, equating to 19.6° Clark or 28.0°fH. Widely recorded across London, Surrey, Bristol, and Brighton, 280 PPM water causes heavy kettle limescale, creates bath scum, and causes an estimated 7% to 10% thermal efficiency loss in combi boilers if left untreated."
+      },
+      {
+        question: "What is the official UK water hardness scale?",
+        answer: "Under official Drinking Water Inspectorate (DWI) and British Water standards, water hardness is divided into four primary bands: Soft (0 to 100 PPM), Moderately Hard (101 to 200 PPM), Hard (201 to 300 PPM), and Very Hard (over 300 PPM). Many water utilities further distinguish 0 to 50 PPM as naturally soft."
+      },
+      {
+        question: "Is high PPM water safe to drink?",
+        answer: "Yes, high PPM tap water is entirely safe and healthy to drink. The dissolved minerals that make water hard—primarily calcium and magnesium—are essential dietary nutrients that contribute to cardiovascular and bone health. While high PPM water causes scaling in pipes and appliances, it poses zero health hazard for human consumption."
+      },
+      {
+        question: "How do I convert PPM to Clark degrees?",
+        answer: "To convert PPM (mg/L CaCO3) to English Clark degrees (°e), divide the PPM figure by 14.3 (or multiply by 0.07). For example, 280 PPM divided by 14.3 equals 19.6° Clark. To convert Clark degrees back to PPM, multiply the Clark rating by 14.3."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        Whether you have tested your kitchen tap with a digital handheld TDS meter, received a water hardness test strip with a new dishwasher, or examined your regional water quality report, seeing a reading like <strong>280 PPM</strong> often leaves homeowners wondering what it actually signifies. In the United Kingdom, water hardness is scientifically quantified in parts per million (PPM) of calcium carbonate (CaCO3), which directly dictates how quickly limescale crystallises inside heating appliances.
+      </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: What Does 280 PPM Water Mean?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>280 PPM water is officially classified as Hard Water</strong>, equating to 19.6° Clark or 280 mg/L CaCO3. Characteristic of London and southern England, 280 PPM water causes rapid kettle limescale buildup, reduces combi boiler efficiency by 7–10%, and demands higher detergent and dishwasher salt usage.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Official UK Water Hardness Scale &amp; Classification Table</h2>
+      <p class="text-slate-600 mb-4">
+        In the UK, the <strong>Drinking Water Inspectorate (DWI)</strong> and <strong>British Water</strong> define four primary hardness classifications based on calcium carbonate (CaCO3) concentration per litre of water. Many water authorities also recognise an ultra-soft tier for pure mountain and moorland catchments:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">Hardness Band (PPM / mg/L)</th>
+              <th class="border border-slate-200 p-3">Official Classification</th>
+              <th class="border border-slate-200 p-3">Clark (°e)</th>
+              <th class="border border-slate-200 p-3">French (°fH)</th>
+              <th class="border border-slate-200 p-3">Representative UK Regions</th>
+              <th class="border border-slate-200 p-3">Limescale &amp; Household Impact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-emerald-700">0 – 50 PPM</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Soft (Naturally Pure)</span></td>
+              <td class="border border-slate-200 p-3">0 – 3.5°</td>
+              <td class="border border-slate-200 p-3">0 – 5.0°</td>
+              <td class="border border-slate-200 p-3">Scotland (Glasgow, Edinburgh), Manchester, Plymouth</td>
+              <td class="border border-slate-200 p-3">Zero limescale in kettles. Instant rich soap lather. Minimal detergent required.</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-teal-700">51 – 100 PPM</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-teal-100 text-teal-800">Moderately Soft</span></td>
+              <td class="border border-slate-200 p-3">3.6 – 7.0°</td>
+              <td class="border border-slate-200 p-3">5.1 – 10.0°</td>
+              <td class="border border-slate-200 p-3">Cardiff, Belfast, Leeds, Swansea, Cornwall</td>
+              <td class="border border-slate-200 p-3">Very slight trace scale after months. Excellent lathering. No water softener needed.</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-700">101 – 200 PPM</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">Moderate / Moderately Hard</span></td>
+              <td class="border border-slate-200 p-3">7.1 – 14.0°</td>
+              <td class="border border-slate-200 p-3">10.1 – 20.0°</td>
+              <td class="border border-slate-200 p-3">Birmingham border, Sheffield, Newcastle, Liverpool</td>
+              <td class="border border-slate-200 p-3">Gradual scale ring in kettles. 200 PPM is the Building Regs Part L threshold for boiler protection.</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-amber-700">201 – 300 PPM</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Hard (Includes 280 PPM)</span></td>
+              <td class="border border-slate-200 p-3">14.1 – 21.0°</td>
+              <td class="border border-slate-200 p-3">20.1 – 30.0°</td>
+              <td class="border border-slate-200 p-3">Bristol (260 PPM), London (280 PPM), Brighton (285 PPM), Leicester (245 PPM)</td>
+              <td class="border border-slate-200 p-3">Rapid kettle furring. Dishwasher salt required. Combi boilers lose 7–10% efficiency without protection.</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">301+ PPM</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+              <td class="border border-slate-200 p-3">21.1°+</td>
+              <td class="border border-slate-200 p-3">30.1°+</td>
+              <td class="border border-slate-200 p-3">East Anglia (Ipswich, Norwich), Cambridge, Surrey (Woking 310 PPM)</td>
+              <td class="border border-slate-200 p-3">Severe chalk encrustation. Shower head blockages. Salt-based water softener strongly advised.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">What Does 280 PPM Mean for Your Home &amp; Appliances?</h2>
+      <p class="text-slate-600 mb-4">
+        A reading of <strong>280 PPM (19.6° Clark)</strong> places your tap water firmly in the upper quartile of the hard water spectrum. In practical everyday terms, here is how 280 PPM water impacts your household plumbing and energy expenditure:
+      </p>
+
+      <div class="space-y-6 my-6">
+        <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">1. Combi Boilers &amp; Building Regulations Part L</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-3">
+            Under <strong>Part L of the UK Building Regulations</strong> (Domestic Building Services Compliance Guide), whenever mains water hardness exceeds <strong>200 PPM</strong>, provision must be made to control the rate of limescale accumulation in domestic hot water systems.
+          </p>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            At 280 PPM, water heated past 60°C rapidly precipitates calcium carbonate directly onto the secondary plate heat exchanger. Within 18 to 24 months, a 1mm limescale layer can develop, inflicting a <strong>7% to 10% thermal efficiency penalty</strong>. On an annual domestic gas bill of £1,600, that scale barrier wastes £120 to £180 each year and drastically increases the risk of boiler overheat lockout.
+          </p>
+        </div>
+
+        <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">2. Dishwashers &amp; Water Softener Salt Settings</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-3">
+            If you run a dishwasher in a 280 PPM area, relying solely on "all-in-one" detergent tablets will lead to chalky clouding and etched glassware. Dishwashers contain an internal ion-exchange resin bed that requires periodic regeneration with coarse sodium chloride (dishwasher salt).
+          </p>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            For 280 PPM water, calibrate your machine to <strong>Level 4</strong> (or setting <strong>H04 / H05</strong> on Bosch, Neff, and Siemens machines). Always keep the base salt reservoir topped up to prevent permanent silicate etching on glassware.
+          </p>
+        </div>
+
+        <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">3. Kettles, Coffee Machines &amp; Descaling Schedules</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            With 280 PPM water, your kettle will develop visible calcium carbonate flakes and a white crust over the submerged heating element within 7 to 14 days of use. Coffee machine thermo-blocks are especially vulnerable to microscopic scale clogging. Descaling every 3 to 4 weeks using food-grade citric acid solution dissolves calcium safely without the persistent odor of malt vinegar.
+          </p>
+        </div>
+
+        <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">4. Showers, Bathroom Tiles &amp; Thermostatic Cartridges</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            At 280 PPM, evaporating droplets leave chalky mineral rings on glass shower enclosures and chrome mixer taps within 24 hours. More damagingly, calcium crystals lodge inside thermostatic mixer valves, seizing ceramic discs and wax capsules. This causes stiff temperature dials and erratic hot-and-cold fluctuations during morning showers.
+          </p>
+        </div>
+
+        <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">5. Laundry Detergent &amp; Soap Scum</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Calcium and magnesium ions actively bind with surfactant molecules in soap and washing powder, forming insoluble soap curd instead of rich lather. Homes in 280 PPM areas require <strong>30% to 40% more laundry detergent</strong> per wash compared to soft water households in Scotland or Wales. Residual soap curd trapped in cotton fibers can also irritate sensitive skin and exacerbate eczema.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Water Hardness Measurement Units &amp; Conversion Guide</h2>
+      <p class="text-slate-600 mb-4">
+        Water hardness across the globe is expressed in different units depending on whether you are reading UK utility data, European appliance handbooks, or aquarium test kits:
+      </p>
+
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>PPM (Parts Per Million) / mg/L CaCO3:</strong> The official scientific metric used by the UK Drinking Water Inspectorate (DWI) and British water suppliers. 1 PPM equals 1 milligram of dissolved calcium carbonate equivalent per litre of water.</li>
+        <li><strong>English Degrees Clark (°Clark or °e):</strong> The traditional British imperial measurement defined as one grain (64.8 mg) of CaCO3 per imperial gallon (0.7 litres) of water. 1° Clark = 14.3 PPM.</li>
+        <li><strong>French Degrees (°fH):</strong> Widely used in continental Europe and cited in Bosch, Miele, and Beko dishwasher manuals. Defined as 10 mg/L CaCO3. 1°fH = 10 PPM (meaning 280 PPM = 28.0°fH).</li>
+        <li><strong>German Degrees (°dH / dGH):</strong> Common in aquatic testing and specialty espresso machine calibration. Defined as 10 mg/L calcium oxide (CaO). 1°dH = 17.8 PPM (meaning 280 PPM = 15.7°dH).</li>
+      </ul>
+
+      <div class="bg-slate-900 text-cyan-300 p-4 rounded-xl font-mono text-xs my-4">
+        PPM ÷ 14.3 = Degrees Clark (°e) | PPM ÷ 10.0 = French Degrees (°fH) | PPM ÷ 17.8 = German Degrees (°dH)
+      </div>
+
+      <h3 class="text-lg font-bold text-slate-900 mt-6 mb-3">PPM to Clark &amp; European Degrees Conversion Quick Reference</h3>
+      <div class="overflow-x-auto my-4">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">PPM (mg/L CaCO3)</th>
+              <th class="border border-slate-200 p-3">Clark Degrees (°e)</th>
+              <th class="border border-slate-200 p-3">French Degrees (°fH)</th>
+              <th class="border border-slate-200 p-3">German Degrees (°dH)</th>
+              <th class="border border-slate-200 p-3">UK Classification</th>
+              <th class="border border-slate-200 p-3">Benchmark UK Location</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold">50 PPM</td>
+              <td class="border border-slate-200 p-3">3.5° Clark</td>
+              <td class="border border-slate-200 p-3">5.0°fH</td>
+              <td class="border border-slate-200 p-3">2.8°dH</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Soft</span></td>
+              <td class="border border-slate-200 p-3">Glasgow / Manchester</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold">60 PPM</td>
+              <td class="border border-slate-200 p-3">4.2° Clark</td>
+              <td class="border border-slate-200 p-3">6.0°fH</td>
+              <td class="border border-slate-200 p-3">3.4°dH</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Soft</span></td>
+              <td class="border border-slate-200 p-3"><a href="/guides/welsh-water-hardness-cardiff-swansea" class="text-cyan-600 hover:underline">Cardiff</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold">120 PPM</td>
+              <td class="border border-slate-200 p-3">8.4° Clark</td>
+              <td class="border border-slate-200 p-3">12.0°fH</td>
+              <td class="border border-slate-200 p-3">6.7°dH</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">Moderate</span></td>
+              <td class="border border-slate-200 p-3"><a href="/guides/does-leeds-have-hard-water" class="text-cyan-600 hover:underline">Leeds</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold">200 PPM</td>
+              <td class="border border-slate-200 p-3">14.0° Clark</td>
+              <td class="border border-slate-200 p-3">20.0°fH</td>
+              <td class="border border-slate-200 p-3">11.2°dH</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">Part L Threshold</span></td>
+              <td class="border border-slate-200 p-3">Building Regs Part L Limit</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold">245 PPM</td>
+              <td class="border border-slate-200 p-3">17.1° Clark</td>
+              <td class="border border-slate-200 p-3">24.5°fH</td>
+              <td class="border border-slate-200 p-3">13.8°dH</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Hard</span></td>
+              <td class="border border-slate-200 p-3"><a href="/guides/does-leicester-have-hard-water" class="text-cyan-600 hover:underline">Leicester</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold">260 PPM</td>
+              <td class="border border-slate-200 p-3">18.2° Clark</td>
+              <td class="border border-slate-200 p-3">26.0°fH</td>
+              <td class="border border-slate-200 p-3">14.6°dH</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Hard</span></td>
+              <td class="border border-slate-200 p-3"><a href="/guides/does-bristol-have-hard-water" class="text-cyan-600 hover:underline">Bristol</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-amber-50/50">
+              <td class="border border-slate-200 p-3 font-bold text-amber-900">280 PPM</td>
+              <td class="border border-slate-200 p-3 font-bold text-amber-900">19.6° Clark</td>
+              <td class="border border-slate-200 p-3 font-bold text-amber-900">28.0°fH</td>
+              <td class="border border-slate-200 p-3 font-bold text-amber-900">15.7°dH</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-bold bg-amber-200 text-amber-900">Hard Target</span></td>
+              <td class="border border-slate-200 p-3"><a href="/guides/london-water-hardness-by-postcode" class="text-cyan-600 hover:underline">London (Thames Water)</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold">285 PPM</td>
+              <td class="border border-slate-200 p-3">19.9° Clark</td>
+              <td class="border border-slate-200 p-3">28.5°fH</td>
+              <td class="border border-slate-200 p-3">16.0°dH</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Hard / Very Hard</span></td>
+              <td class="border border-slate-200 p-3"><a href="/guides/does-brighton-have-hard-water" class="text-cyan-600 hover:underline">Brighton &amp; Hove</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold">310 PPM</td>
+              <td class="border border-slate-200 p-3">21.7° Clark</td>
+              <td class="border border-slate-200 p-3">31.0°fH</td>
+              <td class="border border-slate-200 p-3">17.4°dH</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+              <td class="border border-slate-200 p-3"><a href="/guides/does-surrey-have-hard-water" class="text-cyan-600 hover:underline">Surrey (Woking)</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Water Treatment Solutions: Which Technology Do You Need?</h2>
+      <p class="text-slate-600 mb-4">
+        When confronted with a 280 PPM test reading, choosing the right treatment device depends entirely on your household objectives:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="px-2 py-1 rounded bg-blue-100 text-blue-800 font-bold text-xs uppercase tracking-wide">Whole House Solution</span>
+            <h3 class="text-lg font-bold text-slate-900 mt-2 mb-2">Ion-Exchange Water Softener</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-3">
+              Fitted directly on your incoming mains cold water supply pipe. Uses food-grade cation resin beads charged with sodium ions to capture and remove dissolved calcium and magnesium completely.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-1 mb-4 list-disc pl-4">
+              <li>Permanently stops all kettle and boiler limescale</li>
+              <li>Reduces soap and shampoo usage by up to 50%</li>
+              <li>Cuts heating bills by maintaining 100% boiler heat transfer</li>
+              <li>Protects luxury chrome and frameless shower glass</li>
+            </ul>
+          </div>
+          <p class="text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">
+            <strong>Verdict for 280 PPM:</strong> Highly Recommended for complete home protection. Explore our <a href="/guides/water-softener-vs-water-conditioner-uk" class="text-cyan-600 hover:underline font-bold">Softener vs Conditioner Comparison</a>.
+          </p>
+        </div>
+
+        <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="px-2 py-1 rounded bg-amber-100 text-amber-800 font-bold text-xs uppercase tracking-wide">Plumbing Compliance</span>
+            <h3 class="text-lg font-bold text-slate-900 mt-2 mb-2">Electrolytic / Magnetic Scale Inhibitor</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-3">
+              An inline cylindrical device fitted directly to the 15mm cold feed pipe leading into your combi boiler. Passes water through zinc sacrificial anodes or powerful magnetic fields.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-1 mb-4 list-disc pl-4">
+              <li>Alters crystal structure from sticky calcite to loose aragonite</li>
+              <li>Satisfies Building Regulations Part L requirement (&gt;200 PPM)</li>
+              <li>Low cost (£30–£80) and zero running costs</li>
+              <li><strong>Does NOT</strong> soften water, remove minerals, or stop shower spots</li>
+            </ul>
+          </div>
+          <p class="text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">
+            <strong>Verdict for 280 PPM:</strong> Mandatory minimum for combi boiler warranty compliance under <a href="/guides/how-to-prevent-combi-boiler-limescale" class="text-cyan-600 hover:underline font-bold">Part L Guidelines</a>.
+          </p>
+        </div>
+
+        <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="px-2 py-1 rounded bg-teal-100 text-teal-800 font-bold text-xs uppercase tracking-wide">Drinking Water Only</span>
+            <h3 class="text-lg font-bold text-slate-900 mt-2 mb-2">Activated Carbon Filters (Jugs &amp; Taps)</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-3">
+              Standard filter jugs (Brita, Aqua Optima) and kitchen under-sink carbon cartridges. Adsorbs chlorine, organic pesticides, microplastics, and odor-causing compounds.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-1 mb-4 list-disc pl-4">
+              <li>Significantly improves tea and coffee taste</li>
+              <li>Removes trace heavy metals and disinfection byproducts</li>
+              <li><strong>Does NOT</strong> reduce mineral PPM or soften water</li>
+              <li>TDS readings remain virtually identical before and after</li>
+            </ul>
+          </div>
+          <p class="text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">
+            <strong>Verdict for 280 PPM:</strong> Ideal for crisp drinking water, but incapable of protecting boilers or showers from limescale.
+          </p>
+        </div>
+
+        <div class="border border-slate-200 rounded-xl p-5 bg-white shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="px-2 py-1 rounded bg-indigo-100 text-indigo-800 font-bold text-xs uppercase tracking-wide">Ultra-Purification</span>
+            <h3 class="text-lg font-bold text-slate-900 mt-2 mb-2">Reverse Osmosis (RO) System</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-3">
+              Forces water through a semi-permeable 0.0001-micron membrane. Strips out up to 98% of all dissolved inorganic minerals, dropping 280 PPM water down to 10–25 PPM.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-1 mb-4 list-disc pl-4">
+              <li>Provides laboratory-grade, ultra-pure drinking water</li>
+              <li>Zero kettle scaling and crystal-clear ice cubes</li>
+              <li>Produces wastewater (typically 2:1 reject ratio)</li>
+              <li>Point-of-use only (kitchen tap); cannot supply whole house</li>
+            </ul>
+          </div>
+          <p class="text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">
+            <strong>Verdict for 280 PPM:</strong> Best for dedicated drinking water faucets, aquariums, and commercial espresso machinery.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Explore Regional UK Water Hardness Guides</h2>
+      <p class="text-slate-600 mb-4">
+        Water hardness varies dramatically across the British Isles depending on whether rainfall filters through insoluble granite mountain rock or porous underground Cretaceous chalk aquifers. Check our comprehensive regional guides for local postcode data and supplier profiles:
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 my-6 text-sm">
+        <a href="/guides/thames-water-hardness" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Thames Water (London) Guide &rarr;</a>
+        <a href="/guides/does-bristol-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Bristol (260 PPM) Guide &rarr;</a>
+        <a href="/guides/does-brighton-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Brighton (285 PPM) Guide &rarr;</a>
+        <a href="/guides/does-leicester-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Leicester (245 PPM) Guide &rarr;</a>
+        <a href="/guides/does-bournemouth-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Bournemouth &amp; Poole Guide &rarr;</a>
+        <a href="/guides/welsh-water-hardness-cardiff-swansea" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Cardiff &amp; Welsh Water Guide &rarr;</a>
+        <a href="/guides/does-leeds-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Leeds (Yorkshire) Guide &rarr;</a>
+        <a href="/guides/manchester-water-hardness" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Manchester Soft Water Guide &rarr;</a>
+        <a href="/guides/does-birmingham-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Birmingham &amp; Elan Valley &rarr;</a>
+        <a href="/guides/does-scotland-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Scottish Water Hardness &rarr;</a>
+        <a href="/guides/does-surrey-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Surrey (310 PPM) Guide &rarr;</a>
+        <a href="/guides/how-to-prevent-combi-boiler-limescale" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Combi Boiler Part L Guide &rarr;</a>
+      </div>
     `,
   }
 ];
