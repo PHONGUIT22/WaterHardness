@@ -1008,7 +1008,7 @@ export const guidesData: GuideArticle[] = [
     targetKeyword: "is cardiff water hard or soft",
     category: "Regional Hardness",
     datePublished: "2025-02-15T08:00:00Z",
-    dateModified: "2026-10-05T08:00:00Z",
+    dateModified: "2026-10-06T08:00:00Z",
     readingTime: "5 min read",
     quickVerdict: {
       ppmRange: "30 – 90 PPM (mg/L CaCO3)",
@@ -1018,6 +1018,10 @@ export const guidesData: GuideArticle[] = [
     },
     relatedOutcodes: ["CF10", "CF14", "SA1", "SA4", "NP20"],
     faqItems: [
+      {
+        question: "Does Cardiff have hard or soft water?",
+        answer: "Cardiff has soft tap water, averaging roughly 72 PPM (5.0° Clark). Abstracted from the Brecon Beacons upland reservoirs (such as Llwyn-on and Cantref), Cardiff's water generates generous soap lather and leaves minimal limescale on domestic appliances."
+      },
       {
         question: "Is Cardiff water hard or soft?",
         answer: "Cardiff tap water is naturally soft, averaging between 45 and 85 PPM (approximately 60 PPM, or 4.2° Clark). Abstracted from upland Brecon Beacons reservoirs, it creates instant rich lather with soap and produces virtually no limescale in domestic kettles."
@@ -1041,7 +1045,7 @@ export const guidesData: GuideArticle[] = [
     ],
     contentHtml: `
       <p class="lead text-lg font-medium text-slate-700 mb-6">
-        No, tap water across Cardiff, Swansea, and the South Wales valleys is <strong>naturally soft to moderately soft</strong>, averaging between <strong>30 and 90 PPM</strong>. Unlike homes in southern England that struggle with heavy calcification, Welsh properties enjoy clean surface water collected from the mountainous catchments of the Brecon Beacons.
+        No, tap water across Cardiff, Swansea, and the South Wales valleys is <strong>naturally soft to moderately soft</strong>, averaging between <strong>30 and 90 PPM</strong>. Unlike homes in southern England that struggle with heavy calcification, Welsh properties enjoy clean surface water collected from the mountainous catchments of the Brecon Beacons. For comprehensive municipal breakdowns, visit our dedicated <a href="/cities/cardiff" class="text-blue-600 font-semibold hover:underline">Cardiff City Water Hardness Hub (72 PPM)</a> and <a href="/cities/swansea" class="text-blue-600 font-semibold hover:underline">Swansea City Water Hardness Hub (45 PPM)</a>.
       </p>
 
       <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl"><p class="text-slate-800 font-semibold mb-1">Quick Answer: Is Welsh Water Hard or Soft?</p><p class="text-slate-700 text-sm"><strong>Tap water across Cardiff, Swansea, and South Wales is naturally soft</strong>, with mineral hardness averaging between 30 and 90 PPM (2.1 to 6.3° Clark). Sourced from upland Brecon Beacons reservoirs, Welsh tap water produces virtually zero limescale and lathers easily with soap. Explore our dedicated <a href="/cities/cardiff" class="text-blue-600 font-semibold hover:underline">Cardiff Water Hardness Hub</a> and <a href="/cities/swansea" class="text-blue-600 font-semibold hover:underline">Swansea Water Hardness Hub</a> for local street-level data.</p></div>
@@ -1099,18 +1103,12 @@ export const guidesData: GuideArticle[] = [
         <li><strong>Detergent:</strong> Follow soft-water guidelines, reducing detergent dosage by roughly 30% compared to standard hard-water recipes.</li>
       </ul>
 
-      <div class="border border-slate-200 rounded-xl p-5 bg-slate-50 my-6">
-        <h3 class="text-base font-bold text-slate-900 mb-2">Explore South Wales City Hubs</h3>
-        <p class="text-sm text-slate-600 mb-3">
-          For street-level postcode lookups, council water tests, and tailored household advice, visit our dedicated city portals:
-        </p>
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 my-6">
+        <h3 class="text-blue-900 font-bold text-base mb-2">Explore Welsh City Water Guides</h3>
+        <p class="text-blue-800 text-sm mb-3">Check comprehensive water hardness ratings, kettle advice, and dishwasher settings for South Wales major cities:</p>
         <div class="flex flex-wrap gap-3">
-          <a href="/cities/cardiff" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:underline bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
-            Cardiff Water Hardness Hub &rarr;
-          </a>
-          <a href="/cities/swansea" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:underline bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
-            Swansea Water Hardness Hub &rarr;
-          </a>
+          <a href="/cities/cardiff" class="inline-flex items-center text-sm font-semibold text-blue-700 bg-white px-3 py-1.5 rounded-lg border border-blue-200 hover:bg-blue-100 transition">Cardiff Water Hardness Hub &rarr;</a>
+          <a href="/cities/swansea" class="inline-flex items-center text-sm font-semibold text-blue-700 bg-white px-3 py-1.5 rounded-lg border border-blue-200 hover:bg-blue-100 transition">Swansea Water Hardness Hub &rarr;</a>
         </div>
       </div>
     `
@@ -2953,7 +2951,7 @@ export const guidesData: GuideArticle[] = [
     targetKeyword: "south west water hardness by postcode",
     category: "Regional Hardness",
     datePublished: "2026-09-22T08:00:00Z",
-    dateModified: "2026-10-01T08:00:00Z",
+    dateModified: "2026-10-06T08:00:00Z",
     readingTime: "7 min read",
     quickVerdict: {
       ppmRange: "30 – 210 PPM (mg/L CaCO3)",
@@ -2969,7 +2967,7 @@ export const guidesData: GuideArticle[] = [
       },
       {
         question: "Does Exeter have hard or soft water?",
-        answer: "Exeter tap water is soft, typically measuring between 45 and 65 PPM (3.2 to 4.6° Clark). The municipal supply is treated at Pynes and Countess Wear water treatment works, abstracting clean river surface water from the River Exe catchment."
+        answer: "Exeter tap water is soft, averaging approximately 48 PPM (3.4° Clark). Sourced primarily from Exmoor reservoirs and the River Exe, it produces minimal limescale. However, eastern parishes bordering East Devon (such as Pinhoe) can occasionally receive blended groundwater reaching up to 68 PPM."
       },
       {
         question: "Why is Plymouth water so soft?",
@@ -2998,7 +2996,7 @@ export const guidesData: GuideArticle[] = [
       </p>
 
       <p class="text-slate-600 mb-6">
-        However, when homeowners ask <em>&ldquo;Is South West Water hard or soft?&rdquo;</em>, the answer depends entirely on which side of the county boundary you reside. While residents in <a href="/cities/plymouth" class="text-blue-600 font-semibold hover:underline">Plymouth</a> and <a href="/cities/exeter" class="text-blue-600 font-semibold hover:underline">Exeter</a> enjoy some of the softest, purest reservoir water in the British Isles, households in East Devon towns like Honiton and Axminster face chalk-aquifer groundwater with hardness exceeding 200 PPM.
+        However, when homeowners ask <em>&ldquo;Is South West Water hard or soft?&rdquo;</em>, the answer depends entirely on which side of the county boundary you reside. While residents exploring our <a href="/cities/plymouth" class="text-blue-600 font-bold hover:underline">Plymouth City Water Hardness Hub (34 PPM)</a> and <a href="/cities/exeter" class="text-blue-600 font-bold hover:underline">Exeter City Water Hardness Hub (48 PPM)</a> enjoy some of the softest, purest reservoir water in the British Isles, households in East Devon towns like Honiton and Axminster face chalk-aquifer groundwater with hardness exceeding 200 PPM.
       </p>
 
       <div class="bg-cyan-50/80 border border-cyan-200 rounded-2xl p-6 mb-8">
@@ -3071,6 +3069,15 @@ export const guidesData: GuideArticle[] = [
         </table>
       </div>
 
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 my-6">
+        <h3 class="text-blue-900 font-bold text-base mb-2">Explore City-Specific Water Profiles</h3>
+        <p class="text-blue-800 text-sm mb-3">Looking for street-level hardness data, appliance recommendations, and local supplier facts?</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/cities/exeter" class="inline-flex items-center text-sm font-semibold text-blue-700 bg-white px-3 py-1.5 rounded-lg border border-blue-200 hover:bg-blue-100 transition">Exeter Water Hardness Hub &rarr;</a>
+          <a href="/cities/plymouth" class="inline-flex items-center text-sm font-semibold text-blue-700 bg-white px-3 py-1.5 rounded-lg border border-blue-200 hover:bg-blue-100 transition">Plymouth Water Hardness Hub &rarr;</a>
+        </div>
+      </div>
+
       <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Household Living in Devon: Soft Water Benefits &amp; Risks</h2>
       <p class="text-slate-600 mb-4">
         Living in a soft water region offers massive lifestyle and financial perks, but it introduces one subtle engineering risk that many Devon homeowners overlook:
@@ -3090,21 +3097,6 @@ export const guidesData: GuideArticle[] = [
       <p class="text-slate-600 mb-4">
         If you live in East Devon and suffer from hard water marks, or if you simply want pristine, taste-filtered drinking water at the kitchen sink, compare certified engineers below.
       </p>
-
-      <div class="border border-slate-200 rounded-xl p-5 bg-slate-50 my-6">
-        <h3 class="text-base font-bold text-slate-900 mb-2">Explore Devon City Hubs</h3>
-        <p class="text-sm text-slate-600 mb-3">
-          For street-level postcode lookups, local reservoir sources, and tailored household water advice across Devon's key cities:
-        </p>
-        <div class="flex flex-wrap gap-3">
-          <a href="/cities/exeter" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:underline bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
-            Exeter Water Hardness City Hub &rarr;
-          </a>
-          <a href="/cities/plymouth" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:underline bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
-            Plymouth Water Hardness City Hub &rarr;
-          </a>
-        </div>
-      </div>
     `,
   },
   {
