@@ -1044,7 +1044,7 @@ export const guidesData: GuideArticle[] = [
         No, tap water across Cardiff, Swansea, and the South Wales valleys is <strong>naturally soft to moderately soft</strong>, averaging between <strong>30 and 90 PPM</strong>. Unlike homes in southern England that struggle with heavy calcification, Welsh properties enjoy clean surface water collected from the mountainous catchments of the Brecon Beacons.
       </p>
 
-      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl"><p class="text-slate-800 font-semibold mb-1">Quick Answer: Is Welsh Water Hard or Soft?</p><p class="text-slate-700 text-sm"><strong>Tap water across Cardiff, Swansea, and South Wales is naturally soft</strong>, with mineral hardness averaging between 30 and 90 PPM (2.1 to 6.3° Clark). Sourced from upland Brecon Beacons reservoirs, Welsh tap water produces virtually zero limescale and lathers easily with soap.</p></div>
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl"><p class="text-slate-800 font-semibold mb-1">Quick Answer: Is Welsh Water Hard or Soft?</p><p class="text-slate-700 text-sm"><strong>Tap water across Cardiff, Swansea, and South Wales is naturally soft</strong>, with mineral hardness averaging between 30 and 90 PPM (2.1 to 6.3° Clark). Sourced from upland Brecon Beacons reservoirs, Welsh tap water produces virtually zero limescale and lathers easily with soap. Explore our dedicated <a href="/cities/cardiff" class="text-blue-600 font-semibold hover:underline">Cardiff Water Hardness Hub</a> and <a href="/cities/swansea" class="text-blue-600 font-semibold hover:underline">Swansea Water Hardness Hub</a> for local street-level data.</p></div>
 
       <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Hardness Levels in South Wales</h2>
       <p class="text-slate-600 mb-4">
@@ -1065,14 +1065,14 @@ export const guidesData: GuideArticle[] = [
           <tbody>
             <tr class="hover:bg-slate-50">
               <td class="border border-slate-200 p-3 font-semibold text-cyan-800">CF10, CF11, CF14</td>
-              <td class="border border-slate-200 p-3">Cardiff City Centre, Canton, Whitchurch</td>
+              <td class="border border-slate-200 p-3"><a href="/cities/cardiff" class="text-blue-600 font-semibold hover:underline">Cardiff</a> City Centre, Canton, Whitchurch</td>
               <td class="border border-slate-200 p-3">60 PPM</td>
               <td class="border border-slate-200 p-3">4.2° Clark</td>
               <td class="border border-slate-200 p-3"><span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded text-xs font-bold">Soft</span></td>
             </tr>
             <tr class="hover:bg-slate-50">
               <td class="border border-slate-200 p-3 font-semibold text-cyan-800">SA1, SA2</td>
-              <td class="border border-slate-200 p-3">Swansea, Mumbles, Sketty</td>
+              <td class="border border-slate-200 p-3"><a href="/cities/swansea" class="text-blue-600 font-semibold hover:underline">Swansea</a>, Mumbles, Sketty</td>
               <td class="border border-slate-200 p-3">48 PPM</td>
               <td class="border border-slate-200 p-3">3.4° Clark</td>
               <td class="border border-slate-200 p-3"><span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded text-xs font-bold">Soft</span></td>
@@ -1098,6 +1098,21 @@ export const guidesData: GuideArticle[] = [
         <li><strong>Dishwashers:</strong> Program water hardness to H01 on Bosch appliances. You do not need to purchase water softener salt.</li>
         <li><strong>Detergent:</strong> Follow soft-water guidelines, reducing detergent dosage by roughly 30% compared to standard hard-water recipes.</li>
       </ul>
+
+      <div class="border border-slate-200 rounded-xl p-5 bg-slate-50 my-6">
+        <h3 class="text-base font-bold text-slate-900 mb-2">Explore South Wales City Hubs</h3>
+        <p class="text-sm text-slate-600 mb-3">
+          For street-level postcode lookups, council water tests, and tailored household advice, visit our dedicated city portals:
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/cities/cardiff" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:underline bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+            Cardiff Water Hardness Hub &rarr;
+          </a>
+          <a href="/cities/swansea" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:underline bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+            Swansea Water Hardness Hub &rarr;
+          </a>
+        </div>
+      </div>
     `
   },
 
@@ -2983,7 +2998,7 @@ export const guidesData: GuideArticle[] = [
       </p>
 
       <p class="text-slate-600 mb-6">
-        However, when homeowners ask <em>&ldquo;Is South West Water hard or soft?&rdquo;</em>, the answer depends entirely on which side of the county boundary you reside. While residents in <a href="/cities/plymouth" class="text-blue-600 font-semibold hover:underline">Plymouth</a> and Truro enjoy some of the softest, purest reservoir water in the British Isles, households in East Devon towns like Honiton and Axminster face chalk-aquifer groundwater with hardness exceeding 200 PPM.
+        However, when homeowners ask <em>&ldquo;Is South West Water hard or soft?&rdquo;</em>, the answer depends entirely on which side of the county boundary you reside. While residents in <a href="/cities/plymouth" class="text-blue-600 font-semibold hover:underline">Plymouth</a> and <a href="/cities/exeter" class="text-blue-600 font-semibold hover:underline">Exeter</a> enjoy some of the softest, purest reservoir water in the British Isles, households in East Devon towns like Honiton and Axminster face chalk-aquifer groundwater with hardness exceeding 200 PPM.
       </p>
 
       <div class="bg-cyan-50/80 border border-cyan-200 rounded-2xl p-6 mb-8">
@@ -3011,14 +3026,14 @@ export const guidesData: GuideArticle[] = [
           </thead>
           <tbody class="divide-y divide-slate-200 text-slate-600">
             <tr>
-              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Plymouth</td>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800"><a href="/cities/plymouth" class="text-blue-600 hover:underline">Plymouth</a></td>
               <td class="border border-slate-200 p-3"><a href="/water-hardness/pl1" class="text-blue-600 hover:underline">PL1</a>–<a href="/water-hardness/pl9" class="text-blue-600 hover:underline">PL9</a></td>
               <td class="border border-slate-200 p-3 font-bold text-emerald-700">30 – 45 PPM (2.1–3.1° Clark)</td>
               <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Very Soft</span></td>
               <td class="border border-slate-200 p-3">Burrator Reservoir (Dartmoor granite)</td>
             </tr>
             <tr>
-              <td class="border border-slate-200 p-3 font-semibold text-slate-800">Exeter</td>
+              <td class="border border-slate-200 p-3 font-semibold text-slate-800"><a href="/cities/exeter" class="text-blue-600 hover:underline">Exeter</a></td>
               <td class="border border-slate-200 p-3"><a href="/water-hardness/ex1" class="text-blue-600 hover:underline">EX1</a>–<a href="/water-hardness/ex4" class="text-blue-600 hover:underline">EX4</a></td>
               <td class="border border-slate-200 p-3 font-bold text-emerald-700">45 – 65 PPM (3.1–4.6° Clark)</td>
               <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Soft</span></td>
@@ -3075,6 +3090,21 @@ export const guidesData: GuideArticle[] = [
       <p class="text-slate-600 mb-4">
         If you live in East Devon and suffer from hard water marks, or if you simply want pristine, taste-filtered drinking water at the kitchen sink, compare certified engineers below.
       </p>
+
+      <div class="border border-slate-200 rounded-xl p-5 bg-slate-50 my-6">
+        <h3 class="text-base font-bold text-slate-900 mb-2">Explore Devon City Hubs</h3>
+        <p class="text-sm text-slate-600 mb-3">
+          For street-level postcode lookups, local reservoir sources, and tailored household water advice across Devon's key cities:
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/cities/exeter" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:underline bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+            Exeter Water Hardness City Hub &rarr;
+          </a>
+          <a href="/cities/plymouth" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:underline bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+            Plymouth Water Hardness City Hub &rarr;
+          </a>
+        </div>
+      </div>
     `,
   },
   {
@@ -4153,6 +4183,196 @@ export const guidesData: GuideArticle[] = [
         <a href="/guides/does-scotland-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Scottish Water Hardness &rarr;</a>
         <a href="/guides/does-surrey-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Surrey (310 PPM) Guide &rarr;</a>
         <a href="/guides/how-to-prevent-combi-boiler-limescale" class="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-cyan-800 transition">Combi Boiler Part L Guide &rarr;</a>
+      </div>
+    `,
+  },
+  {
+    slug: "does-sheffield-have-hard-or-soft-water",
+    title: "Does Sheffield Have Hard or Soft Water? Peak District PPM & S Postcodes",
+    metaTitle: "Does Sheffield Have Hard or Soft Water? (Soft - 46 PPM Guide)",
+    metaDescription: "Is water hard or soft in Sheffield? Sheffield tap water is naturally soft at 46 PPM (3.2° Clark). Discover Peak District reservoirs, dishwasher salt & boiler care.",
+    targetKeyword: "does sheffield have hard or soft water",
+    category: "Regional Hardness",
+    datePublished: "2026-10-06T08:00:00Z",
+    dateModified: "2026-10-06T08:00:00Z",
+    readingTime: "6 min read",
+    quickVerdict: {
+      ppmRange: "36 - 68 PPM (mg/L CaCO3)",
+      classification: "Soft Water",
+      supplier: "Yorkshire Water",
+      keyTakeaway: "Sheffield tap water is naturally exceptionally soft, averaging roughly 46 PPM (3.2° Clark). Sourced from upland peat moorlands and millstone grit catchments in the Peak District (Rivelin, Loxley, and Ewden valleys), it leaves virtually zero limescale in kettles. Whole-house water softeners are completely unnecessary."
+    },
+    relatedOutcodes: ["S1", "S2", "S3", "S8", "S10", "S11", "S20"],
+    faqItems: [
+      {
+        question: "Is Sheffield tap water hard or soft?",
+        answer: "Sheffield tap water is naturally soft, with an average hardness of 46 PPM (3.2° Clark). Across the city, mineral concentrations typically range between 36 PPM in western suburbs and 68 PPM in eastern districts, keeping heating elements scale-free."
+      },
+      {
+        question: "Why is water in Sheffield so soft?",
+        answer: "Yorkshire Water collects Sheffield's supply from upland surface reservoirs in the Peak District National Park. Rainwater falling on impermeable millstone grit and peat moors runs quickly into the Rivelin, Loxley, and Ewden valley reservoirs without dissolving chalk or limestone."
+      },
+      {
+        question: "Do I need a water softener in Sheffield?",
+        answer: "No, installing a water softener in Sheffield is an unnecessary expense (£1,200–£2,000 saved). Because tap water contains extremely low calcium and magnesium, limescale deposits do not form inside boilers, showers, or washing machines."
+      },
+      {
+        question: "What dishwasher salt setting should I use in Sheffield?",
+        answer: "Set your dishwasher water softener to Level 1 (the lowest setting, or 0/Off if using multi-benefit tablets). With water at 46 PPM, standard detergent easily lathers and cleans without requiring active ion-exchange regeneration."
+      },
+      {
+        question: "Does soft water in Sheffield damage central heating boilers?",
+        answer: "While soft water prevents limescale scaling on heat exchangers, naturally soft upland water can be slightly acidic. Heating engineers must ensure central heating systems are treated with a high-performance chemical inhibitor (compliant with BS 7593) to protect copper pipes and radiators against galvanic corrosion."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        No, tap water in Sheffield is not hard. Sheffield is officially classified as a <strong>soft water area</strong>, with municipal tap water averaging just <strong>46 PPM (parts per million)</strong> of calcium carbonate (equivalent to <strong>3.2° Clark</strong>). If you are moving to the "Steel City" from southern England or the Midlands, you will instantly notice that soap creates rich lather with ease and electric kettles remain completely free of chalky crust.
+      </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Does Sheffield Have Hard or Soft Water?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>Sheffield has naturally soft tap water</strong>, averaging approximately 46 PPM (3.2° Clark) across all S postcodes. Sourced from high moorland peat catchments and millstone grit reservoirs in the Peak District by Yorkshire Water, Sheffield water produces virtually zero limescale, requires minimal detergent, and eliminates the need for water softeners.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Sheffield Water Hardness by Postcode District</h2>
+      <p class="text-slate-600 mb-4">
+        Managed by <strong>Yorkshire Water</strong>, municipal drinking water in Sheffield exhibits minor geographical variations. Western suburbs nestled closest to the Peak District moorlands receive the softest water, while eastern industrial corridors exhibit slightly higher dissolved solids from blended reservoir distribution:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">Postcode District</th>
+              <th class="border border-slate-200 p-3">Key Neighbourhoods &amp; Suburbs</th>
+              <th class="border border-slate-200 p-3">Average PPM</th>
+              <th class="border border-slate-200 p-3">Degrees Clark (°e)</th>
+              <th class="border border-slate-200 p-3">Classification</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-blue-600"><a href="/water-hardness/s1" class="hover:underline">S1</a>, <a href="/water-hardness/s2" class="hover:underline">S2</a> &amp; <a href="/water-hardness/s3" class="hover:underline">S3</a></td>
+              <td class="border border-slate-200 p-3">Sheffield City Centre, Highfield, Neepsend</td>
+              <td class="border border-slate-200 p-3 font-semibold">42 PPM</td>
+              <td class="border border-slate-200 p-3">2.9° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Soft</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-blue-600"><a href="/water-hardness/s10" class="hover:underline">S10</a></td>
+              <td class="border border-slate-200 p-3">Broomhill, Fulwood, Crookes, Ranmoor</td>
+              <td class="border border-slate-200 p-3 font-semibold">38 PPM</td>
+              <td class="border border-slate-200 p-3">2.7° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Very Soft</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-blue-600"><a href="/water-hardness/s11" class="hover:underline">S11</a></td>
+              <td class="border border-slate-200 p-3">Ecclesall, Endcliffe, Sharrow Vale, Nether Edge</td>
+              <td class="border border-slate-200 p-3 font-semibold">36 PPM</td>
+              <td class="border border-slate-200 p-3">2.5° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Very Soft</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-blue-600"><a href="/water-hardness/s8" class="hover:underline">S8</a></td>
+              <td class="border border-slate-200 p-3">Woodseats, Norton, Beauchief, Greenhill</td>
+              <td class="border border-slate-200 p-3 font-semibold">45 PPM</td>
+              <td class="border border-slate-200 p-3">3.2° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Soft</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-blue-600"><a href="/water-hardness/s9" class="hover:underline">S9</a></td>
+              <td class="border border-slate-200 p-3">Attercliffe, Darnall, Meadowhall, Tinsley</td>
+              <td class="border border-slate-200 p-3 font-semibold">68 PPM</td>
+              <td class="border border-slate-200 p-3">4.8° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-teal-100 text-teal-800">Soft to Moderately Soft</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-blue-600"><a href="/water-hardness/s20" class="hover:underline">S20</a></td>
+              <td class="border border-slate-200 p-3">Crystal Peaks, Mosborough, Westfield, Owlthorpe</td>
+              <td class="border border-slate-200 p-3 font-semibold">52 PPM</td>
+              <td class="border border-slate-200 p-3">3.6° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Soft</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Peak District Geology &amp; Reservoir Sources</h2>
+      <p class="text-slate-600 mb-4">
+        Sheffield's delightfully soft water profile is a direct consequence of the geology of the adjacent <strong>Peak District National Park</strong>. Unlike southern England where rain filters through hundreds of feet of soluble Cretaceous chalk and limestone, South Yorkshire sits upon ancient Carboniferous strata:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>Impermeable Millstone Grit:</strong> The bedrock of the Dark Peak comprises dense quartz sandstone and millstone grit that is completely insoluble in dilute rainwater. Rainwater cannot dissolve calcium or magnesium minerals on contact.</li>
+        <li><strong>Upland Peat Moorlands:</strong> Heavy Atlantic rainfall sweeps over heather moorlands and peat bogs. The runoff drains rapidly through steep valleys directly into Yorkshire Water impounding reservoirs.</li>
+        <li><strong>Valley Catchments (Rivelin, Loxley &amp; Ewden):</strong> Municipal drinking water is captured in historic upland reservoirs including Damflask, Dale Dike, Agden, Strines, and Broomhead, before undergoing multi-stage sand filtration and pH buffering at Rivelin and Bradfield water treatment works.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Household Appliances, Kettles &amp; Dishwashers</h2>
+      <p class="text-slate-600 mb-4">
+        Living with 46 PPM soft water in Sheffield provides immense practical and economic advantages:
+      </p>
+      <div class="space-y-4 my-6">
+        <div class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm">
+          <h3 class="font-bold text-slate-900 mb-1">Kettles &amp; Small Appliances Stay Pristine</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            In hard water regions like London or Brighton, electric kettles accumulate crusty flakes within a fortnight. In Sheffield, kettles remain clean and silver for 6 to 12 months with only an occasional rinse. Chemical descalers are virtually unnecessary.
+          </p>
+        </div>
+        <div class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm">
+          <h3 class="font-bold text-slate-900 mb-1">Dishwasher Salt Settings (Set to Level 1)</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Calibrate your dishwasher water softener dial to <strong>Level 1</strong> (the minimum setting, or H01 on Bosch, Neff, and Siemens appliances). If you use all-in-one detergent tablets, the built-in salt substitute is more than adequate. There is no need to spend money refilling coarse dishwasher salt every month.
+          </p>
+        </div>
+        <div class="border border-slate-200 rounded-xl p-4 bg-white shadow-sm">
+          <h3 class="font-bold text-slate-900 mb-1">No Water Softener Needed (£1,500+ Saved)</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Door-to-door salesmen sometimes market expensive ion-exchange water softeners to new homeowners across Yorkshire. In Sheffield, installing a water softener is completely redundant. Tap water already has less mineral content than artificially softened water in southern counties.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Combi Boiler Efficiency &amp; BS 7593 Corrosion Protection</h2>
+      <p class="text-slate-600 mb-4">
+        While soft water guarantees that your combi boiler secondary plate heat exchanger will never suffer thermal loss from limescale furring, naturally soft upland water introduces a different plumbing consideration:
+      </p>
+      <div class="rounded-xl border border-blue-200 bg-blue-50/70 p-5 my-6">
+        <h3 class="text-base font-bold text-blue-900 mb-2">The Soft Water Engineering Nuance: Acidic Corrosion Prevention</h3>
+        <p class="text-sm text-blue-800 leading-relaxed mb-3">
+          Surface water running off peat moorlands can have lower natural buffering and slightly acidic tendencies. If an untreated central heating system is filled with raw soft mains water, the lack of mineral passivation can accelerate internal electrolytic galvanic corrosion of steel radiators and copper pipework.
+        </p>
+        <p class="text-sm text-blue-800 leading-relaxed font-semibold">
+          Under British Standard BS 7593, your Gas Safe heating engineer must dose a high-performance chemical corrosion inhibitor (such as Fernox F1, Sentinel X100, or Adey MC1+) into the heating circuit during annual servicing, combined with an inline magnetic filter to capture black iron oxide sludge.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Explore Yorkshire &amp; Northern Water Guides</h2>
+      <p class="text-slate-600 mb-4">
+        Discover more about regional water quality, supplier comparisons, and neighboring city water profiles:
+      </p>
+
+      <div class="border border-slate-200 rounded-xl p-5 bg-slate-50 my-6">
+        <h3 class="text-base font-bold text-slate-900 mb-2">Sheffield City Hub &amp; Regional Network</h3>
+        <p class="text-sm text-slate-600 mb-4">
+          Access comprehensive postcode breakdowns, interactive maps, and localized water data:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <a href="/cities/sheffield" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Sheffield City Water Hardness Hub &rarr;
+          </a>
+          <a href="/guides/yorkshire-water-hardness" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Yorkshire Water Regional Hardness Guide &rarr;
+          </a>
+          <a href="/guides/does-leeds-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Does Leeds Have Hard Water? Guide &rarr;
+          </a>
+          <a href="/guides/manchester-water-hardness" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Manchester Soft Water Guide &rarr;
+          </a>
+        </div>
       </div>
     `,
   }
