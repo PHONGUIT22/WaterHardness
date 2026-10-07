@@ -26,12 +26,12 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-bristol-have-hard-water",
     title: "Does Bristol Have Hard Water? Mendip Limestone & Hardness Breakdown",
-    metaTitle: "Is Water in Bristol Hard or Soft? (Yes - 260 PPM Guide)",
-    metaDescription: "Is Bristol a hard water area? Yes, Bristol tap water is hard to very hard, averaging 260 PPM (220–290 PPM). Discover Mendip limestone geology & appliance tips.",
-    targetKeyword: "is water in bristol hard or soft",
+    metaTitle: "Bristol Water Hardness: Is Tap Water Hard or Soft? (260 PPM)",
+    metaDescription: "Is tap water hard or soft in Bristol? Bristol water hardness averages 260 PPM (very hard). Check Bristol Water supply sources, Mendip limestone & limescale tips.",
+    targetKeyword: "bristol water hardness",
     category: "Regional Hardness",
     datePublished: "2025-02-14T08:00:00Z",
-    dateModified: "2026-10-04T08:00:00Z",
+    dateModified: "2026-10-07T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "220 – 290 PPM (mg/L CaCO3)",
@@ -41,6 +41,10 @@ export const guidesData: GuideArticle[] = [
     },
     relatedOutcodes: ["BS1", "BS3", "BS5", "BS8", "BS16"],
     faqItems: [
+      {
+        question: "How hard is Bristol tap water?",
+        answer: "Bristol tap water is categorized as hard to very hard, with mineral concentrations averaging 260 PPM (mg/L CaCO3) or approximately 18.2° Clark. Sourced from limestone-rich Mendip Hills aquifers and Chew Valley Lake, it deposits heavy limescale in kettles and heating elements."
+      },
       {
         question: "Is Bristol water hard or soft?",
         answer: "Bristol water is hard to very hard across every BS postcode, with readings consistently between 220 and 290 PPM (15.4 to 20.3° Clark). Tap water in central Bristol averages roughly 260 PPM."
@@ -3569,7 +3573,7 @@ export const guidesData: GuideArticle[] = [
     targetKeyword: "does leicester have hard water",
     category: "Regional Hardness",
     datePublished: "2026-10-01T08:00:00Z",
-    dateModified: "2026-10-01T08:00:00Z",
+    dateModified: "2026-10-07T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "215 – 280 PPM (mg/L CaCO3)",
@@ -3579,6 +3583,10 @@ export const guidesData: GuideArticle[] = [
     },
     relatedOutcodes: ["LE1", "LE2", "LE3", "LE4", "LE5", "LE18", "LE19"],
     faqItems: [
+      {
+        question: "What is the average Leicester water hardness in PPM?",
+        answer: "The average Leicester water hardness is 245 PPM (mg/L CaCO3), or approximately 17.1° Clark. This classifies Leicester tap water as hard, causing noticeable limescale accumulation in kettles, hot water cylinders, and domestic heating systems."
+      },
       {
         question: "Is tap water hard or soft in Leicester?",
         answer: "Leicester tap water is hard, averaging approximately 245 PPM (17.1° Clark), ranging from 215 PPM in southern suburbs up to 280 PPM in northern districts like Belgrave and Beaumont Leys. It leaves chalky white limescale around kitchen taps and in electric kettles."
@@ -3598,7 +3606,7 @@ export const guidesData: GuideArticle[] = [
     ],
     contentHtml: `
       <p class="lead text-lg font-medium text-slate-700 mb-6">
-        Yes, tap water across Leicester and the surrounding East Midlands county is <strong>officially hard</strong>, averaging approximately <strong>245 PPM (parts per million)</strong> of calcium carbonate. Whether you live in the historic city centre (<a href="/water-hardness/le1" class="text-blue-600 font-semibold hover:underline">LE1</a>), Oadby (<a href="/water-hardness/le2" class="text-blue-600 font-semibold hover:underline">LE2</a>), or northern suburbs like Belgrave (<a href="/water-hardness/le4" class="text-blue-600 font-semibold hover:underline">LE4</a>), your mains water carries heavy mineral dissolved solids that manifest as persistent chalky limescale on household fixtures.
+        If you are wondering <em>"does Leicester have hard water?"</em>, the answer is yes: <strong>Leicester water hardness</strong> is officially rated as <strong>hard</strong>, averaging approximately <strong>245 PPM (parts per million)</strong> of calcium carbonate (17.1° Clark). Whether you live in the historic city centre (<a href="/water-hardness/le1" class="text-blue-600 font-semibold hover:underline">LE1</a>), Oadby (<a href="/water-hardness/le2" class="text-blue-600 font-semibold hover:underline">LE2</a>), or northern suburbs like Belgrave (<a href="/water-hardness/le4" class="text-blue-600 font-semibold hover:underline">LE4</a>), your mains water carries heavy mineral dissolved solids that manifest as persistent chalky limescale on household fixtures.
       </p>
 
       <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
@@ -4363,6 +4371,203 @@ export const guidesData: GuideArticle[] = [
           </a>
           <a href="/guides/manchester-water-hardness" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
             Manchester Soft Water Guide &rarr;
+          </a>
+        </div>
+      </div>
+    `,
+  },
+  {
+    slug: "uk-business-water-suppliers-guide",
+    title: "UK Business Water Suppliers Guide: How to Switch & Compare Commercial Rates",
+    metaTitle: "UK Business Water Suppliers Guide: Compare & Switch Retailers",
+    metaDescription: "Compare UK business water suppliers across Greater London, St Albans & nationwide. Learn how commercial water deregulation works, switch retailers & cut bills.",
+    targetKeyword: "business water suppliers",
+    category: "Plumbing & Heating",
+    datePublished: "2026-10-07T08:00:00Z",
+    dateModified: "2026-10-07T08:00:00Z",
+    readingTime: "7 min read",
+    quickVerdict: {
+      ppmRange: "Varies by Region (20 - 320 PPM)",
+      classification: "Deregulated Retail Market",
+      supplier: "Wholesalers (Thames Water, Affinity Water) vs Retailers (Everflow, Castle Water, Wave, Water Plus)",
+      keyTakeaway: "Since market deregulation in April 2017, all businesses, charities, and public sector organisations across England and Scotland can freely switch water retailers. Switching allows commercial premises to negotiate lower retail margins, consolidate multi-site billing, and access advanced water efficiency audits without altering physical water pipes."
+    },
+    relatedOutcodes: ["AL1", "AL2", "AL3", "EC1", "WC1", "E1", "W1", "SW1"],
+    faqItems: [
+      {
+        question: "Can businesses switch water suppliers in the UK?",
+        answer: "Yes. Following the Open Water market deregulation in April 2017, eligible commercial properties, shops, restaurants, and offices in England and Scotland can switch their clean water and wastewater retailer to secure cheaper tariffs and consolidated billing."
+      },
+      {
+        question: "Who supplies business water in St Albans and Hertfordshire?",
+        answer: "In St Albans and Hertfordshire, the regional physical water wholesaler is Affinity Water. However, businesses purchase retail billing and customer support from independent licensed retailers such as Everflow, Castle Water, Wave, or Water Plus."
+      },
+      {
+        question: "Who are the main business water suppliers in Greater London?",
+        answer: "While Thames Water manages the physical mains network across Greater London, commercial entities can choose from various licensed commercial retailers including Everflow, Castle Water, Water Plus, and First Business Water for retail billing and trade effluent management."
+      },
+      {
+        question: "Do commercial premises need water softeners in hard water areas?",
+        answer: "Yes. In hard water areas such as Greater London (260 PPM) and St Albans (280–320 PPM), commercial kitchens, hotels, and laundrettes should install commercial-grade ion-exchange water softeners to protect commercial dishwashers, steam ovens, and heating boilers from limescale failure."
+      },
+      {
+        question: "How much money can a business save by switching water retailers?",
+        answer: "Commercial customers typically achieve a 5% to 15% reduction on retail margins. However, substantial long-term savings often come from smart automated meter reading (AMR) and commercial leak detection, which prevent costly unmetered water waste."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        Unlike residential households which remain tied to statutory regional water monopolies, non-household commercial properties across the United Kingdom enjoy a deregulated commercial water retail market. Since the landmark <strong>Open Water deregulation in April 2017</strong>, businesses, charities, and public sector organisations across England (and since 2008 in Scotland) can freely compare, negotiate, and switch their commercial water and wastewater retailer to secure lower retail margins, consolidate multi-site utility accounts, and improve water efficiency.
+      </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Can UK Businesses Switch Water Suppliers?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>Yes, UK businesses can switch water suppliers</strong>. Under Open Water deregulation, non-household commercial properties across England and Scotland can freely switch water and wastewater retailers. While regional wholesalers maintain physical mains pipes, choosing a competitive retailer unlocks discounted tariffs, consolidated multi-site invoicing, and leak monitoring services.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Understanding the Two-Tier Market: Wholesalers vs Retailers</h2>
+      <p class="text-slate-600 mb-4">
+        To navigate commercial water procurement effectively, business owners must recognize the crucial distinction between <strong>regional water wholesalers</strong> and <strong>licensed commercial retailers</strong>:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+          <span class="inline-block px-2.5 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800 mb-3">Tier 1: Physical Infrastructure</span>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Regional Water Wholesalers</h3>
+          <p class="text-sm text-slate-600 mb-3">
+            Wholesalers own and operate physical reservoirs, water treatment works, sewage treatment facilities, and the underground pipe network. Regional wholesalers (such as <strong>Thames Water</strong>, <strong>Affinity Water</strong>, <strong>Severn Trent</strong>, and <strong>United Utilities</strong>) remain geographic monopolies.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-1 list-disc pl-4">
+            <li>Responsible for mains pipe maintenance and water pressure</li>
+            <li>Determine physical water quality, mineral composition, and hardness</li>
+            <li>Respond to physical pipe bursts and mains supply emergencies</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+          <span class="inline-block px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 mb-3">Tier 2: Customer Commercials</span>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Licensed Commercial Retailers</h3>
+          <p class="text-sm text-slate-600 mb-3">
+            Retailers buy clean water and sewerage services wholesale and sell them directly to businesses. Retailers (including <strong>Everflow</strong>, <strong>Castle Water</strong>, <strong>Wave</strong>, and <strong>Water Plus</strong>) compete openly for commercial accounts across England and Scotland.
+          </p>
+          <ul class="text-xs text-slate-500 space-y-1 list-disc pl-4">
+            <li>Manage commercial billing, invoicing, and meter readings</li>
+            <li>Negotiate commercial tariff discounts and retail margins</li>
+            <li>Deliver automated meter reading (AMR) and leak detection audits</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Regional Commercial Breakdown: Wholesalers, Hardness &amp; Top Retailers</h2>
+      <p class="text-slate-600 mb-4">
+        Your business's geographic location dictates both the wholesale network operator and the physical water hardness entering your premises, while your choice of retailer determines customer service quality and billing accuracy:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">Commercial Region</th>
+              <th class="border border-slate-200 p-3">Physical Wholesaler</th>
+              <th class="border border-slate-200 p-3">Mains Hardness Rating</th>
+              <th class="border border-slate-200 p-3">Top Licensed Retailers</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">Greater London</td>
+              <td class="border border-slate-200 p-3">Thames Water</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">260 PPM (Very Hard)</td>
+              <td class="border border-slate-200 p-3">Everflow, Castle Water, Water Plus</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">St Albans &amp; Herts</td>
+              <td class="border border-slate-200 p-3">Affinity Water</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">290 PPM (Very Hard)</td>
+              <td class="border border-slate-200 p-3">Wave, Castle Water, Everflow</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">Manchester &amp; North West</td>
+              <td class="border border-slate-200 p-3">United Utilities</td>
+              <td class="border border-slate-200 p-3 font-semibold text-emerald-700">45 PPM (Soft)</td>
+              <td class="border border-slate-200 p-3">Water Plus, Everflow</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600">Birmingham &amp; Midlands</td>
+              <td class="border border-slate-200 p-3">Severn Trent</td>
+              <td class="border border-slate-200 p-3 font-semibold text-amber-700">40–180 PPM (Moderate to Hard)</td>
+              <td class="border border-slate-200 p-3">Regent Water, Wave</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Commercial Hard Water Management: Protecting Capital Equipment</h2>
+      <p class="text-slate-600 mb-4">
+        While switching your commercial water retailer optimizes billing and customer service, switching <strong>does not alter the physical hardness of tap water</strong> supplied through your underground mains. For businesses operating in hard water regions like Greater London (260 PPM) and St Albans &amp; Hertfordshire (280–320 PPM), managing mineral scaling is essential to avoid catastrophic equipment downtime:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+        <div class="border border-amber-200 bg-amber-50/50 rounded-xl p-4">
+          <h3 class="font-bold text-amber-900 text-sm mb-2">Combi Steam Ovens &amp; Bakeries</h3>
+          <p class="text-xs text-amber-800 leading-relaxed">
+            High heat inside commercial combi steam ovens precipitates calcium carbonate instantly. Limescale blocks internal boiler injection nozzles, causes element burnout, and leads to uneven culinary steaming, voiding commercial manufacturer warranties.
+          </p>
+        </div>
+        <div class="border border-amber-200 bg-amber-50/50 rounded-xl p-4">
+          <h3 class="font-bold text-amber-900 text-sm mb-2">Specialty Coffee &amp; Espresso Machines</h3>
+          <p class="text-xs text-amber-800 leading-relaxed">
+            In cafes and hospitality venues, water with 260+ PPM coats solenoid valves, coats flow meters, and severely impairs coffee extraction TDS. Multi-stage reverse osmosis (RO) or dedicated ion-exchange filtration is critical for consistent espresso extraction.
+          </p>
+        </div>
+        <div class="border border-amber-200 bg-amber-50/50 rounded-xl p-4">
+          <h3 class="font-bold text-amber-900 text-sm mb-2">Pass-Through Dishwashers &amp; Glasswashers</h3>
+          <p class="text-xs text-amber-800 leading-relaxed">
+            Commercial catering dishwashers operating without duplex water softeners leave cloudy calcium streaking across glassware, scale wash arms, and demand up to 40% higher commercial detergent dosing to overcome water hardness.
+          </p>
+        </div>
+        <div class="border border-amber-200 bg-amber-50/50 rounded-xl p-4">
+          <h3 class="font-bold text-amber-900 text-sm mb-2">Commercial Heating Boilers &amp; Calorifiers</h3>
+          <p class="text-xs text-amber-800 leading-relaxed">
+            Just 1.5mm of limescale on commercial heat exchanger surfaces degrades thermal conductivity by roughly 12%, driving up commercial gas expenditures and risking sudden heat exchanger thermal crack failure.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">How to Switch Your Business Water Supplier: 4 Simple Steps</h2>
+      <p class="text-slate-600 mb-4">
+        Switching business water retailers is a seamless administrative transition managed via the central market operator (MOSL). There is zero digging, no physical plumbing changes, and zero interruption to your water supply:
+      </p>
+
+      <ol class="list-decimal pl-6 space-y-3 text-slate-600 mb-6">
+        <li>
+          <strong>Locate Your SPID (Supply Point Identifier):</strong> Check page one or two of your current business water invoice for your unique 10- or 12-digit SPID number. There are separate SPID numbers for clean water supply and sewerage services.
+        </li>
+        <li>
+          <strong>Audit Your Current Contract Terms &amp; Tariffs:</strong> Determine if your premises are on a standard 'deemed contract' tariff or a fixed-term agreement. Deemed contracts have no exit penalties, allowing immediate switching. Note your annual consumption in cubic metres (m³).
+        </li>
+        <li>
+          <strong>Compare Retailer Quotes &amp; Service Packages:</strong> Request quotes from competing licensed retailers. Compare default retail margins, multi-site consolidated billing capabilities, automated meter reading (AMR) dataloggers, and customer satisfaction ratings.
+        </li>
+        <li>
+          <strong>E-Sign Your Contract (Zero Disruption):</strong> Once you choose a preferred retailer, sign the digital supply agreement. Your new retailer handles the formal transfer through MOSL within 14 to 28 days without any disruption to your day-to-day operations.
+        </li>
+      </ol>
+
+      <div class="border border-slate-200 rounded-xl p-5 bg-slate-50 my-6">
+        <h3 class="text-base font-bold text-slate-900 mb-2">Explore Related Regional Hardness &amp; Boiler Protection Guides</h3>
+        <p class="text-sm text-slate-600 mb-4">
+          Discover comprehensive municipal data, hardness rankings, and appliance preservation advice:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+          <a href="/guides/london-water-hardness-by-postcode" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            London Water Hardness Guide &rarr;
+          </a>
+          <a href="/guides/how-to-prevent-combi-boiler-limescale" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Commercial Boiler Scale Prevention &rarr;
+          </a>
+          <a href="/water-hardness/al1" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            St Albans AL1 Hardness &rarr;
           </a>
         </div>
       </div>
