@@ -14,7 +14,9 @@ import {
   Home,
   Clock,
   Wrench,
-  Shield
+  Shield,
+  ShoppingCart,
+  ExternalLink
 } from "lucide-react";
 
 interface QuoteRequestCardProps {
@@ -31,6 +33,8 @@ export default function QuoteRequestCard({
   const isHardWater = avgPpm >= 180;
   const isModerateWater = avgPpm >= 100 && avgPpm < 180;
   const isSoftWater = avgPpm < 100;
+
+  const [softTab, setSoftTab] = useState<"direct_solutions" | "installer_quote">("direct_solutions");
 
   const [step, setStep] = useState<1 | 2>(1);
   const [loading, setLoading] = useState(false);
@@ -120,14 +124,14 @@ export default function QuoteRequestCard({
             ? `Living in a Hard Water Zone (${outcode} averages ${avgPpm} PPM)? Compare Approved Local Installers`
             : isModerateWater
             ? `Protect Your Heating & Appliances in ${outcode} (${avgPpm} PPM): Compare Local Specialists`
-            : `Looking for Water Treatment & Heating Protection in ${outcode} (${avgPpm} PPM)?`}
+            : `Soft Water Zone Detected (${outcode} averages ${avgPpm} PPM): Pure Water Solutions`}
         </h2>
         <p className="mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
           {isHardWater
             ? `Get up to 3 free, no-obligation quotes from WRAS-approved water softener installers and heating engineers serving ${locationName}.`
             : isModerateWater
             ? `Connect with certified local plumbers for limescale management and British Standard BS 7593 heating system protection in ${locationName}.`
-            : `Connect with certified local specialists for drinking water filtration and British Standard BS 7593 anti-corrosion boiler protection in ${locationName}.`}
+            : `Because your water is naturally soft, you do not need an expensive salt softener (£1,200+). Explore DIY drinking water filters or compare local specialists for boiler care.`}
         </p>
       </div>
 
@@ -143,12 +147,200 @@ export default function QuoteRequestCard({
         </div>
         <div className="flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-amber-500 shrink-0" />
-          <span>100% Free &amp; No Obligation Quotes</span>
+          <span>{isSoftWater ? "Direct DIY or Free Local Quotes" : "100% Free & No Obligation Quotes"}</span>
         </div>
       </div>
 
+      {/* Soft Water Reassurance Banner */}
+      {isSoftWater && (
+        <div className="mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 flex items-start gap-3">
+          <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+          <div className="text-sm text-emerald-950">
+            <p className="font-bold">
+              Good News: Your Water in {outcode} is Naturally Soft ({avgPpm} PPM) — You Don&apos;t Need an Expensive Salt Softener!
+            </p>
+            <p className="text-xs text-emerald-800 mt-1 leading-relaxed">
+              Unlike hard water regions, you won&apos;t suffer from rapid limescale buildup. However, many residents in {locationName} install targeted under-sink filters for chlorine and microplastics, or schedule British Standard BS 7593 anti-corrosion heating maintenance.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Dual Tab Switcher for Soft Water */}
+      {isSoftWater && (
+        <div className="flex border-b border-slate-200 mb-6 gap-2">
+          <button
+            type="button"
+            onClick={() => setSoftTab("direct_solutions")}
+            className={`pb-3 px-4 text-xs sm:text-sm font-bold flex items-center gap-2 border-b-2 transition-colors cursor-pointer ${
+              softTab === "direct_solutions"
+                ? "border-emerald-600 text-emerald-700"
+                : "border-transparent text-slate-500 hover:text-slate-800"
+            }`}
+          >
+            <ShoppingCart className="w-4 h-4" />
+            Direct Buy Solutions (No Plumber Needed)
+          </button>
+          <button
+            type="button"
+            onClick={() => setSoftTab("installer_quote")}
+            className={`pb-3 px-4 text-xs sm:text-sm font-bold flex items-center gap-2 border-b-2 transition-colors cursor-pointer ${
+              softTab === "installer_quote"
+                ? "border-blue-600 text-blue-700"
+                : "border-transparent text-slate-500 hover:text-slate-800"
+            }`}
+          >
+            <Wrench className="w-4 h-4" />
+            Request Plumber Quotes (Under-sink / Boiler Maintenance)
+          </button>
+        </div>
+      )}
+
+      {/* Soft Water Direct Solutions View */}
+      {isSoftWater && softTab === "direct_solutions" && (
+        <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Card 1: Under-Sink Activated Carbon Water Filter */}
+            <div className="bg-white rounded-xl border border-slate-200 p-4 flex flex-col justify-between shadow-2xs hover:shadow-sm transition-shadow">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide bg-emerald-100 text-emerald-800">
+                    Taste &amp; Purity
+                  </span>
+                  <span className="text-xs font-extrabold text-slate-900">~£45 – £95</span>
+                </div>
+                <h4 className="font-bold text-slate-900 text-sm mb-1.5">
+                  Under-Sink Activated Carbon Filter
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed mb-3">
+                  Removes chlorine taste, odours, lead and microplastics directly at your kitchen tap while preserving healthy natural minerals.
+                </p>
+                <ul className="text-[11px] text-slate-600 space-y-1 mb-4">
+                  <li className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>DIY installation in 15–20 minutes</span>
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>No wastewater or electricity needed</span>
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>6 to 12-month cartridge lifespan</span>
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="https://www.amazon.co.uk/s?k=under+sink+water+filter+drinking+water&tag=pseowater-21"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-colors text-center cursor-pointer"
+              >
+                <span>Check Amazon UK Price</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+
+            {/* Card 2: Lead & Heavy Metal Inox 304 Drinking Tap */}
+            <div className="bg-white rounded-xl border border-slate-200 p-4 flex flex-col justify-between shadow-2xs hover:shadow-sm transition-shadow">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide bg-blue-100 text-blue-800">
+                    Lead-Free Tap
+                  </span>
+                  <span className="text-xs font-extrabold text-slate-900">~£35 – £65</span>
+                </div>
+                <h4 className="font-bold text-slate-900 text-sm mb-1.5">
+                  Lead-Free Inox 304 Drinking Tap
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed mb-3">
+                  Dedicated drinking water faucet forged from food-grade 304 stainless steel, preventing heavy metal leaching from older pipework.
+                </p>
+                <ul className="text-[11px] text-slate-600 space-y-1 mb-4">
+                  <li className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>100% lead-free SUS 304 stainless steel</span>
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>Drip-free ceramic disc valve cartridge</span>
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>Standard 1/4&quot; push-fit pipe compatibility</span>
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="https://www.amazon.co.uk/s?k=lead+free+drinking+water+tap+304+stainless+steel&tag=pseowater-21"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition-colors text-center cursor-pointer"
+              >
+                <span>Check Amazon UK Price</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+
+            {/* Card 3: KDF-55 Shower Filter */}
+            <div className="bg-white rounded-xl border border-slate-200 p-4 flex flex-col justify-between shadow-2xs hover:shadow-sm transition-shadow">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide bg-amber-100 text-amber-800">
+                    Skin &amp; Hair Care
+                  </span>
+                  <span className="text-xs font-extrabold text-slate-900">~£25 – £40</span>
+                </div>
+                <h4 className="font-bold text-slate-900 text-sm mb-1.5">
+                  KDF-55 Shower Chlorine Filter
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed mb-3">
+                  Neutralises harsh municipal chlorine and heavy metals that trigger dry itchy skin, scalp irritation, and eczema in soft water areas.
+                </p>
+                <ul className="text-[11px] text-slate-600 space-y-1 mb-4">
+                  <li className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>KDF-55 + Calcium Sulfite media</span>
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>Universal 1/2&quot; thread screws onto any shower</span>
+                  </li>
+                  <li className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>Maintains full water flow and pressure</span>
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="https://www.amazon.co.uk/s?k=kdf-55+shower+filter+chlorine+uk&tag=pseowater-21"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold transition-colors text-center cursor-pointer"
+              >
+                <span>Check Amazon UK Price</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+
+          <div className="pt-2 text-center">
+            <p className="text-xs text-slate-500">
+              Prefer professional installation or boiler protection in {locationName}?{" "}
+              <button
+                type="button"
+                onClick={() => setSoftTab("installer_quote")}
+                className="text-blue-600 font-bold underline hover:text-blue-800 cursor-pointer"
+              >
+                Switch to Installer Quotes
+              </button>
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Step 1 Form */}
-      {step === 1 && (
+      {(!isSoftWater || softTab === "installer_quote") && step === 1 && (
         <form onSubmit={handleStep1Submit} className="space-y-4">
           <div>
             <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
@@ -301,7 +493,7 @@ export default function QuoteRequestCard({
       )}
 
       {/* Step 2 Form */}
-      {step === 2 && (
+      {(!isSoftWater || softTab === "installer_quote") && step === 2 && (
         <form onSubmit={handleFinalSubmit} className="space-y-4">
           <div className="flex items-center justify-between border-b border-slate-200 pb-2 mb-2">
             <span className="text-xs font-bold uppercase text-slate-600">
