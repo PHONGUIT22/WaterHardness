@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { supabaseAdmin } from "@/lib/supabaseServer";
 
 // UK Phone Number format validation:
 // Supports Mobile (07xxx, +447xxx), Landline (01xxx, 02xxx, +441xxx, +442xxx)
@@ -69,9 +69,9 @@ export async function POST(request: Request) {
     const validUrgencies = ["asap", "within_month", "planning_budget"];
     const sanitizedUrgency = validUrgencies.includes(urgency) ? urgency : "within_month";
 
-    // 5. Insert record into Supabase
+    // 5. Insert record into Supabase using admin service_role client (bypasses RLS safely)
     const leadId = crypto.randomUUID();
-    const { error } = await supabase
+    const { error } = await supabaseAdmin
       .from("leads")
       .insert([
         {
