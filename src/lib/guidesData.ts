@@ -470,12 +470,12 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-birmingham-have-hard-water",
     title: "Does Birmingham Have Hard Water? The Elan Valley Welsh Supply Explained",
-    metaTitle: "Is Birmingham Water Hard? (No - 40 PPM Soft Water)",
-    metaDescription: "Does Birmingham have hard or soft water? Tap water in Birmingham is naturally soft (40–80 PPM), piped 73 miles from the Welsh Elan Valley. Full PPM guide.",
-    targetKeyword: "does birmingham have hard or soft water",
+    metaTitle: "Birmingham Water Hardness: Is Tap Water Hard or Soft? (40 PPM)",
+    metaDescription: "Check Birmingham water hardness levels and Severn Trent PPM ratings. Sourced 73 miles from Wales' Elan Valley, discover why Birmingham has ultra-soft water.",
+    targetKeyword: "birmingham water hardness",
     category: "Regional Hardness",
     datePublished: "2025-01-28T08:00:00Z",
-    dateModified: "2026-10-04T08:00:00Z",
+    dateModified: "2026-10-09T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "40 – 80 PPM (mg/L CaCO3)",
@@ -508,7 +508,7 @@ export const guidesData: GuideArticle[] = [
     ],
     contentHtml: `
       <p class="lead text-lg font-medium text-slate-700 mb-6">
-        No, Birmingham tap water is <strong>naturally soft</strong>, with typical readings between <strong>40 and 80 PPM</strong> across central and southern postal districts (B1 to B45). While surrounding towns across the West Midlands and Staffordshire pump hard groundwater from limestone and sandstone aquifers, Birmingham enjoys crystal-clear soft water imported directly from mid-Wales.
+        When evaluating <strong>Birmingham water hardness</strong>, the answer to <em>"does Birmingham have hard or soft water?"</em> is clear: tap water across the city is <strong>naturally soft</strong>, with typical readings between <strong>40 and 80 PPM</strong> (averaging 40 PPM) across central and southern postal districts (B1 to B45). While surrounding towns across the West Midlands and Staffordshire pump hard groundwater from limestone and sandstone aquifers, Birmingham enjoys crystal-clear soft water imported directly from mid-Wales.
       </p>
 
       <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
@@ -1007,12 +1007,12 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "welsh-water-hardness-cardiff-swansea",
     title: "Welsh Water Hardness: Cardiff, Swansea & South Wales Valley Catchments",
-    metaTitle: "Is Cardiff Water Hard or Soft? (Naturally Soft - 60 PPM Guide)",
-    metaDescription: "Is tap water hard or soft in Cardiff? Cardiff tap water is naturally soft (30–90 PPM, averaging 60 PPM). Check postcode PPM, limescale risk & tap settings.",
+    metaTitle: "Is Cardiff Water Hard or Soft? Welsh Water PPM Guide (72 PPM)",
+    metaDescription: "Is tap water hard or soft in Cardiff? Cardiff water is soft at 72 PPM (5.0° Clark). Discover Brecon Beacons reservoirs, Swansea comparisons & kettle advice.",
     targetKeyword: "is cardiff water hard or soft",
     category: "Regional Hardness",
     datePublished: "2025-02-15T08:00:00Z",
-    dateModified: "2026-10-06T08:00:00Z",
+    dateModified: "2026-10-09T08:00:00Z",
     readingTime: "5 min read",
     quickVerdict: {
       ppmRange: "30 – 90 PPM (mg/L CaCO3)",
@@ -1023,12 +1023,12 @@ export const guidesData: GuideArticle[] = [
     relatedOutcodes: ["CF10", "CF14", "SA1", "SA4", "NP20"],
     faqItems: [
       {
-        question: "Does Cardiff have hard or soft water?",
-        answer: "Cardiff has soft tap water, averaging roughly 72 PPM (5.0° Clark). Abstracted from the Brecon Beacons upland reservoirs (such as Llwyn-on and Cantref), Cardiff's water generates generous soap lather and leaves minimal limescale on domestic appliances."
+        question: "Is Cardiff water hard or soft?",
+        answer: "Cardiff tap water is naturally soft, averaging roughly 72 PPM (mg/L CaCO3) or 5.0° Clark. Abstracted from Brecon Beacons upland reservoirs (such as Llwyn-on and Cantref), it leaves minimal limescale and requires no water softener installation."
       },
       {
-        question: "Is Cardiff water hard or soft?",
-        answer: "Cardiff tap water is naturally soft, averaging between 45 and 85 PPM (approximately 60 PPM, or 4.2° Clark). Abstracted from upland Brecon Beacons reservoirs, it creates instant rich lather with soap and produces virtually no limescale in domestic kettles."
+        question: "Does Cardiff have hard or soft water?",
+        answer: "Cardiff has soft tap water, averaging roughly 72 PPM (5.0° Clark). Abstracted from the Brecon Beacons upland reservoirs (such as Llwyn-on and Cantref), Cardiff's water generates generous soap lather and leaves minimal limescale on domestic appliances."
       },
       {
         question: "Where does Cardiff get its drinking water?",
@@ -4759,6 +4759,185 @@ export const guidesData: GuideArticle[] = [
           </a>
           <a href="/guides/how-to-prevent-combi-boiler-limescale" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm sm:col-span-2">
             How to Prevent Combi Boiler Limescale Guide &rarr;
+          </a>
+        </div>
+      </div>
+    `,
+  },
+  {
+    slug: "does-stoke-on-trent-have-hard-water",
+    title: "Does Stoke-on-Trent Have Hard Water? Staffordshire PPM & Postcode Guide",
+    metaTitle: "Does Stoke-on-Trent Have Hard Water? (Moderate - 180 PPM Guide)",
+    metaDescription: "Is tap water hard or soft in Stoke-on-Trent? Check Severn Trent PPM ratings across ST1 to ST12, Tittesworth reservoir sources, kettle care & salt settings.",
+    targetKeyword: "does stoke-on-trent have hard water",
+    category: "Regional Hardness",
+    datePublished: "2026-10-09T08:00:00Z",
+    dateModified: "2026-10-09T08:00:00Z",
+    readingTime: "6 min read",
+    quickVerdict: {
+      ppmRange: "140 - 210 PPM (mg/L CaCO3)",
+      classification: "Moderately Hard to Hard",
+      supplier: "Severn Trent Water",
+      keyTakeaway: "Stoke-on-Trent tap water is moderately hard to hard, averaging approximately 180 PPM (12.6° Clark). Sourced from Tittesworth Reservoir in the Staffordshire Moorlands blended with deep groundwater boreholes in the Sherwood Sandstone, it causes noticeable limescale buildup in kettles and requires medium dishwasher salt calibration."
+    },
+    relatedOutcodes: ["ST1", "ST2", "ST3", "ST4", "ST5", "ST6", "ST10"],
+    faqItems: [
+      {
+        question: "Is water hard in Stoke-on-Trent?",
+        answer: "Yes, tap water in Stoke-on-Trent is moderately hard, averaging roughly 180 PPM (12.6° Clark). Levels typically range between 140 PPM in northern upland zones and 210 PPM in southern districts supplied by groundwater."
+      },
+      {
+        question: "Where does Stoke-on-Trent water come from?",
+        answer: "Severn Trent Water supplies Stoke-on-Trent and Newcastle-under-Lyme primarily from Tittesworth Reservoir near Leek, supplemented by deep groundwater boreholes extracting from the Sherwood Sandstone aquifer across Staffordshire."
+      },
+      {
+        question: "Do I need a water softener in Stoke-on-Trent?",
+        answer: "A water softener is optional but beneficial in Stoke-on-Trent. At 180 PPM, limescale accumulates gradually inside combi boilers and on shower screens. Many residents find regular kettle descaling and an inline scale reducer sufficient, though an ion-exchange softener completely eliminates scale."
+      },
+      {
+        question: "What dishwasher salt setting should I choose in Stoke-on-Trent?",
+        answer: "Set your dishwasher water softener to Level 3 or Level 4 (medium setting). At 180 PPM, standard detergent tablets benefit from auxiliary salt replenishment to prevent foggy glassware and mineral residue."
+      },
+      {
+        question: "Is tap water in Stoke-on-Trent safe to drink?",
+        answer: "Yes, tap water in Stoke-on-Trent is 100% safe to drink and strictly monitored by the Drinking Water Inspectorate (DWI). It is rich in natural calcium and magnesium minerals that contribute to daily dietary intake."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        If you live in Stoke-on-Trent or across the wider Potteries conurbation, you have likely noticed light limescale dusting on kettle heating coils and bathroom fixtures. Tap water across Stoke-on-Trent and North Staffordshire is <strong>classified as moderately hard to hard</strong>, averaging approximately <strong>180 PPM (parts per million)</strong> of calcium carbonate (12.6° Clark). While not as aggressively alkaline as London or East Anglia, local tap water contains enough dissolved minerals to warrant thoughtful appliance care.
+      </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Does Stoke-on-Trent Have Hard Water?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>Yes, Stoke-on-Trent has moderately hard water</strong>, averaging 180 PPM (12.6° Clark) across all ST postcodes. Supplied by Severn Trent Water from Tittesworth Reservoir blended with groundwater boreholes in Sherwood Sandstone, it causes gradual limescale in kettles and boilers. Explore our <a href="/cities/stoke-on-trent" class="text-blue-600 font-semibold hover:underline">Stoke-on-Trent Water Hardness Hub</a> for full local data.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Stoke-on-Trent Water Hardness by Postcode District</h2>
+      <p class="text-slate-600 mb-4">
+        Managed by <strong>Severn Trent Water</strong>, tap water across North Staffordshire shifts along a spectrum from moderately hard to hard depending on how much upland reservoir water is blended with local sandstone groundwater:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">Postcode District</th>
+              <th class="border border-slate-200 p-3">Key Suburbs &amp; Towns</th>
+              <th class="border border-slate-200 p-3">Average PPM</th>
+              <th class="border border-slate-200 p-3">Degrees Clark (°e)</th>
+              <th class="border border-slate-200 p-3">Classification</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/st1" class="hover:underline">ST1</a></td>
+              <td class="border border-slate-200 p-3">Hanley, City Centre, Cobridge, Sneyd Green</td>
+              <td class="border border-slate-200 p-3 font-semibold text-amber-700">175 PPM</td>
+              <td class="border border-slate-200 p-3">12.3° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Moderately Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/st2" class="hover:underline">ST2</a></td>
+              <td class="border border-slate-200 p-3">Bentilee, Bucknall, Abbey Hulton, Milton</td>
+              <td class="border border-slate-200 p-3 font-semibold text-amber-700">170 PPM</td>
+              <td class="border border-slate-200 p-3">11.9° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Moderately Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/st3" class="hover:underline">ST3</a></td>
+              <td class="border border-slate-200 p-3">Longton, Meir, Weston Coyney, Dresden</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">190 PPM</td>
+              <td class="border border-slate-200 p-3">13.3° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/st4" class="hover:underline">ST4</a></td>
+              <td class="border border-slate-200 p-3">Stoke, Fenton, Trentham, Hanford, Penkhull</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">185 PPM</td>
+              <td class="border border-slate-200 p-3">13.0° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/st5" class="hover:underline">ST5</a></td>
+              <td class="border border-slate-200 p-3">Newcastle-under-Lyme, Keele, Silverdale, Chesterton</td>
+              <td class="border border-slate-200 p-3 font-semibold text-amber-700">178 PPM</td>
+              <td class="border border-slate-200 p-3">12.5° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Moderately Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/st6" class="hover:underline">ST6</a></td>
+              <td class="border border-slate-200 p-3">Burslem, Tunstall, Norton, Smallthorne</td>
+              <td class="border border-slate-200 p-3 font-semibold text-amber-700">165 PPM</td>
+              <td class="border border-slate-200 p-3">11.6° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Moderately Hard</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Staffordshire Moorlands Water Sources &amp; Tittesworth Reservoir</h2>
+      <p class="text-slate-600 mb-4">
+        The unique water hardness profile of Stoke-on-Trent stems from a strategic blend of surface water and deep groundwater abstracted by <strong>Severn Trent Water</strong>.
+      </p>
+      <p class="text-slate-600 mb-4">
+        A primary source is <strong>Tittesworth Reservoir</strong>, located near Leek in the southern foothills of the Peak District. Surface runoff draining the gritstone moorlands of the Roaches and Staffordshire Moorlands is naturally soft to moderately soft (100–140 PPM). However, to meet year-round municipal demand, Severn Trent blends this surface supply with deep groundwater pumped from boreholes sunk into the <strong>Sherwood Sandstone Group</strong> across central Staffordshire. As rainwater filters through sandstone and underlying pebble beds, it dissolves calcium and magnesium carbonates, lifting the final blended mains hardness to roughly 180 PPM across the Potteries.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Appliance Care, Dishwasher Salt &amp; Natural Descaling</h2>
+      <p class="text-slate-600 mb-4">
+        Living with 180 PPM water means limescale develops gradually rather than aggressively, but proactive care prevents avoidable maintenance costs:
+      </p>
+      <ul class="list-disc pl-6 space-y-3 text-slate-600 mb-6">
+        <li>
+          <strong>Calibrate Dishwashers to Level 3 or 4:</strong> In Stoke-on-Trent, calibrate your dishwasher water softener to Level 3 or Level 4 (setting H03 or H04 on Bosch and Siemens). While "all-in-one" tablets offer basic scale prevention, topping up the salt reservoir ensures glassware emerges sparkling and spot-free.
+        </li>
+        <li>
+          <strong>Natural Citric Acid Kettle Descaling:</strong> Descale electric kettles every 4 to 6 weeks. Boil 500ml of water with two tablespoons of natural food-grade citric acid powder, leave for 15 minutes, and rinse thoroughly. Citric acid dissolves mineral scale cleanly without the lingering fumes of white vinegar.
+        </li>
+        <li>
+          <strong>Shower Heads &amp; Aerator Mesh:</strong> Soak chrome tap aerators and shower heads in warm descaling solution every three months to prevent chalk crust from restricting water spray patterns.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Combi Boiler Protection &amp; BS 7593 Standards</h2>
+      <p class="text-slate-600 mb-4">
+        Under <strong>British Standard BS 7593</strong> and Part L Building Regulations, maintaining central heating water quality is essential for heating efficiency and boiler longevity:
+      </p>
+      <div class="border border-blue-200 bg-blue-50/60 rounded-xl p-5 my-6">
+        <h3 class="text-base font-bold text-blue-900 mb-2">Preserving Boiler Heat Exchanger Efficiency in ST Postcodes</h3>
+        <p class="text-sm text-blue-800 leading-relaxed mb-3">
+          At 180 PPM, limescale accumulates inside secondary combi boiler plate heat exchangers over several heating seasons. Even 1mm of scale reduces thermal efficiency by roughly 7%, leading to higher annual gas bills and premature component fatigue.
+        </p>
+        <p class="text-sm text-blue-800 leading-relaxed font-semibold">
+          Heating engineers across Stoke-on-Trent recommend fitting an inline electrolytic or magnetic scale reducer on the 15mm cold water mains inlet, combined with annual dosing of chemical corrosion inhibitor (such as Fernox F1 or Sentinel X100) to protect radiators and primary heating circuits.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Explore Related Midlands &amp; Regional Hardness Guides</h2>
+      <p class="text-slate-600 mb-4">
+        Compare Stoke-on-Trent's water quality with neighboring West Midlands hubs and access expert guidance on water treatment:
+      </p>
+
+      <div class="border border-slate-200 rounded-xl p-5 bg-slate-50 my-6">
+        <h3 class="text-base font-bold text-slate-900 mb-2">Stoke-on-Trent City Hub &amp; Regional Network</h3>
+        <p class="text-sm text-slate-600 mb-4">
+          Discover comprehensive postcode breakdowns, interactive tools, and local supplier facts:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <a href="/cities/stoke-on-trent" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Stoke-on-Trent City Water Hardness Hub &rarr;
+          </a>
+          <a href="/guides/does-birmingham-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Birmingham Water Hardness Guide &rarr;
+          </a>
+          <a href="/guides/does-leicester-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Leicester (245 PPM) Guide &rarr;
+          </a>
+          <a href="/guides/how-to-prevent-combi-boiler-limescale" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Combi Boiler Scale Prevention &rarr;
           </a>
         </div>
       </div>
