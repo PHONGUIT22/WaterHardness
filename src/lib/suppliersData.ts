@@ -582,3 +582,55 @@ export function getAllSuppliers(): SupplierMetadata[] {
 export function getSupplierBySlug(slug: string): SupplierMetadata | undefined {
   return suppliersData.find((s) => s.slug === slug);
 }
+
+/**
+ * Resolves a supplier metadata object from a company name, partial string, or database pattern.
+ * Supports exact names, DB wildcard patterns, multi-utility strings, and regional aliases.
+ */
+export function findSupplierByName(nameOrPattern: string): SupplierMetadata | undefined {
+  if (!nameOrPattern) return undefined;
+  const raw = nameOrPattern.toLowerCase().trim();
+
+  // 1. Direct match on name, slug, or DB pattern
+  const exact = suppliersData.find(
+    (s) =>
+      s.name.toLowerCase() === raw ||
+      s.slug === raw ||
+      s.dbPattern.toLowerCase().replace(/%/g, "").trim() === raw
+  );
+  if (exact) return exact;
+
+  // 2. Specific alias mappings
+  if (raw.includes("bristol water")) {
+    const wessex = suppliersData.find((s) => s.slug === "wessex-water");
+    if (wessex) return wessex;
+  }
+  if (
+    raw.includes("dŵr cymru") ||
+    raw.includes("dwr cymru") ||
+    raw.includes("welsh water") ||
+    raw.includes("cymru")
+  ) {
+    const welsh = suppliersData.find((s) => s.slug === "welsh-water");
+    if (welsh) return welsh;
+  }
+
+  // 3. Substring matching
+  // Check if any supplier's clean name or pattern is inside the query string (e.g. "Thames Water & Affinity Water" -> Thames Water)
+  const containsSupplierName = suppliersData.find((s) => {
+    const sName = s.name.toLowerCase();
+    const cleanPattern = s.dbPattern.toLowerCase().replace(/%/g, "").trim();
+    return raw.includes(sName) || (cleanPattern.length > 3 && raw.includes(cleanPattern));
+  });
+  if (containsSupplierName) return containsSupplierName;
+
+  // Check if query string is inside the supplier name (e.g. "Severn Trent" -> Severn Trent Water)
+  const supplierContainsQuery = suppliersData.find((s) => {
+    const sName = s.name.toLowerCase();
+    const sSlug = s.slug.replace(/-/g, " ");
+    return sName.includes(raw) || sSlug.includes(raw);
+  });
+  if (supplierContainsQuery) return supplierContainsQuery;
+
+  return undefined;
+}

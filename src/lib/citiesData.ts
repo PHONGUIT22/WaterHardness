@@ -913,3 +913,26 @@ export function getCityBySlug(slug: string): CityData | undefined {
 export function getCitiesByRegion(region: string): CityData[] {
   return citiesData.filter((c) => c.region === region);
 }
+
+/**
+ * Finds the major city that encompasses an outcode based on registered UK outcode prefixes.
+ * For example, "SW1A" matches London prefix "SW", "BS8" matches Bristol prefix "BS".
+ */
+export function getCityByOutcode(outcode: string): CityData | undefined {
+  if (!outcode) return undefined;
+  const clean = outcode.trim().toUpperCase();
+  const match = clean.match(/^[A-Z]+/);
+  if (!match) return undefined;
+  const alphaArea = match[0];
+
+  // 1. Exact match against alpha prefix (e.g. "BS" for Bristol, "SW" for London, "EX" for Exeter)
+  const exactCity = citiesData.find((c) =>
+    c.outcodePrefixes.some((p) => p.toUpperCase() === alphaArea)
+  );
+  if (exactCity) return exactCity;
+
+  // 2. Fallback prefix check (e.g. if an outcode string starts with an entire registered code)
+  return citiesData.find((c) =>
+    c.outcodePrefixes.some((p) => clean.startsWith(p.toUpperCase()))
+  );
+}

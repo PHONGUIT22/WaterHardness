@@ -43,7 +43,6 @@ export default async function RelatedSectors({ currentSector, outcode }: Props) 
             <Link
               key={item.sector}
               href={`/water-hardness/${outcodeSlug}/${sectorSlug}`}
-              rel="nofollow"
               className="p-3.5 rounded-2xl bg-slate-50 hover:bg-cyan-50/60 border border-slate-200/60 hover:border-cyan-300 transition-all flex items-center justify-between group"
             >
               <div className="min-w-0 pr-2">

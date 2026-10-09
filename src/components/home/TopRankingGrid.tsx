@@ -42,7 +42,6 @@ export default async function TopRankingGrid() {
                   <Link
                     key={item.sector}
                     href={`/water-hardness/${item.outcode.toLowerCase()}/${sectorSlug}`}
-                    rel="nofollow"
                     className="flex items-center justify-between p-3.5 hover:bg-slate-50 rounded-2xl transition-colors group"
                   >
                     <div className="flex items-center gap-3">
@@ -88,7 +87,6 @@ export default async function TopRankingGrid() {
                   <Link
                     key={item.sector}
                     href={`/water-hardness/${item.outcode.toLowerCase()}/${sectorSlug}`}
-                    rel="nofollow"
                     className="flex items-center justify-between p-3.5 hover:bg-slate-50 rounded-2xl transition-colors group"
                   >
                     <div className="flex items-center gap-3">

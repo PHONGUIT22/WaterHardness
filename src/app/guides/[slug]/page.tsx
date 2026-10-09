@@ -19,7 +19,11 @@ import {
   Flame,
   Award,
   ExternalLink,
-  ChevronDown
+  ChevronDown,
+  Compass,
+  Building2,
+  Droplets,
+  Scale
 } from "lucide-react";
 
 export const revalidate = 86400; // ISR Cache 24h
@@ -477,6 +481,130 @@ export default async function GuideArticlePage({ params }: PageProps) {
             </div>
           </div>
         )}
+
+        {/* CONTEXTUAL NAVIGATION / EXPLORE WATER HARDNESS BY REGION */}
+        <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-md border border-slate-800 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+            <div>
+              <div className="flex items-center gap-2 text-cyan-400 font-bold text-xs uppercase tracking-wider mb-1">
+                <Compass className="w-4 h-4" /> Regional Hydro-Intelligence Hub
+              </div>
+              <h3 className="text-xl sm:text-2xl font-black text-white">
+                Explore UK Water Hardness by Region &amp; Supplier
+              </h3>
+            </div>
+            <p className="text-xs text-slate-400 max-w-sm">
+              Discover official DWI mineral ratings, postcode data, and utility reports across England, Wales &amp; Scotland.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+            {/* Link 1: London */}
+            <Link
+              href="/cities/london"
+              className="group p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/80 hover:border-cyan-500/50 transition-all flex items-start gap-3.5"
+            >
+              <div className="w-10 h-10 rounded-xl bg-cyan-950 border border-cyan-800 flex items-center justify-center text-cyan-400 shrink-0 group-hover:scale-105 transition-transform">
+                <Building2 className="w-5 h-5" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-white text-sm group-hover:text-cyan-300 transition-colors">
+                    London Water Hardness Guide
+                  </span>
+                  <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-cyan-400 transition-colors shrink-0" />
+                </div>
+                <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                  278 PPM average. Thames Basin chalk aquifers, kettle furring &amp; combi boiler care.
+                </p>
+              </div>
+            </Link>
+
+            {/* Link 2: Bristol */}
+            <Link
+              href="/cities/bristol"
+              className="group p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/80 hover:border-cyan-500/50 transition-all flex items-start gap-3.5"
+            >
+              <div className="w-10 h-10 rounded-xl bg-blue-950 border border-blue-800 flex items-center justify-center text-blue-400 shrink-0 group-hover:scale-105 transition-transform">
+                <Building2 className="w-5 h-5" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-white text-sm group-hover:text-cyan-300 transition-colors">
+                    Bristol Water Hardness Guide
+                  </span>
+                  <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-cyan-400 transition-colors shrink-0" />
+                </div>
+                <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                  225 PPM average. Mendip limestone aquifers, limescale prevention &amp; appliance tuning.
+                </p>
+              </div>
+            </Link>
+
+            {/* Link 3: Thames Water */}
+            <Link
+              href="/suppliers/thames-water"
+              className="group p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/80 hover:border-cyan-500/50 transition-all flex items-start gap-3.5"
+            >
+              <div className="w-10 h-10 rounded-xl bg-amber-950 border border-amber-800 flex items-center justify-center text-amber-400 shrink-0 group-hover:scale-105 transition-transform">
+                <Droplets className="w-5 h-5" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-white text-sm group-hover:text-cyan-300 transition-colors">
+                    Thames Water Hardness Hub
+                  </span>
+                  <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-cyan-400 transition-colors shrink-0" />
+                </div>
+                <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                  UK&apos;s largest utility. 260–320 PPM hard water, chalk boreholes &amp; DWI compliance.
+                </p>
+              </div>
+            </Link>
+
+            {/* Link 4: UK Outcodes Directory */}
+            <Link
+              href="/outcodes"
+              className="group p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/80 hover:border-cyan-500/50 transition-all flex items-start gap-3.5"
+            >
+              <div className="w-10 h-10 rounded-xl bg-emerald-950 border border-emerald-800 flex items-center justify-center text-emerald-400 shrink-0 group-hover:scale-105 transition-transform">
+                <MapPin className="w-5 h-5" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-white text-sm group-hover:text-cyan-300 transition-colors">
+                    UK Outcodes Directory
+                  </span>
+                  <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-cyan-400 transition-colors shrink-0" />
+                </div>
+                <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                  Browse over 3,000 UK postal districts with hyper-local PPM measurements &amp; maps.
+                </p>
+              </div>
+            </Link>
+
+            {/* Link 5: Compare Regional Water Quality */}
+            <Link
+              href="/compare"
+              className="group p-4 rounded-2xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/80 hover:border-cyan-500/50 transition-all flex items-start gap-3.5 sm:col-span-2 lg:col-span-2"
+            >
+              <div className="w-10 h-10 rounded-xl bg-purple-950 border border-purple-800 flex items-center justify-center text-purple-400 shrink-0 group-hover:scale-105 transition-transform">
+                <Scale className="w-5 h-5" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-white text-sm group-hover:text-cyan-300 transition-colors">
+                    Compare Regional Water Quality
+                  </span>
+                  <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-cyan-400 transition-colors shrink-0" />
+                </div>
+                <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                  Side-by-side hydro-comparison between any two UK postcodes. Contrast mineral load, appliance salt calibrations, and annual limescale financial impacts.
+                </p>
+              </div>
+            </Link>
+          </div>
+        </div>
 
         {/* BACK TO HUB LINK */}
         <div className="text-center pt-4">

@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getOutcodeOverviewData, getAllOutcodesFromDB } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
+import { getCityByOutcode } from "@/lib/citiesData";
+import { findSupplierByName } from "@/lib/suppliersData";
 import QuoteRequestCard from "@/components/lead/QuoteRequestCard";
 import { 
   Droplets, 
@@ -85,6 +87,8 @@ export default async function OutcodeHubPage({ params }: PageProps) {
   // 🔥 MA TRẬN PHÂN TÍCH THỦY VĂN ĐA TẦNG CHO 3.000 OUTCODES
   // ==============================================================================
   const { outcode, companyName, avgPpm, totalSectors, softestSector, hardestSector, sectorsList } = data;
+  const cityMeta = getCityByOutcode(outcode);
+  const supplierMeta = findSupplierByName(companyName);
 
   const softestPpm = softestSector?.avgPpm || avgPpm;
   const hardestPpm = hardestSector?.avgPpm || avgPpm;
@@ -307,9 +311,41 @@ export default async function OutcodeHubPage({ params }: PageProps) {
       <section className="bg-slate-900 text-white pt-16 pb-20 px-4">
         <div className="max-w-7xl mx-auto text-center sm:text-left">
           
-          <div className="inline-flex items-center gap-2 bg-slate-800 text-cyan-400 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-6">
-            <ShieldCheck className="w-4 h-4 text-cyan-400" />
-            <span>Official Supplier Data: {companyName} • DWI & BS 7593 Standards</span>
+          <div className="flex flex-wrap items-center gap-2 mb-6">
+            <div className="inline-flex items-center gap-2 bg-slate-800 text-cyan-400 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs font-semibold">
+              <ShieldCheck className="w-4 h-4 text-cyan-400" />
+              <span>
+                Official Supplier Data:{" "}
+                {supplierMeta ? (
+                  <Link
+                    href={`/suppliers/${supplierMeta.slug}`}
+                    className="text-white hover:text-cyan-400 hover:underline transition-colors font-medium"
+                    title={`View ${supplierMeta.name} water hardness guide & coverage`}
+                  >
+                    {companyName}
+                  </Link>
+                ) : (
+                  companyName
+                )}{" "}
+                • DWI &amp; BS 7593 Standards
+              </span>
+            </div>
+
+            {cityMeta && (
+              <div className="inline-flex items-center gap-1.5 bg-cyan-950/80 text-cyan-300 border border-cyan-800 px-3.5 py-1.5 rounded-full text-xs font-semibold">
+                <Building2 className="w-3.5 h-3.5 text-cyan-400" />
+                <span>
+                  Part of the{" "}
+                  <Link
+                    href={`/cities/${cityMeta.slug}`}
+                    className="text-white font-bold hover:text-cyan-400 hover:underline transition-colors"
+                    title={`View ${cityMeta.name} City Water Hardness Report`}
+                  >
+                    {cityMeta.name} Water Hardness Network
+                  </Link>
+                </span>
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-800 pb-10">
@@ -318,7 +354,30 @@ export default async function OutcodeHubPage({ params }: PageProps) {
                 Water Hardness in <span className="text-cyan-400">{outcode}</span>
               </h1>
               <p className="text-slate-300 mt-3 text-base sm:text-lg max-w-2xl font-medium">
-                Official water quality verdict for outcode <span className="text-white font-bold">{outcode}</span>: classified as <span className="text-cyan-400 font-bold">{hardnessCategoryText}</span> ({avgPpm} PPM), supplied and treated by <span className="text-white font-bold">{companyName}</span> across {totalSectors} sectors.
+                Official water quality verdict for outcode <span className="text-white font-bold">{outcode}</span>
+                {cityMeta && (
+                  <>
+                    {" "}in the{" "}
+                    <Link
+                      href={`/cities/${cityMeta.slug}`}
+                      className="text-cyan-300 hover:underline font-bold"
+                    >
+                      {cityMeta.name}
+                    </Link>{" "}area
+                  </>
+                )}
+                : classified as <span className="text-cyan-400 font-bold">{hardnessCategoryText}</span> ({avgPpm} PPM), supplied and treated by{" "}
+                {supplierMeta ? (
+                  <Link
+                    href={`/suppliers/${supplierMeta.slug}`}
+                    className="text-white font-bold hover:text-cyan-400 hover:underline"
+                  >
+                    {companyName}
+                  </Link>
+                ) : (
+                  <span className="text-white font-bold">{companyName}</span>
+                )}{" "}
+                across {totalSectors} sectors.
               </p>
 
               {/* INSTANT VERDICT PILLS */}
@@ -330,7 +389,17 @@ export default async function OutcodeHubPage({ params }: PageProps) {
                   {avgPpm} PPM • {clarkDegrees}° Clark
                 </span>
                 <span className="bg-slate-800 text-slate-300 px-3 py-1 rounded-full font-semibold border border-slate-700">
-                  Supplier: {companyName}
+                  Supplier:{" "}
+                  {supplierMeta ? (
+                    <Link
+                      href={`/suppliers/${supplierMeta.slug}`}
+                      className="text-cyan-300 hover:underline font-bold"
+                    >
+                      {companyName}
+                    </Link>
+                  ) : (
+                    companyName
+                  )}
                 </span>
                 <span className="bg-slate-800 text-slate-300 px-3 py-1 rounded-full font-semibold border border-slate-700">
                   {isHarderThanUK ? `+${diffVsUK}% above UK average` : isSofterThanUK ? `${diffVsUK}% below UK average` : "At UK national average (200 PPM)"}
@@ -368,7 +437,31 @@ export default async function OutcodeHubPage({ params }: PageProps) {
           </div>
 
           <p className="text-base sm:text-lg font-medium leading-relaxed text-slate-900 mb-4">
-            Domestic tap water in outcode <strong>{outcode}</strong> is officially classified as <strong>{hardnessCategoryText.toLowerCase()}</strong>, averaging <strong>{avgPpm} PPM</strong> (mg/L CaCO₃) or <strong>{clarkDegrees}° Clark</strong>, supplied and treated by <strong>{companyName}</strong> across all {totalSectors} postcode sectors ({totalPostcodes.toLocaleString()} postcodes). Readings range from <strong>{softestPpm} PPM</strong> ({softestSectorName}) to <strong>{hardestPpm} PPM</strong> ({hardestSectorName}){varianceDelta > 0 ? `, showing a local disparity of ${varianceDelta} PPM` : " with consistent mineral levels throughout"}.
+            Domestic tap water in outcode <strong>{outcode}</strong>
+            {cityMeta && (
+              <>
+                {" "}(part of the{" "}
+                <Link
+                  href={`/cities/${cityMeta.slug}`}
+                  className="text-cyan-700 hover:underline font-bold"
+                >
+                  {cityMeta.name} City Water Network
+                </Link>
+                )
+              </>
+            )}
+            {" "}is officially classified as <strong>{hardnessCategoryText.toLowerCase()}</strong>, averaging <strong>{avgPpm} PPM</strong> (mg/L CaCO₃) or <strong>{clarkDegrees}° Clark</strong>, supplied and treated by{" "}
+            {supplierMeta ? (
+              <Link
+                href={`/suppliers/${supplierMeta.slug}`}
+                className="text-cyan-800 hover:underline font-bold"
+              >
+                {companyName}
+              </Link>
+            ) : (
+              <strong>{companyName}</strong>
+            )}{" "}
+            across all {totalSectors} postcode sectors ({totalPostcodes.toLocaleString()} postcodes). Readings range from <strong>{softestPpm} PPM</strong> ({softestSectorName}) to <strong>{hardestPpm} PPM</strong> ({hardestSectorName}){varianceDelta > 0 ? `, showing a local disparity of ${varianceDelta} PPM` : " with consistent mineral levels throughout"}.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-3 border-t border-cyan-200/70 text-xs sm:text-sm text-slate-700">
@@ -489,7 +582,19 @@ export default async function OutcodeHubPage({ params }: PageProps) {
 
             <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
               <span className="text-slate-400 text-[11px] font-bold uppercase tracking-wider block">Regulating Authority</span>
-              <span className="text-lg font-black text-slate-900 block mt-1 truncate">{companyName}</span>
+              <span className="text-lg font-black text-slate-900 block mt-1 truncate">
+                {supplierMeta ? (
+                  <Link
+                    href={`/suppliers/${supplierMeta.slug}`}
+                    className="hover:text-cyan-700 hover:underline transition-colors"
+                    title={`View ${supplierMeta.name} water hardness profile & coverage`}
+                  >
+                    {companyName}
+                  </Link>
+                ) : (
+                  companyName
+                )}
+              </span>
               <span className="text-slate-500 text-[11px] block mt-0.5">DWI Regulated Supply</span>
             </div>
           </div>
@@ -701,7 +806,6 @@ export default async function OutcodeHubPage({ params }: PageProps) {
               {softestSector && (
                 <Link
                   href={`/water-hardness/${cleanOutcodeSlug}/${softestSector.sector.toLowerCase().trim().replace(/\s+/g, "-")}`}
-                  rel="nofollow"
                   className="flex items-center justify-between p-4 bg-slate-50 hover:bg-emerald-50/60 rounded-2xl transition-colors border border-slate-200/60 group"
                 >
                   <div>
@@ -740,7 +844,6 @@ export default async function OutcodeHubPage({ params }: PageProps) {
               {hardestSector && (
                 <Link
                   href={`/water-hardness/${cleanOutcodeSlug}/${hardestSector.sector.toLowerCase().trim().replace(/\s+/g, "-")}`}
-                  rel="nofollow"
                   className="flex items-center justify-between p-4 bg-slate-50 hover:bg-amber-50/60 rounded-2xl transition-colors border border-slate-200/60 group"
                 >
                   <div>
@@ -794,7 +897,6 @@ export default async function OutcodeHubPage({ params }: PageProps) {
                 <Link
                   key={item.sector}
                   href={`/water-hardness/${cleanOutcodeSlug}/${sectorSlug}`}
-                  rel="nofollow"
                   className="p-3.5 rounded-2xl bg-slate-50 hover:bg-cyan-50 border border-slate-200/60 hover:border-cyan-300 transition-all flex items-center justify-between group"
                 >
                   <div className="truncate pr-2">

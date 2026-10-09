@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { citiesData, getCityBySlug } from "@/lib/citiesData";
+import { findSupplierByName } from "@/lib/suppliersData";
 import { getOutcodesForCity } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
 import CityOutcodeGrid from "./CityOutcodeGrid";
@@ -89,6 +90,7 @@ export default async function CityHubPage({ params }: PageProps) {
 
   const outcodes = await getOutcodesForCity(city.outcodePrefixes);
   const { datePublishedISO, dateModifiedISO, dateModifiedFormatted } = getSeoDates(city.slug);
+  const supplierMeta = findSupplierByName(city.supplier);
 
   const isSoft = city.avgPpm < 100;
   const isModerate = city.avgPpm >= 100 && city.avgPpm < 200;
@@ -276,7 +278,17 @@ export default async function CityHubPage({ params }: PageProps) {
               </span>
               <span className="text-xs text-slate-500 flex items-center gap-1 bg-white px-2.5 py-1 rounded-full border border-slate-200">
                 <Building2 className="h-3.5 w-3.5 text-slate-400" />
-                {city.supplier}
+                {supplierMeta ? (
+                  <Link
+                    href={`/suppliers/${supplierMeta.slug}`}
+                    className="hover:text-blue-600 hover:underline transition-colors font-medium"
+                    title={`View ${supplierMeta.name} water hardness coverage and report`}
+                  >
+                    {city.supplier}
+                  </Link>
+                ) : (
+                  city.supplier
+                )}
               </span>
               <span className="text-xs text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">
                 {city.region}
@@ -520,7 +532,18 @@ export default async function CityHubPage({ params }: PageProps) {
                   WaterHardness.uk Technical &amp; Water Quality Research Team
                 </div>
                 <div className="text-slate-500 mt-0.5">
-                  Data sourced from {city.supplier} compliance reports and Drinking Water Inspectorate (DWI) public records.
+                  Data sourced from{" "}
+                  {supplierMeta ? (
+                    <Link
+                      href={`/suppliers/${supplierMeta.slug}`}
+                      className="hover:text-blue-600 hover:underline font-semibold"
+                    >
+                      {city.supplier}
+                    </Link>
+                  ) : (
+                    city.supplier
+                  )}{" "}
+                  compliance reports and Drinking Water Inspectorate (DWI) public records.
                 </div>
               </div>
             </div>
