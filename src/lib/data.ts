@@ -51,32 +51,48 @@ export async function getHardnessRankings() {
 
 // 2. TỐI ƯU TRANG DIRECTORY (Danh sách tất cả Outcode - VD: /outcodes)
 export async function getAllOutcodesFromDB() {
+  // Query pre-aggregated view to reduce serverless RAM usage from 15,000 raw rows to ~2,800 outcodes
   const { data, error } = await supabase
-    .from("water_hardness_sectors")
-    .select("outcode, company_name")
-    .limit(15000); // Giới hạn 15000 bản ghi để tránh quá tải
-  if (error || !data) {
-    console.error("Lỗi fetch Directory Outcodes:", error);
-    return [];
+    .from("water_hardness_outcodes_summary")
+    .select("outcode, company_name, sector_count, avg_ppm, avg_clark_degrees")
+    .order("outcode", { ascending: true });
+
+  if (error || !data || data.length === 0) {
+    // Graceful fallback to raw table if the database view migration has not run yet
+    const { data: rawData, error: rawError } = await supabase
+      .from("water_hardness_sectors")
+      .select("outcode, company_name")
+      .limit(15000);
+
+    if (rawError || !rawData) {
+      console.error("Lỗi fetch Directory Outcodes:", error || rawError);
+      return [];
+    }
+
+    const outcodeMap = new Map<string, { outcode: string; company: string; count: number }>();
+    rawData.forEach((row) => {
+      const existing = outcodeMap.get(row.outcode);
+      if (existing) {
+        existing.count += 1;
+      } else {
+        outcodeMap.set(row.outcode, {
+          outcode: row.outcode,
+          company: row.company_name,
+          count: 1,
+        });
+      }
+    });
+
+    return Array.from(outcodeMap.values()).sort((a, b) => a.outcode.localeCompare(b.outcode));
   }
 
-  // Gom nhóm theo Outcode và đếm số lượng Sector bên trong
-  const outcodeMap = new Map<string, { outcode: string; company: string; count: number }>();
-
-  data.forEach((row) => {
-    const existing = outcodeMap.get(row.outcode);
-    if (existing) {
-      existing.count += 1;
-    } else {
-      outcodeMap.set(row.outcode, {
-        outcode: row.outcode,
-        company: row.company_name,
-        count: 1,
-      });
-    }
-  });
-
-  return Array.from(outcodeMap.values()).sort((a, b) => a.outcode.localeCompare(b.outcode));
+  return data.map((row) => ({
+    outcode: row.outcode,
+    company: row.company_name,
+    count: Number(row.sector_count) || 1,
+    avgPpm: Number(row.avg_ppm) || 0,
+    avgClarkDegrees: Number(row.avg_clark_degrees) || 0,
+  }));
 }
 
 // 3. TỐI ƯU TRANG TRUY VẤN OUTCODE (VD: Trang tổng quan khu vực /outcode/AB10)
@@ -201,6 +217,7 @@ export async function getTopSectorsForBuild() {
 
 // 7. Lấy danh sách Outcode thuộc về một Thành phố dựa theo tiền tố Outcode (VD: ["SW", "SE", "E", ...])
 export async function getOutcodesForCity(outcodePrefixes: string[]) {
+  if (!outcodePrefixes || outcodePrefixes.length === 0) return [];
   const allOutcodes = await getAllOutcodesFromDB();
   return allOutcodes
     .filter((item) => {
