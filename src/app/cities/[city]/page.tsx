@@ -7,6 +7,7 @@ import { getOutcodesForCity } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
 import CityOutcodeGrid from "./CityOutcodeGrid";
 import QuoteRequestCard from "@/components/lead/QuoteRequestCard";
+import { WaterHardnessGauge } from "@/components/visual";
 import {
   Droplets,
   ShieldCheck,
@@ -317,26 +318,41 @@ export default async function CityHubPage({ params }: PageProps) {
                   </span>
                 </div>
 
-                <div className="flex flex-wrap items-baseline gap-3 mb-4">
-                  <span className="text-5xl sm:text-6xl font-black tracking-tight text-slate-900">
-                    {city.avgPpm}
-                  </span>
-                  <span className="text-xl font-bold text-slate-600">PPM (mg/L CaCO3)</span>
-                </div>
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-baseline gap-3 mb-4">
+                      <span className="text-5xl sm:text-6xl font-black tracking-tight text-slate-900">
+                        {city.avgPpm}
+                      </span>
+                      <span className="text-xl font-bold text-slate-600">PPM (mg/L CaCO3)</span>
+                    </div>
 
-                {/* Multi-unit scales */}
-                <div className="grid grid-cols-3 gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 mb-6">
-                  <div>
-                    <div className="text-xs text-slate-500">Clark Degrees</div>
-                    <div className="text-base font-bold text-slate-900">{city.clarkDegrees}° Clark</div>
+                    {/* Multi-unit scales */}
+                    <div className="grid grid-cols-3 gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                      <div>
+                        <div className="text-xs text-slate-500">Clark Degrees</div>
+                        <div className="text-base font-bold text-slate-900">{city.clarkDegrees}° Clark</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-slate-500">French Scale</div>
+                        <div className="text-base font-bold text-slate-900">{frenchDegrees}°fH</div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-slate-500">German Scale</div>
+                        <div className="text-base font-bold text-slate-900">{germanDegrees}°dH</div>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="text-xs text-slate-500">French Scale</div>
-                    <div className="text-base font-bold text-slate-900">{frenchDegrees}°fH</div>
-                  </div>
-                  <div>
-                    <div className="text-xs text-slate-500">German Scale</div>
-                    <div className="text-base font-bold text-slate-900">{germanDegrees}°dH</div>
+
+                  {/* Dynamic Speedometer Gauge */}
+                  <div className="w-full md:w-[280px] shrink-0">
+                    <WaterHardnessGauge
+                      ppm={city.avgPpm}
+                      outcodeOrCityName={city.name}
+                      category={city.hardnessCategory}
+                      showDetails={false}
+                      className="p-4 border-slate-100 bg-slate-50/70 shadow-none"
+                    />
                   </div>
                 </div>
 

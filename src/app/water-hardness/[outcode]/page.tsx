@@ -6,6 +6,7 @@ import { getSeoDates } from "@/lib/seoDates";
 import { getCityByOutcode } from "@/lib/citiesData";
 import { findSupplierByName } from "@/lib/suppliersData";
 import QuoteRequestCard from "@/components/lead/QuoteRequestCard";
+import { WaterHardnessGauge, LimescaleImpactDiagram } from "@/components/visual";
 import { 
   Droplets, 
   ShieldCheck, 
@@ -348,8 +349,8 @@ export default async function OutcodeHubPage({ params }: PageProps) {
             )}
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-800 pb-10">
-            <div>
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 border-b border-slate-800 pb-10">
+            <div className="flex-1">
               <h1 className="text-4xl sm:text-6xl font-black tracking-tight uppercase">
                 Water Hardness in <span className="text-cyan-400">{outcode}</span>
               </h1>
@@ -407,20 +408,31 @@ export default async function OutcodeHubPage({ params }: PageProps) {
               </div>
             </div>
 
-            <div className="bg-slate-800/90 p-6 rounded-3xl border border-slate-700/80 shrink-0 text-center sm:text-right shadow-xl">
-              <span className="text-slate-400 text-xs font-semibold block uppercase tracking-wider">
-                Outcode Mean Hardness
-              </span>
-              <span className="text-4xl sm:text-5xl font-black text-cyan-400 block mt-1">
-                {avgPpm}
-                <span className="text-xs font-normal text-slate-400"> PPM</span>
-              </span>
-              <span className="text-sm font-bold text-slate-200 block mt-1">
-                {clarkDegrees}° Clark • {hardnessCategoryText}
-              </span>
-              <span className="text-[11px] text-slate-400 block mt-1">
-                {frenchDegrees}°fH • {germanDegrees}°dH
-              </span>
+            {/* HERO VISUAL METER & STAT GROUP */}
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-4 shrink-0 lg:w-[340px]">
+              <WaterHardnessGauge
+                ppm={avgPpm}
+                outcodeOrCityName={`Outcode ${outcode}`}
+                category={hardnessCategoryText}
+                showDetails={false}
+                className="shadow-2xl text-slate-900 border-slate-700"
+              />
+
+              <div className="bg-slate-800/90 p-5 rounded-2xl border border-slate-700/80 text-center sm:text-right shadow-xl">
+                <span className="text-slate-400 text-xs font-semibold block uppercase tracking-wider">
+                  Outcode Mean Hardness
+                </span>
+                <span className="text-4xl font-black text-cyan-400 block mt-1">
+                  {avgPpm}
+                  <span className="text-xs font-normal text-slate-400"> PPM</span>
+                </span>
+                <span className="text-xs font-bold text-slate-200 block mt-1">
+                  {clarkDegrees}° Clark • {hardnessCategoryText}
+                </span>
+                <span className="text-[11px] text-slate-400 block mt-0.5">
+                  {frenchDegrees}°fH • {germanDegrees}°dH
+                </span>
+              </div>
             </div>
           </div>
 
@@ -693,6 +705,16 @@ export default async function OutcodeHubPage({ params }: PageProps) {
                 {applianceLifespanImpact}.
               </p>
             </div>
+          </div>
+
+          {/* Technical Boiler Heat Exchanger Cross-Section Diagram */}
+          <div className="mt-8 border-t border-slate-800 pt-8">
+            <LimescaleImpactDiagram
+              annualGasBill={1200}
+              initialScaleThicknessMm={isVeryHard ? 3.0 : isHard ? 1.5 : isModerate ? 1.0 : 0.5}
+              showStandardsGuide={true}
+              className="border-slate-700 shadow-xl"
+            />
           </div>
         </section>
 
