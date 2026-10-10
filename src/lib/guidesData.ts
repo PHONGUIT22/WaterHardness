@@ -5512,6 +5512,17 @@ export function getGuidesByCategory(category: GuideArticle["category"]): GuideAr
 }
 
 /**
+ * Finds a primary guide article explicitly associated with a specific UK postal outcode.
+ */
+export function getGuideForOutcode(outcode: string): GuideArticle | undefined {
+  if (!outcode) return undefined;
+  const clean = outcode.trim().toUpperCase();
+  return guidesData.find((g) =>
+    g.relatedOutcodes?.some((o) => o.toUpperCase() === clean)
+  );
+}
+
+/**
  * Finds guides related to a specific UK postal outcode.
  * Matches explicit relatedOutcodes list, or by outcode alpha prefix.
  */

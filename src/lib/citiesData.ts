@@ -23,6 +23,7 @@ export interface CityData {
   outcodePrefixes: string[];
   editorialSummary: string;
   faqItems: CityFaqItem[];
+  relatedGuideSlug?: string;
 }
 
 export const citiesData: CityData[] = [
@@ -39,6 +40,7 @@ export const citiesData: CityData[] = [
     metaTitle: "London Water Hardness Guide",
     metaDescription: "Check London water hardness levels across all postcodes. Compare Thames Water PPM ratings, kettle descaling advice, and dishwasher salt settings.",
     outcodePrefixes: ["SW", "SE", "E", "EC", "W", "WC", "N", "NW"],
+    relatedGuideSlug: "london-water-hardness-by-postcode",
     editorialSummary: "London tap water is famously hard, filtered naturally through the deep chalk aquifers of the Thames Basin and the Chiltern Hills. Across the capital, mineral levels frequently exceed 275 PPM CaCO3, leading to rapid kettle furring, crusty showerheads, and an oily scum floating on your morning cuppa. For London homeowners, heating system scale is a serious expense: a 1.5mm limescale crust inside a combi boiler heat exchanger cuts thermal efficiency by up to 12%, making annual chemical inhibitor dosing under British Standard BS 7593 essential. London renters can easily tackle kettle scale by boiling one tablespoon of citric acid once a fortnight.",
     faqItems: [
       {
@@ -72,6 +74,7 @@ export const citiesData: CityData[] = [
     metaTitle: "Birmingham Water Hardness Guide",
     metaDescription: "Check Birmingham water hardness levels and PPM ratings. Find Severn Trent Elan Valley soft water facts, kettle care, and dishwasher salt guidance.",
     outcodePrefixes: ["B"],
+    relatedGuideSlug: "does-birmingham-have-hard-water",
     editorialSummary: "Unlike southern England, Birmingham enjoys some of the purest, softest municipal water in the UK. The majority of the city's tap water travels 73 miles by gravity alone from the Elan Valley reservoirs in Mid-Wales via the historic Elan Aqueduct. With average hardness hovering around 48 PPM, Birmingham residents rarely struggle with furred kettles, limescale-choked taps, or scum on their tea. Shampoos and soaps lather effortlessly with a fraction of the product needed down south. However, northern suburbs like Sutton Coldfield draw from local groundwater blend wells, where hardness can rise into moderately hard territory.",
     faqItems: [
       {
@@ -101,6 +104,7 @@ export const citiesData: CityData[] = [
     metaTitle: "Manchester Water Hardness Guide",
     metaDescription: "Check Manchester water hardness and United Utilities PPM ratings. Discover Lake District soft water facts, appliance care, and salt requirements.",
     outcodePrefixes: ["M"],
+    relatedGuideSlug: "manchester-water-hardness",
     editorialSummary: "Greater Manchester is blessed with exceptionally soft, refreshing tap water, supplied primarily by United Utilities from the Lake District national park (Thirlmere and Haweswater reservoirs) and the Pennine Moors. Averaging just 35 PPM CaCO3, Manchester's water is remarkably kind to domestic appliances. Kettles stay sparkling clean for months without descaling, showers remain clear of calcium stains, and combi boiler heat exchangers operate free of limescale constriction. If you move to Manchester from London or the South East, you will immediately notice that a single pea-sized drop of washing-up liquid produces a sink full of suds.",
     faqItems: [
       {
@@ -188,6 +192,7 @@ export const citiesData: CityData[] = [
     metaTitle: "Bristol Water Hardness Guide",
     metaDescription: "Check Bristol water hardness levels across all postcodes. Compare Mendip Hills hard water PPM, kettle descaling, and dishwasher salt settings.",
     outcodePrefixes: ["BS"],
+    relatedGuideSlug: "does-bristol-have-hard-water",
     editorialSummary: "Bristol's water is notoriously hard, sourced from rainwater percolating through the carboniferous limestone of the Mendip Hills, Chew Valley Lake, and Blagdon Lake. With average mineral concentrations reaching 285 PPM, Bristol homes face constant limescale battles. Kettles fur up within weeks, tap spouts clog with white crystalline grit, and tea is prone to a chalky aftertaste. Without water softener protection, hot water cylinders and combi boilers suffer reduced efficiency and premature heat exchanger failures. We recommend regular citric acid boiling for kettles and rigorous dishwasher salt maintenance.",
     faqItems: [
       {
@@ -246,6 +251,7 @@ export const citiesData: CityData[] = [
     metaTitle: "Leeds Water Hardness Guide",
     metaDescription: "Check Leeds water hardness levels and Yorkshire Water PPM. Explore moorland reservoir soft water facts, kettle care, and dishwasher settings.",
     outcodePrefixes: ["LS"],
+    relatedGuideSlug: "does-leeds-have-hard-water",
     editorialSummary: "Leeds tap water is primarily soft, sourced from Yorkshire Water's extensive network of Pennine moorland reservoirs in the Washburn and Wharfe valleys, alongside water pumped from the River Ouse and River Derwent. While central and northern Leeds enjoy soft water around 55–75 PPM, eastern suburbs toward Garforth and Micklefield receive blended river water that can creep into moderately hard territory. For the majority of Leeds households, limescale accumulation in kettles is negligible and soaps lather smoothly.",
     faqItems: [
       {
@@ -275,6 +281,7 @@ export const citiesData: CityData[] = [
     metaTitle: "Sheffield Water Hardness Guide",
     metaDescription: "Check Sheffield water hardness ratings and Yorkshire Water PPM. Discover Peak District soft water qualities, kettle care, and salt settings.",
     outcodePrefixes: ["S"],
+    relatedGuideSlug: "does-sheffield-have-hard-or-soft-water",
     editorialSummary: "Sheffield benefits from exceptionally soft upland tap water, collected from the Peak District moorlands and reservoirs along the Rivelin, Loxley, and Ewden valleys. Averaging roughly 46 PPM, Sheffield's water is free from significant calcium and magnesium concentrations. Local kettles remain spotless, shower enclosures resist water spotting, and laundry washes soft without fabric conditioners. Combi boilers run efficiently with zero limescale burden on heat exchangers, though heating systems must remain treated with anti-corrosion inhibitor.",
     faqItems: [
       {
@@ -362,6 +369,7 @@ export const citiesData: CityData[] = [
     metaTitle: "Cardiff Water Hardness Guide",
     metaDescription: "Check Cardiff water hardness levels and Welsh Water PPM. Discover Brecon Beacons soft upland reservoir water, appliance care, and salt tips.",
     outcodePrefixes: ["CF"],
+    relatedGuideSlug: "welsh-water-hardness-cardiff-swansea",
     editorialSummary: "Cardiff tap water is pleasantly soft, supplied by Dŵr Cymru Welsh Water from the scenic upland reservoirs of the Brecon Beacons, including Llwyn-on, Cantref, and Beacons reservoirs in the Taff catchment. With average hardness of roughly 72 PPM, Welsh capital households enjoy low-limescale living. Kettles need only occasional cleaning, taps do not clog with scale crusts, and morning tea brews bright and aromatic. While boiler limescale is minimal, central heating systems still require regular corrosion inhibitor maintenance.",
     faqItems: [
       {
@@ -391,6 +399,7 @@ export const citiesData: CityData[] = [
     metaTitle: "Belfast Water Hardness Guide",
     metaDescription: "Check Belfast water hardness levels and NI Water PPM. Discover Mourne Mountains soft water facts, kettle maintenance, and dishwasher settings.",
     outcodePrefixes: ["BT"],
+    relatedGuideSlug: "does-belfast-have-hard-water",
     editorialSummary: "Belfast tap water is predominantly soft, sourced by Northern Ireland Water from the granite peaks of the Mourne Mountains (Silent Valley reservoir) and Lough Neagh. With mineral hardness averaging around 68 PPM, Belfast homeowners avoid the destructive limescale issues prevalent in southern England. Domestic kettles stay clear of fur, soap suds form rapidly in the shower, and combi boilers run efficiently without heavy mineral scaling on internal heat exchangers.",
     faqItems: [
       {
@@ -420,6 +429,7 @@ export const citiesData: CityData[] = [
     metaTitle: "Southampton Water Hardness Guide",
     metaDescription: "Check Southampton water hardness levels and Southern Water PPM. Learn about chalk aquifer hard water, kettle descaling, and boiler protection.",
     outcodePrefixes: ["SO"],
+    relatedGuideSlug: "southern-water-hardness-guide-hampshire",
     editorialSummary: "Southampton has some of the hardest water in Hampshire, averaging 295 PPM CaCO3. Southern Water draws supply from deep chalk boreholes and groundwater-fed rivers including the River Test and River Itchen. These pure chalk-filtered waters carry heavy concentrations of dissolved calcium bicarbonate. As a result, kettles develop a thick fur within weeks, chrome bathroom fittings become cloudy, and boiler heat exchangers can lose up to 15% efficiency over time if left unprotected.",
     faqItems: [
       {
@@ -449,6 +459,7 @@ export const citiesData: CityData[] = [
     metaTitle: "Leicester Water Hardness Guide",
     metaDescription: "Check Leicester water hardness levels and Severn Trent PPM ratings. Compare East Midlands hard water facts, kettle descaling, and salt settings.",
     outcodePrefixes: ["LE"],
+    relatedGuideSlug: "does-leicester-have-hard-water",
     editorialSummary: "Leicester tap water falls firmly into the hard water category, with an average hardness rating of 245 PPM. Sourced by Severn Trent from regional surface reservoirs (like Cropston and Thornton) and blended with River Dove and Derwent transfers, the water dissolves significant mineral content from the local Triassic mudstones and limestones. Leicester homeowners must regularly descale kettles, clear white crust from tap aerators, and ensure combi boilers are protected with heating inhibitors.",
     faqItems: [
       {
@@ -499,6 +510,7 @@ export const citiesData: CityData[] = [
     slug: "brighton",
     supplier: "Southern Water",
     region: "South East",
+    relatedGuideSlug: "does-brighton-have-hard-water",
     avgPpm: 285,
     clarkDegrees: 19.9,
     hardnessCategory: "Hard Water",
@@ -528,6 +540,7 @@ export const citiesData: CityData[] = [
     slug: "plymouth",
     supplier: "South West Water",
     region: "South West",
+    relatedGuideSlug: "south-west-water-hardness-exeter-plymouth",
     avgPpm: 34,
     clarkDegrees: 2.4,
     hardnessCategory: "Soft Water",
@@ -557,6 +570,7 @@ export const citiesData: CityData[] = [
     slug: "stoke-on-trent",
     supplier: "Severn Trent Water",
     region: "West Midlands",
+    relatedGuideSlug: "does-stoke-on-trent-have-hard-water",
     avgPpm: 165,
     clarkDegrees: 11.5,
     hardnessCategory: "Moderately Hard",
@@ -644,6 +658,7 @@ export const citiesData: CityData[] = [
     slug: "swansea",
     supplier: "Dŵr Cymru Welsh Water",
     region: "Wales",
+    relatedGuideSlug: "welsh-water-hardness-cardiff-swansea",
     avgPpm: 45,
     clarkDegrees: 3.1,
     hardnessCategory: "Soft Water",
@@ -702,6 +717,7 @@ export const citiesData: CityData[] = [
     slug: "portsmouth",
     supplier: "Portsmouth Water",
     region: "South East",
+    relatedGuideSlug: "southern-water-hardness-guide-hampshire",
     avgPpm: 290,
     clarkDegrees: 20.3,
     hardnessCategory: "Hard Water",
@@ -760,6 +776,7 @@ export const citiesData: CityData[] = [
     slug: "reading",
     supplier: "Thames Water",
     region: "South East",
+    relatedGuideSlug: "does-reading-have-hard-water",
     avgPpm: 295,
     clarkDegrees: 20.6,
     hardnessCategory: "Hard Water",
@@ -789,6 +806,7 @@ export const citiesData: CityData[] = [
     slug: "norwich",
     supplier: "Anglian Water",
     region: "East of England",
+    relatedGuideSlug: "does-norwich-have-hard-water",
     avgPpm: 325,
     clarkDegrees: 22.7,
     hardnessCategory: "Very Hard Water",
@@ -847,6 +865,7 @@ export const citiesData: CityData[] = [
     slug: "oxford",
     supplier: "Thames Water",
     region: "South East",
+    relatedGuideSlug: "does-oxford-have-hard-water",
     avgPpm: 290,
     clarkDegrees: 20.3,
     hardnessCategory: "Hard Water",
@@ -876,6 +895,7 @@ export const citiesData: CityData[] = [
     slug: "exeter",
     supplier: "South West Water",
     region: "South West",
+    relatedGuideSlug: "south-west-water-hardness-exeter-plymouth",
     avgPpm: 48,
     clarkDegrees: 3.4,
     hardnessCategory: "Soft Water",

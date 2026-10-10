@@ -440,6 +440,35 @@ export default async function CityHubPage({ params }: PageProps) {
           {/* Outcode Postcode Directory Grid (Step 2.3) */}
           <CityOutcodeGrid cityName={city.name} outcodes={outcodes} />
 
+          {/* In-Depth Guide Callout Banner (Closed-Loop Topic Cluster) */}
+          {city.relatedGuideSlug && (
+            <div className="mb-8 rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50/80 via-indigo-50/50 to-white p-5 sm:p-6 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex items-start gap-3.5">
+                <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5 sm:mt-0">
+                  <BookOpen className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-blue-700 block mb-0.5">
+                    In-Depth Local Field Guide
+                  </span>
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900">
+                    Looking for deeper household advice in {city.name}?
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
+                    Read our comprehensive engineer report on limescale removal, water softeners, and appliance calibrations.
+                  </p>
+                </div>
+              </div>
+              <Link
+                href={`/guides/${city.relatedGuideSlug}`}
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-blue-600 text-white text-xs sm:text-sm font-bold transition-all shrink-0 shadow-xs cursor-pointer"
+              >
+                <span>Read Full {city.name} Guide</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          )}
+
           {/* Practical Household Advice Box (Which?-style) */}
           <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm mb-8">
             <div className="mb-6">

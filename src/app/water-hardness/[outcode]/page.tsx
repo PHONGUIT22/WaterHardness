@@ -5,7 +5,7 @@ import { getOutcodeOverviewData, getAllOutcodesFromDB } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
 import { getCityByOutcode } from "@/lib/citiesData";
 import { findSupplierByName } from "@/lib/suppliersData";
-import { getGuidesByOutcode } from "@/lib/guidesData";
+import { getGuidesByOutcode, getGuideForOutcode } from "@/lib/guidesData";
 import QuoteRequestCard from "@/components/lead/QuoteRequestCard";
 import { WaterHardnessGauge, LimescaleImpactDiagram } from "@/components/visual";
 import { 
@@ -93,6 +93,7 @@ export default async function OutcodeHubPage({ params }: PageProps) {
   const cityMeta = getCityByOutcode(outcode);
   const supplierMeta = findSupplierByName(companyName);
   const relatedGuides = getGuidesByOutcode(outcode);
+  const relatedGuide = getGuideForOutcode(outcode);
 
   const softestPpm = softestSector?.avgPpm || avgPpm;
   const hardestPpm = hardestSector?.avgPpm || avgPpm;
@@ -667,6 +668,32 @@ export default async function OutcodeHubPage({ params }: PageProps) {
           <p>{paragraphGeology}</p>
           <p>{paragraphAppliance}</p>
         </article>
+
+        {/* LOCAL EXPERT GUIDE BANNER (CLOSED-LOOP PSEO CLUSTER) */}
+        {relatedGuide && (
+          <div className="mb-8 rounded-2xl border border-cyan-200 bg-gradient-to-r from-cyan-50/80 via-white to-blue-50/50 p-5 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-cyan-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+                <BookOpen className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-cyan-700 block">
+                  Regional Specialist Guide
+                </span>
+                <h4 className="font-bold text-slate-900 text-sm sm:text-base">
+                  Living in {outcode}? Read our in-depth regional report: {relatedGuide.title}
+                </h4>
+              </div>
+            </div>
+            <Link
+              href={`/guides/${relatedGuide.slug}`}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white text-xs font-bold transition-all shrink-0 shadow-2xs"
+            >
+              <span>Read Regional Guide</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        )}
 
         {/* LEVER 2: ANNUAL DISTRICT COST IMPACT (HOUSEHOLD ECONOMIC BURDEN) */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-md mb-8 border border-slate-800">
