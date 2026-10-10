@@ -1,0 +1,31 @@
+Category,URL,Path,City_Name,Slug,Region,Water_Supplier,Avg_PPM,Clark_Degrees,Hardness_Category,Outcode_Prefixes,Related_Guide_Slug
+City Hub,https://waterhardness.uk/cities/london,/cities/london,London,london,Greater London,Thames Water & Affinity Water,278,19.4,Hard Water,"SW, SE, E, EC, W, WC, N, NW",london-water-hardness-by-postcode
+City Hub,https://waterhardness.uk/cities/birmingham,/cities/birmingham,Birmingham,birmingham,West Midlands,Severn Trent Water,48,3.4,Soft Water,B,does-birmingham-have-hard-water
+City Hub,https://waterhardness.uk/cities/manchester,/cities/manchester,Manchester,manchester,North West,United Utilities,35,2.4,Soft Water,M,manchester-water-hardness
+City Hub,https://waterhardness.uk/cities/glasgow,/cities/glasgow,Glasgow,glasgow,Scotland,Scottish Water,22,1.5,Soft Water,G,None
+City Hub,https://waterhardness.uk/cities/liverpool,/cities/liverpool,Liverpool,liverpool,North West,United Utilities,42,2.9,Soft Water,L,None
+City Hub,https://waterhardness.uk/cities/bristol,/cities/bristol,Bristol,bristol,South West,Bristol Water,285,19.9,Hard Water,BS,does-bristol-have-hard-water
+City Hub,https://waterhardness.uk/cities/edinburgh,/cities/edinburgh,Edinburgh,edinburgh,Scotland,Scottish Water,38,2.7,Soft Water,EH,None
+City Hub,https://waterhardness.uk/cities/leeds,/cities/leeds,Leeds,leeds,Yorkshire & The Humber,Yorkshire Water,75,5.2,Soft Water,LS,does-leeds-have-hard-water
+City Hub,https://waterhardness.uk/cities/sheffield,/cities/sheffield,Sheffield,sheffield,Yorkshire & The Humber,Yorkshire Water,46,3.2,Soft Water,S,does-sheffield-have-hard-or-soft-water
+City Hub,https://waterhardness.uk/cities/newcastle,/cities/newcastle,Newcastle upon Tyne,newcastle,North East,Northumbrian Water,125,8.7,Moderately Hard,NE,None
+City Hub,https://waterhardness.uk/cities/nottingham,/cities/nottingham,Nottingham,nottingham,East Midlands,Severn Trent Water,265,18.5,Hard Water,NG,None
+City Hub,https://waterhardness.uk/cities/cardiff,/cities/cardiff,Cardiff,cardiff,Wales,Dŵr Cymru Welsh Water,72,5,Soft Water,CF,welsh-water-hardness-cardiff-swansea
+City Hub,https://waterhardness.uk/cities/belfast,/cities/belfast,Belfast,belfast,Northern Ireland,Northern Ireland Water,68,4.8,Soft Water,BT,does-belfast-have-hard-water
+City Hub,https://waterhardness.uk/cities/southampton,/cities/southampton,Southampton,southampton,South East,Southern Water,295,20.6,Hard Water,SO,southern-water-hardness-guide-hampshire
+City Hub,https://waterhardness.uk/cities/leicester,/cities/leicester,Leicester,leicester,East Midlands,Severn Trent Water,245,17.1,Hard Water,LE,does-leicester-have-hard-water
+City Hub,https://waterhardness.uk/cities/coventry,/cities/coventry,Coventry,coventry,West Midlands,Severn Trent Water,275,19.2,Hard Water,CV,None
+City Hub,https://waterhardness.uk/cities/brighton,/cities/brighton,Brighton & Hove,brighton,South East,Southern Water,285,19.9,Hard Water,BN,does-brighton-have-hard-water
+City Hub,https://waterhardness.uk/cities/plymouth,/cities/plymouth,Plymouth,plymouth,South West,South West Water,34,2.4,Soft Water,PL,south-west-water-hardness-exeter-plymouth
+City Hub,https://waterhardness.uk/cities/stoke-on-trent,/cities/stoke-on-trent,Stoke-on-Trent,stoke-on-trent,West Midlands,Severn Trent Water,165,11.5,Moderately Hard,ST,does-stoke-on-trent-have-hard-water
+City Hub,https://waterhardness.uk/cities/wolverhampton,/cities/wolverhampton,Wolverhampton,wolverhampton,West Midlands,Severn Trent Water,155,10.8,Moderately Hard,WV,None
+City Hub,https://waterhardness.uk/cities/derby,/cities/derby,Derby,derby,East Midlands,Severn Trent Water,230,16.1,Hard Water,DE,None
+City Hub,https://waterhardness.uk/cities/swansea,/cities/swansea,Swansea,swansea,Wales,Dŵr Cymru Welsh Water,45,3.1,Soft Water,SA,welsh-water-hardness-cardiff-swansea
+City Hub,https://waterhardness.uk/cities/aberdeen,/cities/aberdeen,Aberdeen,aberdeen,Scotland,Scottish Water,28,2,Soft Water,AB,None
+City Hub,https://waterhardness.uk/cities/portsmouth,/cities/portsmouth,Portsmouth,portsmouth,South East,Portsmouth Water,290,20.3,Hard Water,PO,southern-water-hardness-guide-hampshire
+City Hub,https://waterhardness.uk/cities/york,/cities/york,York,york,Yorkshire & The Humber,Yorkshire Water,240,16.8,Hard Water,YO,None
+City Hub,https://waterhardness.uk/cities/reading,/cities/reading,Reading,reading,South East,Thames Water,295,20.6,Hard Water,RG,does-reading-have-hard-water
+City Hub,https://waterhardness.uk/cities/norwich,/cities/norwich,Norwich,norwich,East of England,Anglian Water,325,22.7,Very Hard Water,NR,does-norwich-have-hard-water
+City Hub,https://waterhardness.uk/cities/cambridge,/cities/cambridge,Cambridge,cambridge,East of England,Cambridge Water,315,22,Very Hard Water,CB,None
+City Hub,https://waterhardness.uk/cities/oxford,/cities/oxford,Oxford,oxford,South East,Thames Water,290,20.3,Hard Water,OX,does-oxford-have-hard-water
+City Hub,https://waterhardness.uk/cities/exeter,/cities/exeter,Exeter,exeter,South West,South West Water,48,3.4,Soft Water,EX,south-west-water-hardness-exeter-plymouth
