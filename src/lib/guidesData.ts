@@ -4942,6 +4942,560 @@ export const guidesData: GuideArticle[] = [
         </div>
       </div>
     `,
+  },
+  {
+    slug: "does-reading-have-hard-water",
+    title: "Does Reading Have Hard Water? Thames Valley Limescale & Hardness Guide",
+    metaTitle: "Does Reading Have Hard Water? (Very Hard - 295 PPM Guide)",
+    metaDescription: "Is Reading water hard or soft? Reading tap water is very hard (295 PPM). Explore Thames Water supply, RG postcode breakdown, boiler scale & softener advice.",
+    targetKeyword: "reading water hardness",
+    category: "Regional Hardness",
+    datePublished: "2026-10-10T08:00:00Z",
+    dateModified: "2026-10-10T08:00:00Z",
+    readingTime: "7 min read",
+    quickVerdict: {
+      ppmRange: "265 – 320 PPM (mg/L CaCO3)",
+      classification: "Very Hard Water",
+      supplier: "Thames Water",
+      keyTakeaway: "Reading tap water is very hard (295 PPM), filtered through Cretaceous chalk in the Thames and Kennet basins. Causes rapid limescale crusting on combi boiler heat exchangers across RG postcodes."
+    },
+    relatedOutcodes: ["RG1", "RG2", "RG4", "RG6", "RG30"],
+    faqItems: [
+      {
+        question: "How hard is tap water in Reading?",
+        answer: "Tap water in Reading averages approximately 295 PPM (mg/L CaCO3) or 20.6° Clark, placing it officially in the 'Very Hard' drinking water bracket. Mineral levels range from 265 PPM in Caversham to over 320 PPM in Tilehurst, depending on localized groundwater borehole blending."
+      },
+      {
+        question: "Where does Reading get its tap water from?",
+        answer: "Thames Water supplies Reading from surface abstractions on the River Kennet and River Thames (treated at Fobney Water Treatment Works), blended with deep groundwater pumped from the Cretaceous White Chalk aquifer under the Berkshire Downs."
+      },
+      {
+        question: "What dishwasher salt setting should I choose in Reading?",
+        answer: "Set your dishwasher water softener to Level 4 or Level 5 (dial setting H05 on Bosch, Siemens, and Neff machines). Because Reading water is saturated with 295 PPM of dissolved limestone, standard detergent tablets alone cannot prevent permanent glassware clouding."
+      },
+      {
+        question: "Do I need a water softener in Reading?",
+        answer: "While not mandatory, a whole-house ion-exchange water softener is strongly recommended for Reading homes. Untreated 295 PPM water deposits a 1.5mm limescale crust inside combi boiler heat exchangers within 18 months, reducing energy efficiency by up to 12% and adding £140–£180 to annual gas bills."
+      },
+      {
+        question: "Does hard water in Reading cause dry skin and eczema?",
+        answer: "Yes. High calcium concentrations react with soaps and body washes to create an insoluble curd that binds to skin pores, stripping natural protective oils and frequently aggravating eczema, dermatitis, and scalp dryness."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        If you have recently moved to Reading or anywhere along the Kennet and Thames valleys in Berkshire, you have likely noticed chalky mineral residue on your bathroom tiles, kettle base, and shower screens. Tap water across Reading is officially classified as <strong>Very Hard Water</strong>, averaging <strong>295 PPM (parts per million)</strong> of calcium carbonate (20.6° Clark). Sourced from the mineral-saturated chalk aquifers of Berkshire and treated by Thames Water, domestic tap water in RG postcodes requires proactive household management to protect appliances and plumbing systems.
+      </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Does Reading Have Hard Water?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>Yes, Reading has very hard tap water</strong>, averaging 295 PPM (20.6° Clark). Sourced from the River Kennet and Cretaceous chalk boreholes across Berkshire, it causes rapid kettle furring, cloudy tea scum, and combi boiler heat exchanger scaling. Visit our <a href="/cities/reading" class="text-blue-600 font-semibold hover:underline">Reading Water Hardness City Hub</a> for full street-level postcode data.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Reading Water Hardness by Postcode District</h2>
+      <p class="text-slate-600 mb-4">
+        Drinking water quality across Reading is monitored and distributed by <strong>Thames Water</strong>. While the entire borough falls into the hard to very hard spectrum, exact mineral concentrations vary between northern riverside catchments and western elevated chalk sectors:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">Postcode</th>
+              <th class="border border-slate-200 p-3">Key Coverage &amp; Suburbs</th>
+              <th class="border border-slate-200 p-3">Average PPM</th>
+              <th class="border border-slate-200 p-3">Degrees Clark</th>
+              <th class="border border-slate-200 p-3">Official Band</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/rg1" class="hover:underline">RG1</a></td>
+              <td class="border border-slate-200 p-3">Reading Town Centre, Newtown, Katesgrove</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">295 PPM</td>
+              <td class="border border-slate-200 p-3">20.6° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/rg2" class="hover:underline">RG2</a></td>
+              <td class="border border-slate-200 p-3">Whitley, South Reading, Green Park, Madejski Stadium</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">300 PPM</td>
+              <td class="border border-slate-200 p-3">21.0° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/rg4" class="hover:underline">RG4</a></td>
+              <td class="border border-slate-200 p-3">Caversham, Mapledurham, Tokers Green, Chazey Heath</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">285 PPM</td>
+              <td class="border border-slate-200 p-3">19.9° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Hard to Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/rg6" class="hover:underline">RG6</a></td>
+              <td class="border border-slate-200 p-3">Earley, Lower Earley, University of Reading campus</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">290 PPM</td>
+              <td class="border border-slate-200 p-3">20.3° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/rg30" class="hover:underline">RG30</a></td>
+              <td class="border border-slate-200 p-3">Tilehurst, Southcote, Prospect Park, Norcot</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">310 PPM</td>
+              <td class="border border-slate-200 p-3">21.7° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Hydrogeological Origins: The Thames Valley &amp; Berkshire Downs Chalk</h2>
+      <p class="text-slate-600 mb-4">
+        The primary reason for Reading's severe mineral density is the ancient subterranean geology of Berkshire. Reading sits squarely in the western arm of the <strong>London Basin</strong>, directly underlain by the massive <strong>Cretaceous White Chalk formation</strong> and porous River Terrace gravels.
+      </p>
+      <p class="text-slate-600 mb-4">
+        Thames Water treats water abstracted from the <strong>River Kennet</strong> and <strong>River Thames</strong> at the Fobney Water Treatment Works, alongside groundwater boreholes sunk deep into the chalk bedrock across the Kennet Valley. Because the River Kennet itself is a world-renowned lowland chalk stream—fed almost entirely by springs bubbling out of the Berkshire and Marlborough Downs—the surface water already carries heavy concentrations of dissolved calcium and magnesium carbonates before it even reaches the water treatment plant.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Appliance Care &amp; Dishwasher Settings in Reading</h2>
+      <p class="text-slate-600 mb-4">
+        Living with 295 PPM water requires strict appliance calibration to prevent premature heating element failure and unsightly scale accumulation:
+      </p>
+      <ul class="list-disc pl-6 space-y-3 text-slate-600 mb-6">
+        <li>
+          <strong>Calibrate Dishwasher Softeners to H05 / Level 4:</strong> Standard 3-in-1 dishwasher tablets are formulated for water hardness up to 150 PPM. In Reading's 295 PPM water, you must charge the built-in ion-exchange salt chamber with coarse dishwasher salt and set the selector dial to H05 (Level 4 or 5) to avoid cloudy mineral etching on glassware.
+        </li>
+        <li>
+          <strong>Citric Acid Kettle Maintenance:</strong> A hard white limescale crust forms over heating elements within 10 to 14 days of boiling Reading tap water. Boil one tablespoon of natural food-grade citric acid in your kettle once a fortnight to dissolve the crust without harsh chemical fumes.
+        </li>
+        <li>
+          <strong>Compensate Detergent Dosing:</strong> Calcium ions bond with surfactant molecules in laundry detergents, neutralizing their cleaning power. Families in RG postcodes typically require 30% to 40% more laundry powder per load compared to soft water regions.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Combi Boiler Protection &amp; BS 7593 Compliance in Berkshire</h2>
+      <p class="text-slate-600 mb-4">
+        Under <strong>Part L of the UK Building Regulations</strong> and <strong>British Standard BS 7593:2019</strong>, central heating installations in areas where water hardness exceeds 200 PPM must be fitted with dedicated limescale treatment.
+      </p>
+      <div class="border border-rose-200 bg-rose-50/60 rounded-xl p-5 my-6">
+        <h3 class="text-base font-bold text-rose-900 mb-2">Thermal Efficiency Penalty of 295 PPM Water</h3>
+        <p class="text-sm text-rose-800 leading-relaxed mb-3">
+          Inside modern condensing combi boilers, secondary plate heat exchangers transfer burner heat across narrow stainless steel channels. In Reading, an untreated boiler accumulates 1.5mm of limescale crust in less than two years. Because calcium carbonate is an effective thermal insulator, this 1.5mm barrier forces the boiler to burn up to 12% more natural gas to reach target water temperatures, costing Berkshire homeowners between £140 and £180 extra per year.
+        </p>
+        <p class="text-sm text-rose-800 leading-relaxed font-semibold">
+          Gas Safe heating engineers across Reading advise homeowners to install an inline electrolytic scale inhibitor on the 15mm cold feed to the boiler, or install a whole-house ion-exchange water softener at the main stopcock.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Water Softener Solutions for Reading Homes</h2>
+      <p class="text-slate-600 mb-4">
+        Because chemical kettle descalers only treat localized symptoms, many Berkshire residents choose to install an <strong>ion-exchange water softener</strong>. Non-electric twin-cylinder softeners (such as Harvey, Kinetico, or TwinTec) provide 24/7 softened water without electrical timers:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li>Completely eliminates limescale formation across all showers, taps, and domestic boilers.</li>
+        <li>Reduces annual household shampoo, soap, and detergent consumption by over 50%.</li>
+        <li>Helps relieve skin tightness, dryness, and childhood eczema triggered by calcium mineral curds.</li>
+        <li>Protects hot water cylinders and preserves boiler manufacturer warranty clauses.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Explore Related Thames Valley &amp; Regional Hardness Guides</h2>
+      <p class="text-slate-600 mb-4">
+        Compare Reading's tap water metrics with neighbouring South East and Thames Valley conurbations:
+      </p>
+
+      <div class="border border-slate-200 rounded-xl p-5 bg-slate-50 my-6">
+        <h3 class="text-base font-bold text-slate-900 mb-2">Reading City Hub &amp; Regional Network</h3>
+        <p class="text-sm text-slate-600 mb-4">
+          Access comprehensive postcode breakdowns, interactive tools, and local supplier facts:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <a href="/cities/reading" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Reading City Water Hardness Hub &rarr;
+          </a>
+          <a href="/suppliers/thames-water" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Thames Water Supplier Overview &rarr;
+          </a>
+          <a href="/guides/thames-water-hardness-guide" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Thames Water Regional Hardness Guide &rarr;
+          </a>
+          <a href="/cities/oxford" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Oxford Water Hardness Report (290 PPM) &rarr;
+          </a>
+          <a href="/guides/how-to-prevent-combi-boiler-limescale" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm sm:col-span-2">
+            How to Prevent Combi Boiler Limescale Guide &rarr;
+          </a>
+        </div>
+      </div>
+    `,
+  },
+  {
+    slug: "southern-water-hardness-guide-hampshire",
+    title: "Hampshire Water Hardness Guide: Southampton & Portsmouth Tap Water Report",
+    metaTitle: "Hampshire Water Hardness: Southampton & Portsmouth Guide (295 PPM)",
+    metaDescription: "Is tap water hard in Southampton & Portsmouth? Hampshire tap water is very hard (290–295 PPM). Sourced from South Downs chalk. Check SO & PO postcodes & boiler tips.",
+    targetKeyword: "southampton water hardness",
+    category: "Regional Hardness",
+    datePublished: "2026-10-10T08:00:00Z",
+    dateModified: "2026-10-10T08:00:00Z",
+    readingTime: "8 min read",
+    quickVerdict: {
+      ppmRange: "260 – 320 PPM (mg/L CaCO3)",
+      classification: "Very Hard Water",
+      supplier: "Southern Water & Portsmouth Water",
+      keyTakeaway: "Tap water across Southampton and Portsmouth is very hard (290–295 PPM), drawn from pure South Downs chalk groundwater and the River Test/Itchen. High mineral density leads to frequent immersion heater and shower element failures."
+    },
+    relatedOutcodes: ["SO14", "SO15", "SO16", "PO1", "PO2", "PO4", "PO5"],
+    faqItems: [
+      {
+        question: "Is tap water hard in Southampton and Portsmouth?",
+        answer: "Yes, tap water throughout both Southampton and Portsmouth is classified as 'Very Hard', averaging between 290 and 295 PPM (20.3° to 20.6° Clark). Sourced from chalk aquifers and the world-famous chalk streams of Hampshire, local water contains heavy concentrations of dissolved calcium carbonate."
+      },
+      {
+        question: "Who supplies drinking water in Southampton vs Portsmouth?",
+        answer: "Southern Water supplies the city of Southampton, Eastleigh, and the Test Valley from River Test, River Itchen, and underground boreholes. Portsmouth Water supplies the city of Portsmouth, Havant, and Gosport, drawing water from the legendary natural chalk springs at Havant and Bedhampton."
+      },
+      {
+        question: "Why does water in Hampshire cause rapid limescale?",
+        answer: "The entire county of Hampshire is underlain by the massive Cretaceous White Chalk formation of the South Downs and Salisbury Plain. Pure rainwater dissolves huge quantities of calcium and bicarbonate ions as it filters through hundreds of feet of natural limestone, arriving at municipal taps saturated with limescale-forming minerals."
+      },
+      {
+        question: "What dishwasher salt setting is needed in Hampshire?",
+        answer: "Dishwashers across both SO and PO postcodes must be calibrated to high hardness (Level 4 or 5, or dial setting H05/H06). Operating dishwashers without granular salt in Hampshire causes persistent white glass haze and rapid heating element furring."
+      },
+      {
+        question: "Why do electric shower elements fail frequently in Southampton and Portsmouth?",
+        answer: "Electric showers heat water instantaneously over compact high-wattage copper elements. At 290–295 PPM, calcium precipitates out of solution in seconds, wrapping the element in an insulating crust of limescale that causes thermal hotspotting and premature burnout within 18–36 months."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        Hampshire boasts some of England's most scenic coastlines and world-renowned chalk streams, but for residents living in Southampton, Portsmouth, and the Solent conurbation, local tap water presents an ongoing household challenge. Tap water across Hampshire is officially classified as <strong>Very Hard Water</strong>, averaging between <strong>290 and 295 PPM (parts per million)</strong> of calcium carbonate (20.3° to 20.6° Clark). Supplied by Southern Water and Portsmouth Water from the subterranean South Downs chalk aquifer, local water causes rapid kettle encrustation, cloudy shower screens, and frequent immersion heater burnouts.
+      </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Is Hampshire Water Hard or Soft?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>Tap water in Southampton and Portsmouth is very hard (290–295 PPM)</strong>. Sourced from the South Downs chalk formation and the River Test and Itchen, it leaves persistent limescale on fixtures and combi boilers. Explore our dedicated <a href="/cities/southampton" class="text-blue-600 font-semibold hover:underline">Southampton Water Hardness Hub</a> and <a href="/cities/portsmouth" class="text-blue-600 font-semibold hover:underline">Portsmouth Water Hardness Hub</a> for local street ratings.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Hampshire Water Hardness by Postcode (SO &amp; PO Districts)</h2>
+      <p class="text-slate-600 mb-4">
+        Municipal supplies across the Solent maritime corridor are split between two primary water undertakers: <strong>Southern Water</strong> (serving Southampton and the Test Valley) and <strong>Portsmouth Water</strong> (serving Portsea Island, Havant, and Gosport):
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">Postcode</th>
+              <th class="border border-slate-200 p-3">District &amp; Key Suburbs</th>
+              <th class="border border-slate-200 p-3">Supplier</th>
+              <th class="border border-slate-200 p-3">Average PPM</th>
+              <th class="border border-slate-200 p-3">Degrees Clark</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/so14" class="hover:underline">SO14</a></td>
+              <td class="border border-slate-200 p-3">Southampton City Centre, Ocean Village, St Marys</td>
+              <td class="border border-slate-200 p-3">Southern Water</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">290 PPM</td>
+              <td class="border border-slate-200 p-3">20.3° Clark</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/so15" class="hover:underline">SO15</a></td>
+              <td class="border border-slate-200 p-3">Shirley, Freemantle, Millbrook, Polygon</td>
+              <td class="border border-slate-200 p-3">Southern Water</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">285 PPM</td>
+              <td class="border border-slate-200 p-3">19.9° Clark</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/so16" class="hover:underline">SO16</a></td>
+              <td class="border border-slate-200 p-3">Bassett, Lordshill, Chilworth, Rownhams</td>
+              <td class="border border-slate-200 p-3">Southern Water</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">295 PPM</td>
+              <td class="border border-slate-200 p-3">20.6° Clark</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/po1" class="hover:underline">PO1</a></td>
+              <td class="border border-slate-200 p-3">Portsmouth Historic Dockyard, Portsea, Landport</td>
+              <td class="border border-slate-200 p-3">Portsmouth Water</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">295 PPM</td>
+              <td class="border border-slate-200 p-3">20.6° Clark</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/po2" class="hover:underline">PO2</a></td>
+              <td class="border border-slate-200 p-3">North End, Hilsea, Stamshaw, Tipner</td>
+              <td class="border border-slate-200 p-3">Portsmouth Water</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">290 PPM</td>
+              <td class="border border-slate-200 p-3">20.3° Clark</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/po4" class="hover:underline">PO4</a></td>
+              <td class="border border-slate-200 p-3">Southsea East, Milton, Eastney, Cumberland</td>
+              <td class="border border-slate-200 p-3">Portsmouth Water</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">295 PPM</td>
+              <td class="border border-slate-200 p-3">20.6° Clark</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/po5" class="hover:underline">PO5</a></td>
+              <td class="border border-slate-200 p-3">Southsea West, Old Portsmouth, Seafront</td>
+              <td class="border border-slate-200 p-3">Portsmouth Water</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">300 PPM</td>
+              <td class="border border-slate-200 p-3">21.0° Clark</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Hydrogeology of Hampshire: South Downs Chalk &amp; Bedhampton Springs</h2>
+      <p class="text-slate-600 mb-4">
+        The geological reason for Hampshire's extreme water hardness is the <strong>Upper Cretaceous Chalk formation</strong> that blankets the South Downs, the Hampshire Basin, and Salisbury Plain. This porous sedimentary rock acts as a colossal subterranean sponge, capturing millions of gallons of rainwater annually.
+      </p>
+      <p class="text-slate-600 mb-4">
+        As rain filters through hundreds of meters of calcium carbonate, it dissolves immense quantities of calcite. In Portsmouth, the majority of tap water is drawn from the famous <strong>Havant and Bedhampton natural chalk springs</strong>, where pure, heavily mineralized water surfaces under artesian pressure. In Southampton, Southern Water abstracts from deep boreholes alongside the River Test and River Itchen—both renowned as mineral-rich chalk streams. Consequently, tap water arrives at domestic meters saturated to near-maximum capacity with dissolved calcium and bicarbonate ions.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Coastal Appliance Strain: Showers, Cylinders &amp; Boiler Failure</h2>
+      <p class="text-slate-600 mb-4">
+        Operating water-heating equipment with 290–295 PPM water leads to pronounced maintenance costs across Hampshire:
+      </p>
+      <ul class="list-disc pl-6 space-y-3 text-slate-600 mb-6">
+        <li>
+          <strong>Instantaneous Electric Shower Element Burnout:</strong> Electric showers heat cold water instantly over a high-wattage copper coil. At 295 PPM, calcium precipitates out within seconds, forming an insulating crust over the element. The trapped heat causes localized hotspots and premature element burnout, requiring frequent cartridge replacements every 24 to 36 months.
+        </li>
+        <li>
+          <strong>Immersion Heater Failure in Hot Water Cylinders:</strong> Vented and unvented hot water cylinders across Southsea, Shirley, and central Southampton frequently accumulate 5 to 10 kilograms of loose limescale at the bottom of the tank within three years, choking immersion heaters and reducing recovery speeds.
+        </li>
+        <li>
+          <strong>Dishwasher Salt Requirement:</strong> Calibrate dishwashers to Level 4 or Level 5 (H05/H06). Operating machines on detergent tablets alone in Hampshire leads to etching and chalky film on glassware.
+        </li>
+        <li>
+          <strong>Kettle Descaling:</strong> Descale electric kettles fortnightly using food-grade citric acid or distilled white vinegar to maintain thermal efficiency and stop tea scum flakes.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Combi Boiler Protection &amp; BS 7593 Compliance in Hampshire</h2>
+      <p class="text-slate-600 mb-4">
+        Under <strong>British Standard BS 7593:2019</strong> and Building Regulations Part L, protecting modern high-efficiency combi boilers from limescale is a regulatory imperative in hard water areas like Hampshire:
+      </p>
+      <div class="border border-rose-200 bg-rose-50/60 rounded-xl p-5 my-6">
+        <h3 class="text-base font-bold text-rose-900 mb-2">The 12% Energy Penalty on Hampshire Boilers</h3>
+        <p class="text-sm text-rose-800 leading-relaxed mb-3">
+          Without scale reduction, secondary plate heat exchangers inside combi boilers accumulate 1.5mm of calcium carbonate scale within 18 months. This insulating layer cuts thermal conductivity significantly, driving up annual gas heating bills by over £145 per household and triggering loud boiler 'kettling' noises.
+        </p>
+        <p class="text-sm text-rose-800 leading-relaxed font-semibold">
+          Plumbing and heating engineers in Southampton and Portsmouth advise installing an inline electrolytic scale inhibitor or an ion-exchange water softener to safeguard boiler warranties and maintain Part L seasonal fuel efficiency.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Explore Related Solent &amp; South Coast Hardness Guides</h2>
+      <p class="text-slate-600 mb-4">
+        Explore regional water hardness data and utility breakdowns across the South Coast and South East:
+      </p>
+
+      <div class="border border-slate-200 rounded-xl p-5 bg-slate-50 my-6">
+        <h3 class="text-base font-bold text-slate-900 mb-2">Hampshire Hardness Network &amp; City Hubs</h3>
+        <p class="text-sm text-slate-600 mb-4">
+          Discover street-level postcode ratings, interactive tools, and appliance guides:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <a href="/cities/southampton" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Southampton Water Hardness Hub &rarr;
+          </a>
+          <a href="/cities/portsmouth" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Portsmouth Water Hardness Hub &rarr;
+          </a>
+          <a href="/suppliers/southern-water" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Southern Water Supplier Hub &rarr;
+          </a>
+          <a href="/guides/does-brighton-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Brighton Water Hardness Guide &rarr;
+          </a>
+          <a href="/guides/how-to-prevent-combi-boiler-limescale" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm sm:col-span-2">
+            How to Prevent Combi Boiler Limescale Guide &rarr;
+          </a>
+        </div>
+      </div>
+    `,
+  },
+  {
+    slug: "does-oxford-have-hard-water",
+    title: "Does Oxford Have Hard Water? Farmoor Reservoir & Limestone Breakdown",
+    metaTitle: "Does Oxford Have Hard Water? (Very Hard - 290 PPM Guide)",
+    metaDescription: "Is tap water hard or soft in Oxford? Oxford tap water is very hard (290 PPM). Explore Farmoor Reservoir, Thames limestone catchments, OX postcodes & kettle care.",
+    targetKeyword: "oxford water hardness",
+    category: "Regional Hardness",
+    datePublished: "2026-10-10T08:00:00Z",
+    dateModified: "2026-10-10T08:00:00Z",
+    readingTime: "7 min read",
+    quickVerdict: {
+      ppmRange: "260 – 320 PPM (mg/L CaCO3)",
+      classification: "Very Hard Water",
+      supplier: "Thames Water",
+      keyTakeaway: "Yes, Oxford tap water is very hard (290 PPM), sourced from Farmoor Reservoir and Thames gravel aquifers underlain by Jurassic limestone and chalk. Leaves stubborn tea scum and limescale buildup in kettles and boilers across OX postcodes."
+    },
+    relatedOutcodes: ["OX1", "OX2", "OX3", "OX4"],
+    faqItems: [
+      {
+        question: "Is Oxford tap water hard or soft?",
+        answer: "Oxford tap water is officially classified as very hard, averaging 290 PPM (mg/L CaCO3) or 20.3° Clark. Readings across the city range from 260 PPM in Summertown and Jericho to 320 PPM in Headington and Cowley."
+      },
+      {
+        question: "Where does Oxford's municipal tap water come from?",
+        answer: "Thames Water supplies Oxford predominantly from Farmoor Reservoir, a large pumped-storage reservoir fed by the Upper River Thames. This is blended with groundwater abstracted from gravel aquifers and deep boreholes in the Oxfordshire Jurassic limestone."
+      },
+      {
+        question: "Why does tea made in Oxford develop a scum or oil film on top?",
+        answer: "The infamous 'Oxford tea scum' occurs when high concentrations of calcium carbonate (290 PPM) react with organic tannins and polyphenols extracted from black tea leaves during brewing. The insoluble calcium-theaflavin complexes float to the surface, creating an unsightly iridescent film."
+      },
+      {
+        question: "What dishwasher setting should I choose in Oxford?",
+        answer: "Set your dishwasher water softener to Level 4 or Level 5 (dial setting H05). Because Oxford water is saturated with 290 PPM of minerals, regular replenishment of coarse dishwasher salt is essential to prevent milky mineral haze on glassware."
+      },
+      {
+        question: "How does Oxford hard water affect combi boilers and heating bills?",
+        answer: "At 290 PPM, limescale accumulates inside secondary plate heat exchangers over 12–18 months. A 1.5mm scale crust acts as an insulator, reducing boiler thermal efficiency by 12% under BS 7593 benchmarks and costing typical Oxfordshire households over £140 per year in wasted gas."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        Oxford may be celebrated worldwide for its dreaming spires and ancient colleges, but beneath its historic cobblestones flows some of the most heavily mineralized tap water in the United Kingdom. Tap water across Oxford is officially classified as <strong>Very Hard Water</strong>, averaging <strong>290 PPM (parts per million)</strong> of calcium carbonate (20.3° Clark). Supplied and treated by Thames Water from the Upper River Thames and Farmoor Reservoir, Oxford tap water contains abundant dissolved calcium and magnesium that precipitate out as stubborn limescale inside kettles, boilers, and domestic pipework.
+      </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Does Oxford Have Hard Water?</p>
+        <p class="text-slate-700 text-sm">
+          <strong>Yes, Oxford has very hard tap water</strong>, averaging 290 PPM (20.3° Clark). Sourced from Farmoor Reservoir and limestone aquifers across the Upper Thames basin, it causes persistent kettle scaling, floating tea scum, and boiler heat exchanger efficiency loss. Explore our <a href="/cities/oxford" class="text-blue-600 font-semibold hover:underline">Oxford Water Hardness City Hub</a> for full local data.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Oxford Water Hardness by Postcode District</h2>
+      <p class="text-slate-600 mb-4">
+        Managed by <strong>Thames Water</strong>, drinking water across Oxford shifts along a high-hardness corridor depending on proximity to the Farmoor treatment works and local limestone borehole blending:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">Postcode</th>
+              <th class="border border-slate-200 p-3">Key Suburbs &amp; Districts</th>
+              <th class="border border-slate-200 p-3">Average PPM</th>
+              <th class="border border-slate-200 p-3">Degrees Clark</th>
+              <th class="border border-slate-200 p-3">Classification</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/ox1" class="hover:underline">OX1</a></td>
+              <td class="border border-slate-200 p-3">Oxford City Centre, Grandpont, South Hinksey, University Colleges</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">290 PPM</td>
+              <td class="border border-slate-200 p-3">20.3° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/ox2" class="hover:underline">OX2</a></td>
+              <td class="border border-slate-200 p-3">Jericho, Summertown, Wolvercote, North Oxford, Sunnymead</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">285 PPM</td>
+              <td class="border border-slate-200 p-3">19.9° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Hard to Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/ox3" class="hover:underline">OX3</a></td>
+              <td class="border border-slate-200 p-3">Headington, Marston, Barton, John Radcliffe Hospital</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">300 PPM</td>
+              <td class="border border-slate-200 p-3">21.0° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-600"><a href="/water-hardness/ox4" class="hover:underline">OX4</a></td>
+              <td class="border border-slate-200 p-3">Cowley, Iffley, Blackbird Leys, Rose Hill, Littlemore</td>
+              <td class="border border-slate-200 p-3 font-semibold text-rose-700">295 PPM</td>
+              <td class="border border-slate-200 p-3">20.6° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">Very Hard</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Hydrogeology of Oxford: Farmoor Reservoir &amp; Jurassic Limestone</h2>
+      <p class="text-slate-600 mb-4">
+        The reason for Oxford's high mineral content lies in the geology of the <strong>Cotswolds and the Upper Thames Catchment</strong>. The River Thames originates in Gloucestershire, flowing across permeable strata of <strong>Jurassic Oolitic Limestone</strong>, Corallian limestone ridges, and Cretaceous chalk hills before reaching Oxfordshire.
+      </p>
+      <p class="text-slate-600 mb-4">
+        Thames Water abstracts river water into <strong>Farmoor Reservoir</strong>—a major pumped-storage facility located five miles west of the city. While treatment at the Farmoor Advanced Water Treatment Works removes organic matter, microscopic particulates, and bacteria to world-class standards, standard municipal filtration does not remove dissolved calcium and magnesium ions. Consequently, tap water piped into OX homes carries the full geological mineral load of the Cotswold limestone hills.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">The Infamous "Oxford Tea Scum" Chemistry</h2>
+      <p class="text-slate-600 mb-4">
+        Students and residents in Oxford frequently notice an oily, rainbow-sheened scum floating atop cups of tea. This is not grease or oil from the kettle, but a chemical reaction between <strong>calcium bicarbonate</strong> and <strong>theaflavins</strong> (organic polyphenols naturally present in black tea leaves).
+      </p>
+      <p class="text-slate-600 mb-4">
+        When freshly boiled 290 PPM water hits tea leaves, dissolved calcium bonds instantly with tannins to form insoluble precipitates that float to the surface and coat the inside of your ceramic mug. Using filtered water or installing an ion-exchange softener prevents this reaction, yielding clearer, brighter, and more aromatic hot drinks.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Appliance Care &amp; Dishwasher Settings in Oxford</h2>
+      <p class="text-slate-600 mb-4">
+        Operating domestic appliances with 290 PPM water requires consistent limescale management:
+      </p>
+      <ul class="list-disc pl-6 space-y-3 text-slate-600 mb-6">
+        <li>
+          <strong>Calibrate Dishwasher to Level 4 or Level 5 (H05):</strong> Multi-benefit dishwasher tablets cannot prevent limescale etching in Oxford's water. Keep the salt chamber filled with coarse regeneration salt to ensure glassware rinses streak-free.
+        </li>
+        <li>
+          <strong>Kettle Descaling Every 2 to 3 Weeks:</strong> A dense layer of white limescale crust forms on kettle heating bases quickly. Boil one tablespoon of citric acid powder with 500ml of water to dissolve the chalk in under 10 minutes.
+        </li>
+        <li>
+          <strong>Washing Machine Protection:</strong> Hard water minerals neutralize laundry detergents, requiring households in OX postcodes to dose 30% more detergent per wash cycle. Run an empty 60°C maintenance wash with citric acid every two months to keep heating elements clear.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Combi Boiler Protection &amp; BS 7593 Standards in Oxfordshire</h2>
+      <p class="text-slate-600 mb-4">
+        Under <strong>British Standard BS 7593:2019</strong> and Part L Building Regulations, central heating systems installed in hard water zones (>200 PPM) must include inline limescale protection:
+      </p>
+      <div class="border border-rose-200 bg-rose-50/60 rounded-xl p-5 my-6">
+        <h3 class="text-base font-bold text-rose-900 mb-2">The Impact of 290 PPM Water on Boilers</h3>
+        <p class="text-sm text-rose-800 leading-relaxed mb-3">
+          Inside modern condensing boilers, hot water passes through narrow secondary plate heat exchangers. In Oxford, a 1.5mm limescale encrustation accumulates over 18 months of domestic heating. This crust acts as a thermal barrier, forcing the boiler to burn roughly 12% more gas to reach standard radiator temperatures, wasting over £140 per year in fuel bills.
+        </p>
+        <p class="text-sm text-rose-800 leading-relaxed font-semibold">
+          Heating engineers across Oxford advise fitting an inline electrolytic scale reducer on the boiler cold feed or installing a whole-house ion-exchange water softener at the incoming mains stopcock.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Explore Related Thames Valley &amp; Regional Hardness Guides</h2>
+      <p class="text-slate-600 mb-4">
+        Compare Oxford's water profile with neighboring Thames Valley hubs and access technical guides:
+      </p>
+
+      <div class="border border-slate-200 rounded-xl p-5 bg-slate-50 my-6">
+        <h3 class="text-base font-bold text-slate-900 mb-2">Oxford City Hub &amp; Regional Hardness Network</h3>
+        <p class="text-sm text-slate-600 mb-4">
+          Access comprehensive postcode breakdowns, interactive tools, and local supplier facts:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <a href="/cities/oxford" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Oxford City Water Hardness Hub &rarr;
+          </a>
+          <a href="/guides/does-reading-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Reading Water Hardness Guide (295 PPM) &rarr;
+          </a>
+          <a href="/suppliers/thames-water" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Thames Water Supplier Overview &rarr;
+          </a>
+          <a href="/guides/thames-water-hardness-guide" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Thames Water Regional Hardness Guide &rarr;
+          </a>
+          <a href="/guides/how-to-prevent-combi-boiler-limescale" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm sm:col-span-2">
+            How to Prevent Combi Boiler Limescale Guide &rarr;
+          </a>
+        </div>
+      </div>
+    `,
   }
 ];
 
@@ -4956,3 +5510,40 @@ export function getGuideBySlug(slug: string): GuideArticle | undefined {
 export function getGuidesByCategory(category: GuideArticle["category"]): GuideArticle[] {
   return guidesData.filter((g) => g.category === category);
 }
+
+/**
+ * Finds guides related to a specific UK postal outcode.
+ * Matches explicit relatedOutcodes list, or by outcode alpha prefix.
+ */
+export function getGuidesByOutcode(outcode: string): GuideArticle[] {
+  if (!outcode) return [];
+  const clean = outcode.trim().toUpperCase();
+  const match = clean.match(/^[A-Z]+/);
+  const alphaPrefix = match ? match[0] : "";
+
+  return guidesData.filter((g) => {
+    if (!g.relatedOutcodes || g.relatedOutcodes.length === 0) return false;
+    // 1. Exact match
+    if (g.relatedOutcodes.some((o) => o.toUpperCase() === clean)) return true;
+    // 2. Alpha prefix match (e.g. RG1 matches RG in relatedOutcodes)
+    if (alphaPrefix && g.relatedOutcodes.some((o) => o.toUpperCase().startsWith(alphaPrefix))) return true;
+    return false;
+  });
+}
+
+/**
+ * Finds guides directly related to a city (by city slug, name, or keywords).
+ */
+export function getGuidesByCity(cityNameOrSlug: string): GuideArticle[] {
+  if (!cityNameOrSlug) return [];
+  const query = cityNameOrSlug.toLowerCase().trim().replace(/-/g, " ");
+  const slugQuery = cityNameOrSlug.toLowerCase().trim();
+
+  return guidesData.filter((g) => {
+    const slugMatch = g.slug.toLowerCase().includes(slugQuery);
+    const titleMatch = g.title.toLowerCase().includes(query);
+    const keywordMatch = g.targetKeyword.toLowerCase().includes(query);
+    return slugMatch || titleMatch || keywordMatch;
+  });
+}
+

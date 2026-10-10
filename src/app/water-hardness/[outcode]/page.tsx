@@ -5,6 +5,7 @@ import { getOutcodeOverviewData, getAllOutcodesFromDB } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
 import { getCityByOutcode } from "@/lib/citiesData";
 import { findSupplierByName } from "@/lib/suppliersData";
+import { getGuidesByOutcode } from "@/lib/guidesData";
 import QuoteRequestCard from "@/components/lead/QuoteRequestCard";
 import { WaterHardnessGauge, LimescaleImpactDiagram } from "@/components/visual";
 import { 
@@ -15,12 +16,13 @@ import {
   TrendingUp, 
   Building2, 
   ArrowRight, 
-  Scale,
-  Flame,
-  WashingMachine,
-  Activity,
-  CheckCircle2,
-  Check
+  Scale, 
+  Flame, 
+  WashingMachine, 
+  Activity, 
+  CheckCircle2, 
+  Check,
+  BookOpen
 } from "lucide-react";
 
 // BẬT ISR: Cache trang Outcode trên CDN trong 24 tiếng
@@ -90,6 +92,7 @@ export default async function OutcodeHubPage({ params }: PageProps) {
   const { outcode, companyName, avgPpm, totalSectors, softestSector, hardestSector, sectorsList } = data;
   const cityMeta = getCityByOutcode(outcode);
   const supplierMeta = findSupplierByName(companyName);
+  const relatedGuides = getGuidesByOutcode(outcode);
 
   const softestPpm = softestSector?.avgPpm || avgPpm;
   const hardestPpm = hardestSector?.avgPpm || avgPpm;
@@ -759,6 +762,47 @@ export default async function OutcodeHubPage({ params }: PageProps) {
             </Link>
           </div>
         </div>
+
+        {/* CLOSED-LOOP TOPIC CLUSTER: IN-DEPTH REGIONAL PILLAR GUIDE */}
+        {relatedGuides.length > 0 && (
+          <div className="mb-12 bg-gradient-to-br from-cyan-50 to-blue-50/70 p-6 sm:p-8 rounded-3xl border border-cyan-200 shadow-sm">
+            <div className="flex items-center gap-2 text-cyan-700 font-bold text-xs uppercase tracking-wider mb-2">
+              <BookOpen className="w-4 h-4 text-cyan-600" />
+              <span>In-Depth Regional Water Hardness Analysis</span>
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 mb-2">
+              Detailed Engineering Guide for Outcode {outcode} &amp; Surrounding Catchments
+            </h3>
+            <p className="text-sm text-slate-600 mb-5 max-w-2xl leading-relaxed">
+              Read our comprehensive technical report covering hydrogeological origins, seasonal mineral fluctuations, boiler protection under BS 7593, and appliance care:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {relatedGuides.slice(0, 2).map((guide) => (
+                <Link
+                  key={guide.slug}
+                  href={`/guides/${guide.slug}`}
+                  className="p-5 rounded-2xl bg-white hover:bg-cyan-50/80 border border-cyan-100 hover:border-cyan-300 transition-all shadow-2xs group flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="text-[11px] font-bold text-cyan-600 uppercase mb-1">
+                      {guide.category} • {guide.quickVerdict.classification || "Official Report"}
+                    </div>
+                    <h4 className="font-bold text-slate-900 text-base group-hover:text-cyan-700 transition-colors">
+                      {guide.title}
+                    </h4>
+                    <p className="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                      {guide.quickVerdict.keyTakeaway}
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-cyan-600 group-hover:text-cyan-700">
+                    <span>Read Comprehensive Guide</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* INTERNAL LINKING CROSS-LINKING ĐẨY TRAFFIC CHO TRANG COMPARE */}
         {hardestSector && (
