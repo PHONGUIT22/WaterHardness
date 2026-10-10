@@ -39,6 +39,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-xs">
               <li><Link href="/suppliers" className="hover:text-white transition-colors font-medium text-cyan-400">Water Suppliers Hub</Link></li>
               <li><Link href="/cities" className="hover:text-white transition-colors">UK Cities Directory</Link></li>
+              <li><Link href="/tools/dishwasher-salt-calculator" className="hover:text-white transition-colors text-cyan-300 font-semibold">Dishwasher Salt Calculator</Link></li>
               <li><Link href="/suppliers/thames-water" className="hover:text-white transition-colors">Thames Water Hardness</Link></li>
               <li><Link href="/suppliers/severn-trent-water" className="hover:text-white transition-colors">Severn Trent Water Hardness</Link></li>
               <li><Link href="/outcodes" className="hover:text-white transition-colors">All UK Outcodes Directory</Link></li>

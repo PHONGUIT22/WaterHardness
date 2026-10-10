@@ -73,6 +73,10 @@ export default function Navbar() {
             <Link href="/guides" className="hover:text-slate-900 transition-colors">
               Guides & Blog
             </Link>
+            <Link href="/tools/dishwasher-salt-calculator" className="hover:text-slate-900 transition-colors flex items-center gap-1.5 font-semibold text-cyan-700">
+              <span>Salt Calculator</span>
+              <span className="px-1.5 py-0.5 rounded-full text-[10px] font-extrabold bg-cyan-100 text-cyan-800 tracking-wide uppercase">Tool</span>
+            </Link>
             <Link href="/outcodes" className="hover:text-slate-900 transition-colors">
               All Outcodes
             </Link>

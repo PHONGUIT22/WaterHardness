@@ -647,12 +647,47 @@ export default async function OutcodeHubPage({ params }: PageProps) {
               </tr>
               <tr>
                 <td className="py-3 px-4 font-semibold text-slate-900">Dishwasher Salt Calibration</td>
-                <td className="py-3 px-4 font-bold text-cyan-700">{defaultBoschSetting}</td>
+                <td className="py-3 px-4 font-bold text-cyan-700">
+                  <Link
+                    href={`/tools/dishwasher-salt-calculator?outcode=${cleanOutcodeSlug}`}
+                    className="hover:underline inline-flex items-center gap-1.5"
+                  >
+                    <span>{defaultBoschSetting}</span>
+                    <span className="text-[10px] font-normal text-blue-600 bg-blue-50 border border-blue-200 rounded px-1.5 py-0.5">Calculator →</span>
+                  </Link>
+                </td>
                 <td className="py-3 px-4 text-slate-500">Bosch H03 / Beko Level 2</td>
                 <td className="py-3 px-4 text-right text-slate-800 font-medium">{isSoft || isVerySoft ? "Salt optional" : "Salt required"}</td>
               </tr>
             </tbody>
           </table>
+        </div>
+
+        {/* INTERACTIVE DISHWASHER SALT CALCULATOR BANNER */}
+        <div className="mb-8 rounded-3xl border border-blue-200 bg-gradient-to-r from-blue-50/90 via-indigo-50/40 to-white p-5 sm:p-6 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-start sm:items-center gap-3.5">
+            <div className="w-11 h-11 rounded-2xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-xs">
+              <WashingMachine className="w-6 h-6" />
+            </div>
+            <div>
+              <span className="text-[10px] font-extrabold uppercase tracking-wider text-blue-700 block">
+                Interactive Appliance Tool
+              </span>
+              <h4 className="font-bold text-slate-900 text-sm sm:text-base">
+                Looking for exact dishwasher salt settings in {outcode.toUpperCase()}?
+              </h4>
+              <p className="text-xs text-slate-600 mt-0.5">
+                Calculate dial settings for Bosch, Beko, Miele, Samsung & Hotpoint based on {avgPpm} PPM.
+              </p>
+            </div>
+          </div>
+          <Link
+            href={`/tools/dishwasher-salt-calculator?outcode=${cleanOutcodeSlug}`}
+            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition-all shrink-0 shadow-sm"
+          >
+            <span>Launch Salt Calculator</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
 
         {/* SEO ARTICLE CHUYÊN SÂU ĐỘC BẢN */}

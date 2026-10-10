@@ -510,6 +510,14 @@ export default async function CityHubPage({ params }: PageProps) {
                 <div className="text-xs font-semibold text-slate-700 bg-white p-2.5 rounded-lg border border-slate-200">
                   ⚙️ <strong>Recommended Dial Setting:</strong> {isSoft ? "Level 1 / Off" : isModerate ? "Level 2–3" : "Level 4–5"} (refer to machine manual).
                 </div>
+                <div className="mt-3 pt-3 border-t border-slate-200">
+                  <Link
+                    href={`/tools/dishwasher-salt-calculator?outcode=${city.outcodePrefixes[0]?.toLowerCase() || ""}`}
+                    className="text-xs font-bold text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-1"
+                  >
+                    <span>Launch Dishwasher Setting Calculator →</span>
+                  </Link>
+                </div>
               </div>
 
               {/* Combi Boiler & Central Heating */}

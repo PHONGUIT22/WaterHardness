@@ -423,6 +423,20 @@ export default async function GuideArticlePage({ params }: PageProps) {
               </p>
             </div>
           </div>
+
+          <div className="pt-3 border-t border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-slate-800/40 p-4 rounded-2xl">
+            <div className="text-xs text-slate-300">
+              <span className="font-semibold text-white">Need exact dial settings for your appliance model?</span>
+              <p className="text-slate-400 text-[11px] mt-0.5">Custom calibrations for Bosch, Beko, Miele, Samsung & Hotpoint based on local PPM.</p>
+            </div>
+            <Link
+              href={`/tools/dishwasher-salt-calculator${guide.relatedOutcodes?.[0] ? `?outcode=${guide.relatedOutcodes[0].toLowerCase()}` : ""}`}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold transition-all shrink-0 shadow-xs"
+            >
+              <span>Launch Salt Calculator</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
 
         {/* FAQ ACCORDION SECTION */}
