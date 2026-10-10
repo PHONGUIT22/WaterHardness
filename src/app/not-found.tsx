@@ -1,31 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { Search, MapPin, Home, Compass, Loader2 } from "lucide-react";
-import { resolveSearchDestination } from "@/lib/search";
+import { Home, Compass } from "lucide-react";
+import LiveSearchAutocomplete from "@/components/search/LiveSearchAutocomplete";
 
 export default function NotFound() {
-  const [query, setQuery] = useState("");
-  const [isSearching, setIsSearching] = useState(false);
-  const router = useRouter();
-
-  const handleSearch = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!query.trim() || isSearching) return;
-
-    setIsSearching(true);
-    try {
-      const destination = await resolveSearchDestination(query);
-      router.push(destination);
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setIsSearching(false);
-    }
-  };
-
   return (
     <div className="min-h-[80vh] bg-[#FDFDFD] text-slate-900 flex flex-col items-center justify-center px-4 py-16">
       <div className="max-w-2xl w-full text-center space-y-8">
@@ -49,29 +28,12 @@ export default function NotFound() {
         </div>
 
         {/* Ô Search Tải Lại Ngay Tại Trang 404 */}
-        <form
-          onSubmit={handleSearch}
-          className="bg-white p-3 rounded-3xl shadow-lg border border-slate-200/80 flex flex-col sm:flex-row items-center gap-3 max-w-lg mx-auto"
-        >
-          <div className="flex items-center gap-3 px-4 py-2 w-full">
-            <MapPin className="w-5 h-5 text-cyan-600 shrink-0" />
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Enter Postcode Sector (e.g. SW1A 1, AB10)..."
-              className="w-full bg-transparent text-slate-900 placeholder-slate-400 focus:outline-none font-medium text-sm sm:text-base"
-            />
-          </div>
-          <button
-            type="submit"
-            disabled={isSearching}
-            className="w-full sm:w-auto bg-slate-900 hover:bg-cyan-600 text-white font-bold px-6 py-3.5 rounded-2xl transition-all flex items-center justify-center gap-2 text-sm shrink-0 disabled:opacity-50 cursor-pointer"
-          >
-            {isSearching ? <Loader2 className="w-4 h-4 animate-spin" /> : <Search className="w-4 h-4" />}
-            <span>Search</span>
-          </button>
-        </form>
+        <div className="max-w-lg mx-auto w-full">
+          <LiveSearchAutocomplete
+            variant="hero"
+            placeholder="Search Postcode, City, or Supplier..."
+          />
+        </div>
 
         {/* Nút Quay Về Trang Chủ & Link Các Vùng Nổi Bật UK */}
         <div className="pt-6 border-t border-slate-200/80 space-y-4">

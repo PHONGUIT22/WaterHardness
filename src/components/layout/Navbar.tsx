@@ -2,31 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { Search, MapPin, Scale, Loader2, Droplet, Menu, X } from "lucide-react";
-import { resolveSearchDestination } from "@/lib/search";
+import { Scale, Droplet, Menu, X } from "lucide-react";
+import LiveSearchAutocomplete from "@/components/search/LiveSearchAutocomplete";
 
 export default function Navbar() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [isSearching, setIsSearching] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const router = useRouter();
-
-  const handleSearch = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!searchTerm.trim() || isSearching) return;
-
-    setIsSearching(true);
-    try {
-      const targetUrl = await resolveSearchDestination(searchTerm);
-      setIsMobileMenuOpen(false);
-      router.push(targetUrl);
-    } catch (err) {
-      console.error("Search error:", err);
-    } finally {
-      setIsSearching(false);
-    }
-  };
 
   return (
     <header className="border-b border-slate-200/80 bg-white/95 backdrop-blur-md sticky top-0 z-50">
@@ -46,26 +26,14 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* THANH SEARCH THÔNG MINH (Chỉ dẫn mã bưu điện UK) */}
-        <form onSubmit={handleSearch} className="flex-1 min-w-0 max-w-md mx-1 sm:mx-6">
-          <div className="relative flex items-center">
-            <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-600 absolute left-3 pointer-events-none" />
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search Postcode or Area (e.g. SW1A 1, London)..."
-              className="w-full bg-slate-100/80 focus:bg-white border border-transparent focus:border-cyan-600 rounded-full pl-8 sm:pl-10 pr-8 sm:pr-10 py-1.5 sm:py-2 text-xs sm:text-sm font-medium focus:outline-none transition-all truncate"
-            />
-            <button
-              type="submit"
-              disabled={isSearching}
-              className="absolute right-1.5 p-1 sm:p-1.5 bg-slate-900 hover:bg-cyan-600 text-white rounded-full transition-colors disabled:opacity-50"
-            >
-              {isSearching ? <Loader2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 animate-spin" /> : <Search className="w-3 h-3 sm:w-3.5 sm:h-3.5" />}
-            </button>
-          </div>
-        </form>
+        {/* THANH SEARCH THÔNG MINH AUTOCOMPLETE */}
+        <div className="flex-1 min-w-0 max-w-md mx-1 sm:mx-6">
+          <LiveSearchAutocomplete
+            variant="navbar"
+            placeholder="Search Postcode, City, or Tool..."
+            onSelect={() => setIsMobileMenuOpen(false)}
+          />
+        </div>
 
         {/* LINKS GÓC PHẢI */}
         <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
