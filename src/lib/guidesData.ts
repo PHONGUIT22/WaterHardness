@@ -1936,12 +1936,12 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "london-water-hardness-by-postcode",
     title: "London Water Hardness by Postcode: Is London Water Hard?",
-    metaTitle: "London Water Hardness by Postcode: Full PPM Directory",
+    metaTitle: "London Water Hardness: Postcode PPM Map & Softener Guide",
     metaDescription: "Is London tap water hard? Check London water hardness by postcode (PPM & Clark). Compare North, South, East, West & Central London limescale risks.",
-    targetKeyword: "london water hardness by postcode",
+    targetKeyword: "london water hardness",
     category: "Regional Hardness",
     datePublished: "2025-02-18T08:00:00Z",
-    dateModified: "2026-10-08T08:00:00Z",
+    dateModified: "2026-10-12T08:00:00Z",
     readingTime: "7 min read",
     quickVerdict: {
       ppmRange: "260 – 320 PPM (mg/L CaCO3)",
@@ -2355,7 +2355,7 @@ export const guidesData: GuideArticle[] = [
     targetKeyword: "does surrey have hard water",
     category: "Regional Hardness",
     datePublished: "2025-03-01T08:00:00Z",
-    dateModified: "2026-09-30T08:00:00Z",
+    dateModified: "2026-10-12T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "270 – 330 PPM (mg/L CaCO3)",
@@ -2363,7 +2363,7 @@ export const guidesData: GuideArticle[] = [
       supplier: "Affinity Water, SES Water & Thames Water",
       keyTakeaway: "Yes, Surrey has some of the hardest water in England, regularly exceeding 290 PPM. Underground chalk springs across the North Downs saturate tap water with dissolved calcium, coating kettles in limescale within days and making whole-house water softeners a standard feature in Surrey homes."
     },
-    relatedOutcodes: ["GU21","GU22","GU1","KT22","KT18","RH1","SM7"],
+    relatedOutcodes: ["GU21", "GU22", "GU1", "KT22", "KT18", "RH1", "SM7"],
     contentHtml: `
       <p class="text-lg text-slate-700 leading-relaxed mb-6">
         If you have just unpacked your removal boxes in Woking, Guildford, or Leatherhead after leaving a London flat, you are in for a sharp shock the very first time you boil the kettle. Many newcomers assume moving out into the leafy Surrey commuter belt means greener pastures and softer water. In reality, Surrey tap water is significantly harder than most parts of central London, frequently measuring between <strong>280 and 330 PPM</strong>.
@@ -2495,8 +2495,8 @@ export const guidesData: GuideArticle[] = [
             "answer": "While tap water is completely safe to drink, installing an ion-exchange water softener is strongly recommended for homeowners. It eliminates limescale crust from taps, prevents boiler heat exchanger failure, and protects expensive thermostatic showers from seizing."
       },
       {
-            "question": "What is the water hardness in Woking?",
-            "answer": "Woking has very hard water, averaging 290 to 320 PPM (20.3 to 22.4° Clark). Supplied primarily by Affinity Water from underground chalk aquifers across Surrey, Woking tap water causes rapid limescale buildup on kettles and combi boilers."
+        question: "What is the water hardness in Woking (Affinity Water)?",
+        answer: "Tap water in Woking (GU21, GU22) is supplied primarily by Affinity Water and is classified as very hard, averaging approximately 280 to 310 PPM (19.6° to 21.7° Clark). Extracted from deep chalk boreholes, it causes rapid kettle limescale encrustation and requires water softener or scale inhibitor protection."
       }
     ]
   },
@@ -5492,6 +5492,196 @@ export const guidesData: GuideArticle[] = [
           </a>
           <a href="/guides/how-to-prevent-combi-boiler-limescale" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm sm:col-span-2">
             How to Prevent Combi Boiler Limescale Guide &rarr;
+          </a>
+        </div>
+      </div>
+    `,
+  },
+  {
+    slug: "does-coventry-have-hard-water",
+    title: "Does Coventry Have Hard Water? West Midlands PPM & Postcode Guide",
+    metaTitle: "Does Coventry Have Hard Water? (Yes - 220 PPM Guide)",
+    metaDescription: "Is tap water hard or soft in Coventry? Coventry water is hard at 220 PPM (15.4° Clark). Check Severn Trent sources, CV postcodes, Draycote Water & salt advice.",
+    targetKeyword: "does coventry have hard water",
+    category: "Regional Hardness",
+    datePublished: "2026-10-12T08:00:00Z",
+    dateModified: "2026-10-12T08:00:00Z",
+    readingTime: "6 min read",
+    quickVerdict: {
+      ppmRange: "180 - 260 PPM (mg/L CaCO3)",
+      classification: "Hard Water",
+      supplier: "Severn Trent Water",
+      keyTakeaway: "Yes, Coventry tap water is hard, averaging approximately 220 PPM (15.4° Clark). Unlike neighboring Birmingham which receives ultra-soft Welsh water, Coventry is supplied from River Severn abstractions and Draycote Water reservoir blended with local groundwater, causing chalky limescale on kettles and shower screens."
+    },
+    relatedOutcodes: ["CV1", "CV2", "CV3", "CV4", "CV5", "CV6"],
+    faqItems: [
+      {
+        question: "Is water hard or soft in Coventry?",
+        answer: "Coventry tap water is hard, averaging 220 PPM (15.4° Clark). It ranges between 180 PPM in southern suburbs to 260 PPM in eastern districts, requiring active limescale prevention."
+      },
+      {
+        question: "Why is Coventry water hard while Birmingham water is soft?",
+        answer: "While Birmingham is supplied via the dedicated 73-mile Elan Valley Aqueduct from Welsh mountain reservoirs (40 PPM), Coventry receives water from the River Severn, Draycote Water reservoir in Warwickshire, and local borehole aquifers that flow through mineral-rich sandstone and limestone."
+      },
+      {
+        question: "Do I need a water softener in Coventry?",
+        answer: "Installing an ion-exchange water softener is recommended for homeowners in Coventry. At 220 PPM, hard water causes combi boilers to accumulate scale on heat exchangers, reduces soap lather, and leaves chalky streaks on taps and shower screens."
+      },
+      {
+        question: "What dishwasher salt setting should I choose in Coventry?",
+        answer: "Set your dishwasher water softener to Level 4 (medium-high setting). Due to the 220 PPM mineral concentration, standard detergent pods alone are insufficient to prevent cloudy film on glassware."
+      },
+      {
+        question: "Is Coventry tap water safe to drink?",
+        answer: "Yes, Coventry tap water meets 100% of Drinking Water Inspectorate (DWI) rigorous standards and is completely safe and healthy to drink, providing rich dietary calcium and magnesium."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        Yes, mains tap water across Coventry is officially classified as <strong>hard water</strong>, averaging <strong>220 PPM</strong> (parts per million of calcium carbonate) or <strong>15.4° Clark</strong>. In striking contrast to neighboring Birmingham just 20 miles west—where tap water arrives naturally ultra-soft at 40 PPM from Welsh mountain valleys—Coventry households face persistent limescale furring on kettle bases, cloudy film on shower enclosures, and scale buildup inside heating systems.
+      </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Does Coventry Have Hard Water?</p>
+        <p class="text-slate-700 text-sm">
+          Yes, Coventry has hard tap water averaging 220 PPM (15.4° Clark), ranging from 180 to 260 PPM across CV postcodes. Supplied by Severn Trent Water from the River Severn and Draycote Water reservoir, it leaves chalky limescale on kettles, taps, and heating elements, unlike neighboring soft-water Birmingham.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Coventry Water Hardness by Postcode District</h2>
+      <p class="text-slate-600 mb-4">
+        Managed by <strong>Severn Trent Water</strong>, tap water mineral levels fluctuate moderately across Coventry depending on municipal blending ratios between river abstraction, reservoir storage, and deep boreholes:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left border-collapse border border-slate-200 text-sm">
+          <thead>
+            <tr class="bg-slate-100 text-slate-800 font-semibold">
+              <th class="border border-slate-200 p-3">Postcode District</th>
+              <th class="border border-slate-200 p-3">Key Neighbourhoods</th>
+              <th class="border border-slate-200 p-3">Average PPM</th>
+              <th class="border border-slate-200 p-3">Degrees Clark (°e)</th>
+              <th class="border border-slate-200 p-3">Classification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/cv1" class="text-blue-600 hover:underline">CV1</a></td>
+              <td class="border border-slate-200 p-3">City Centre, Coventry University, Spon End</td>
+              <td class="border border-slate-200 p-3 font-semibold">215 PPM</td>
+              <td class="border border-slate-200 p-3">15.1° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/cv2" class="text-blue-600 hover:underline">CV2</a></td>
+              <td class="border border-slate-200 p-3">Walsgrave, Wyken, Potter's Green, Wood End</td>
+              <td class="border border-slate-200 p-3 font-semibold">225 PPM</td>
+              <td class="border border-slate-200 p-3">15.8° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/cv3" class="text-blue-600 hover:underline">CV3</a></td>
+              <td class="border border-slate-200 p-3">Styvechale, Whitley, Willenhall, Binley Woods</td>
+              <td class="border border-slate-200 p-3 font-semibold">218 PPM</td>
+              <td class="border border-slate-200 p-3">15.3° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/cv4" class="text-blue-600 hover:underline">CV4</a></td>
+              <td class="border border-slate-200 p-3">Tile Hill, Canley, Westwood Heath, University of Warwick</td>
+              <td class="border border-slate-200 p-3 font-semibold">210 PPM</td>
+              <td class="border border-slate-200 p-3">14.7° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/cv5" class="text-blue-600 hover:underline">CV5</a></td>
+              <td class="border border-slate-200 p-3">Earlsdon, Allesley, Whoberley, Chapelfields</td>
+              <td class="border border-slate-200 p-3 font-semibold">222 PPM</td>
+              <td class="border border-slate-200 p-3">15.5° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Hard</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold"><a href="/water-hardness/cv6" class="text-blue-600 hover:underline">CV6</a></td>
+              <td class="border border-slate-200 p-3">Foleshill, Holbrooks, Radford, Longford</td>
+              <td class="border border-slate-200 p-3 font-semibold">230 PPM</td>
+              <td class="border border-slate-200 p-3">16.1° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-800">Hard</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Where Does Coventry's Tap Water Come From? Draycote Water &amp; River Severn</h2>
+      <p class="text-slate-600 mb-4">
+        The geological roots of Coventry's water hardness date back centuries. Unlike Birmingham, which secured exclusive access to Mid-Wales' soft granite catchments via the Elan Valley Aqueduct in 1904, Coventry developed regional Midlands supplies managed today by Severn Trent Water:
+      </p>
+      <ul class="list-disc pl-6 space-y-3 text-slate-600 mb-6">
+        <li>
+          <strong>Draycote Water Reservoir:</strong> Situated 10 miles south-east of Coventry near Dunchurch, this 240-hectare reservoir stores water pumped from the River Leam and River Severn. Water flows over Triassic Mercia Mudstone and sandstone strata, dissolving calcium and magnesium carbonate into solution.
+        </li>
+        <li>
+          <strong>River Severn Abstraction:</strong> Significant volume is abstracted directly from the River Severn at Upton-upon-Severn and treated at regional water treatment works before piped distribution to Warwickshire.
+        </li>
+        <li>
+          <strong>Groundwater Boreholes:</strong> Local deep boreholes drilled into the Permo-Triassic sandstone aquifer contribute mineral-rich groundwater, stabilizing supplies during dry summer months but elevating baseline hardness.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Appliance Care &amp; Dishwasher Salt Settings in Coventry</h2>
+      <p class="text-slate-600 mb-4">
+        Living in a 220 PPM water area requires active household limescale precautions to extend appliance lifespans and maintain performance:
+      </p>
+      <ul class="list-disc pl-6 space-y-3 text-slate-600 mb-6">
+        <li>
+          <strong>Dishwasher Softener Calibration to Level 4 (or H04):</strong> For Bosch, Siemens, Neff, and Beko dishwashers in CV postcodes, adjust the internal hardness selector to Level 4. Standard all-in-one detergent pods lack sufficient water softening capacity at 220 PPM, leading to cloudy glassware and etched ceramics unless coarse regeneration salt is replenished monthly.
+        </li>
+        <li>
+          <strong>Kettle Descaling Every 3 to 4 Weeks:</strong> Electric kettles develop a distinct chalky mineral ring within weeks. Descale regularly with food-grade citric acid powder (two tablespoons boiled in 500ml water) to eliminate buildup quickly without chemical vinegar odors.
+        </li>
+        <li>
+          <strong>Showerhead &amp; Aerator Cleaning:</strong> Soak mixer tap aerators and thermostatic shower roses in warm citric acid quarterly to dissolve calcium crystals that restrict water pressure.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Combi Boiler Protection &amp; BS 7593 Compliance in Coventry</h2>
+      <p class="text-slate-600 mb-4">
+        Under <strong>British Standard BS 7593:2019</strong> and UK Building Regulations Part L, heating installations in areas where water hardness exceeds 200 PPM require permanent limescale mitigation:
+      </p>
+      <div class="border border-rose-200 bg-rose-50/60 rounded-xl p-5 my-6">
+        <h3 class="text-base font-bold text-rose-900 mb-2">Combi Boiler Scale Impact at 220 PPM</h3>
+        <p class="text-sm text-rose-800 leading-relaxed mb-3">
+          When water is heated above 60°C in your condensing boiler's secondary plate heat exchanger, dissolved calcium carbonate precipitates out as solid calcite scale. A 1mm limescale layer reduces thermal heat transfer efficiency by approximately 7% to 10%, adding an estimated £90 to £130 to annual household gas bills.
+        </p>
+        <p class="text-sm text-rose-800 leading-relaxed font-semibold">
+          Severn Trent area heating engineers recommend fitting an inline electrolytic scale reducer on the boiler mains cold feed or installing a whole-house ion-exchange water softener at the incoming stopcock to safeguard warranties.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Explore Related West Midlands &amp; Regional Hardness Guides</h2>
+      <p class="text-slate-600 mb-4">
+        Compare Coventry's water quality with neighboring towns across the West Midlands and access technical guides:
+      </p>
+
+      <div class="border border-slate-200 rounded-xl p-5 bg-slate-50 my-6">
+        <h3 class="text-base font-bold text-slate-900 mb-2">Coventry City Hub &amp; West Midlands Hardness Network</h3>
+        <p class="text-sm text-slate-600 mb-4">
+          Access comprehensive postcode breakdowns, interactive tools, and local supplier facts:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <a href="/cities/coventry" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Coventry City Water Hardness Hub &rarr;
+          </a>
+          <a href="/guides/does-birmingham-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Birmingham Water Hardness Guide (Soft - 40 PPM) &rarr;
+          </a>
+          <a href="/guides/does-leicester-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Leicester (245 PPM) Guide &rarr;
+          </a>
+          <a href="/guides/does-stoke-on-trent-have-hard-water" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
+            Stoke-on-Trent (180 PPM) Guide &rarr;
+          </a>
+          <a href="/tools/dishwasher-salt-calculator" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm sm:col-span-2">
+            Interactive Dishwasher Salt Setting Calculator &rarr;
           </a>
         </div>
       </div>
