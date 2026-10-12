@@ -8,7 +8,7 @@ import { getSeoDates } from "@/lib/seoDates";
 import CityOutcodeGrid from "./CityOutcodeGrid";
 import QuoteRequestCard from "@/components/lead/QuoteRequestCard";
 import { WaterHardnessGauge } from "@/components/visual";
-import { getGuidesByCity } from "@/lib/guidesData";
+import { getGuidesByCity, getGuideBySlug } from "@/lib/guidesData";
 import {
   Droplets,
   ShieldCheck,
@@ -96,6 +96,7 @@ export default async function CityHubPage({ params }: PageProps) {
   const { datePublishedISO, dateModifiedISO, dateModifiedFormatted } = getSeoDates(city.slug);
   const supplierMeta = findSupplierByName(city.supplier);
   const cityGuides = getGuidesByCity(city.slug);
+  const relatedGuide = city.relatedGuideSlug ? getGuideBySlug(city.relatedGuideSlug) : undefined;
 
   const isSoft = city.avgPpm < 100;
   const isModerate = city.avgPpm >= 100 && city.avgPpm < 200;
@@ -441,7 +442,7 @@ export default async function CityHubPage({ params }: PageProps) {
           <CityOutcodeGrid cityName={city.name} outcodes={outcodes} />
 
           {/* In-Depth Guide Callout Banner (Closed-Loop Topic Cluster) */}
-          {city.relatedGuideSlug && (
+          {relatedGuide && (
             <div className="mb-8 rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50/80 via-indigo-50/50 to-white p-5 sm:p-6 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="flex items-start gap-3.5">
                 <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5 sm:mt-0">
@@ -452,7 +453,7 @@ export default async function CityHubPage({ params }: PageProps) {
                     In-Depth Local Field Guide
                   </span>
                   <h3 className="text-base sm:text-lg font-bold text-slate-900">
-                    Looking for deeper household advice in {city.name}?
+                    {relatedGuide.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
                     Read our comprehensive engineer report on limescale removal, water softeners, and appliance calibrations.
@@ -460,8 +461,9 @@ export default async function CityHubPage({ params }: PageProps) {
                 </div>
               </div>
               <Link
-                href={`/guides/${city.relatedGuideSlug}`}
+                href={`/guides/${relatedGuide.slug}`}
                 className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-blue-600 text-white text-xs sm:text-sm font-bold transition-all shrink-0 shadow-xs cursor-pointer"
+                title={relatedGuide.title}
               >
                 <span>Read Full {city.name} Guide</span>
                 <ArrowRight className="w-4 h-4" />

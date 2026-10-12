@@ -13,8 +13,7 @@ import {
   X,
   ArrowRight,
 } from "lucide-react";
-import { resolveSearchDestination } from "@/lib/search";
-import {
+import type {
   SearchSuggestResponse,
   SearchSuggestCity,
   SearchSuggestSupplier,
@@ -222,14 +221,27 @@ export default function LiveSearchAutocomplete({
       return;
     }
 
+    // If suggestions are currently populated, navigate to the top result
+    if (flatItems.length > 0) {
+      navigateTo(flatItems[0].url);
+      return;
+    }
+
     setIsSubmitting(true);
     setIsOpen(false);
     try {
-      const destination = await resolveSearchDestination(trimmed);
-      onSelect?.();
-      router.push(destination);
+      const res = await fetch(`/api/search/resolve?q=${encodeURIComponent(trimmed)}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data?.destination) {
+          navigateTo(data.destination);
+          return;
+        }
+      }
+      navigateTo("/outcodes");
     } catch (err) {
       console.error("Search resolution error:", err);
+      navigateTo("/outcodes");
     } finally {
       setIsSubmitting(false);
     }
