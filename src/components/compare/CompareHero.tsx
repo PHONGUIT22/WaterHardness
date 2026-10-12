@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Scale, ArrowRightLeft, Search, MapPin, Loader2 } from "lucide-react";
-import { supabase } from "@/lib/supabase";
 
 interface Props {
   locA: string;
@@ -30,15 +29,17 @@ export default function CompareHero({ locA, locB, dataA, dataB }: Props) {
       return currentData.sector ? currentData.sector.toLowerCase().replace(/\s+/g, "-") : currentLoc;
     }
 
-    // 2. Query Supabase lấy Sector mới
-    const { data } = await supabase
-      .from("water_hardness_sectors")
-      .select("sector")
-      .ilike("sector", normalized)
-      .maybeSingle();
-
-    if (data) {
-      return data.sector.toLowerCase().replace(/\s+/g, "-");
+    // 2. Query in-memory suggest endpoint lấy Sector mới nếu khớp
+    try {
+      const res = await fetch(`/api/search/suggest?q=${encodeURIComponent(cleanInput)}`);
+      if (res.ok) {
+        const json = await res.json();
+        if (json.sectors && json.sectors.length > 0) {
+          return json.sectors[0].sector.toLowerCase().replace(/\s+/g, "-");
+        }
+      }
+    } catch {
+      // fallback
     }
 
     // Fallback slug dạng gạch nối

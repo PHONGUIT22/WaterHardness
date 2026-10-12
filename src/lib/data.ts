@@ -1,5 +1,9 @@
-import { supabase } from "@/lib/supabase";
 import { getSupplierBySlug, SupplierMetadata } from "@/lib/suppliersData";
+import {
+  outcodesSummary,
+  sectorsLookup,
+  WaterSectorRecord,
+} from "@/lib/sectorsLocal";
 
 // Khai báo Type để Code TypeScript chuẩn chỉ, gợi ý code (IntelliSense) mượt mà
 export interface WaterSectorData {
@@ -13,80 +17,32 @@ export interface WaterSectorData {
   clarkDegrees: number;
   hardnessCategory: string;
   boschSaltSetting: string;
-  dataPrecision: string; // 👈 THÊM DÒNG NÀY VÀO
+  dataPrecision: string;
 }
 
 // 1. TỐI ƯU TRANG CHỦ / XẾP HẠNG: Lấy Top vùng nước Mềm nhất và Cứng nhất UK
 export async function getHardnessRankings() {
-  const { data: softest, error: softErr } = await supabase
-    .from("water_hardness_sectors")
-    .select("sector, outcode, company_name, avg_ppm, hardness_category")
-    .order("avg_ppm", { ascending: true })
-    .limit(5);
+  const allSectors = Object.values(sectorsLookup.bySectorSlug);
 
-  const { data: hardest, error: hardErr } = await supabase
-    .from("water_hardness_sectors")
-    .select("sector, outcode, company_name, avg_ppm, hardness_category")
-    .order("avg_ppm", { ascending: false })
-    .limit(5);
+  const sorted = [...allSectors].sort((a, b) => a.avgPpm - b.avgPpm);
 
-  if (softErr || hardErr) {
-    console.error("Lỗi fetch Hardness Rankings:", softErr || hardErr);
-    return { softest: [], hardest: [] };
-  }
-
-  const mapItem = (item: any) => ({
+  const mapItem = (item: WaterSectorRecord) => ({
     sector: item.sector,
     outcode: item.outcode,
-    company: item.company_name,
-    ppm: Number(item.avg_ppm) || 0,
-    category: item.hardness_category,
+    company: item.companyName,
+    ppm: item.avgPpm,
+    category: item.hardnessCategory,
   });
 
   return {
-    softest: (softest || []).map(mapItem),
-    hardest: (hardest || []).map(mapItem),
+    softest: sorted.slice(0, 5).map(mapItem),
+    hardest: sorted.slice(-5).reverse().map(mapItem),
   };
 }
 
 // 2. TỐI ƯU TRANG DIRECTORY (Danh sách tất cả Outcode - VD: /outcodes)
 export async function getAllOutcodesFromDB() {
-  // Query pre-aggregated view to reduce serverless RAM usage from 15,000 raw rows to ~2,800 outcodes
-  const { data, error } = await supabase
-    .from("water_hardness_outcodes_summary")
-    .select("outcode, company_name, sector_count, avg_ppm, avg_clark_degrees")
-    .order("outcode", { ascending: true });
-
-  if (error || !data || data.length === 0) {
-    // Graceful fallback to raw table if the database view migration has not run yet
-    const { data: rawData, error: rawError } = await supabase
-      .from("water_hardness_sectors")
-      .select("outcode, company_name")
-      .limit(15000);
-
-    if (rawError || !rawData) {
-      console.error("Lỗi fetch Directory Outcodes:", error || rawError);
-      return [];
-    }
-
-    const outcodeMap = new Map<string, { outcode: string; company: string; count: number }>();
-    rawData.forEach((row) => {
-      const existing = outcodeMap.get(row.outcode);
-      if (existing) {
-        existing.count += 1;
-      } else {
-        outcodeMap.set(row.outcode, {
-          outcode: row.outcode,
-          company: row.company_name,
-          count: 1,
-        });
-      }
-    });
-
-    return Array.from(outcodeMap.values()).sort((a, b) => a.outcode.localeCompare(b.outcode));
-  }
-
-  return data.map((row) => ({
+  return outcodesSummary.map((row) => ({
     outcode: row.outcode,
     company: row.company_name,
     count: Number(row.sector_count) || 1,
@@ -95,30 +51,25 @@ export async function getAllOutcodesFromDB() {
   }));
 }
 
-// 3. TỐI ƯU TRANG TRUY VẤN OUTCODE (VD: Trang tổng quan khu vực /outcode/AB10)
+// 3. TỐI ƯU TRANG TRUY VẤN OUTCODE (VD: Trang tổng quan khu vực /water-hardness/AB10)
 export async function getOutcodeOverviewData(outcodeStr: string) {
   const cleanOutcode = outcodeStr.trim().toUpperCase();
+  const data = sectorsLookup.byOutcode[cleanOutcode];
 
-  const { data, error } = await supabase
-    .from("water_hardness_sectors")
-    .select("*")
-    .ilike("outcode", cleanOutcode)
-    .order("sector", { ascending: true });
-
-  if (error || !data || data.length === 0) return null;
+  if (!data || data.length === 0) return null;
 
   // Tính chỉ số trung bình độ cứng cho cả vùng Outcode
-  const totalPpm = data.reduce((sum, item) => sum + (Number(item.avg_ppm) || 0), 0);
+  const totalPpm = data.reduce((sum, item) => sum + item.avgPpm, 0);
   const avgPpm = Math.round((totalPpm / data.length) * 10) / 10;
 
   const sectors = data.map((item) => ({
     sector: item.sector,
-    postcodeCount: Number(item.postcode_count) || 0,
-    companyName: item.company_name,
-    avgPpm: Number(item.avg_ppm) || 0,
-    clarkDegrees: Number(item.clark_degrees) || 0,
-    hardnessCategory: item.hardness_category,
-    boschSaltSetting: item.bosch_salt_setting,
+    postcodeCount: item.postcodeCount,
+    companyName: item.companyName,
+    avgPpm: item.avgPpm,
+    clarkDegrees: item.clarkDegrees,
+    hardnessCategory: item.hardnessCategory,
+    boschSaltSetting: item.boschSaltSetting,
   }));
 
   // Lấy ra khu vực mềm nhất & cứng nhất trong Outcode này
@@ -126,7 +77,7 @@ export async function getOutcodeOverviewData(outcodeStr: string) {
 
   return {
     outcode: cleanOutcode,
-    companyName: data[0].company_name,
+    companyName: data[0].companyName,
     totalSectors: data.length,
     avgPpm,
     softestSector: sortedByPpm[0],
@@ -135,101 +86,92 @@ export async function getOutcodeOverviewData(outcodeStr: string) {
   };
 }
 
-// 4. TỐI ƯU TRANG CHI TIẾT 1 SECTOR (VD: /water-hardness/AB12-3 hoặc tra cứu nhanh)
+// 4. TỐI ƯU TRANG CHI TIẾT 1 SECTOR (VD: /water-hardness/AB10/ab10-1)
 export async function getSectorData(sectorStr: string): Promise<WaterSectorData | null> {
-  const cleanSector = sectorStr.trim().toUpperCase();
+  const cleanSectorSlug = sectorStr.trim().toLowerCase().replace(/\s+/g, "-");
+  const data = sectorsLookup.bySectorSlug[cleanSectorSlug];
 
-  const { data, error } = await supabase
-    .from("water_hardness_sectors")
-    .select("*")
-    .ilike("sector", cleanSector)
-    .maybeSingle();
-
-  if (error || !data) {
-    if (error) console.error(`Lỗi fetch Sector ${cleanSector}:`, error);
+  if (!data) {
     return null;
   }
 
   return {
     sector: data.sector,
     outcode: data.outcode,
-    latitude: data.latitude ? Number(data.latitude) : null,
-    longitude: data.longitude ? Number(data.longitude) : null,
-    postcodeCount: Number(data.postcode_count) || 0,
-    companyName: data.company_name,
-    avgPpm: Number(data.avg_ppm) || 0,
-    clarkDegrees: Number(data.clark_degrees) || 0,
-    hardnessCategory: data.hardness_category,
-    boschSaltSetting: data.bosch_salt_setting,
-    dataPrecision: data.data_precision || "regional_estimate", // 👈 THÊM DÒNG NÀY VÀO
+    latitude: data.latitude,
+    longitude: data.longitude,
+    postcodeCount: data.postcodeCount,
+    companyName: data.companyName,
+    avgPpm: data.avgPpm,
+    clarkDegrees: data.clarkDegrees,
+    hardnessCategory: data.hardnessCategory,
+    boschSaltSetting: data.boschSaltSetting,
+    dataPrecision: data.dataPrecision,
   };
 }
 
-// 5. TỐI ƯU SO SÁNH 2 SECTOR (Chỉ dùng 1 Query duy nhất bằng toán tử IN)
+// 5. LẤY CÁC SECTOR CÙNG THUỘC MỘT OUTCODE (Adjacent / Sibling Sectors)
+export async function getAdjacentSectors(outcode: string): Promise<WaterSectorData[]> {
+  const clean = outcode.trim().toUpperCase();
+  return sectorsLookup.byOutcode[clean] || [];
+}
+
+// 6. TỐI ƯU SO SÁNH 2 SECTOR
 export async function compareTwoSectors(sector1: string, sector2: string) {
-  const clean1 = sector1.trim().toUpperCase();
-  const clean2 = sector2.trim().toUpperCase();
+  const clean1 = sector1.trim().toLowerCase().replace(/\s+/g, "-");
+  const clean2 = sector2.trim().toLowerCase().replace(/\s+/g, "-");
 
-  const { data, error } = await supabase
-    .from("water_hardness_sectors")
-    .select("*")
-    .in("sector", [clean1, clean2]);
+  const item1 = sectorsLookup.bySectorSlug[clean1];
+  const item2 = sectorsLookup.bySectorSlug[clean2];
 
-  if (error || !data || data.length === 0) return null;
+  if (!item1 && !item2) return null;
 
-  const formatItem = (row: any) => ({
+  const formatItem = (row: WaterSectorRecord) => ({
     sector: row.sector,
     outcode: row.outcode,
-    companyName: row.company_name,
-    avgPpm: Number(row.avg_ppm) || 0,
-    clarkDegrees: Number(row.clark_degrees) || 0,
-    hardnessCategory: row.hardness_category,
-    boschSaltSetting: row.bosch_salt_setting,
-    postcodeCount: Number(row.postcode_count) || 0,
+    companyName: row.companyName,
+    avgPpm: row.avgPpm,
+    clarkDegrees: row.clarkDegrees,
+    hardnessCategory: row.hardnessCategory,
+    boschSaltSetting: row.boschSaltSetting,
+    postcodeCount: row.postcodeCount,
   });
-
-  const item1 = data.find((d) => d.sector.toUpperCase() === clean1);
-  const item2 = data.find((d) => d.sector.toUpperCase() === clean2);
 
   return {
     sector1: item1 ? formatItem(item1) : null,
     sector2: item2 ? formatItem(item2) : null,
   };
 }
-// 6. Lấy toàn bộ danh sách Sector để Build tĩnh (SSG)
-// Trong data.ts
-// lib/data.ts
+
+// 7. Lấy danh sách Top Sector để Build tĩnh (SSG)
 export async function getTopSectorsForBuild() {
-  // Chỉ pre-build sẵn 300 sectors có số lượng postcode lớn nhất hoặc trọng điểm
-  const { data, error } = await supabase
-    .from("water_hardness_sectors")
-    .select("outcode, sector")
-    .order("postcode_count", { ascending: false })
-    .limit(300);
-
-  if (error || !data) {
-    console.error("Lỗi fetch top sectors for build:", error);
-    return [];
-  }
-
-  return data;
+  const allSectors = Object.values(sectorsLookup.bySectorSlug);
+  return allSectors
+    .sort((a, b) => b.postcodeCount - a.postcodeCount)
+    .slice(0, 300)
+    .map((s) => ({
+      outcode: s.outcode,
+      sector: s.sector,
+    }));
 }
 
-// 7. Lấy danh sách Outcode thuộc về một Thành phố dựa theo tiền tố Outcode (VD: ["SW", "SE", "E", ...])
+// 8. Lấy danh sách Outcode thuộc về một Thành phố dựa theo tiền tố Outcode (VD: ["SW", "SE", "E", ...])
 export async function getOutcodesForCity(outcodePrefixes: string[]) {
   if (!outcodePrefixes || outcodePrefixes.length === 0) return [];
   const allOutcodes = await getAllOutcodesFromDB();
   return allOutcodes
     .filter((item) => {
       return outcodePrefixes.some((prefix) => {
-        const regex = new RegExp(`^${prefix}\\d`, 'i');
+        const regex = new RegExp(`^${prefix}\\d`, "i");
         return regex.test(item.outcode);
       });
     })
-    .sort((a, b) => a.outcode.localeCompare(b.outcode, undefined, { numeric: true, sensitivity: 'base' }));
+    .sort((a, b) =>
+      a.outcode.localeCompare(b.outcode, undefined, { numeric: true, sensitivity: "base" })
+    );
 }
 
-// 8. TỐI ƯU TRANG WATER SUPPLIER HUB (VD: /suppliers/thames-water)
+// 9. TỐI ƯU TRANG WATER SUPPLIER HUB (VD: /suppliers/thames-water)
 export interface SupplierOutcodeItem {
   outcode: string;
   avgPpm: number;
@@ -256,24 +198,22 @@ export async function getSupplierOverview(supplierSlug: string): Promise<Supplie
   const supplier = getSupplierBySlug(supplierSlug);
   if (!supplier) return null;
 
-  const { data, error } = await supabase
-    .from("water_hardness_sectors")
-    .select("outcode, sector, avg_ppm, clark_degrees, hardness_category")
-    .ilike("company_name", supplier.dbPattern)
-    .limit(3500);
+  const pattern = supplier.dbPattern.replace(/%/g, "").toLowerCase();
+  const allSectors = Object.values(sectorsLookup.bySectorSlug);
+  const data = allSectors.filter((s) => s.companyName.toLowerCase().includes(pattern));
 
-  if (error || !data || data.length === 0) return null;
+  if (!data || data.length === 0) return null;
 
-  const totalPpm = data.reduce((sum, item) => sum + (Number(item.avg_ppm) || 0), 0);
+  const totalPpm = data.reduce((sum, item) => sum + item.avgPpm, 0);
   const networkAvgPpm = Math.round((totalPpm / data.length) * 10) / 10;
-  const networkClarkDegrees = Math.round((networkAvgPpm * 0.07) * 10) / 10;
+  const networkClarkDegrees = Math.round(networkAvgPpm * 0.07 * 10) / 10;
 
   // Group by outcode
   const outcodeMap = new Map<string, { outcode: string; totalPpm: number; count: number; category: string }>();
   data.forEach((row) => {
     const code = row.outcode.toUpperCase();
     const existing = outcodeMap.get(code);
-    const ppm = Number(row.avg_ppm) || 0;
+    const ppm = row.avgPpm;
     if (existing) {
       existing.totalPpm += ppm;
       existing.count += 1;
@@ -282,7 +222,7 @@ export async function getSupplierOverview(supplierSlug: string): Promise<Supplie
         outcode: code,
         totalPpm: ppm,
         count: 1,
-        category: row.hardness_category || "Hard",
+        category: row.hardnessCategory || "Hard",
       });
     }
   });
@@ -292,9 +232,17 @@ export async function getSupplierOverview(supplierSlug: string): Promise<Supplie
     return {
       outcode: o.outcode,
       avgPpm: avg,
-      clarkDegrees: Math.round((avg * 0.07) * 10) / 10,
+      clarkDegrees: Math.round(avg * 0.07 * 10) / 10,
       hardnessCategory:
-        avg < 100 ? "Soft" : avg < 150 ? "Moderately Soft" : avg < 200 ? "Slightly Hard" : avg < 300 ? "Hard" : "Very Hard",
+        avg < 100
+          ? "Soft"
+          : avg < 150
+          ? "Moderately Soft"
+          : avg < 200
+          ? "Slightly Hard"
+          : avg < 300
+          ? "Hard"
+          : "Very Hard",
       sectorCount: o.count,
     };
   });
@@ -332,4 +280,3 @@ export async function getSupplierOverview(supplierSlug: string): Promise<Supplie
     outcodes: sortedByCode,
   };
 }
-

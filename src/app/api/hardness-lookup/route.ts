@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { outcodesSummary, sectorsLookup } from "@/lib/sectorsLocal";
 import { getCityByOutcode, getCityBySlug } from "@/lib/citiesData";
 
 export const dynamic = "force-dynamic";
@@ -21,14 +21,12 @@ export async function GET(request: Request) {
     const outcodeMatch = clean.match(/^[A-Z]{1,2}[0-9][A-Z0-9]?/);
     const candidateOutcode = outcodeMatch ? outcodeMatch[0] : clean.split(" ")[0];
 
-    // 1. Try querying the pre-aggregated outcodes summary view
-    const { data: summaryData, error: summaryErr } = await supabase
-      .from("water_hardness_outcodes_summary")
-      .select("outcode, company_name, avg_ppm, avg_clark_degrees, sector_count")
-      .ilike("outcode", candidateOutcode)
-      .maybeSingle();
+    // 1. Try querying the pre-aggregated outcodes summary
+    const summaryData = outcodesSummary.find(
+      (o) => o.outcode.toUpperCase() === candidateOutcode
+    );
 
-    if (summaryData && !summaryErr) {
+    if (summaryData) {
       const avgPpm = Number(summaryData.avg_ppm) || 200;
       const clark = Number(summaryData.avg_clark_degrees) || Number((avgPpm * 0.07).toFixed(1));
       const city = getCityByOutcode(summaryData.outcode);
@@ -45,17 +43,15 @@ export async function GET(request: Request) {
       });
     }
 
-    // 2. Try querying raw sectors table (fallback)
-    const { data: sectorData } = await supabase
-      .from("water_hardness_sectors")
-      .select("outcode, company_name, avg_ppm, clark_degrees, hardness_category, sector")
-      .or(`outcode.ilike.${candidateOutcode},sector.ilike.${clean}`)
-      .limit(1)
-      .maybeSingle();
+    // 2. Try querying sectors lookup (fallback)
+    const sectorSlug = clean.toLowerCase().replace(/\s+/g, "-");
+    const sectorData =
+      sectorsLookup.bySectorSlug[sectorSlug] ||
+      (sectorsLookup.byOutcode[candidateOutcode] && sectorsLookup.byOutcode[candidateOutcode][0]);
 
     if (sectorData) {
-      const avgPpm = Number(sectorData.avg_ppm) || 200;
-      const clark = Number(sectorData.clark_degrees) || Number((avgPpm * 0.07).toFixed(1));
+      const avgPpm = Number(sectorData.avgPpm) || 200;
+      const clark = Number(sectorData.clarkDegrees) || Number((avgPpm * 0.07).toFixed(1));
       const city = getCityByOutcode(sectorData.outcode);
 
       return NextResponse.json({
@@ -64,7 +60,7 @@ export async function GET(request: Request) {
         outcode: sectorData.outcode,
         avgPpm,
         clarkDegrees: clark,
-        companyName: sectorData.company_name || "Regional Water Utility",
+        companyName: sectorData.companyName || "Regional Water Utility",
         locationName: city ? city.name : sectorData.outcode,
         source: "sectors_table"
       });

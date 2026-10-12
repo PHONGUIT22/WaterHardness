@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { outcodesSummary, sectorsLookup } from "@/lib/sectorsLocal";
 import { citiesData, getCityByOutcode } from "@/lib/citiesData";
 import { suppliersData } from "@/lib/suppliersData";
 
@@ -154,27 +154,14 @@ export async function GET(request: Request) {
         url: `/suppliers/${s.slug}`,
       }));
 
-    // 4. SUPABASE MATCH: Outcodes & Sectors
+    // 4. LOCAL IN-MEMORY MATCH: Outcodes & Sectors
     const hasSpaceOrSectorDigit = /\s|\d$/.test(rawQuery);
 
-    // Parallel fetch from Supabase
-    const outcodePromise = supabase
-      .from("water_hardness_outcodes_summary")
-      .select("outcode, company_name, avg_ppm")
-      .ilike("outcode", `${outcodePattern}%`)
-      .limit(6);
+    const matchedOutcodeRows = outcodesSummary
+      .filter((o) => o.outcode.toUpperCase().startsWith(outcodePattern))
+      .slice(0, 6);
 
-    const sectorPromise = hasSpaceOrSectorDigit
-      ? supabase
-          .from("water_hardness_sectors")
-          .select("sector, outcode, company_name, avg_ppm, hardness_category")
-          .ilike("sector", `${cleanUpper}%`)
-          .limit(4)
-      : Promise.resolve({ data: null, error: null });
-
-    const [outcodeRes, sectorRes] = await Promise.all([outcodePromise, sectorPromise]);
-
-    const outcodes: SearchSuggestOutcode[] = (outcodeRes.data || []).map((row: any) => {
+    const outcodes: SearchSuggestOutcode[] = matchedOutcodeRows.map((row) => {
       const city = getCityByOutcode(row.outcode);
       return {
         outcode: row.outcode,
@@ -185,16 +172,25 @@ export async function GET(request: Request) {
       };
     });
 
-    const sectors: SearchSuggestSector[] = (sectorRes.data || []).map((row: any) => ({
-      sector: row.sector,
-      outcode: row.outcode,
-      avgPpm: Number(row.avg_ppm) || 200,
-      hardnessCategory: row.hardness_category || "Hard Water",
-      companyName: row.company_name,
-      url: `/water-hardness/${row.outcode.toLowerCase()}/${row.sector
-        .toLowerCase()
-        .replace(/\s+/g, "-")}`,
-    }));
+    const sectors: SearchSuggestSector[] = [];
+    if (hasSpaceOrSectorDigit) {
+      const allSectors = Object.values(sectorsLookup.bySectorSlug);
+      for (const s of allSectors) {
+        if (s.sector.toUpperCase().startsWith(cleanUpper)) {
+          sectors.push({
+            sector: s.sector,
+            outcode: s.outcode,
+            avgPpm: Number(s.avgPpm) || 200,
+            hardnessCategory: s.hardnessCategory || "Hard Water",
+            companyName: s.companyName,
+            url: `/water-hardness/${s.outcode.toLowerCase()}/${s.sector
+              .toLowerCase()
+              .replace(/\s+/g, "-")}`,
+          });
+          if (sectors.length >= 4) break;
+        }
+      }
+    }
 
     return NextResponse.json(
       {

@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { supabase } from "@/lib/supabase";
 import { getAllOutcodesFromDB } from "@/lib/data";
 import { getSeoDates } from "@/lib/seoDates";
 import { guidesData } from "@/lib/guidesData";

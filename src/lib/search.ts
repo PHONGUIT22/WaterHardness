@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/supabase";
+import { outcodesSummary, sectorsLookup } from "@/lib/sectorsLocal";
 import { citiesData } from "@/lib/citiesData";
 import { suppliersData, findSupplierByName } from "@/lib/suppliersData";
 
@@ -44,46 +44,51 @@ export async function resolveSearchDestination(query: string): Promise<string> {
 
   // 4. TRƯỜNG HỢP POSTCODE SECTORS & OUTCODES
   // Chuẩn hóa chuỗi tìm kiếm (VD: "sw1a-1" hoặc "sw1a 1" -> "SW1A 1")
-  const normalizedQuery = clean.replace(/-/g, " ").toUpperCase();
+  const sectorSlugKey = clean.toLowerCase().replace(/\s+/g, "-");
+  const normalizedSector = clean.replace(/-/g, " ").toUpperCase();
   const outcodeQuery = clean.replace(/\s+/g, "").toUpperCase();
 
   // 4.1. User nhập đầy đủ Postcode Sector (VD: "SW1A 1", "AB10 1", "ab10-1")
-  const { data: sectorMatch } = await supabase
-    .from("water_hardness_sectors")
-    .select("sector, outcode")
-    .ilike("sector", normalizedQuery)
-    .limit(1)
-    .maybeSingle();
+  const directSector =
+    sectorsLookup.bySectorSlug[sectorSlugKey] ||
+    Object.values(sectorsLookup.bySectorSlug).find(
+      (s) => s.sector.toUpperCase() === normalizedSector
+    );
 
-  if (sectorMatch) {
-    const outcodeClean = sectorMatch.outcode.toLowerCase();
-    const sectorSlug = sectorMatch.sector.toLowerCase().replace(/\s+/g, "-");
+  if (directSector) {
+    const outcodeClean = directSector.outcode.toLowerCase();
+    const sectorSlug = directSector.sector.toLowerCase().replace(/\s+/g, "-");
     return `/water-hardness/${outcodeClean}/${sectorSlug}`;
   }
 
   // 4.2. User chỉ nhập Outcode (VD: "SW1A", "AB10", "M1", "B1")
-  const { data: outcodeMatch } = await supabase
-    .from("water_hardness_sectors")
-    .select("outcode")
-    .ilike("outcode", outcodeQuery)
-    .limit(1)
-    .maybeSingle();
+  const directOutcode = sectorsLookup.byOutcode[outcodeQuery];
+  if (directOutcode && directOutcode.length > 0) {
+    return `/water-hardness/${directOutcode[0].outcode.toLowerCase()}`;
+  }
 
-  if (outcodeMatch) {
-    return `/water-hardness/${outcodeMatch.outcode.toLowerCase()}`;
+  const outcodeSummaryMatch = outcodesSummary.find(
+    (o) => o.outcode.toUpperCase() === outcodeQuery
+  );
+  if (outcodeSummaryMatch) {
+    return `/water-hardness/${outcodeSummaryMatch.outcode.toLowerCase()}`;
   }
 
   // 4.3. Tìm kiếm tương đối (Gõ thiếu hoặc tìm kiếm gần đúng)
-  const { data: partialMatches } = await supabase
-    .from("water_hardness_sectors")
-    .select("sector, outcode")
-    .or(`sector.ilike.%${normalizedQuery}%,outcode.ilike.%${outcodeQuery}%`)
-    .limit(1);
+  const partialOutcode = outcodesSummary.find((o) =>
+    o.outcode.toUpperCase().startsWith(outcodeQuery)
+  );
+  if (partialOutcode) {
+    return `/water-hardness/${partialOutcode.outcode.toLowerCase()}`;
+  }
 
-  if (partialMatches && partialMatches.length > 0) {
-    const match = partialMatches[0];
-    const outcodeClean = match.outcode.toLowerCase();
-    const sectorSlug = match.sector.toLowerCase().replace(/\s+/g, "-");
+  const cleanNoSpace = clean.toUpperCase().replace(/[\s-]/g, "");
+  const partialSector = Object.values(sectorsLookup.bySectorSlug).find((s) =>
+    s.sector.toUpperCase().replace(/[\s-]/g, "").includes(cleanNoSpace)
+  );
+  if (partialSector) {
+    const outcodeClean = partialSector.outcode.toLowerCase();
+    const sectorSlug = partialSector.sector.toLowerCase().replace(/\s+/g, "-");
     return `/water-hardness/${outcodeClean}/${sectorSlug}`;
   }
 
