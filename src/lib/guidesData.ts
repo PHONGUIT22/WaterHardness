@@ -31,7 +31,7 @@ export const guidesData: GuideArticle[] = [
     targetKeyword: "bristol water hardness",
     category: "Regional Hardness",
     datePublished: "2025-02-14T08:00:00Z",
-    dateModified: "2026-10-07T08:00:00Z",
+    dateModified: "2026-10-13T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "220 – 290 PPM (mg/L CaCO3)",
@@ -41,6 +41,10 @@ export const guidesData: GuideArticle[] = [
     },
     relatedOutcodes: ["BS1", "BS3", "BS5", "BS8", "BS16"],
     faqItems: [
+      {
+        question: "Is Bristol a hard water area?",
+        answer: "Yes, Bristol is a verified hard water area, registering an average mineral concentration of 260 PPM (mg/L CaCO3) or approximately 18.2° Clark. Supplied from limestone-rich Mendip Hills aquifers and Chew Valley Lake, Bristol tap water causes rapid limescale buildup across kettles, boilers, and sanitaryware."
+      },
       {
         question: "How hard is Bristol tap water?",
         answer: "Bristol tap water is categorized as hard to very hard, with mineral concentrations averaging 260 PPM (mg/L CaCO3) or approximately 18.2° Clark. Sourced from limestone-rich Mendip Hills aquifers and Chew Valley Lake, it deposits heavy limescale in kettles and heating elements."
@@ -62,10 +66,6 @@ export const guidesData: GuideArticle[] = [
         answer: "Yes. An untreated combi boiler in Bristol accumulates roughly 1mm of limescale on its secondary plate heat exchanger within 18 to 24 months, reducing heat transfer efficiency by 7% to 10% and adding £120 to £180 onto annual gas bills."
       },
       {
-        question: "Is Bristol a hard water area?",
-        answer: "Yes, Bristol is officially classified as a hard to very hard water area. Tap water across all BS postcode districts measures between 220 and 290 PPM (15.4 to 20.3° Clark), leading to heavy calcium carbonate deposits on kettle heating coils and bathroom surfaces."
-      },
-      {
         question: "Is tap water in Bristol safe to drink?",
         answer: "Yes, tap water in Bristol is 100% safe to drink. Managed by Bristol Water and tested continuously against stringent Drinking Water Inspectorate (DWI) standards, it carries healthy levels of essential dietary calcium and magnesium minerals."
       }
@@ -82,7 +82,7 @@ export const guidesData: GuideArticle[] = [
         </p>
       </div>
 
-      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Bristol Water Hardness Readings by Postcode Sector</h2>
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Is Bristol a Hard Water Area? Regional Hardness Overview</h2>
       <p class="text-slate-600 mb-4">
         Bristol Water (part of Pennon Group) manages drinking water distribution across the greater Bristol conurbation. While minor seasonal shifts occur when reservoir levels drop during dry summers, mineral densities across the primary outcodes remain firmly in the hard water bracket:
       </p>
@@ -591,7 +591,7 @@ export const guidesData: GuideArticle[] = [
     targetKeyword: "manchester water hardness",
     category: "Regional Hardness",
     datePublished: "2025-02-05T08:00:00Z",
-    dateModified: "2026-08-15T14:20:00Z",
+    dateModified: "2026-10-13T08:00:00Z",
     readingTime: "5 min read",
     quickVerdict: {
       ppmRange: "30 – 60 PPM (mg/L CaCO3)",
@@ -622,6 +622,12 @@ export const guidesData: GuideArticle[] = [
       <p class="lead text-lg font-medium text-slate-700 mb-6">
         Manchester tap water is <strong>naturally soft</strong>, averaging between <strong>30 and 60 PPM</strong> across all Greater Manchester postal districts (M1 to M90). Unlike homeowners in southern England who battle chalky limescale daily, Manchester residents rarely ever need to descale a kettle, replace a scaled-up immersion element, or install a whole-house water softener.
       </p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 my-6">
+        <h3 class="text-blue-900 font-bold text-base mb-2">Looking for Street-Level Manchester Data?</h3>
+        <p class="text-blue-800 text-sm mb-3">Explore postcode ratings across Greater Manchester, Lake District reservoir sources, and domestic appliance advice:</p>
+        <a href="/cities/manchester" class="inline-flex items-center text-sm font-semibold text-blue-700 bg-white px-3 py-1.5 rounded-lg border border-blue-200 hover:bg-blue-100 transition">Manchester City Water Hardness Hub &rarr;</a>
+      </div>
 
       <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Hardness Levels Across Greater Manchester Postcodes</h2>
       <p class="text-slate-600 mb-4">
@@ -5684,6 +5690,207 @@ export const guidesData: GuideArticle[] = [
             Interactive Dishwasher Salt Setting Calculator &rarr;
           </a>
         </div>
+      </div>
+    `,
+  },
+  {
+    slug: "bosch-dishwasher-salt-settings-uk",
+    title: "Bosch Dishwasher Salt Settings UK: Water Hardness Levels (H:00 to H:07)",
+    metaTitle: "Bosch Dishwasher Salt Settings UK: How to Set Hardness (H:00-H:07)",
+    metaDescription: "How to set water hardness on a Bosch dishwasher in the UK. Step-by-step guide to H:00 to H:07 levels by PPM, button combos, Series 2/4/6/8 & salt tips.",
+    targetKeyword: "bosch dishwasher salt settings uk",
+    category: "Appliance Care",
+    datePublished: "2026-10-13T08:00:00Z",
+    dateModified: "2026-10-13T08:00:00Z",
+    readingTime: "6 min read",
+    quickVerdict: {
+      ppmRange: "0 - 400+ PPM (All UK Postcodes)",
+      classification: "Appliance Water Softener Calibration",
+      supplier: "All UK Water Suppliers (Thames Water, Severn Trent, Anglian, Yorkshire)",
+      keyTakeaway: "Bosch dishwashers feature an internal water softening unit calibrated from H:00 (switched off for ultra-soft water below 50 PPM) to H:07 (maximum softening for aggressively hard water above 380 PPM). Setting the correct H level prevents cloudy glass etching in soft water and stops limescale encrustation on heating elements in hard water."
+    },
+    relatedOutcodes: ["SW1", "B1", "M1", "BS1", "LE1", "NR1", "ST1"],
+    faqItems: [
+      {
+        question: "How do I change the water hardness setting on a Bosch dishwasher?",
+        answer: "Press and hold the Programme A button (or the Setup 3 sec button on newer Series 4, 6, and 8 models) while pressing the Power ON button until H:0x appears on the digital display. Press the programme button repeatedly until your desired hardness level (H:00 to H:07) is selected, then press Start to save."
+      },
+      {
+        question: "What Bosch salt setting should I use for soft water?",
+        answer: "In soft water areas such as Scotland, Manchester, Belfast, and Birmingham (below 90 PPM / 6° Clark), set your Bosch dishwasher to H:00 (switched off) or H:01. At H:00, no dishwasher salt is consumed and soft water glass corrosion is prevented."
+      },
+      {
+        question: "What Bosch salt setting should I use for hard water in London or East Anglia?",
+        answer: "In very hard water zones like Greater London, Surrey, Bristol, and Norwich (260 to 350+ PPM), calibrate your Bosch dishwasher to H:05 or H:06. For aggressively hard water exceeding 380 PPM, set to H:07 and keep the salt reservoir replenished."
+      },
+      {
+        question: "Do I need salt in a Bosch dishwasher if I use All-in-1 pods?",
+        answer: "Bosch officially recommends using separate dishwasher salt whenever your water hardness exceeds 210 PPM (15° Clark / H:04 and above). All-in-one tablets only soften water effectively up to approximately 200 PPM; beyond this, built-in tablet builders become overwhelmed, causing cloudy glasses."
+      },
+      {
+        question: "Where is the salt reservoir in a Bosch dishwasher?",
+        answer: "The salt reservoir is located at the bottom of the dishwasher tub on the left-hand side. Unscrew the large cap, insert the supplied plastic funnel, fill with coarse dishwasher salt, and wipe away any spilled granules before closing the cap."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        Calibrating the water hardness setting on your Bosch dishwasher (Series 2, Series 4, Series 6, or Series 8) is the single most critical step to ensuring streak-free glassware and safeguarding the internal heating element against premature limescale burn-out. In the UK, mains tap water ranges dramatically from naturally soft 30 PPM in Scotland and Manchester to aggressively hard 380+ PPM across London and East Anglia. Bosch dishwashers accommodate this via an internal ion-exchange softening unit with levels ranging from <strong>H:00 to H:07</strong>.
+      </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: How to Set Water Hardness on a Bosch Dishwasher</p>
+        <p class="text-slate-700 text-sm">
+          Switch on the appliance. Press and hold <strong>Programme A</strong> (or the <strong>Setup 3 sec</strong> button) until <strong>H:0x</strong> flashes on the display. Press the programme button repeatedly to select your local hardness level from <strong>H:00 to H:07</strong>, then press <strong>Start</strong> to store the setting.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Bosch Dishwasher Water Hardness Conversion Table (UK Postcodes)</h2>
+      <p class="text-slate-600 mb-4">
+        Match your local tap water hardness (measured in PPM or English Clark Degrees) with the official Bosch factory settings below:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left text-sm border-collapse border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 font-semibold">
+            <tr>
+              <th class="border border-slate-200 p-3">Bosch Setting</th>
+              <th class="border border-slate-200 p-3">PPM (mg/L CaCO3)</th>
+              <th class="border border-slate-200 p-3">English Degrees (°e / Clark)</th>
+              <th class="border border-slate-200 p-3">Water Classification</th>
+              <th class="border border-slate-200 p-3">Representative UK Regions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-emerald-700">H:00</td>
+              <td class="border border-slate-200 p-3">0 – 50 PPM</td>
+              <td class="border border-slate-200 p-3">0 – 3.5° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded text-xs font-bold">Switched OFF</span></td>
+              <td class="border border-slate-200 p-3">Scottish Highlands, Glasgow, Cornwall granites</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-emerald-600">H:01</td>
+              <td class="border border-slate-200 p-3">50 – 90 PPM</td>
+              <td class="border border-slate-200 p-3">3.5 – 6.3° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded text-xs font-bold">Very Soft</span></td>
+              <td class="border border-slate-200 p-3">Manchester, Edinburgh, Birmingham (Elan Valley)</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-cyan-700">H:02</td>
+              <td class="border border-slate-200 p-3">90 – 140 PPM</td>
+              <td class="border border-slate-200 p-3">6.3 – 9.8° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-cyan-100 text-cyan-800 px-2 py-0.5 rounded text-xs font-bold">Soft to Moderate</span></td>
+              <td class="border border-slate-200 p-3">Leeds, Liverpool, Newcastle, Devon Moorlands</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-blue-700">H:03</td>
+              <td class="border border-slate-200 p-3">140 – 180 PPM</td>
+              <td class="border border-slate-200 p-3">9.8 – 12.6° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-bold">Moderate</span></td>
+              <td class="border border-slate-200 p-3">Sheffield, Stoke-on-Trent, Cardiff, Derby</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-amber-700">H:04</td>
+              <td class="border border-slate-200 p-3">180 – 240 PPM</td>
+              <td class="border border-slate-200 p-3">12.6 – 16.8° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-xs font-bold">Hard</span></td>
+              <td class="border border-slate-200 p-3">Coventry, Leicester, Nottingham, Gloucester</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-orange-700">H:05</td>
+              <td class="border border-slate-200 p-3">240 – 300 PPM</td>
+              <td class="border border-slate-200 p-3">16.8 – 21.0° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-orange-100 text-orange-800 px-2 py-0.5 rounded text-xs font-bold">Very Hard</span></td>
+              <td class="border border-slate-200 p-3">Bristol, Greater London, Oxford, Reading, Brighton</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-rose-700">H:06</td>
+              <td class="border border-slate-200 p-3">300 – 380 PPM</td>
+              <td class="border border-slate-200 p-3">21.0 – 26.6° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-rose-100 text-rose-800 px-2 py-0.5 rounded text-xs font-bold">Aggressively Hard</span></td>
+              <td class="border border-slate-200 p-3">Surrey (Woking, Guildford), Norwich, Ipswich, Cambridge</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-bold text-red-800">H:07</td>
+              <td class="border border-slate-200 p-3">380+ PPM</td>
+              <td class="border border-slate-200 p-3">26.6+° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-xs font-bold">Maximum Regeneration</span></td>
+              <td class="border border-slate-200 p-3">Hertfordshire chalk, Kent North Downs, Salisbury Plain</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Method 1: Bosch Series 2 &amp; Series 4 (Push-Button Control Panels)</h2>
+      <p class="text-slate-600 mb-4">
+        Most freestanding and semi-integrated Bosch Series 2 (Classixx) and Series 4 (Exxcel) models use standard physical push buttons to program water hardness:
+      </p>
+      <ol class="list-decimal pl-6 space-y-3 text-slate-600 mb-6">
+        <li><strong>Open the Door:</strong> Ensure the dishwasher is switched off before starting.</li>
+        <li><strong>Press and Hold Programme Button A:</strong> Press and hold down Programme button A (often the Intensive 70°C or Eco 50°C button depending on generation), and simultaneously press the <strong>Power ON</strong> button.</li>
+        <li><strong>Release Both Buttons:</strong> Hold both buttons until the digital display flashes <strong>H:00</strong> (or your currently saved value, e.g., <strong>H:04</strong>).</li>
+        <li><strong>Cycle to Target Level:</strong> Press <strong>Programme button C</strong> (or the main programme cycle button) repeatedly until your desired hardness level (from <strong>H:00</strong> to <strong>H:07</strong>) appears.</li>
+        <li><strong>Save and Confirm:</strong> Press the <strong>START</strong> button to store the value permanently into the electronic memory.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Method 2: Bosch Series 6 &amp; Series 8 (TouchControls &amp; TFT Display)</h2>
+      <p class="text-slate-600 mb-4">
+        Premium Bosch Series 6 (Logixx) and Series 8 fully integrated models feature touch-capacitive controls, hidden top-door edges, or Home Connect digital menus:
+      </p>
+      <ol class="list-decimal pl-6 space-y-3 text-slate-600 mb-6">
+        <li><strong>Open the Door &amp; Power On:</strong> Turn the machine on using the Power button.</li>
+        <li><strong>Access Basic Settings:</strong> Press and hold the dedicated <strong>Setup 3 sec.</strong> button for 3 seconds until the display shows <em>Basic Settings</em> or <em>Water Hardness</em>.</li>
+        <li><strong>Adjust the Dial Setting:</strong> Use the <strong>+ / -</strong> buttons or scroll wheel to navigate to the water hardness setting. Select your target value from <strong>H:00 to H:07</strong>.</li>
+        <li><strong>Store the Setting:</strong> Press and hold <strong>Setup 3 sec.</strong> again for 3 seconds to save and exit the setup menu.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Why All-in-1 Dishwasher Pods Fail in Hard Water Areas</h2>
+      <p class="text-slate-600 mb-4">
+        Many dishwasher detergent manufacturers market "All-in-1" or "Platinum" pods claiming to eliminate the need for dishwasher salt. In soft water regions like Manchester or Scotland, this claim holds true. However, in hard water zones across southern and eastern England, relying solely on pods leads to chalky residue and cloudy glassware.
+      </p>
+      <p class="text-slate-600 mb-4">
+        The chemical builders inside all-in-one tablets (such as sodium tripolyphosphate or polycarboxylates) are designed to neutralize calcium only up to approximately <strong>210 PPM (15° Clark / Level H:04)</strong>. Once tap water exceeds 210 PPM:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>Scale Precipitation:</strong> Excess unchelated calcium precipitates during the high-temperature drying phase, baking onto glassware and ceramic glaze.</li>
+        <li><strong>Internal Resin Starvation:</strong> The built-in ion-exchange resin tank inside your Bosch dishwasher becomes depleted and exhausted if not recharged with sodium ions from coarse dishwasher salt.</li>
+        <li><strong>Boiler Element Damage:</strong> Limescale coats the internal flow-through heating element, causing it to run hotter, draw more electricity, and eventually crack.</li>
+      </ul>
+
+      <div class="bg-blue-50 border-blue-200 border rounded-xl p-5 my-6">
+        <h3 class="text-blue-900 font-bold text-base mb-2">Calculate Your Postcode's Exact Bosch Dial Setting</h3>
+        <p class="text-blue-800 text-sm mb-3">
+          Unsure of your street-level mineral PPM rating? Use our interactive tool to lookup your exact UK outcode and determine your ideal Bosch H setting, salt consumption rate, and refill schedule:
+        </p>
+        <a href="/tools/dishwasher-salt-calculator" class="text-blue-700 font-bold hover:underline">Interactive UK Dishwasher Salt Calculator &rarr;</a>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Refilling the Salt Reservoir: Step-by-Step</h2>
+      <p class="text-slate-600 mb-4">
+        When the red optical refill indicator (or digital salt symbol resembling two curved arrows) lights up on your Bosch control panel:
+      </p>
+      <ol class="list-decimal pl-6 space-y-2 text-slate-600 mb-6">
+        <li>Slide out the lower basket and locate the circular cap on the bottom-left floor of the tub.</li>
+        <li>Unscrew the cap anticlockwise. If refilling for the very first time on a brand-new machine, fill the chamber with 1 litre of water first.</li>
+        <li>Position the funnel and pour in genuine coarse dishwasher salt (never table salt or rock salt) until the reservoir is full (typically 1.2kg to 1.5kg). Displaced water will overflow into the sump—this is completely normal.</li>
+        <li>Wipe away any loose salt grains from around the seal threads and tightly screw the cap shut.</li>
+        <li>Immediately run a short rinse or pre-wash cycle to flush out any stray brine water and prevent rust pitting in the stainless steel tub.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Explore Related UK Appliance &amp; Water Guides</h2>
+      <p class="text-slate-600 mb-4">
+        Deepen your understanding of UK water quality and domestic appliance protection:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 my-6">
+        <a href="/guides/indesit-dishwasher-salt-settings-uk" class="p-3.5 rounded-xl border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-xs text-sm">
+          Indesit Salt Settings Guide &rarr;
+        </a>
+        <a href="/guides/uk-water-hardness-ppm-scale-chart" class="p-3.5 rounded-xl border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-xs text-sm">
+          UK Water Hardness PPM Scale Chart &rarr;
+        </a>
+        <a href="/guides/london-water-hardness-by-postcode" class="p-3.5 rounded-xl border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-xs text-sm">
+          London Water Hardness Guide &rarr;
+        </a>
       </div>
     `,
   }
