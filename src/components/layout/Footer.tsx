@@ -30,6 +30,16 @@ export default function Footer() {
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact Support</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
+              <li>
+                <a 
+                  href="https://www.trustpilot.com/review/waterhardness.uk" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-white transition-colors flex items-center gap-1.5 text-emerald-400 font-medium"
+                >
+                  <span>★ Review on Trustpilot</span>
+                </a>
+              </li>
             </ul>
           </div>
 

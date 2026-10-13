@@ -105,8 +105,14 @@ export default function RootLayout({
                     "@id": "https://waterhardness.uk/#person"
                   },
                   "sameAs": [
-                    "https://www.facebook.com/profile.php?id=61593468350046",
-                    "https://gravatar.com/quicklyimpossible45dfc1b37d"
+                    "https://www.trustpilot.com/review/waterhardness.uk",
+                    "https://www.linkedin.com/company/water-hardness",
+                    "https://www.crunchbase.com/organization/waterhardness-uk-4884",
+                    "https://www.producthunt.com/products/waterhardness",
+                    "https://github.com/PHONGUIT22/WaterHardness",
+                    "https://x.com/phongr40k",
+                    "https://www.threads.net/@waterhardness",
+                    "https://www.facebook.com/profile.php?id=61595468350046"
                   ]
                 },
                 {
@@ -124,9 +130,14 @@ export default function RootLayout({
                     "@id": "https://waterhardness.uk/#organization"
                   },
                   "sameAs": [
-                    "https://www.facebook.com/phong.nguyen.916206/",
+                    "https://www.linkedin.com/in/nguy%E1%BB%85n-phong-a673681b5/",
+                    "https://about.me/phong_nguyen1123/",
+                    "https://medium.com/@dpphong80",
+                    "https://linktr.ee/dpphong80",
+                    "https://www.quora.com/profile/DP-PHONG-1",
                     "https://github.com/KoVN-s",
-                    "https://www.linkedin.com/in/nguy%E1%BB%85n-phong-a673681b5/"
+                    "https://www.facebook.com/phong.nguyen.916206/",
+                    "https://gravatar.com/quicklyimpossible45dfc1b37d"
                   ],
                   "knowsAbout": [
                     "Data Analytics",
