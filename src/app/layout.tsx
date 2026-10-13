@@ -53,6 +53,9 @@ export const metadata: Metadata = {
     description: "Lookup water hardness (PPM & Clark) across UK postcodes. Check limescale risks and appliance dishwasher salt settings.",
     images: ["https://waterhardness.uk/og-image.png"],
   },
+  other: {
+    "trustpilot-one-time-domain-verification-id": "3dca041c-1257-4a84-8d6c-78266614ef91",
+  },
 };
 
 export default function RootLayout({
@@ -63,6 +66,10 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <head>
+        <meta
+          name="trustpilot-one-time-domain-verification-id"
+          content="3dca041c-1257-4a84-8d6c-78266614ef91"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
