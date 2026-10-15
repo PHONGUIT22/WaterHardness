@@ -31,7 +31,7 @@ export const guidesData: GuideArticle[] = [
     targetKeyword: "bristol water hardness",
     category: "Regional Hardness",
     datePublished: "2025-02-14T08:00:00Z",
-    dateModified: "2026-10-13T08:00:00Z",
+    dateModified: "2026-10-15T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "220 – 290 PPM (mg/L CaCO3)",
@@ -84,7 +84,7 @@ export const guidesData: GuideArticle[] = [
 
       <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Is Bristol a Hard Water Area? Regional Hardness Overview</h2>
       <p class="text-slate-600 mb-4">
-        Bristol Water (part of Pennon Group) manages drinking water distribution across the greater Bristol conurbation. While minor seasonal shifts occur when reservoir levels drop during dry summers, mineral densities across the primary outcodes remain firmly in the hard water bracket:
+        Bristol Water (part of Pennon Group) manages drinking water distribution across the greater Bristol conurbation. While domestic clean tap water in central Bristol is distributed by Bristol Water, wastewater and sewerage services across the wider Bristol, Bath, and Somerset region are managed by Wessex Water (operating in an identically hard 250–290 PPM catchment). While minor seasonal shifts occur when reservoir levels drop during dry summers, mineral densities across the primary outcodes remain firmly in the hard water bracket:
       </p>
 
       <div class="overflow-x-auto my-6">
@@ -5143,7 +5143,7 @@ export const guidesData: GuideArticle[] = [
     targetKeyword: "southampton water hardness",
     category: "Regional Hardness",
     datePublished: "2026-10-10T08:00:00Z",
-    dateModified: "2026-10-10T08:00:00Z",
+    dateModified: "2026-10-15T08:00:00Z",
     readingTime: "8 min read",
     quickVerdict: {
       ppmRange: "260 – 320 PPM (mg/L CaCO3)",
@@ -5182,7 +5182,7 @@ export const guidesData: GuideArticle[] = [
       <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
         <p class="text-slate-800 font-semibold mb-1">Quick Answer: Is Hampshire Water Hard or Soft?</p>
         <p class="text-slate-700 text-sm">
-          <strong>Tap water in Southampton and Portsmouth is very hard (290–295 PPM)</strong>. Sourced from the South Downs chalk formation and the River Test and Itchen, it leaves persistent limescale on fixtures and combi boilers. Explore our dedicated <a href="/cities/southampton" class="text-blue-600 font-semibold hover:underline">Southampton Water Hardness Hub</a> and <a href="/cities/portsmouth" class="text-blue-600 font-semibold hover:underline">Portsmouth Water Hardness Hub</a> for local street ratings.
+          <strong>Tap water in Southampton and Portsmouth is very hard (290–295 PPM)</strong>. Sourced from the South Downs chalk formation and the River Test and Itchen, it leaves persistent limescale on fixtures and combi boilers. Read our dedicated <a href="/guides/does-southampton-have-hard-water" class="text-blue-600 font-bold hover:underline">Southampton Water Hardness Guide (270 PPM) &rarr;</a> or explore the <a href="/cities/southampton" class="text-blue-600 font-semibold hover:underline">Southampton Water Hardness Hub</a> and <a href="/cities/portsmouth" class="text-blue-600 font-semibold hover:underline">Portsmouth Water Hardness Hub</a> for local street ratings.
         </p>
       </div>
 
@@ -5308,6 +5308,9 @@ export const guidesData: GuideArticle[] = [
           Discover street-level postcode ratings, interactive tools, and appliance guides:
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <a href="/guides/does-southampton-have-hard-water" class="p-3 rounded-lg border border-blue-200 bg-blue-50/70 hover:bg-blue-100 font-bold text-blue-700 transition shadow-sm sm:col-span-2">
+            Southampton Water Hardness Guide (270 PPM) &rarr;
+          </a>
           <a href="/cities/southampton" class="p-3 rounded-lg border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-sm">
             Southampton Water Hardness Hub &rarr;
           </a>
@@ -5890,6 +5893,183 @@ export const guidesData: GuideArticle[] = [
         </a>
         <a href="/guides/london-water-hardness-by-postcode" class="p-3.5 rounded-xl border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-xs text-sm">
           London Water Hardness Guide &rarr;
+        </a>
+      </div>
+    `,
+  },
+  {
+    slug: "does-southampton-have-hard-water",
+    title: "Does Southampton Have Hard Water? Hampshire PPM & Postcode Guide",
+    metaTitle: "Does Southampton Have Hard Water? (Yes - 270 PPM Guide)",
+    metaDescription: "Is tap water hard or soft in Southampton? Southampton water is hard at 270 PPM (18.9° Clark). Check Southern Water River Test sources, SO postcodes & softener advice.",
+    targetKeyword: "does southampton have hard water",
+    category: "Regional Hardness",
+    datePublished: "2026-10-15T08:00:00Z",
+    dateModified: "2026-10-15T08:00:00Z",
+    readingTime: "6 min read",
+    quickVerdict: {
+      ppmRange: "250 - 290 PPM (mg/L CaCO3)",
+      classification: "Hard to Very Hard",
+      supplier: "Southern Water",
+      keyTakeaway: "Yes, Southampton tap water is hard to very hard, averaging roughly 270 PPM (18.9° Clark). Sourced from underground Cretaceous chalk boreholes blended with surface abstractions from the chalk-filtered River Test and River Itchen, it leaves chalky limescale on kettles, clouds shower screens, and requires high dishwasher salt settings."
+    },
+    relatedOutcodes: ["SO14", "SO15", "SO16", "SO17", "SO18", "SO19"],
+    faqItems: [
+      {
+        question: "Is water hard or soft in Southampton?",
+        answer: "Southampton has hard to very hard tap water, averaging 270 PPM (18.9° Clark). Levels typically range between 250 PPM and 290 PPM across all SO postcodes due to natural calcium dissolved from Hampshire chalk aquifers."
+      },
+      {
+        question: "Where does Southampton's tap water come from?",
+        answer: "Southern Water supplies Southampton primarily from groundwater extracted from deep chalk boreholes in the South Downs and surface abstractions from the world-famous chalk streams of the River Test and River Itchen."
+      },
+      {
+        question: "Do I need a water softener in Southampton?",
+        answer: "Installing an ion-exchange water softener is highly recommended in Southampton. At 270 PPM, untreated water causes combi boilers to lose up to 10% thermal efficiency from heat exchanger scaling and significantly shortens the lifespan of washing machines and dishwashers."
+      },
+      {
+        question: "What dishwasher salt setting should I choose in Southampton?",
+        answer: "Set your dishwasher water softener to Level 5 (or H:05 on Bosch dishwashers). Due to the heavy 270 PPM calcium concentration, auxiliary coarse dishwasher salt is essential to prevent cloudy film on glassware."
+      },
+      {
+        question: "Is Southampton tap water safe to drink?",
+        answer: "Yes, tap water in Southampton meets 100% of Drinking Water Inspectorate (DWI) strict safety standards and is completely safe and healthy to drink, rich in beneficial dietary calcium and magnesium."
+      }
+    ],
+    contentHtml: `
+      <p class="lead text-lg font-medium text-slate-700 mb-6">
+        Whether you have recently moved to Hampshire's largest port city or are battling stubborn white crust on your kettle, the answer is definitive: tap water across Southampton and the surrounding Solent coastline is officially classified as <strong>Hard to Very Hard</strong>, averaging <strong>270 PPM (mg/L CaCO3)</strong> or <strong>18.9° Clark</strong>. Supplied by Southern Water, Southampton's drinking water originates from natural mineral-rich Cretaceous chalk aquifers and famous Hampshire chalk streams, delivering clean, crisp water that leaves persistent limescale across household appliances.
+      </p>
+
+      <div class="bg-cyan-50 border-l-4 border-cyan-600 p-4 my-6 rounded-r-xl">
+        <p class="text-slate-800 font-semibold mb-1">Quick Answer: Does Southampton Have Hard Water?</p>
+        <p class="text-slate-700 text-sm">
+          Yes, Southampton tap water is classified as hard to very hard, with average mineral concentrations of 270 PPM (mg/L CaCO3) or 18.9° Clark. Sourced by Southern Water from chalk groundwater aquifers and the Rivers Test and Itchen, it causes rapid kettle limescale buildup and soap scum across all SO postcodes.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Southampton Water Hardness by Postcode: SO14 to SO19</h2>
+      <p class="text-slate-600 mb-4">
+        Water hardness varies slightly across Southampton depending on whether your supply is weighted more toward River Test surface abstractions or deep chalk boreholes. The table below outlines hardness levels, water suppliers, and official classification across key Southampton postcodes:
+      </p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left border-collapse border border-slate-200 text-sm">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700 font-semibold">
+              <th class="border border-slate-200 p-3">Postcode District</th>
+              <th class="border border-slate-200 p-3">Coverage &amp; Neighbourhoods</th>
+              <th class="border border-slate-200 p-3">Hardness (PPM)</th>
+              <th class="border border-slate-200 p-3">English Degrees (°Clark)</th>
+              <th class="border border-slate-200 p-3">Classification</th>
+              <th class="border border-slate-200 p-3">Local Hub Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">SO14</td>
+              <td class="border border-slate-200 p-3">Southampton City Centre, Ocean Village, Newtown, St Mary's</td>
+              <td class="border border-slate-200 p-3 font-medium text-orange-600">268 PPM</td>
+              <td class="border border-slate-200 p-3">18.8° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-orange-100 text-orange-800 px-2 py-0.5 rounded text-xs font-semibold">Hard</span></td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/so14" class="text-blue-600 font-semibold hover:underline">Check SO14 Data &rarr;</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">SO15</td>
+              <td class="border border-slate-200 p-3">Shirley, Freemantle, Millbrook, Banister Park, Polygon</td>
+              <td class="border border-slate-200 p-3 font-medium text-orange-600">272 PPM</td>
+              <td class="border border-slate-200 p-3">19.0° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-orange-100 text-orange-800 px-2 py-0.5 rounded text-xs font-semibold">Hard</span></td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/so15" class="text-blue-600 font-semibold hover:underline">Check SO15 Data &rarr;</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">SO16</td>
+              <td class="border border-slate-200 p-3">Bassett, Lordshill, Chilworth, General Hospital, Lordswood</td>
+              <td class="border border-slate-200 p-3 font-medium text-orange-600">275 PPM</td>
+              <td class="border border-slate-200 p-3">19.3° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-orange-100 text-orange-800 px-2 py-0.5 rounded text-xs font-semibold">Hard</span></td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/so16" class="text-blue-600 font-semibold hover:underline">Check SO16 Data &rarr;</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">SO17</td>
+              <td class="border border-slate-200 p-3">Highfield, Portswood, St Denys, University of Southampton</td>
+              <td class="border border-slate-200 p-3 font-medium text-orange-600">270 PPM</td>
+              <td class="border border-slate-200 p-3">18.9° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-orange-100 text-orange-800 px-2 py-0.5 rounded text-xs font-semibold">Hard</span></td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/so17" class="text-blue-600 font-semibold hover:underline">Check SO17 Data &rarr;</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">SO18</td>
+              <td class="border border-slate-200 p-3">Bitterne, Bitterne Park, Midanbury, Townhill Park, Harefield</td>
+              <td class="border border-slate-200 p-3 font-medium text-orange-600">265 PPM</td>
+              <td class="border border-slate-200 p-3">18.6° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-orange-100 text-orange-800 px-2 py-0.5 rounded text-xs font-semibold">Hard</span></td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/so18" class="text-blue-600 font-semibold hover:underline">Check SO18 Data &rarr;</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="border border-slate-200 p-3 font-semibold text-slate-900">SO19</td>
+              <td class="border border-slate-200 p-3">Woolston, Weston, Sholing, Peartree, Itchen</td>
+              <td class="border border-slate-200 p-3 font-medium text-orange-600">268 PPM</td>
+              <td class="border border-slate-200 p-3">18.8° Clark</td>
+              <td class="border border-slate-200 p-3"><span class="bg-orange-100 text-orange-800 px-2 py-0.5 rounded text-xs font-semibold">Hard</span></td>
+              <td class="border border-slate-200 p-3"><a href="/water-hardness/so19" class="text-blue-600 font-semibold hover:underline">Check SO19 Data &rarr;</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Hampshire Chalk Geology &amp; Where Southampton's Water Comes From</h2>
+      <p class="text-slate-600 mb-4">
+        Southern Water operates the drinking water distribution system throughout Southampton. Unlike northern or western cities that capture surface water runoff from impermeable granite moorlands, Southampton sits atop the southern edge of the vast Hampshire Basin, enveloped by the Cretaceous White Chalk formations of the South Downs and Salisbury Plain.
+      </p>
+      <p class="text-slate-600 mb-4">
+        Southern Water draws Southampton's municipal supply from a combination of deep underground chalk boreholes and regulated river abstractions from two of the world's most pristine chalk streams: the <strong>River Test</strong> and the <strong>River Itchen</strong>. Raw water from the River Test is piped into the major <strong>Testwood Water Supply Works (WSW)</strong> near Totton, where advanced filtration, clarification, and disinfection ensure wholesome drinking standards before pumping it across the city.
+      </p>
+      <p class="text-slate-600 mb-4">
+        Because both the subterranean aquifers and chalk streams pass through hundreds of feet of natural calcium carbonate (CaCO3) and magnesium carbonate (MgCO3) limestone bedrock, every litre of rainwater becomes heavily saturated with dissolved minerals. By the time it arrives at domestic kitchen taps, it carries approximately 270 mg of dissolved limestone per litre.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Managing Limescale &amp; Dishwasher Settings in Southampton (Level 5)</h2>
+      <p class="text-slate-600 mb-4">
+        At 270 PPM, hard water exerts continuous wear and tear on domestic appliances across Southampton households:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-slate-600 mb-6">
+        <li><strong>Electric Kettles:</strong> White flake residue develops within days of boiling. Descale monthly using citric acid or distilled white vinegar.</li>
+        <li><strong>Shower Screens &amp; Tiles:</strong> Soap reacts with dissolved calcium ions to form insoluble calcium stearate (soap scum), which bonds tightly to glass and porcelain.</li>
+        <li><strong>Washing Machines:</strong> Detergent efficiency drops by roughly 30% because surfactants are neutralised by calcium. Add an extra 15–20% washing powder or use dedicated water softening tablets in the drum.</li>
+        <li><strong>Dishwasher Salt Setting (Level 5 / H:05):</strong> Calibrate your dishwasher built-in ion-exchange water softener to <strong>Level 5</strong> (or <strong>H:05</strong> on Bosch and Neff appliances, corresponding to 240–300 PPM / 17–21° Clark). Always keep the salt reservoir replenished with granular dishwasher salt; 3-in-1 detergent pods cannot soften water sufficiently at 270 PPM.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Combi Boiler Protection &amp; BS 7593 Compliance in Southampton</h2>
+      <p class="text-slate-600 mb-4">
+        Under UK Building Regulations (Part L) and British Standard <strong>BS 7593:2019</strong>, properties situated in hard water areas exceeding 200 PPM must take active measures to inhibit limescale accumulation in domestic hot water systems:
+      </p>
+      <p class="text-slate-600 mb-4">
+        When hard water at 270 PPM passes through the secondary plate heat exchanger of a modern condensing combi boiler, high water temperatures (above 60°C) cause calcium carbonate to rapidly precipitate out. A layer of limescale just 1.6 mm thick reduces heat transfer efficiency by up to <strong>12%</strong>, increasing annual gas bills and triggering overheating error codes, noisy kettling, or premature heat exchanger failure.
+      </p>
+      <p class="text-slate-600 mb-4">
+        To protect heating systems across SO postcodes, heating engineers recommend installing an inline electrolytic scale inhibitor or magnetic scale reducer on the mains cold water inlet feeding the boiler. For complete whole-house protection, an ion-exchange water softener removes virtually all calcium and magnesium, delivering silky soft water to showers, taps, and pipework.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Explore Hampshire &amp; South Coast Water Hardness Guides</h2>
+      <p class="text-slate-600 mb-4">
+        Compare Southampton's water mineral content with surrounding South Coast towns and access our free appliance calibration tools:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6 text-sm">
+        <a href="/guides/southern-water-hardness-guide-hampshire" class="p-3.5 rounded-xl border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-xs">
+          Southern Water Hampshire Regional Guide &rarr;
+        </a>
+        <a href="/cities/southampton" class="p-3.5 rounded-xl border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-xs">
+          Southampton Water Hardness Hub &rarr;
+        </a>
+        <a href="/guides/does-brighton-have-hard-water" class="p-3.5 rounded-xl border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-xs">
+          Brighton (285 PPM) Guide &rarr;
+        </a>
+        <a href="/guides/does-bournemouth-have-hard-water" class="p-3.5 rounded-xl border border-slate-200 bg-white hover:bg-cyan-50 hover:border-cyan-300 font-semibold text-blue-600 transition shadow-xs">
+          Bournemouth &amp; Poole Guide &rarr;
+        </a>
+        <a href="/tools/dishwasher-salt-calculator" class="p-3.5 rounded-xl border border-blue-200 bg-blue-50/70 hover:bg-blue-100 font-bold text-blue-700 transition shadow-xs sm:col-span-2">
+          UK Dishwasher Salt Calculator Tool &rarr;
         </a>
       </div>
     `,
