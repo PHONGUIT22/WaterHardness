@@ -1,0 +1,67 @@
+name: Build and Deploy to Azure VM
+on:
+  push:
+    branches:
+      - main
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup .env.local for Next.js build
+        run: |
+          echo "${{ secrets.ENV_LOCAL }}" > .env.local
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set up Docker Buildx (Tăng tốc build)
+        uses: docker/setup-buildx-action@v3
+      - name: Downcase Image Name (Bắt buộc cho GHCR)
+        id: image_tag
+        run: |
+          IMAGE_LOWER=$(echo "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}" | tr '[:upper:]' '[:lower:]')
+          echo "IMAGE=$IMAGE_LOWER" >> $GITHUB_OUTPUT
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.image_tag.outputs.IMAGE }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+  deploy-to-azure:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy on Azure VM via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          script: |
+            # Đăng nhập vào GHCR trên VM
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            
+            IMAGE_LOWER=$(echo "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest" | tr '[:upper:]' '[:lower:]')
+            
+            echo ">>> Dang keo image moi..."
+            docker pull $IMAGE_LOWER
+            
+            echo ">>> Dang cap nhat container..."
+            docker rm -f water-hardness || true
+            docker run -d --name water-hardness --restart always -p 80:3000 --env-file ~/app/.env.local $IMAGE_LOWER
+            
+            echo ">>> Don dep image cu..."
+            docker image prune -f
+            echo ">>> DEPLOY THANH CONG!"
