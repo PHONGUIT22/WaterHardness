@@ -122,13 +122,6 @@ export default async function GuideArticlePage({ params }: PageProps) {
     guidePpm = 60;
   }
 
-  // Ensure Plumbing & Heating (water-conditioner, water-softener) articles always render QuoteRequestCard
-  const isPlumbingAndHeating =
-    guide.category === "Plumbing & Heating" ||
-    guide.slug.includes("water-conditioner") ||
-    guide.slug.includes("water-softener") ||
-    guide.slug.includes("combi-boiler");
-
   const leadOutcode = (guide.relatedOutcodes && guide.relatedOutcodes.length > 0)
     ? guide.relatedOutcodes[0]
     : "UK";
@@ -387,13 +380,11 @@ export default async function GuideArticlePage({ params }: PageProps) {
         </div>
 
         {/* LOCAL LEAD CAPTURE ENGINE: WATER SOFTENER & HEATING PROTECTION */}
-        {(isPlumbingAndHeating || (guide.relatedOutcodes && guide.relatedOutcodes.length > 0)) && (
-          <QuoteRequestCard
-            outcode={leadOutcode}
-            avgPpm={leadPpm}
-            locationName={leadLocationName}
-          />
-        )}
+        <QuoteRequestCard
+          outcode={leadOutcode}
+          avgPpm={leadPpm}
+          locationName={leadLocationName}
+        />
 
         {/* APPLIANCE SPECS / SETTINGS CALLOUT BOX */}
         <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-800 space-y-5">
