@@ -3583,7 +3583,7 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-leicester-have-hard-water",
     title: "Does Leicester Have Hard Water? Severn Trent PPM & Postcode Guide",
-    metaTitle: "Does Leicester Have Hard Water? (140-160 PPM Moderate Guide)",
+    metaTitle: "Does Leicester Have Hard Water? (Yes - 245 PPM Hard Guide)",
     metaDescription: "Is tap water hard or soft in Leicester? Check Severn Trent PPM ratings across LE1 to LE19, Cropston reservoir sources, kettle descaling & salt settings.",
     targetKeyword: "does leicester have hard water",
     category: "Regional Hardness",
@@ -3594,7 +3594,7 @@ export const guidesData: GuideArticle[] = [
       ppmRange: "215 – 280 PPM (mg/L CaCO3)",
       classification: "Hard Water",
       supplier: "Severn Trent Water",
-      keyTakeaway: "No, Leicester does not have very hard water. Tap water in Leicester is classified as moderately hard, averaging between 140 and 160 PPM (9.8° to 11.2° Clark). Sourced by Severn Trent Water primarily from reservoirs in the Derwent Valley and River Dove blended with Foremark and Melbourne water treatment works, it causes mild limescale buildup on kettles but is significantly softer than Southern and Eastern England."
+      keyTakeaway: "Yes, Leicester tap water is hard, averaging 245 PPM (17.1° Clark) and ranging from 215 PPM in southern suburbs up to 280 PPM in northern districts. Sourced by Severn Trent Water from regional reservoirs (Cropston and Thornton) blended with River Dove and Derwent transfers via Melbourne water treatment works, it leaves noticeable limescale on kettles, shower screens, and combi boiler heat exchangers."
     },
     relatedOutcodes: ["LE1", "LE2", "LE3", "LE4", "LE5", "LE18", "LE19"],
     faqItems: [
@@ -3620,7 +3620,7 @@ export const guidesData: GuideArticle[] = [
       },
       {
         question: "Is Leicester tap water hard or soft compared to Nottingham and Birmingham?",
-        answer: "Leicester tap water (140–160 PPM, moderately hard) sits right in the middle: it is slightly harder than Birmingham (ultra-soft at 30–50 PPM from Wales) but very similar to Nottingham (moderately hard at 130–170 PPM). Both cities are managed by Severn Trent Water."
+        answer: "Leicester tap water (averaging 245 PPM, hard water) is significantly harder than neighboring Birmingham (which receives ultra-soft 30–50 PPM water from the Elan Valley in Wales) and slightly harder than Nottingham (averaging 180–220 PPM). All three East and West Midlands cities are managed by Severn Trent Water."
       }
     ],
     contentHtml: `

@@ -146,28 +146,44 @@ export default async function GuideArticlePage({ params }: PageProps) {
         "@id": `https://waterhardness.uk/guides/${guide.slug}#article`,
         "headline": guide.title,
         "description": guide.metaDescription,
+        "image": "https://waterhardness.uk/og-image.png",
         "datePublished": guide.datePublished,
         "dateModified": guide.dateModified,
         "mainEntityOfPage": `https://waterhardness.uk/guides/${guide.slug}`,
         "author": {
           "@type": "Person",
           "@id": "https://waterhardness.uk/#person",
-          "name": "Nguyen Hac Phong",
+          "name": "Nguyễn Hạc Phong",
           "jobTitle": "Lead Water Engineer",
           "url": "https://waterhardness.uk/about"
         },
         "publisher": {
           "@type": "Organization",
+          "@id": "https://waterhardness.uk/#organization",
           "name": "WaterHardness.uk",
           "logo": {
             "@type": "ImageObject",
             "url": "https://waterhardness.uk/logo.png"
           }
         },
-        "about": {
-          "@type": "Thing",
-          "name": guide.targetKeyword
-        }
+        "citation": [
+          "https://www.dwi.gov.uk/",
+          "https://www.ofwat.gov.uk/",
+          "https://www.ciphe.org.uk/"
+        ],
+        "about": [
+          {
+            "@type": "Thing",
+            "name": guide.targetKeyword
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Water Hardness Range",
+            "value": guide.quickVerdict.ppmRange,
+            "unitText": "mg/L CaCO3",
+            "description": `${guide.quickVerdict.classification} (${guide.quickVerdict.supplier})`
+          }
+        ]
       },
       {
         "@type": "BreadcrumbList",

@@ -429,7 +429,7 @@ export const citiesData: CityData[] = [
     metaTitle: "Southampton Water Hardness Guide",
     metaDescription: "Check Southampton water hardness levels and Southern Water PPM. Learn about chalk aquifer hard water, kettle descaling, and boiler protection.",
     outcodePrefixes: ["SO"],
-    relatedGuideSlug: "southern-water-hardness-guide-hampshire",
+    relatedGuideSlug: "does-southampton-have-hard-water",
     editorialSummary: "Southampton has some of the hardest water in Hampshire, averaging 295 PPM CaCO3. Southern Water draws supply from deep chalk boreholes and groundwater-fed rivers including the River Test and River Itchen. These pure chalk-filtered waters carry heavy concentrations of dissolved calcium bicarbonate. As a result, kettles develop a thick fur within weeks, chrome bathroom fittings become cloudy, and boiler heat exchangers can lose up to 15% efficiency over time if left unprotected.",
     faqItems: [
       {
@@ -489,6 +489,7 @@ export const citiesData: CityData[] = [
     metaTitle: "Coventry Water Hardness Guide",
     metaDescription: "Check Coventry water hardness levels and Severn Trent PPM. Discover groundwater hard water ratings, kettle descaling, and dishwasher advice.",
     outcodePrefixes: ["CV"],
+    relatedGuideSlug: "does-coventry-have-hard-water",
     editorialSummary: "Unlike its neighbour Birmingham, Coventry suffers from distinctly hard water, averaging 275 PPM. While Birmingham gets soft Welsh reservoir water, Coventry's supply relies heavily on local groundwater boreholes and treated water from the River Severn and River Avon catchments. As water seeps through sandstone and mineral beds, it gathers calcium and magnesium. Coventry residents frequently deal with furred kettle coils, scum on cups of tea, and limescale deposits on shower screens.",
     faqItems: [
       {
@@ -570,7 +571,6 @@ export const citiesData: CityData[] = [
     slug: "stoke-on-trent",
     supplier: "Severn Trent Water",
     region: "West Midlands",
-    relatedGuideSlug: "does-stoke-on-trent-have-hard-water",
     avgPpm: 165,
     clarkDegrees: 11.5,
     hardnessCategory: "Moderately Hard",
@@ -579,6 +579,7 @@ export const citiesData: CityData[] = [
     metaTitle: "Stoke Water Hardness Guide",
     metaDescription: "Check Stoke-on-Trent water hardness levels and Severn Trent PPM. Compare Staffordshire moorland blend ratings, kettle care, and salt advice.",
     outcodePrefixes: ["ST"],
+    relatedGuideSlug: "does-stoke-on-trent-have-hard-water",
     editorialSummary: "Stoke-on-Trent has moderately hard tap water, averaging roughly 165 PPM. Severn Trent supplies the Potteries from a combination of Tittesworth Reservoir in the Staffordshire Moorlands and groundwater wells across the North Staffordshire coalfield and sandstone beds. Householders will notice light limescale crusting on kettle bases every couple of months, but it remains far less aggressive than in the south of England. Regular kettle descaling keeps appliances running smoothly.",
     faqItems: [
       {
