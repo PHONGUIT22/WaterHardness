@@ -3583,18 +3583,18 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-leicester-have-hard-water",
     title: "Does Leicester Have Hard Water? Severn Trent PPM & Postcode Guide",
-    metaTitle: "Does Leicester Have Hard Water? (Yes - 245 PPM Guide)",
+    metaTitle: "Does Leicester Have Hard Water? (140-160 PPM Moderate Guide)",
     metaDescription: "Is tap water hard or soft in Leicester? Check Severn Trent PPM ratings across LE1 to LE19, Cropston reservoir sources, kettle descaling & salt settings.",
     targetKeyword: "does leicester have hard water",
     category: "Regional Hardness",
     datePublished: "2026-10-01T08:00:00Z",
-    dateModified: "2026-10-07T08:00:00Z",
+    dateModified: "2026-10-16T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "215 – 280 PPM (mg/L CaCO3)",
       classification: "Hard Water",
       supplier: "Severn Trent Water",
-      keyTakeaway: "Yes, Leicester tap water is hard, averaging 245 PPM (17.1° Clark). Sourced by Severn Trent from regional surface reservoirs (Cropston and Thornton) and blended with River Dove and Derwent transfers, it leaves noticeable limescale on kettle elements, bathroom tiles, and combi boiler heat exchangers."
+      keyTakeaway: "No, Leicester does not have very hard water. Tap water in Leicester is classified as moderately hard, averaging between 140 and 160 PPM (9.8° to 11.2° Clark). Sourced by Severn Trent Water primarily from reservoirs in the Derwent Valley and River Dove blended with Foremark and Melbourne water treatment works, it causes mild limescale buildup on kettles but is significantly softer than Southern and Eastern England."
     },
     relatedOutcodes: ["LE1", "LE2", "LE3", "LE4", "LE5", "LE18", "LE19"],
     faqItems: [
@@ -3617,6 +3617,10 @@ export const guidesData: GuideArticle[] = [
       {
         question: "Do I need a water softener in Leicester?",
         answer: "While not mandatory, installing an ion-exchange water softener is highly advantageous for Leicester homeowners. It eliminates stubborn shower limescale, prevents combi boiler heat exchangers from clogging, and cuts domestic detergent expenditure by up to 30%."
+      },
+      {
+        question: "Is Leicester tap water hard or soft compared to Nottingham and Birmingham?",
+        answer: "Leicester tap water (140–160 PPM, moderately hard) sits right in the middle: it is slightly harder than Birmingham (ultra-soft at 30–50 PPM from Wales) but very similar to Nottingham (moderately hard at 130–170 PPM). Both cities are managed by Severn Trent Water."
       }
     ],
     contentHtml: `
@@ -3710,18 +3714,18 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "does-brighton-have-hard-water",
     title: "Does Brighton Have Hard Water? Sussex Chalk PPM & Postcode Guide",
-    metaTitle: "Does Brighton Have Hard Water? (Yes - 285 PPM Guide)",
+    metaTitle: "Does Brighton Have Hard Water? (Yes - 280-300 PPM Very Hard Guide)",
     metaDescription: "Is tap water hard in Brighton & Hove? Check Southern Water PPM ratings across BN1, BN2, BN3, South Downs chalk boreholes & water softener advice.",
     targetKeyword: "does brighton have hard water",
     category: "Regional Hardness",
     datePublished: "2026-10-01T08:00:00Z",
-    dateModified: "2026-10-04T08:00:00Z",
+    dateModified: "2026-10-16T08:00:00Z",
     readingTime: "6 min read",
     quickVerdict: {
       ppmRange: "260 – 310 PPM (mg/L CaCO3)",
       classification: "Very Hard Water",
       supplier: "Southern Water",
-      keyTakeaway: "Yes, Brighton and Hove tap water is very hard, averaging 285 PPM (20.0° Clark). Abstracted entirely from underground chalk aquifers across the South Downs National Park, it deposits chalky limescale on kettle coils, cloudy film on shower screens, and reduces combi boiler efficiency."
+      keyTakeaway: "Yes, Brighton has very hard water, consistently measuring between 280 and 300 PPM (19.6° to 21° Clark). Supplied entirely by Southern Water from deep underground boreholes in the South Downs chalk aquifer, Brighton tap water is heavily saturated with dissolved calcium carbonate, causing thick chalky limescale on appliances across BN1, BN2, and BN3."
     },
     relatedOutcodes: ["BN1", "BN2", "BN3", "BN41", "BN42", "BN7"],
     faqItems: [
@@ -3744,6 +3748,10 @@ export const guidesData: GuideArticle[] = [
       {
         question: "What is the tap water quality in Brighton?",
         answer: "Tap water quality in Brighton is exceptionally high, achieving a 99.9% overall compliance score with Drinking Water Inspectorate (DWI) safety standards. Because it is naturally filtered through hundreds of feet of South Downs Cretaceous chalk, it is microbiologically pristine and delicious to drink, though its high calcium carbonate content (285 PPM) requires regular kettle and boiler descaling."
+      },
+      {
+        question: "Why is water so hard in Brighton and Hove (BN postcodes)?",
+        answer: "Brighton and Hove tap water is 100% extracted from natural chalk aquifers beneath the South Downs. As rainwater filters through hundreds of metres of porous limestone and chalk strata, it dissolves vast quantities of calcium and magnesium minerals before being treated and pumped by Southern Water into local homes."
       }
     ],
     contentHtml: `
@@ -4394,12 +4402,12 @@ export const guidesData: GuideArticle[] = [
   {
     slug: "uk-business-water-suppliers-guide",
     title: "UK Business Water Suppliers Guide: How to Switch & Compare Commercial Rates",
-    metaTitle: "UK Business Water Suppliers Guide: Compare & Switch Retailers",
-    metaDescription: "Compare UK business water suppliers across Greater London, St Albans & nationwide. Learn how commercial water deregulation works, switch retailers & cut bills.",
-    targetKeyword: "business water suppliers",
+    metaTitle: "Commercial Water Suppliers UK: Compare Business Water Rates (2026)",
+    metaDescription: "Compare commercial water suppliers for business in the UK. How the deregulated water market works, switching retailers in London, York, St Albans, and saving up to 20% on bills.",
+    targetKeyword: "commercial water suppliers",
     category: "Plumbing & Heating",
     datePublished: "2026-10-07T08:00:00Z",
-    dateModified: "2026-10-07T08:00:00Z",
+    dateModified: "2026-10-16T08:00:00Z",
     readingTime: "7 min read",
     quickVerdict: {
       ppmRange: "Varies by Region (20 - 320 PPM)",
@@ -4428,6 +4436,14 @@ export const guidesData: GuideArticle[] = [
       {
         question: "How much money can a business save by switching water retailers?",
         answer: "Commercial customers typically achieve a 5% to 15% reduction on retail margins. However, substantial long-term savings often come from smart automated meter reading (AMR) and commercial leak detection, which prevent costly unmetered water waste."
+      },
+      {
+        question: "Can any UK business choose their commercial water supplier?",
+        answer: "Yes. Since the English water market deregulated in April 2017 (Open Water programme), all eligible businesses, charities, and public sector organisations can switch their retail water and wastewater supplier. While your physical water wholesaler remains fixed based on geography (e.g. Thames Water, Severn Trent, Yorkshire Water), you can shop around for customer service, consolidated billing, and competitive retail tariffs across regional hubs like London, York, St Albans, and Eastbourne."
+      },
+      {
+        question: "Who are the biggest commercial water suppliers for business in the UK?",
+        answer: "The leading licensed commercial water retailers in the UK include Wave Utilities (joint venture of Anglian Water and NWG), Water Plus (Severn Trent and United Utilities joint venture), Everflow Water, Castle Water, and Source for Business (Pennon Group). Switching retailer does not interrupt your physical water supply or change water hardness levels."
       }
     ],
     contentHtml: `
